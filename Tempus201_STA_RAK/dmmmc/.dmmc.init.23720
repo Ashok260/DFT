@@ -1,0 +1,3 @@
+if { $::DistMMMC::distribute_read_design_completed == 0 } { enable_distributed_processing_wrappers 0;              set_global _timing_use_distinct_timing_info_log_file true;              set _view_temp_dir /icd/etsproject1/njain/Tempus_LAB/Tempus171_STA_RAK/dmmmc/dmmmc_logs ; set _active_setupview_name {} ; set _active_holdview_name {} ;setMultiCpuUsage -localCpu 2 ;
+set ::DistMMMC::timing_master_pid 23720;source ./scripts/loadDesign_dmmmc.tcl
+set ::DistMMMC::distribute_read_design_completed 1;disable_distributed_processing_wrappers }

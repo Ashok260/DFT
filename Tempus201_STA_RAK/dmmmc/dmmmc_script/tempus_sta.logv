@@ -1,0 +1,73 @@
+[02/17 14:14:04     0s] 
+[02/17 14:14:04     0s] Cadence Tempus(TM) Timing Signoff Solution.
+[02/17 14:14:04     0s] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[02/17 14:14:04     0s] 
+[02/17 14:14:04     0s] Version:	v15.20-p004_1, built Mon Nov 9 12:44:57 PST 2015
+[02/17 14:14:04     0s] Options:	-nowin -overwrite -log tempus_sta.log 
+[02/17 14:14:04     0s] Date:		Wed Feb 17 14:14:04 2016
+[02/17 14:14:04     0s] Host:		vlsj-schritz (x86_64 w/Linux 2.6.18-371.el5) (1core*1cpu* Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz 25600KB)
+[02/17 14:14:04     0s] OS:		Red Hat Enterprise Linux Client release 5.10 (Tikanga)
+[02/17 14:14:04     0s] 
+[02/17 14:14:04     0s] License:
+[02/17 14:14:04     0s] 		tpsxl	Tempus Timing Signoff Solution XL	15.2	checkout succeeded
+[02/17 14:14:08     2s] **INFO: (TMPDIR-1001): The environment variable TMPDIR is not set.
+Create and set the environment variable TMPDIR to '/tmp/tempus_tmpdir_8146_R8oTwB'.
+@(#)CDS: Tempus Timing Signoff Solution v15.20-p004_1 (64bit) 11/09/2015 12:44 (Linux 2.6.18-194.el5)
+[02/17 14:14:14     5s] @(#)CDS: NanoRoute 15.20-p004_1 NR151028-1715/15_20-UB (database version 2.30, 298.6.1) {superthreading v1.26}
+[02/17 14:14:14     5s] @(#)CDS: AAE 15.20-p002 (64bit) 11/09/2015 (Linux 2.6.18-194.el5)
+[02/17 14:14:14     5s] @(#)CDS: CTE 15.20-p001_1 () Oct 29 2015 01:50:39 ( )
+[02/17 14:14:14     5s] @(#)CDS: SYNTECH 15.20-b002_1 () Oct 20 2015 02:35:29 ( )
+[02/17 14:14:14     5s] @(#)CDS: CPE v15.20-p002
+[02/17 14:14:14     5s] @(#)CDS: OA 22.50-p028 Thu Jul 23 14:59:57 2015
+[02/17 14:14:14     5s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[02/17 14:14:14     5s] @(#)CDS: RCDB 11.6
+[02/17 14:14:14     5s] --- Running on vlsj-schritz (x86_64 w/Linux 2.6.18-371.el5) (1core*1cpu* Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz 25600KB) ---
+[02/17 14:14:14     5s] environment variable TMPDIR is '/tmp/tempus_tmpdir_8146_R8oTwB'.
+[02/17 14:14:14     5s] Sourcing tcl/tk file "/home/schritz/.tpsrc" ...
+[02/17 14:14:14     5s] Starting user home directory file ~/.tpsrc
+[02/17 14:14:15     5s] <CMD> get_distribute_host -help
+[02/17 14:14:15     5s] 
+[02/17 14:14:15     5s] Usage: get_distribute_host [-help] [-args] [-custom_script] [-hosts] [-mode] [-queue] [-reportLsfInfo <file>] [-resource] [-shellTimeout] [-single_cpu_lsf_args] [-timeOut]
+[02/17 14:14:15     5s]                            [-waitForLsfInfo <integer>]
+[02/17 14:14:15     5s] 
+[02/17 14:14:15     5s] -help                         # Prints out the command usage
+[02/17 14:14:15     5s] -args                         # Get additional arguments to use with the LSF/SGE submit command (bsub/qsub). Example: -x -P PROJ1 -W 10. (bool, optional)
+[02/17 14:14:15     5s] -custom_script                # Get the custom job submission script for distributed processing if the mode is set to "custom". (bool, optional)
+[02/17 14:14:15     5s] -hosts                        # Get the list of hosts for distributed processing via rsh/ssh. A host can be named multiple times (bool, optional)
+[02/17 14:14:15     5s] -mode                         # Get the distributed processing mode (lsf|rsh|ssh|sge|local|custom) (bool, optional)
+[02/17 14:14:15     5s] -queue                        # Get the name of the job submission queue for LSF or SGE (Sun Grid Engine) queuing systems. (bool, optional)
+[02/17 14:14:15     5s] -reportLsfInfo <file>         # Restore the lsf resource to file (string, optional)
+[02/17 14:14:15     5s] -resource                     # Get the resource string for LSF or SGE queuing systems (bool, optional)
+[02/17 14:14:15     5s] -shellTimeout                 # Get the value of the rsh/ssh machine timeout in seconds (the time by which a remote machine responds to a rsh/ssh request) (bool, optional)
+[02/17 14:14:15     5s] -single_cpu_lsf_args          # Get additional arguments to use with the LSF submit command (bsub) for single cpu distributed application only. Example: -x -P PROJ1 -W 10.
+[02/17 14:14:15     5s]                               # (bool, optional)
+[02/17 14:14:15     5s] -timeOut                      # Get the value of the timeout in seconds (the time by which a remote job must come up and respond to the master) (bool, optional)
+[02/17 14:14:15     5s] -waitForLsfInfo <integer>     # Timeout period for waiting for task exit and generate the lsf information (int, optional)
+[02/17 14:14:15     5s] 
+[02/17 14:14:15     5s] 
+[02/17 14:16:30     5s] <CMD> get_distribute_host -help
+[02/17 14:16:30     5s] 
+[02/17 14:16:30     5s] Usage: get_distribute_host [-help] [-args] [-custom_script] [-hosts] [-mode] [-queue] [-reportLsfInfo <file>] [-resource] [-shellTimeout] [-single_cpu_lsf_args] [-timeOut]
+[02/17 14:16:30     5s]                            [-waitForLsfInfo <integer>]
+[02/17 14:16:30     5s] 
+[02/17 14:16:30     5s] -help                         # Prints out the command usage
+[02/17 14:16:30     5s] -args                         # Get additional arguments to use with the LSF/SGE submit command (bsub/qsub). Example: -x -P PROJ1 -W 10. (bool, optional)
+[02/17 14:16:30     5s] -custom_script                # Get the custom job submission script for distributed processing if the mode is set to "custom". (bool, optional)
+[02/17 14:16:30     5s] -hosts                        # Get the list of hosts for distributed processing via rsh/ssh. A host can be named multiple times (bool, optional)
+[02/17 14:16:30     5s] -mode                         # Get the distributed processing mode (lsf|rsh|ssh|sge|local|custom) (bool, optional)
+[02/17 14:16:30     5s] -queue                        # Get the name of the job submission queue for LSF or SGE (Sun Grid Engine) queuing systems. (bool, optional)
+[02/17 14:16:30     5s] -reportLsfInfo <file>         # Restore the lsf resource to file (string, optional)
+[02/17 14:16:30     5s] -resource                     # Get the resource string for LSF or SGE queuing systems (bool, optional)
+[02/17 14:16:30     5s] -shellTimeout                 # Get the value of the rsh/ssh machine timeout in seconds (the time by which a remote machine responds to a rsh/ssh request) (bool, optional)
+[02/17 14:16:30     5s] -single_cpu_lsf_args          # Get additional arguments to use with the LSF submit command (bsub) for single cpu distributed application only. Example: -x -P PROJ1 -W 10.
+[02/17 14:16:30     5s]                               # (bool, optional)
+[02/17 14:16:30     5s] -timeOut                      # Get the value of the timeout in seconds (the time by which a remote job must come up and respond to the master) (bool, optional)
+[02/17 14:16:30     5s] -waitForLsfInfo <integer>     # Timeout period for waiting for task exit and generate the lsf information (int, optional)
+[02/17 14:16:30     5s] 
+[02/17 14:16:30     5s] 
+[02/17 14:18:40     5s] <CMD> exit
+[02/17 14:18:40     5s] 
+[02/17 14:18:40     5s] *** Memory Usage v#1 (Current mem = 433.953M, initial mem = 184.328M) ***
+[02/17 14:18:40     5s] *** Message Summary: 0 warning(s), 0 error(s)
+[02/17 14:18:40     5s] 
+[02/17 14:18:40     5s] --- Ending "Tempus Timing Signoff Solution" (totcpu=0:00:05.4, real=0:04:36, mem=434.0M) ---

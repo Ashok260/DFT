@@ -1,0 +1,621 @@
+
+Cadence Tempus(TM) Timing Signoff Solution.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.20-p001_1, built Wed Dec 2 16:07:28 PST 2020
+Options:	
+Date:		Sat Mar 22 12:34:40 2025
+Host:		APL7.kletech.ac.in (x86_64 w/Linux 4.18.0-425.3.1.el8.x86_64) (6cores*12cpus*12th Gen Intel(R) Core(TM) i5-12500 18432KB)
+OS:		Red Hat Enterprise Linux release 8.7 (Ootpa)
+
+License:
+		tpsxl	Tempus Timing Signoff Solution XL	20.2	checkout succeeded
+		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_36075_TQD0nj'.
+<CMD> set_multi_cpu_usage -localCpu 8
+<CMD> set_table_style -no_frame_fix_width -nosplit
+<CMD> read_lib ../TECHFILES//NangateOpenCellLibrary_slow_conditional_ccs.lib
+*Info: Search files from $search_path matching "../TECHFILES//NangateOpenCellLibrary_slow_conditional_ccs.lib".
+Matched: ../TECHFILES/NangateOpenCellLibrary_slow_conditional_ccs.lib
+*Info: Search files from $search_path matching "../TECHFILES//NangateOpenCellLibrary_slow_conditional_ccs.lib".
+Matched: ../TECHFILES/NangateOpenCellLibrary_slow_conditional_ccs.lib
+<CMD> read_verilog ../NETLIST/mcrb_opt.v
+<CMD> set_top_module
+#% Begin Load MMMC data ... (date=03/22 12:35:35, mem=757.6M)
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#% End Load MMMC data ... (date=03/22 12:35:35, total cpu=0:00:00.0, real=0:00:00.0, peak res=758.1M, current mem=758.1M)
+default_emulate_early_rc_corner default_emulate_late_rc_corner default_emulate_rc_corner
+Loading view definition file from .ssv_emulate_view_definition_36075.tcl
+Starting library reading in 'Multi-threaded flow' (with '8' threads)
+Reading   timing library /home/01fe21bec223/DFT/MCRB/TEMPUS_1/TECHFILES/NangateOpenCellLibrary_slow_conditional_ccs.lib.
+Read 134 cells in library NangateOpenCellLibrary.
+Library reading multithread flow ended.
+*** End library_loading (cpu=0.02min, real=0.00min, mem=196.0M, fe_cpu=0.19min, fe_real=0.92min, fe_mem=973.8M) ***
+#% Begin Load netlist data ... (date=03/22 12:35:35, mem=771.1M)
+*** Begin netlist parsing (mem=973.8M) ***
+Reading verilog netlist '../NETLIST/mcrb_opt.v'
+
+*** Memory Usage v#1 (Current mem = 1125.832M, initial mem = 299.711M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1125.8M) ***
+#% End Load netlist data ... (date=03/22 12:35:36, total cpu=0:00:00.2, real=0:00:01.0, peak res=867.2M, current mem=867.2M)
+Top level cell is mcrb.
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Building hierarchical netlist for Cell mcrb ...
+*** Netlist is unique.
+** info: there are 135 modules.
+** info: there are 23 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1309.777M, initial mem = 299.711M) ***
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+/dev/null
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Reading timing constraints file '/dev/null' ...
+Current (total cpu=0:00:11.6, real=0:00:56.0, peak res=1215.5M, current mem=1215.5M)
+Total number of combinational cells: 92
+Total number of sequential cells: 29
+Total number of tristate cells: 6
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUF_X1 BUF_X2 BUF_X4 BUF_X8 CLKBUF_X1 CLKBUF_X3 CLKBUF_X2
+Total number of usable buffers: 7
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INV_X1 INV_X16 INV_X2 INV_X32 INV_X8 INV_X4
+Total number of usable inverters: 6
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: BUF_X16 BUF_X32
+Total number of identified usable delay cells: 2
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+default_emulate_constraint_mode
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+default_emulate_libset_max default_emulate_libset_min
+Multithreaded Timing Analysis is initialized with 8 threads
+
+<CMD> read_sdc ../SDC/mcrb.sdc
+Current (total cpu=0:00:11.8, real=0:00:56.0, peak res=1282.8M, current mem=1282.8M)
+ERROR (CTE-2): scripts aborted prematurely, turning off message_verbosity.
+
+
+ERROR (CTE-27): Reading of timing constraints file aborted prematurely missing close-bracket
+    while executing
+"set_input_delay 0.5 -clock [get_clocks sclk] [remove_from_collection [all_inputs] ["
+    (file "../SDC/mcrb.sdc" line 3)
+---
+    invoked from within
+"__source ../SDC/mcrb.sdc"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 __source ../SDC/mcrb.sdc"
+    ("eval" body line 1)
+    invoked from within
+"eval "uplevel #0 $::syn2ambit::source_cmd $::syn2ambit::tcl_file_G"".
+
+**ERROR: (IMPCTE-2):	Scripts terminated prematurely. Turning off message_verbosity.
+**ERROR: (IMPCTE-27):	read_dc_script terminated prematurely 
+<CMD> set_delay_cal_mode -siAware true
+AAE_INFO: switching -siAware from false to true ...
+<CMD> set_si_mode -enable_delay_report true
+<CMD> set_si_mode -enable_glitch_report true
+<CMD> set_si_mode -enable_glitch_propagation true
+<CMD> set_global timing_pba_exhaustive_path_nworst_limit 2
+<CMD> set_global timing_path_based_exhaustive_max_paths_limit 1000
+<CMD> update_timing -full
+**WARN: (IMPESI-3468):	User needs to specify -equivalent_waveform_model propagation first before specifying -waveform_compression_mode accurate|clock_detailed .
+AAE DB initialization (MEM=1688.21 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+Start delay calculation (fullDC) (8 T). (MEM=1836.07)
+/dev/null
+/dev/null
+Total number of fetched objects 33
+End delay calculation. (MEM=2300.64 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2300.64 CPU=0:00:00.2 REAL=0:00:00.0)
+<CMD> report_timing
+Path 1: MET Setup Check with Pin skew_addr_cntr_reg[4]/CK 
+Endpoint:   skew_addr_cntr_reg[4]/D (v) checked with  leading edge of 'sclk'
+Beginpoint: skew_addr_cntr_reg[2]/Q (v) triggered by  leading edge of 'sclk'
+Path Groups: {sclk}
+Other End Arrival Time          0.000
+- Setup                         0.321
++ Phase Shift                   5.000
+= Required Time                 4.679
+- Arrival Time                  1.675
+= Slack Time                    3.005
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ------------------------------------------------------------------------
+      Instance               Arc           Cell       Delay  Arrival  Required  
+                                                             Time     Time  
+      ------------------------------------------------------------------------
+      skew_addr_cntr_reg[2]  CK ^          -          -      0.000    3.005  
+      skew_addr_cntr_reg[2]  CK ^ -> Q v   DFFR_X1    0.626  0.626    3.631  
+      g422__7098             A2 v -> ZN ^  NOR2_X2    0.229  0.855    3.860  
+      g417__2802             B2 ^ -> ZN v  AOI21_X2   0.092  0.947    3.952  
+      g416__6783             A v -> ZN ^   AOI221_X2  0.603  1.549    4.554  
+      g404__2398             A2 ^ -> ZN v  NOR2_X2    0.125  1.675    4.679  
+      skew_addr_cntr_reg[4]  D v           DFFR_X2    0.000  1.675    4.679  
+      ------------------------------------------------------------------------
+
+<CMD> report_timing -max_paths 10000000 -retime path_slew_propagation -retime_mode exhaustive -max_slack 0.200 > epba_${DATE}.rpt
+<CMD> report_noise -txtfile reports_Mar22-12:35:35/glitch.rpt
+Output report file name prefix is reports_Mar22-12:35:35/glitch.rpt 
+**ERROR: (IMPESI-2109):	Glitch results are not available for reporting. Ensure that parasitics are correctly annotated for all active RC corners, and glitch analysis has also been performed before running report_noise.
+<CMD> check_design -type timing -out_file reports_Mar22-12:35:35/check_design.rpt
+Output file 'reports_Mar22-12:35:35/check_design.rpt' created. Sourcing this file will create a $design_checks TCL dictionary that can be parsed for more information.
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> check_timing -verbose > ${reportDir}/check_timing.rpt
+<CMD> report_annotated_parasitics > reports_Mar22-12:35:35/annotated.rpt
+**WARN: (IMPEXT-6165):	Command report_annotated_parasitics is issued before the parasitic data is made available. Parasitic annotation summary will be reported with zero parasitic data. Load the parasitic data for correct annotation report before issuing report_annotated_parasitics.
+<CMD> report_analysis_coverage            > ${reportDir}/coverage.rpt
+<CMD> report_clocks                       > ${reportDir}/clocks.rpt
+<CMD> report_case_analysis                > ${reportDir}/case_analysis.rpt
+<CMD> report_inactive_arcs                > ${reportDir}/inactive_arcs.rpt
+<CMD> report_constraint -all_violators > reports_Mar22-12:35:35/allviol.rpt
+<CMD> report_analysis_summary                                         > ${reportDir}/analysis_summary.rpt
+<CMD> report_timing -path_type summary_slack_only -late -max_paths 5  > ${reportDir}/start_end_slack.rpt
+<CMD> report_timing -late   -max_paths 50 -nworst 1 -path_type full_clock -net  > ${reportDir}/worst_max_path.rpt
+<CMD> report_timing -early  -max_paths 50 -nworst 1 -path_type full_clock -net  > ${reportDir}/worst_min_path.rpt
+<CMD> report_timing -path_type end_slack_only                       > ${reportDir}/setup_1.rpt
+<CMD> report_timing -path_type end_slack_only  -early               > ${reportDir}/hold_1.rpt
+<CMD> report_timing -late    -max_paths 100                         > ${reportDir}/setup_100.rpt.gz
+<CMD> report_timing -early   -max_paths 100                         > ${reportDir}/hold_100.rpt.gz
+<CMD> report_timing -retime path_slew_propagation -max_paths 50 -nworst 1 -path_type full_clock    > ${reportDir}/pba_50_paths.rpt
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+INFO: Path Based Analysis (PBA) performed on total '12' paths
+All done
+Loading  (mcrb)
+Traverse HInst (mcrb)
+-checkType setup                           # enums={setup hold}, default=setup
+<CMD> get_time_unit
+<CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -early > top.mtarpt
+<CMD> load_timing_debug_report -name default_report top.mtarpt
+Parsing file top.mtarpt...
+<CMD> selectInst {skew_addr_cntr_reg[0]}
+<CMD> deselectInst {skew_addr_cntr_reg[0]}
+<CMD> selectObject Net gctl_rclk_orst_n_i
+<CMD> deselectObject Net gctl_rclk_orst_n_i
+<CMD> selectObject Net {skew_addr_cntr_o[0]}
+-checkType setup                           # enums={setup hold}, default=setup
+<CMD> get_time_unit
+<CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -early > top.mtarpt
+<CMD> load_timing_debug_report -name default_report top.mtarpt
+Parsing file top.mtarpt...
+-checkType setup                           # enums={setup hold}, default=setup
+<CMD> get_time_unit
+<CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -retime aocv -path_exceptions all -early > top.mtarpt
+**ERROR: (TCLCMD-1237):	AOCV analysis could not be done as either AOCV mode in timing analysis is not turned on or AOCV libraries are not read. To proceed further, please load AOCV library if it is not read and set the analysis mode to aocv.
+
+**WARN: (IMPSYT-3142):	<CMD> analyze_paths_by_basic_path_group
+INFO(analyze_paths_by_basic_path_group):  examined 12 paths.
+INFO(analyze_paths_by_basic_path_group):  created 1 groups.
+<CMD> analyze_paths_by_clock_domain
+INFO(analyze_paths_by_clock_domain):  examined 12 paths.
+INFO(analyze_paths_by_clock_domain):  created 1 clock-domain based groups.
+default_emulate_constraint_mode
+/dev/null
+INFO:  processing SDC file "/dev/null" for SDC<->STA report cross-probing....
+INFO:  processed 0 commands in 0 lines from file "/dev/null", with 0 errors.
+INFO:  registered 0 SDC constraints for cross-probing.
+INFO:  processing SDC file "/tmp/ssv_tmpdir_36075_TQD0nj/BinarySdcB8JcTY/mmmc/modes/default_emulate_constraint_mode/default_emulate_constraint_mode.sdc" for SDC<->STA report cross-probing....
+INFO:  processed 2 commands in 8 lines from file "/tmp/ssv_tmpdir_36075_TQD0nj/BinarySdcB8JcTY/mmmc/modes/default_emulate_constraint_mode/default_emulate_constraint_mode.sdc", with 0 errors.
+INFO:  registered 2 SDC constraints for cross-probing.
+<CMD> all_setup_analysis_views
+<CMD> all_setup_analysis_views
+<CMD> all_hold_analysis_views
+<CMD> get_analysis_view $view -delay_corner
+<CMD> get_delay_corner $dc -rc_corner
+<CMD> all_setup_analysis_views
+<CMD> all_setup_analysis_views
+<CMD> all_hold_analysis_views
+<CMD> get_analysis_view $view -delay_corner
+<CMD> get_delay_corner $dc -rc_corner
+**ERROR: (IMPQTF-4005):	Cannot find item 'addbufapplyb1' in form 'ecoopt'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+**ERROR: (IMPQTF-4005):	Cannot find item 'addbufapplyb2' in form 'ecoopt'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+**ERROR: (IMPQTF-4005):	Cannot find item 'delbufapplyb1' in form 'ecoopt'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+<CMD> change_cell -inst {skew_addr_cntr_reg[0]} -cell DFFR_X1
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+Resize skew_addr_cntr_reg[0] (DFFR_X2) to DFFR_X1.
+<CMD_INTERNAL> redraw
+<CMD> change_cell -inst {skew_addr_cntr_reg[0]} -cell DFFR_X1
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+Resize skew_addr_cntr_reg[0] (DFFR_X1) to DFFR_X1.
+Parsing file eco.mtarpt...
+**WARN: (IMPGTD-801):	File (eco.mtarpt) does not contain any timing paths.
+This could be because the report is not of the correct format,
+or because it does not contain any paths (because there are no
+failing paths in the design, for instance).
+**ERROR: (IMPQTF-4044):	Error occurs when '::Rda_Timing::EcoOpt::applylist ecoopt ecolist' is executed with the error message: ''. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+**ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::pathList:tipcb etsgtd@frameOnly 0 3' is executed with the error message: 'ERROR: TA report not loaded in.'. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+**ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::pathList:tipcb etsgtd@frameOnly 0 3' is executed with the error message: 'ERROR: TA report not loaded in.'. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+<CMD> change_cell -inst {skew_addr_cntr_reg[0]} -cell DFFR_X2
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+Resize skew_addr_cntr_reg[0] (DFFR_X1) to DFFR_X2.
+<CMD> redraw
+<CMD> change_cell -inst {skew_addr_cntr_reg[0]} -cell DFFR_X1
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+#################################################################################
+# Design Name: mcrb
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+Resize skew_addr_cntr_reg[0] (DFFR_X2) to DFFR_X1.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+
+**ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::dpathList:popup gtdDetail@frameOnly tabfpan1detail 371 21' is executed with the error message: ''. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::dpathList:b1cb gtdDetail@frameOnly tabfpan1detail 371 21 0' is executed with the error message: ''. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+
+**ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::dpathList:popup gtdDetail@frameOnly tabfpan1detail 346 21' is executed with the error message: ''. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::pathList:popup etsgtd@frameOnly tabfmpan3 299 8' is executed with the error message: 'ERROR: Incorrect usage for command "tdGetPathInfo".'. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**WARN: (EMS-62):	Message <IMPGTD-904> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::pathList:popup etsgtd@frameOnly tabfmpan3 299 7' is executed with the error message: 'ERROR: Incorrect usage for command "tdGetPathInfo".'. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+<CMD> report_slack_histogram
+
+#####################################################################
+# report_slack_histogram at Sat Mar 22 13:05:19 IST 2025
+#   slack file: /tmp/ssv_tmpdir_36075_TQD0nj/.histogram.36075.slk
+#   format    : not compact, step=0.5 ns
+#   slack (ns): target=0.000  violating_only
+#####################################################################
+
+---------------------------------------------
+| Slack Range (ns)     |  Count  |     Sum  |
++----------------------+---------+----------+
+---------------------------------------------
+<CMD> report_slack_histogram -plus_non_violating
+
+#####################################################################
+# report_slack_histogram at Sat Mar 22 13:06:18 IST 2025
+#   slack file: /tmp/ssv_tmpdir_36075_TQD0nj/.histogram.36075.slk
+#   format    : not compact, step=0.5 ns
+#   slack (ns): target=0.000  plus_non_violating
+#####################################################################
+
+---------------------------------------------
+| Slack Range (ns)     |  Count  |     Sum  |
++----------------------+---------+----------+
+| (  3.005 ~   3.505]  |      5  |        5 |
+| (  3.505 ~   4.005]  |      0  |        5 |
+| (  4.005 ~   4.505]  |      0  |        5 |
+| (  4.505 ~   5.005]  |      1  |        6 |
+| (  5.005 ~   5.505]  |      6  |       12 |
+---------------------------------------------
+<CMD> redirect -quiet {eval "report_timing -max_paths $num  $pathGroupArgs > $vioFile"} > @file40
+<CMD> redirect -quiet {set slack($i,$j) [eval calWorstSlack $pathGroupArgs -outfile $slackFile($fromType,$toType)]} > @file40
+<CMD> redirect -quiet {set slack($i,$j) [calWorstSlack -infile $slackFile($fromType,$toType)]} > @file40
+<CMD> redirect -quiet {report_slack_clockdomain -plus_non_violating -count -infile $slackFile($fromType,$toType)} > @file40
+<CMD> redirect -quiet {report_slack_histogram -plus_non_violating -compact -infile $slackFile($fromType,$toType)} > @file40
+<CMD> redirect -quiet {eval "report_timing -max_paths $num  $pathGroupArgs > $vioFile"} > @file40
+<CMD> redirect -quiet {set slack($i,$j) [eval calWorstSlack $pathGroupArgs -outfile $slackFile($fromType,$toType)]} > @file40
+<CMD> redirect -quiet {set slack($i,$j) [calWorstSlack -infile $slackFile($fromType,$toType)]} > @file40
+<CMD> redirect -quiet {report_slack_clockdomain -plus_non_violating -count -infile $slackFile($fromType,$toType)} > @file40
+<CMD> redirect -quiet {report_slack_histogram -plus_non_violating -compact -infile $slackFile($fromType,$toType)} > @file40
+<CMD> redirect -quiet {eval "report_timing -max_paths $num  $pathGroupArgs > $vioFile"} > @file40
+<CMD> redirect -quiet {set slack($i,$j) [eval calWorstSlack $pathGroupArgs -outfile $slackFile($fromType,$toType)]} > @file40
+<CMD> redirect -quiet {set slack($i,$j) [calWorstSlack -infile $slackFile($fromType,$toType)]} > @file40
+<CMD> redirect -quiet {report_slack_clockdomain -plus_non_violating -count -infile $slackFile($fromType,$toType)} > @file40
+<CMD> redirect -quiet {report_slack_histogram -plus_non_violating -compact -infile $slackFile($fromType,$toType)} > @file40
+<CMD> redirect -quiet {eval "report_timing -max_paths $num  $pathGroupArgs > $vioFile"} > @file40
+<CMD> redirect -quiet {set slack($i,$j) [eval calWorstSlack $pathGroupArgs -outfile $slackFile($fromType,$toType)]} > @file40
+<CMD> redirect -quiet {set slack($i,$j) [calWorstSlack -infile $slackFile($fromType,$toType)]} > @file40
+<CMD> redirect -quiet {report_slack_clockdomain -plus_non_violating -count -infile $slackFile($fromType,$toType)} > @file40
+<CMD> redirect -quiet {report_slack_histogram -plus_non_violating -compact -infile $slackFile($fromType,$toType)} > @file40
+<CMD> report_slack_histogram >slack_hist.txt
+
+Usage: report_slack_histogram [-help] [-compact] [-early] [-infile <string>]
+                              [-late] [-max_slack <float>] [-min_slack <float>]
+                              [-outfile <string>] [-plus_non_violating]
+                              [-retime {aocv ssta path_slew_propagation aocv_path_slew_propagation}]
+                              [-retime_mode {path exhaustive infinite_depth}]
+                              [-step <float>] [-target_slack <float>]
+                              [-view <string>]
+
+**ERROR: (IMPTCM-48):	">slack_hist.txt" is not a legal option for command "report_slack_histogram". Either the current option or an option prior to it is not specified correctly.
+  
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+-checkType setup                           # enums={setup hold}, default=setup
+<CMD> get_time_unit
+<CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -retime aocv -path_exceptions all -early > top.mtarpt
+**ERROR: (TCLCMD-1237):	AOCV analysis could not be done as either AOCV mode in timing analysis is not turned on or AOCV libraries are not read. To proceed further, please load AOCV library if it is not read and set the analysis mode to aocv.
+
+**WARN: (IMPSYT-3142):	-checkType setup                           # enums={setup hold}, default=setup
+<CMD> get_time_unit
+<CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -late > top.mtarpt
+Parsing file top.mtarpt...
+**WARN: (IMPGTD-801):	File (top.mtarpt) does not contain any timing paths.
+This could be because the report is not of the correct format,
+or because it does not contain any paths (because there are no
+failing paths in the design, for instance).
+**ERROR: (IMPGTD-223):	load_timing_debug_report top.mtarpt failed.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::pathList:popup etsgtd@frameOnly tabfmpan3 157 13' is executed with the error message: 'ERROR: Incorrect usage for command "tdGetPathInfo".'. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+-checkType setup                           # enums={setup hold}, default=setup
+<CMD> get_time_unit
+<CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -early > top.mtarpt
+Parsing file top.mtarpt...
+<CMD> report_slack_histogram -plus_non_violating -early -retime -retime_mode exhaustive -outfile setupslack.txt
+
+Usage: report_slack_histogram [-help] [-compact] [-early] [-infile <string>]
+                              [-late] [-max_slack <float>] [-min_slack <float>]
+                              [-outfile <string>] [-plus_non_violating]
+                              [-retime {aocv ssta path_slew_propagation aocv_path_slew_propagation}]
+                              [-retime_mode {path exhaustive infinite_depth}]
+                              [-step <float>] [-target_slack <float>]
+                              [-view <string>]
+
+**ERROR: (IMPTCM-23):	"-retime_mode" is not a valid enum for "-retime", the allowed values are {aocv ssta path_slew_propagation aocv_path_slew_propagation}.
+  
+<CMD> report_slack_histogram -plus_non_violating -early -retime path_slew_propagation -retime_mode exhaustive -outfile setupslack.txt
+<CMD> report_slack_histogram -plus_non_violating -late -retime path_slew_propagation -retime_mode exhaustive -outfile holdslack.txt
