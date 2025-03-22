@@ -1,0 +1,25 @@
+139:ERROR (CTE-2): scripts aborted prematurely, turning off message_verbosity.
+142:ERROR (CTE-27): Reading of timing constraints file aborted prematurely missing close-bracket
+156:**ERROR: (IMPCTE-2):	Scripts terminated prematurely. Turning off message_verbosity.
+157:**ERROR: (IMPCTE-27):	read_dc_script terminated prematurely 
+211:**ERROR: (IMPESI-2109):	Glitch results are not available for reporting. Ensure that parasitics are correctly annotated for all active RC corners, and glitch analysis has also been performed before running report_noise.
+233:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+234:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+235:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+236:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+237:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+238:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+239:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+240:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+241:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+242:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+243:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+244:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+245:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+246:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+247:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+248:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+249:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+250:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+251:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+252:**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.

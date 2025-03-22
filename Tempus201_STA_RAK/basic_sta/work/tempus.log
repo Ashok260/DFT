@@ -1,0 +1,352 @@
+
+Cadence Tempus(TM) Timing Signoff Solution.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.20-p001_1, built Wed Dec 2 16:07:28 PST 2020
+Options:	
+Date:		Sat Mar 22 10:31:09 2025
+Host:		APL7.kletech.ac.in (x86_64 w/Linux 4.18.0-425.3.1.el8.x86_64) (6cores*12cpus*12th Gen Intel(R) Core(TM) i5-12500 18432KB)
+OS:		Red Hat Enterprise Linux release 8.7 (Ootpa)
+
+License:
+		tpsxl	Tempus Timing Signoff Solution XL	20.2	checkout succeeded
+		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_26298_DlBy3Z'.
+<CMD> set_multi_cpu_usage -localCpu 8
+<CMD> set_table_style -no_frame_fix_width -nosplit
+<CMD> read_lib ../../libs/liberty/FreePDK45_lib_v1.0_worst.lib
+<CMD> read_lib ../../libs/MACRO/LIBERTY/pllclk.lib
+<CMD> read_lib ../../libs/MACRO/LIBERTY/ram_256x16A.lib ../../libs/MACRO/LIBERTY/rom_512x16A.lib
+<CMD> read_verilog ../../design/ECO_INIT_11_optSetup.enc.dat/dtmf_recvr_core.v.gz
+<CMD> set_top_module dtmf_recvr_core -ignore_undefined_cell
+#% Begin Load MMMC data ... (date=03/22 10:31:40, mem=762.8M)
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#% End Load MMMC data ... (date=03/22 10:31:40, total cpu=0:00:00.0, real=0:00:00.0, peak res=763.2M, current mem=763.2M)
+default_emulate_early_rc_corner default_emulate_late_rc_corner default_emulate_rc_corner
+Loading view definition file from .ssv_emulate_view_definition_26298.tcl
+Starting library reading in 'Multi-threaded flow' (with '8' threads)
+Reading   timing library /home/01fe21bec223/DFT/Tempus201_STA_RAK/libs/liberty/FreePDK45_lib_v1.0_worst.lib.
+Read 113 cells in library FreePDK45_lib_v1.0.
+Reading   timing library /home/01fe21bec223/DFT/Tempus201_STA_RAK/libs/MACRO/LIBERTY/pllclk.lib.
+Read 1 cells in library pllclk.
+Reading   timing library /home/01fe21bec223/DFT/Tempus201_STA_RAK/libs/MACRO/LIBERTY/ram_256x16A.lib.
+Read 1 cells in library USERLIB.
+Library reading multithread flow ended.
+Starting library reading in 'Multi-threaded flow' (with '8' threads)
+Reading   timing library /home/01fe21bec223/DFT/Tempus201_STA_RAK/libs/MACRO/LIBERTY/rom_512x16A.lib.
+**WARN: (TECHLIB-459):	Appending library 'USERLIB' to the previously read library of the same name and nominal PVT. Cell definitions from the previously read library will not be overridden. (File /home/01fe21bec223/DFT/Tempus201_STA_RAK/libs/MACRO/LIBERTY/rom_512x16A.lib)
+Read 1 cells in library USERLIB.
+Library reading multithread flow ended.
+*** End library_loading (cpu=0.01min, real=0.00min, mem=188.5M, fe_cpu=0.14min, fe_real=0.52min, fe_mem=965.1M) ***
+#% Begin Load netlist data ... (date=03/22 10:31:40, mem=777.6M)
+*** Begin netlist parsing (mem=965.1M) ***
+Reading verilog netlist '../../design/ECO_INIT_11_optSetup.enc.dat/dtmf_recvr_core.v.gz'
+
+*** Memory Usage v#1 (Current mem = 1141.137M, initial mem = 299.711M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1141.1M) ***
+#% End Load netlist data ... (date=03/22 10:31:40, total cpu=0:00:00.2, real=0:00:00.0, peak res=912.5M, current mem=904.4M)
+Set top cell to dtmf_recvr_core.
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Building hierarchical netlist for Cell dtmf_recvr_core ...
+*** Netlist is unique.
+** info: there are 152 modules.
+** info: there are 8234 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1328.082M, initial mem = 299.711M) ***
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+/dev/null
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Reading timing constraints file '/dev/null' ...
+Current (total cpu=0:00:09.2, real=0:00:31.0, peak res=1271.0M, current mem=1271.0M)
+Total number of combinational cells: 87
+Total number of sequential cells: 20
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUF_X1 BUF_X16 BUF_X2 BUF_X32 BUF_X4
+Total number of usable buffers: 5
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INV_X1 INV_X16 INV_X2 INV_X32 INV_X8 INV_X4
+Total number of usable inverters: 6
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: BUF_X8
+Total number of identified usable delay cells: 1
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+default_emulate_constraint_mode
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+default_emulate_libset_max default_emulate_libset_min
+Multithreaded Timing Analysis is initialized with 8 threads
+
+<CMD> read_spef ../../design/SPEF/corner_worst_CMAX.spef.gz
+
+SPEF files for RC Corner default_emulate_rc_corner:
+Top-level spef file '../../design/SPEF/corner_worst_CMAX.spef.gz'.
+Start spef parsing (MEM=1707.43).
+SPEF file ../../design/SPEF/corner_worst_CMAX.spef.gz.
+Number of Resistors     : 132172
+Number of Ground Caps   : 140357
+Number of Coupling Caps : 31664
+
+End spef parsing (MEM=1759.43 CPU=0:00:00.7 REAL=0:00:00.0).
+3 nets are missing in SPEF file. The names of these nets are saved in ./default_emulate_rc_corner.missing_nets.rpt.
+<CMD> read_sdc ../../design/dtmf_recvr_core.pr.sdc
+Current (total cpu=0:00:10.2, real=0:00:32.0, peak res=1367.1M, current mem=1325.0M)
+Number of path exceptions in the constraint file = 7
+INFO (CTE): Constraints read successfully.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1336.0M, current mem=1336.0M)
+Current (total cpu=0:00:10.2, real=0:00:32.0, peak res=1367.1M, current mem=1336.0M)
+<CMD> set_delay_cal_mode -siAware true
+AAE_INFO: switching -siAware from false to true ...
+<CMD> set_si_mode -enable_delay_report true
+<CMD> set_si_mode -enable_glitch_report true
+<CMD> set_si_mode -enable_glitch_propagation true
+<CMD> set_global timing_pba_exhaustive_path_nworst_limit 2
+<CMD> set_global timing_path_based_exhaustive_max_paths_limit 1000
+<CMD> update_timing -full
+**WARN: (IMPESI-3468):	User needs to specify -equivalent_waveform_model propagation first before specifying -waveform_compression_mode accurate|clock_detailed .
+AAE DB initialization (MEM=1782.17 CPU=0:00:00.0 REAL=0:00:00.0) 
+Starting SI iteration 1 using Infinite Timing Windows
+#################################################################################
+# Design Name: dtmf_recvr_core
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+Start delay calculation (fullDC) (8 T). (MEM=1948.64)
+/dev/null
+/dev/null
+**WARN: (IMPESI-3140):	Bumpy transitions may exist in the design which may lead to inaccurate delay computation. To report/analyze the nets having bumpy transition, please enable delay report and use command 'report_noise -bumpy_waveform -threshold 0' after timing analysis. Delay report is enabled by setting 'set_si_mode -enable_delay_report true' before timing analysis.
+Total number of fetched objects 8888
+AAE_INFO-618: Total number of nets in the design is 8751,  100.0 percent of the nets selected for SI analysis
+End delay calculation. (MEM=2568.64 CPU=0:00:01.6 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2568.64 CPU=0:00:01.8 REAL=0:00:00.0)
+esiiDumpWaveformsThread is successfull 1 
+Save waveform /tmp/ssv_tmpdir_26298_DlBy3Z/.AAE_pSQUI1/.AAE_26298/waveform.data in separate thread...
+Finish pthread dumping compressed waveforms.
+**ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view default_emulate_view at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin. Additional details for this message are available using 'man TA-1014'.
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2512.6M)
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 2512.6M)
+Starting SI iteration 2
+Start delay calculation (fullDC) (8 T). (MEM=2274.64)
+Glitch Analysis: View default_emulate_view -- Total Number of Nets Skipped = 0. 
+Glitch Analysis: View default_emulate_view -- Total Number of Nets Analyzed = 8888. 
+Total number of fetched objects 8888
+AAE_INFO-618: Total number of nets in the design is 8751,  22.0 percent of the nets selected for SI analysis
+Glitch Analysis: View default_emulate_view -- Total Number of Nets Skipped = 0. 
+Glitch Analysis: View default_emulate_view -- Total Number of Nets Analyzed = 8888. 
+Total number of fetched objects 8888
+AAE_INFO-618: Total number of nets in the design is 8751,  0.7 percent of the nets selected for SI analysis
+End delay calculation. (MEM=2767.3 CPU=0:00:01.6 REAL=0:00:00.0)
+End delay calculation. (MEM=2690.99 CPU=0:00:01.6 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=2690.99 CPU=0:00:01.6 REAL=0:00:00.0)
+**ERROR: (TA-1014):	Detected a missing clock arrival for one transition in view default_emulate_view at pin PLLCLK_INST/clk1x because a timing arc of this pin allows only one transition to propagate. No clock will propagate beyond this pin. Additional details for this message are available using 'man TA-1014'.
+<CMD> report_timing
+Path 1: VIOLATED Setup Check with Pin TDSP_CORE_INST/EXECUTE_INST/p_reg[31]/CK 
+Endpoint:   TDSP_CORE_INST/EXECUTE_INST/p_reg[31]/D (v) checked with  leading edge of 'm_clk'
+Beginpoint: TDSP_CORE_INST/DECODE_INST/ir_reg[10]/Q (^) triggered by  leading edge of 'm_clk'
+Path Groups: {m_clk}
+Other End Arrival Time          5.259
+- Setup                         1.298
++ Phase Shift                   4.000
+- Uncertainty                   0.400
+= Required Time                 7.561
+- Arrival Time                 38.399
+= Slack Time                  -30.838
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Prop)  5.334
+     = Beginpoint Arrival Time       5.334
+      ------------------------------------------------------------------------------------------------------------------
+      Instance                                                          Arc           Cell      Delay  Arrival  Required  
+                                                                                                       Time     Time  
+      ------------------------------------------------------------------------------------------------------------------
+      TDSP_CORE_INST/DECODE_INST/ir_reg[10]                             CK ^          -         -      5.334    -25.505  
+      TDSP_CORE_INST/DECODE_INST/ir_reg[10]                             CK ^ -> Q ^   SDFFS_X2  0.639  5.973    -24.866  
+      TDSP_CORE_INST/DECODE_INST/FE_OFC193_port_address_2_              A ^ -> Z ^    BUF_X16   1.475  7.448    -23.391  
+      TDSP_CORE_INST/TDSP_CORE_GLUE_INST/lsh_120_47/Fn0110D9126         A ^ -> ZN v   INV_X4    1.833  9.281    -21.558  
+      TDSP_CORE_INST/TDSP_CORE_GLUE_INST/lsh_120_47/p0088D              A2 v -> ZN v  AND2_X2   1.171  10.451   -20.387  
+      TDSP_CORE_INST/TDSP_CORE_GLUE_INST/lsh_120_47/g9132               A1 v -> ZN v  AND2_X2   0.336  10.788   -20.051  
+      TDSP_CORE_INST/TDSP_CORE_GLUE_INST/lsh_120_47/FE_PSC502_n_661     A v -> Z v    BUF_X32   0.341  11.129   -19.710  
+      TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p0171A                         A1 v -> ZN ^  NAND2_X4  0.231  11.360   -19.479  
+      TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p0089D                         A3 ^ -> ZN ^  AND3_X2   0.386  11.745   -19.093  
+      TDSP_CORE_INST/TDSP_CORE_GLUE_INST/p0053D                         A1 ^ -> ZN v  NAND2_X4  0.417  12.162   -18.676  
+      TDSP_CORE_INST/MPY_32_INST/FE_RC_514_0                            A v -> ZN ^   INV_X32   0.271  12.433   -18.405  
+      TDSP_CORE_INST/MPY_32_INST/p0258A                                 A2 ^ -> ZN v  NAND2_X4  0.200  12.634   -18.205  
+      TDSP_CORE_INST/MPY_32_INST/Fp0229A                                A v -> ZN ^   INV_X8    0.423  13.057   -17.782  
+      TDSP_CORE_INST/MPY_32_INST/p0287A                                 A1 ^ -> ZN v  NAND2_X1  0.261  13.318   -17.520  
+      TDSP_CORE_INST/MPY_32_INST/p0073D                                 A2 v -> ZN ^  NAND2_X4  0.320  13.638   -17.200  
+      TDSP_CORE_INST/MPY_32_INST/p0137D                                 A1 ^ -> ZN v  NAND2_X1  0.215  13.854   -16.985  
+      TDSP_CORE_INST/MPY_32_INST/p0041D                                 A2 v -> ZN ^  NAND2_X4  1.206  15.060   -15.778  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/Fn0024D           A ^ -> ZN v   INV_X32   0.711  15.771   -15.067  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p0231D            A1 v -> ZN ^  NAND2_X4  0.546  16.317   -14.521  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p0145D            A2 ^ -> ZN v  NAND2_X4  0.290  16.608   -14.231  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/Fp0160D14363      A v -> ZN ^   INV_X16   0.518  17.126   -13.712  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p0236D            A1 ^ -> ZN v  NAND3_X4  0.877  18.003   -12.835  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p0388A            B1 v -> ZN ^  OAI21_X1  2.350  20.353   -10.485  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/Fp0557A14249      A ^ -> ZN v   INV_X2    0.410  20.763   -10.076  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p0467A14145       A1 v -> ZN ^  NOR2_X4   0.670  21.432   -9.406  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p0434A14090       A2 ^ -> ZN v  NAND2_X2  0.308  21.740   -9.098  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p0413A14082       A v -> ZN ^   OAI21_X1  0.725  22.466   -8.373  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p0574A            A1 ^ -> ZN v  NAND2_X1  0.344  22.809   -8.029  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p0507A14036       A v -> ZN ^   OAI21_X1  0.440  23.249   -7.589  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/FE_PSC518_n_1178  A ^ -> Z ^    BUF_X16   0.407  23.656   -7.182  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p0702A            A1 ^ -> ZN v  NAND2_X4  0.122  23.778   -7.060  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p0668A            A v -> ZN ^   OAI21_X1  0.552  24.330   -6.508  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p0760A            A1 ^ -> ZN v  NAND2_X1  0.271  24.601   -6.238  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p0688A            A v -> ZN ^   OAI21_X1  0.556  25.156   -5.682  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p0961A            A1 ^ -> ZN v  NAND2_X1  0.320  25.476   -5.362  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p0890A            A2 v -> ZN ^  NAND2_X1  0.500  25.976   -4.862  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/g14561            B ^ -> Z ^    XOR2_X2   0.726  26.702   -4.136  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p1088A            A2 ^ -> ZN v  NAND2_X1  0.508  27.210   -3.628  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p1204A            A2 v -> ZN ^  NAND2_X1  0.488  27.699   -3.140  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p1180A            A1 ^ -> ZN v  NAND2_X1  0.270  27.968   -2.870  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p1175A            A1 v -> ZN ^  NAND2_X4  0.248  28.217   -2.622  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p1172A            A2 ^ -> ZN ^  AND3_X2   0.874  29.091   -1.747  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p1161A            A2 ^ -> ZN v  NOR2_X4   0.438  29.529   -1.309  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/g14558            A1 v -> ZN ^  NAND3_X1  0.422  29.951   -0.887  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p1701A            A1 ^ -> ZN ^  AND3_X2   0.348  30.299   -0.539  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/FE_PSC514_n_1670  A ^ -> Z ^    BUF_X16   0.322  30.621   -0.217  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p2218A            B1 ^ -> ZN v  OAI21_X1  0.317  30.938   0.100  
+      TDSP_CORE_INST/MPY_32_INST/M16X16_INST/mul_8_14/p2349A            B1 v -> ZN ^  OAI21_X2  2.691  33.629   2.790  
+      TDSP_CORE_INST/MPY_32_INST/Fp2263A                                A ^ -> ZN v   INV_X4    0.968  34.597   3.759  
+      TDSP_CORE_INST/MPY_32_INST/inc_add_63_54/FE_RC_1008_0             A3 v -> ZN v  AND3_X2   0.933  35.530   4.692  
+      TDSP_CORE_INST/MPY_32_INST/inc_add_63_54/FE_RC_1302_0             A1 v -> ZN v  AND3_X2   0.292  35.822   4.983  
+      TDSP_CORE_INST/MPY_32_INST/inc_add_63_54/FE_RC_2008_0             A1 v -> ZN ^  NAND3_X1  0.170  35.992   5.153  
+      TDSP_CORE_INST/MPY_32_INST/inc_add_63_54/FE_RC_2009_0             A ^ -> ZN v   INV_X8    0.293  36.285   5.446  
+      TDSP_CORE_INST/MPY_32_INST/inc_add_63_54/p2430A                   A1 v -> ZN ^  NAND2_X1  0.333  36.618   5.779  
+      TDSP_CORE_INST/MPY_32_INST/inc_add_63_54/p2364A                   B1 ^ -> ZN v  OAI21_X1  0.263  36.880   6.042  
+      TDSP_CORE_INST/MPY_32_INST/FE_RC_1689_0                           A1 v -> ZN ^  NAND2_X4  0.270  37.150   6.312  
+      TDSP_CORE_INST/MPY_32_INST/FE_RC_1688_0                           A1 ^ -> ZN v  NAND2_X4  0.178  37.328   6.489  
+      TDSP_CORE_INST/EXECUTE_INST/n1456D                                B1 v -> ZN ^  AOI22_X1  0.735  38.063   7.224  
+      TDSP_CORE_INST/EXECUTE_INST/n1510D                                A ^ -> ZN v   INV_X8    0.337  38.399   7.561  
+      TDSP_CORE_INST/EXECUTE_INST/p_reg[31]                             D v           SDFF_X2   0.000  38.399   7.561  
+      ------------------------------------------------------------------------------------------------------------------
+
+<CMD> report_timing -max_paths 10000000 -retime path_slew_propagation -retime_mode exhaustive -max_slack 0.200 > epba.rpt
+**WARN: (TCLCMD-1251):	The PBA exhaustive mode '-nworst' limit has been exhausted for some of the endpoints. Refer to verbose log file of current session for more details.
+**ERROR: (TCLCMD-1377):	The max paths limit for PBA paths has been exhausted and tool will fallback to GBA slacks for incomplete or leftover endpoints. To identify the paths for which tool has fallback on GBA slacks, please look for the following marker in final path report : 'Retime Analysis {GBA}'
+INFO: Path Based Analysis (PBA) performed on total '674' paths
+INFO: Max depth 3 reached for end point 'TDSP_CORE_INST/EXECUTE_INST/p_reg[30]/D' during Path Based Analysis
+<CMD> report_noise -txtfile reports/glitch.rpt
+Output report file name prefix is reports/glitch.rpt 
+Info: Processing report for view default_emulate_view ...
+Info: The output report file is reports/glitch.rpt
+<CMD> check_design -type timing -out_file reports/check_design.rpt
+**WARN: (CHKTIM-4):	 Clock pin CK of instance t_sel_7_reg has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance t_bit_7_reg has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance spare_110 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance spare_108 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance spare_109 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance spare_106 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance spare_105 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance spare_107 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance spare_104 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance spare_103 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance spare_102 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance spare_101 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance spare_100 has no clock constraint for view name default_emulate_view.
+Output file 'reports/check_design.rpt' created. Sourcing this file will create a $design_checks TCL dictionary that can be parsed for more information.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   CHKTIM-4            13   Clock pin %s of instance %s has no cloc...
+*** Message Summary: 13 warning(s), 0 error(s)
+
+<CMD> check_timing -verbose > ${reportDir}/check_timing.rpt
+<CMD> report_annotated_parasitics > reports/annotated.rpt
+<CMD> report_analysis_coverage            > ${reportDir}/coverage.rpt
+<CMD> report_clocks                       > ${reportDir}/clocks.rpt
+<CMD> report_case_analysis                > ${reportDir}/case_analysis.rpt
+<CMD> report_inactive_arcs                > ${reportDir}/inactive_arcs.rpt
+<CMD> report_constraint -all_violators > reports/allviol.rpt
+<CMD> report_analysis_summary                                         > ${reportDir}/analysis_summary.rpt
+<CMD> report_timing -path_type summary_slack_only -late -max_paths 5  > ${reportDir}/start_end_slack.rpt
+<CMD> report_timing -late   -max_paths 50 -nworst 1 -path_type full_clock -net  > ${reportDir}/worst_max_path.rpt
+<CMD> report_timing -early  -max_paths 50 -nworst 1 -path_type full_clock -net  > ${reportDir}/worst_min_path.rpt
+<CMD> report_timing -path_type end_slack_only                       > ${reportDir}/setup_1.rpt
+<CMD> report_timing -path_type end_slack_only  -early               > ${reportDir}/hold_1.rpt
+<CMD> report_timing -late    -max_paths 100                         > ${reportDir}/setup_100.rpt.gz
+<CMD> report_timing -early   -max_paths 100                         > ${reportDir}/hold_100.rpt.gz
+<CMD> report_timing -retime path_slew_propagation -max_paths 50 -nworst 1 -path_type full_clock    > ${reportDir}/pba_50_paths.rpt
+INFO: Path Based Analysis (PBA) performed on total '50' paths
+All done
+<CMD> exit
+
+*** Memory Usage v#1 (Current mem = 2427.902M, initial mem = 299.711M) ***
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPESI-3140          1  Bumpy transitions may exist in the desig...
+WARNING   IMPESI-3468          1  User needs to specify -equivalent_wavefo...
+WARNING   CHKTIM-4            13   Clock pin %s of instance %s has no cloc...
+ERROR     TA-1014              2  Detected a missing clock arrival for one...
+WARNING   TCLCMD-1251          1  The PBA exhaustive mode '-nworst' limit ...
+ERROR     TCLCMD-1377          1  The max paths limit for PBA paths has be...
+WARNING   TECHLIB-459          1  Appending library '%s' to the previously...
+*** Message Summary: 17 warning(s), 3 error(s)
+
+--- Ending "Tempus Timing Signoff Solution" (totcpu=0:00:17.4, real=0:00:34.0, mem=2427.9M) ---

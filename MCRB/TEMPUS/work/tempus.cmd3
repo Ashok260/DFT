@@ -1,0 +1,55 @@
+#######################################################
+#                                                     
+#  Tempus Timing Signoff Solution Command Logging File                     
+#  Created on Fri Mar 14 15:47:34 2025                
+#                                                     
+#######################################################
+
+#@(#)CDS: Tempus Timing Signoff Solution v20.20-p001_1 (64bit) 12/02/2020 16:07 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: NanoRoute 20.20-p001_1 NR200917-0125/MT (database version 18.20.530) {superthreading v2.11}
+#@(#)CDS: AAE 20.20-p005 (64bit) 12/02/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: CTE 20.20-p010_1 () Dec  2 2020 14:35:30 ( )
+#@(#)CDS: SYNTECH 20.20-p001_1 () Nov 24 2020 02:28:20 ( )
+#@(#)CDS: CPE v20.20-p009
+
+read_lib /home/01fe21bec223/DFT/MCRB/TEMPUS/TECHFILES/NangateOpenCellLibrary_slow_conditional_ccs.lib
+read_verilog /home/01fe21bec223/DFT/MCRB/TEMPUS/NETLIST/mcrb_opt.v
+set_top_module mcrb
+set_global timing_apply_default_primary_input_assertion false
+create_clock -name "sclk" -period 5 -waveform (0 2.5) -add [get_ports "mc_rb_ef1_sclk_i"]
+create_clock -name clk -period 10 -waveform {0 5} [get_ports clk_in]
+create_clock -name clk -period 5 -waveform {0 2.5} [get_ports mc_rb_ef1_sclk_i]
+set_input_delay 0.5 -clock [get_clocks sclk] [remove_from_collection [all_inputs] [get_ports mc_rb_ef1_sclk_i]]
+create_clock -name sclk -period 5 -waveform {0 2.5} [get_ports mc_rb_ef1_sclk_i]
+set_input_delay 0.5 -clock [get_clocks sclk] [remove_from_collection [all_inputs] [get_ports mc_rb_ef1_sclk_i]]
+set_output_delay 0.5 -clock [get_clocks sclk] [all_outputs]
+set_global report_timing_format {hpin cell arc slew load delay arrival}
+report_clock_timing -type summary 
+report_clock_timing -type summary > ./REPORTS_${DATE}/clock_summary.rpt
+report_clock_timing -type summary > ./REPORTS_${DATE}/clock_summary.rpt
+check_timing -verbose -type {loops inputs endpoints clocks constant_collision clock_gating_inferred clock_clipping} -include_warning clocks_masked_by_another_clock > ./REPORTS_${DATE}/check_timing_verbose.rpt
+check_timing -check_only {clock_crossing} -verbose > ./REPORTS_${DATE}/clock_crossings.rpt
+report_clocks -groups > ./REPORTS_${DATE}/report_clock_groups.rpt
+report_constraint -all_violators > ./REPORTS_Mar14-15:48:10/report_allViolators.rpt
+report_timing -max_paths 30  > ./REPORTS_${DATE}/timing_report.rpt
+check_clock_design
+selectObject Net mc_rb_ef1_sclk_i
+deselectObject Net mc_rb_ef1_sclk_i
+selectObject Net mc_rb_ef1_sclk_i
+ui::getColorByName maroon
+ui::getColorByName gold
+get_time_unit
+report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -early > top.mtarpt
+load_timing_debug_report -name default_report top.mtarpt
+save_path_categories -filename REPORTS_Mar14-15:48:10/category.cat
+analyze_paths_by_basic_path_group
+analyze_paths_by_clock_domain
+analyze_paths_by_critical_false_path
+analyze_paths_by_critical_false_path -critical_false_paths false_path_only
+analyze_paths_by_view
+write_category_summary -report category.rpt
+get_time_unit
+report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -late > top.mtarpt
+load_timing_debug_report -name default_report top.mtarpt
+analyze_paths_by_basic_path_group
+analyze_paths_by_clock_domain

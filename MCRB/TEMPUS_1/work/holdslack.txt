@@ -1,0 +1,24 @@
+**WARN: (TCLCMD-1235):	The PBA exhaustive mode '-nworst' limit has been exhausted for endpoint skew_addr_cntr_reg[0]/D (Path Groups: {reg2reg})
+**WARN: (TCLCMD-1235):	The PBA exhaustive mode '-nworst' limit has been exhausted for endpoint skew_addr_cntr_reg[3]/D (Path Groups: {reg2reg})
+**WARN: (TCLCMD-1235):	The PBA exhaustive mode '-nworst' limit has been exhausted for endpoint mc_rb_fuse_vld_q_reg/D (Path Groups: {in2reg})
+**WARN: (TCLCMD-1235):	The PBA exhaustive mode '-nworst' limit has been exhausted for endpoint skew_addr_cntr_reg[1]/D (Path Groups: {reg2reg})
+**WARN: (TCLCMD-1235):	The PBA exhaustive mode '-nworst' limit has been exhausted for endpoint skew_addr_cntr_reg[2]/D (Path Groups: {reg2reg})
+**WARN: (TCLCMD-1235):	The PBA exhaustive mode '-nworst' limit has been exhausted for endpoint skew_addr_cntr_reg[4]/D (Path Groups: {reg2reg})
+
+#####################################################################
+# report_slack_histogram at Sat Mar 22 13:22:57 IST 2025
+#   slack file: /tmp/ssv_tmpdir_36075_TQD0nj/.histogram.36075.slk
+#   format    : not compact, step=0.5 ns
+#   slack (ns): target=0.000  plus_non_violating
+#   Retime    : path_slew_propagation  Retime Mode : exhaustive
+#####################################################################
+
+---------------------------------------------
+| Slack Range (ns)     |  Count  |     Sum  |
++----------------------+---------+----------+
+| (  3.011 ~   3.511]  |      5  |        5 |
+| (  3.511 ~   4.011]  |      0  |        5 |
+| (  4.011 ~   4.511]  |      0  |        5 |
+| (  4.511 ~   5.011]  |      1  |        6 |
+| (  5.011 ~   5.511]  |      6  |       12 |
+---------------------------------------------

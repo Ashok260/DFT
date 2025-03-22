@@ -1,0 +1,13 @@
+# Format: clock  timeReq  slackR/slackF  setupR/setupF  instName/pinName   # cycle(s)
+sclk(R)->sclk(R)	4.680    */3.005         */0.320         skew_addr_cntr_reg[4]/D    1
+sclk(R)->sclk(R)	4.679    */3.034         */0.321         skew_addr_cntr_reg[1]/D    1
+sclk(R)->sclk(R)	4.683    */3.039         */0.317         skew_addr_cntr_reg[0]/D    1
+sclk(R)->sclk(R)	4.683    */3.039         */0.317         skew_addr_cntr_reg[3]/D    1
+sclk(R)->sclk(R)	4.683    */3.039         */0.317         skew_addr_cntr_reg[2]/D    1
+@(R)->sclk(R)	4.736    */4.736         */0.264         mc_rb_fuse_vld_q_reg/D    1
+@(R)->sclk(R)	5.043    5.043/*         -0.043/*        skew_addr_cntr_reg[3]/RN    1
+@(R)->sclk(R)	5.043    5.043/*         -0.043/*        mc_rb_fuse_vld_q_reg/RN    1
+@(R)->sclk(R)	5.043    5.043/*         -0.043/*        skew_addr_cntr_reg[2]/RN    1
+@(R)->sclk(R)	5.043    5.043/*         -0.043/*        skew_addr_cntr_reg[0]/RN    1
+@(R)->sclk(R)	5.044    5.044/*         -0.044/*        skew_addr_cntr_reg[4]/RN    1
+@(R)->sclk(R)	5.044    5.044/*         -0.044/*        skew_addr_cntr_reg[1]/RN    1

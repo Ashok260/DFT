@@ -1,0 +1,744 @@
+[03/22 12:34:40      0s] 
+[03/22 12:34:40      0s] Cadence Tempus(TM) Timing Signoff Solution.
+[03/22 12:34:40      0s] Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+[03/22 12:34:40      0s] 
+[03/22 12:34:40      0s] Version:	v20.20-p001_1, built Wed Dec 2 16:07:28 PST 2020
+[03/22 12:34:40      0s] Options:	
+[03/22 12:34:40      0s] Date:		Sat Mar 22 12:34:40 2025
+[03/22 12:34:40      0s] Host:		APL7.kletech.ac.in (x86_64 w/Linux 4.18.0-425.3.1.el8.x86_64) (6cores*12cpus*12th Gen Intel(R) Core(TM) i5-12500 18432KB)
+[03/22 12:34:40      0s] OS:		Red Hat Enterprise Linux release 8.7 (Ootpa)
+[03/22 12:34:40      0s] 
+[03/22 12:34:40      0s] License:
+[03/22 12:34:41      0s] 		tpsxl	Tempus Timing Signoff Solution XL	20.2	checkout succeeded
+[03/22 12:34:41      0s] 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[03/22 12:34:48      5s] @(#)CDS: Tempus Timing Signoff Solution v20.20-p001_1 (64bit) 12/02/2020 16:07 (Linux 2.6.32-431.11.2.el6.x86_64)
+[03/22 12:34:48      5s] @(#)CDS: NanoRoute 20.20-p001_1 NR200917-0125/MT (database version 18.20.530) {superthreading v2.11}
+[03/22 12:34:48      5s] @(#)CDS: AAE 20.20-p005 (64bit) 12/02/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[03/22 12:34:48      5s] @(#)CDS: CTE 20.20-p010_1 () Dec  2 2020 14:35:30 ( )
+[03/22 12:34:48      5s] @(#)CDS: SYNTECH 20.20-p001_1 () Nov 24 2020 02:28:20 ( )
+[03/22 12:34:48      5s] @(#)CDS: CPE v20.20-p009
+[03/22 12:34:48      5s] @(#)CDS: OA 22.60-s011 Tue Jun 16 12:27:00 2020
+[03/22 12:34:48      5s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[03/22 12:34:48      5s] @(#)CDS: RCDB 11.15.0
+[03/22 12:34:48      5s] @(#)CDS: STYLUS 21.10-d018_1 (08/28/2020 09:14 PDT)
+[03/22 12:34:48      5s] Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+[03/22 12:34:48      5s] **INFO: (TMPDIR-1001): The environment variable TMPDIR is not set.
+Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_36075_TQD0nj'.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_36075_TQD0nj'.
+[03/22 12:35:35      9s] <CMD> set_multi_cpu_usage -localCpu 8
+[03/22 12:35:35      9s] <CMD> set_table_style -no_frame_fix_width -nosplit
+[03/22 12:35:35      9s] <CMD> read_lib ../TECHFILES//NangateOpenCellLibrary_slow_conditional_ccs.lib
+[03/22 12:35:35      9s] *Info: Search files from $search_path matching "../TECHFILES//NangateOpenCellLibrary_slow_conditional_ccs.lib".
+[03/22 12:35:35      9s] Matched: ../TECHFILES/NangateOpenCellLibrary_slow_conditional_ccs.lib
+[03/22 12:35:35      9s] *Info: Search files from $search_path matching "../TECHFILES//NangateOpenCellLibrary_slow_conditional_ccs.lib".
+[03/22 12:35:35      9s] Matched: ../TECHFILES/NangateOpenCellLibrary_slow_conditional_ccs.lib
+[03/22 12:35:35      9s] <CMD> read_verilog ../NETLIST/mcrb_opt.v
+[03/22 12:35:35      9s] <CMD> set_top_module
+[03/22 12:35:35      9s] #% Begin Load MMMC data ... (date=03/22 12:35:35, mem=757.6M)
+[03/22 12:35:35      9s] Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+[03/22 12:35:35      9s] #% End Load MMMC data ... (date=03/22 12:35:35, total cpu=0:00:00.0, real=0:00:00.0, peak res=758.1M, current mem=758.1M)
+[03/22 12:35:35      9s] Loading view definition file from .ssv_emulate_view_definition_36075.tcl
+[03/22 12:35:35      9s] Starting library reading in 'Multi-threaded flow' (with '8' threads)
+[03/22 12:35:35     11s] Reading   timing library /home/01fe21bec223/DFT/MCRB/TEMPUS_1/TECHFILES/NangateOpenCellLibrary_slow_conditional_ccs.lib.
+[03/22 12:35:35     11s] Read 134 cells in library NangateOpenCellLibrary.
+[03/22 12:35:35     11s] Library reading multithread flow ended.
+[03/22 12:35:35     11s] Ending "PreSetAnalysisView" (total cpu=0:00:01.5, real=0:00:00.0, peak res=968.1M, current mem=771.1M)
+[03/22 12:35:35     11s] *** End library_loading (cpu=0.02min, real=0.00min, mem=196.0M, fe_cpu=0.19min, fe_real=0.92min, fe_mem=973.8M) ***
+[03/22 12:35:35     11s] #% Begin Load netlist data ... (date=03/22 12:35:35, mem=771.1M)
+[03/22 12:35:35     11s] *** Begin netlist parsing (mem=973.8M) ***
+[03/22 12:35:35     11s] Reading verilog netlist '../NETLIST/mcrb_opt.v'
+[03/22 12:35:35     11s] 
+[03/22 12:35:35     11s] *** Memory Usage v#1 (Current mem = 1125.832M, initial mem = 299.711M) ***
+[03/22 12:35:35     11s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1125.8M) ***
+[03/22 12:35:36     11s] #% End Load netlist data ... (date=03/22 12:35:36, total cpu=0:00:00.2, real=0:00:01.0, peak res=867.2M, current mem=867.2M)
+[03/22 12:35:36     11s] Top level cell is mcrb.
+[03/22 12:35:36     11s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+[03/22 12:35:36     11s] late library set: default_emulate_libset_max
+[03/22 12:35:36     11s] early library set: default_emulate_libset_min
+[03/22 12:35:36     11s] Completed consistency checks. Status: Successful
+[03/22 12:35:36     11s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+[03/22 12:35:36     11s] late library set: default_emulate_libset_max
+[03/22 12:35:36     11s] early library set: default_emulate_libset_min
+[03/22 12:35:36     11s] Completed consistency checks. Status: Successful
+[03/22 12:35:36     11s] Ending "BindLib:" (total cpu=0:00:00.0, real=0:00:00.0, peak res=901.2M, current mem=901.2M)
+[03/22 12:35:36     11s] Building hierarchical netlist for Cell mcrb ...
+[03/22 12:35:36     11s] *** Netlist is unique.
+[03/22 12:35:36     11s] ** info: there are 135 modules.
+[03/22 12:35:36     11s] ** info: there are 23 stdCell insts.
+[03/22 12:35:36     11s] 
+[03/22 12:35:36     11s] *** Memory Usage v#1 (Current mem = 1309.777M, initial mem = 299.711M) ***
+[03/22 12:35:36     11s] Set Default Net Delay as 1000 ps.
+[03/22 12:35:36     11s] Set Default Net Load as 0.5 pF. 
+[03/22 12:35:36     11s] Set Default Input Pin Transition as 0.1 ps.
+[03/22 12:35:36     11s] Extraction setup Started 
+[03/22 12:35:36     11s] Summary of Active RC-Corners : 
+[03/22 12:35:36     11s]  
+[03/22 12:35:36     11s]  Analysis View: default_emulate_view
+[03/22 12:35:36     11s]     RC-Corner Name        : default_emulate_rc_corner
+[03/22 12:35:36     11s]     RC-Corner Index       : 0
+[03/22 12:35:36     11s]     RC-Corner Temperature : 25 Celsius
+[03/22 12:35:36     11s]     RC-Corner Cap Table   : ''
+[03/22 12:35:36     11s]     RC-Corner PostRoute Res Factor        : 1
+[03/22 12:35:36     11s]     RC-Corner PostRoute Cap Factor        : 1
+[03/22 12:35:36     11s]     RC-Corner PostRoute XCap Factor       : 1
+[03/22 12:35:36     11s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+[03/22 12:35:36     11s] late library set: default_emulate_libset_max
+[03/22 12:35:36     11s] early library set: default_emulate_libset_min
+[03/22 12:35:36     11s] Completed consistency checks. Status: Successful
+[03/22 12:35:36     11s] Ending "SetAnalysisView" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1213.1M, current mem=997.1M)
+[03/22 12:35:36     11s] Reading timing constraints file '/dev/null' ...
+[03/22 12:35:36     11s] Current (total cpu=0:00:11.6, real=0:00:56.0, peak res=1215.5M, current mem=1215.5M)
+[03/22 12:35:36     11s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[03/22 12:35:36     11s] Creating Cell Server ...(0, 1, 1, 1)
+[03/22 12:35:36     11s] Summary for sequential cells identification: 
+[03/22 12:35:36     11s]   Identified SBFF number: 16
+[03/22 12:35:36     11s]   Identified MBFF number: 0
+[03/22 12:35:36     11s]   Identified SB Latch number: 0
+[03/22 12:35:36     11s]   Identified MB Latch number: 0
+[03/22 12:35:36     11s]   Not identified SBFF number: 0
+[03/22 12:35:36     11s]   Not identified MBFF number: 0
+[03/22 12:35:36     11s]   Not identified SB Latch number: 0
+[03/22 12:35:36     11s]   Not identified MB Latch number: 0
+[03/22 12:35:36     11s]   Number of sequential cells which are not FFs: 13
+[03/22 12:35:36     11s] Total number of combinational cells: 92
+[03/22 12:35:36     11s] Total number of sequential cells: 29
+[03/22 12:35:36     11s] Total number of tristate cells: 6
+[03/22 12:35:36     11s] Total number of level shifter cells: 0
+[03/22 12:35:36     11s] Total number of power gating cells: 0
+[03/22 12:35:36     11s] Total number of isolation cells: 0
+[03/22 12:35:36     11s] Total number of power switch cells: 0
+[03/22 12:35:36     11s] Total number of pulse generator cells: 0
+[03/22 12:35:36     11s] Total number of always on buffers: 0
+[03/22 12:35:36     11s] Total number of retention cells: 0
+[03/22 12:35:36     11s] List of usable buffers: BUF_X1 BUF_X2 BUF_X4 BUF_X8 CLKBUF_X1 CLKBUF_X3 CLKBUF_X2
+[03/22 12:35:36     11s] Total number of usable buffers: 7
+[03/22 12:35:36     11s] List of unusable buffers:
+[03/22 12:35:36     11s] Total number of unusable buffers: 0
+[03/22 12:35:36     11s] List of usable inverters: INV_X1 INV_X16 INV_X2 INV_X32 INV_X8 INV_X4
+[03/22 12:35:36     11s] Total number of usable inverters: 6
+[03/22 12:35:36     11s] List of unusable inverters:
+[03/22 12:35:36     11s] Total number of unusable inverters: 0
+[03/22 12:35:36     11s] List of identified usable delay cells: BUF_X16 BUF_X32
+[03/22 12:35:36     11s] Total number of identified usable delay cells: 2
+[03/22 12:35:36     11s] List of identified unusable delay cells:
+[03/22 12:35:36     11s] Total number of identified unusable delay cells: 0
+[03/22 12:35:36     11s] Creating Cell Server, finished. 
+[03/22 12:35:36     11s] 
+[03/22 12:35:36     11s] Deleting Cell Server ...
+[03/22 12:35:36     11s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1244.1M, current mem=1244.1M)
+[03/22 12:35:36     11s] Creating Cell Server ...(0, 0, 0, 0)
+[03/22 12:35:36     11s] Summary for sequential cells identification: 
+[03/22 12:35:36     11s]   Identified SBFF number: 16
+[03/22 12:35:36     11s]   Identified MBFF number: 0
+[03/22 12:35:36     11s]   Identified SB Latch number: 0
+[03/22 12:35:36     11s]   Identified MB Latch number: 0
+[03/22 12:35:36     11s]   Not identified SBFF number: 0
+[03/22 12:35:36     11s]   Not identified MBFF number: 0
+[03/22 12:35:36     11s]   Not identified SB Latch number: 0
+[03/22 12:35:36     11s]   Not identified MB Latch number: 0
+[03/22 12:35:36     11s]   Number of sequential cells which are not FFs: 13
+[03/22 12:35:36     11s]  Visiting view : default_emulate_view
+[03/22 12:35:36     11s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/22 12:35:36     11s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/22 12:35:36     11s]  Visiting view : default_emulate_view
+[03/22 12:35:36     11s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/22 12:35:36     11s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/22 12:35:36     11s] Creating Cell Server, finished. 
+[03/22 12:35:36     11s] 
+[03/22 12:35:36     11s] Extraction setup Started 
+[03/22 12:35:36     11s] Summary of Active RC-Corners : 
+[03/22 12:35:36     11s]  
+[03/22 12:35:36     11s]  Analysis View: default_emulate_view
+[03/22 12:35:36     11s]     RC-Corner Name        : default_emulate_rc_corner
+[03/22 12:35:36     11s]     RC-Corner Index       : 0
+[03/22 12:35:36     11s]     RC-Corner Temperature : 125 Celsius
+[03/22 12:35:36     11s]     RC-Corner Cap Table   : ''
+[03/22 12:35:36     11s]     RC-Corner PostRoute Res Factor        : 1
+[03/22 12:35:36     11s]     RC-Corner PostRoute Cap Factor        : 1
+[03/22 12:35:36     11s]     RC-Corner PostRoute XCap Factor       : 1
+[03/22 12:35:36     11s] Extraction setup Started 
+[03/22 12:35:36     11s] Summary of Active RC-Corners : 
+[03/22 12:35:36     11s]  
+[03/22 12:35:36     11s]  Analysis View: default_emulate_view
+[03/22 12:35:36     11s]     RC-Corner Name        : default_emulate_rc_corner
+[03/22 12:35:36     11s]     RC-Corner Index       : 0
+[03/22 12:35:36     11s]     RC-Corner Temperature : 125 Celsius
+[03/22 12:35:36     11s]     RC-Corner Cap Table   : ''
+[03/22 12:35:36     11s]     RC-Corner PostRoute Res Factor        : 1
+[03/22 12:35:36     11s]     RC-Corner PostRoute Cap Factor        : 1
+[03/22 12:35:36     11s]     RC-Corner PostRoute XCap Factor       : 1
+[03/22 12:35:36     11s] Extraction setup Started 
+[03/22 12:35:36     11s] Summary of Active RC-Corners : 
+[03/22 12:35:36     11s]  
+[03/22 12:35:36     11s]  Analysis View: default_emulate_view
+[03/22 12:35:36     11s]     RC-Corner Name        : default_emulate_rc_corner
+[03/22 12:35:36     11s]     RC-Corner Index       : 0
+[03/22 12:35:36     11s]     RC-Corner Temperature : 125 Celsius
+[03/22 12:35:36     11s]     RC-Corner Cap Table   : ''
+[03/22 12:35:36     11s]     RC-Corner PostRoute Res Factor        : 1
+[03/22 12:35:36     11s]     RC-Corner PostRoute Cap Factor        : 1
+[03/22 12:35:36     11s]     RC-Corner PostRoute XCap Factor       : 1
+[03/22 12:35:36     11s] Multithreaded Timing Analysis is initialized with 8 threads
+[03/22 12:35:36     11s] 
+[03/22 12:35:36     11s] <CMD> read_sdc ../SDC/mcrb.sdc
+[03/22 12:35:36     11s] Current (total cpu=0:00:11.8, real=0:00:56.0, peak res=1282.8M, current mem=1282.8M)
+[03/22 12:35:36     11s] ERROR (CTE-2): scripts aborted prematurely, turning off message_verbosity.
+[03/22 12:35:36     11s] 
+[03/22 12:35:36     11s] 
+[03/22 12:35:36     11s] ERROR (CTE-27): Reading of timing constraints file aborted prematurely missing close-bracket
+[03/22 12:35:36     11s]     while executing
+[03/22 12:35:36     11s] "set_input_delay 0.5 -clock [get_clocks sclk] [remove_from_collection [all_inputs] ["
+[03/22 12:35:36     11s]     (file "../SDC/mcrb.sdc" line 3)
+[03/22 12:35:36     11s] ---
+[03/22 12:35:36     11s]     invoked from within
+[03/22 12:35:36     11s] "__source ../SDC/mcrb.sdc"
+[03/22 12:35:36     11s]     ("uplevel" body line 1)
+[03/22 12:35:36     11s]     invoked from within
+[03/22 12:35:36     11s] "uplevel #0 __source ../SDC/mcrb.sdc"
+[03/22 12:35:36     11s]     ("eval" body line 1)
+[03/22 12:35:36     11s]     invoked from within
+[03/22 12:35:36     11s] "eval "uplevel #0 $::syn2ambit::source_cmd $::syn2ambit::tcl_file_G"".
+[03/22 12:35:36     11s] 
+[03/22 12:35:36     11s] **ERROR: (IMPCTE-2):	Scripts terminated prematurely. Turning off message_verbosity.
+[03/22 12:35:36     11s] **ERROR: (IMPCTE-27):	read_dc_script terminated prematurely 
+[03/22 12:35:36     11s] <CMD> set_delay_cal_mode -siAware true
+[03/22 12:35:36     11s] AAE_INFO: switching -siAware from false to true ...
+[03/22 12:35:36     11s] <CMD> set_si_mode -enable_delay_report true
+[03/22 12:35:36     11s] <CMD> set_si_mode -enable_glitch_report true
+[03/22 12:35:36     11s] <CMD> set_si_mode -enable_glitch_propagation true
+[03/22 12:35:36     11s] <CMD> set_global timing_pba_exhaustive_path_nworst_limit 2
+[03/22 12:35:36     11s] <CMD> set_global timing_path_based_exhaustive_max_paths_limit 1000
+[03/22 12:35:36     11s] <CMD> update_timing -full
+[03/22 12:35:36     11s] **WARN: (IMPESI-3468):	User needs to specify -equivalent_waveform_model propagation first before specifying -waveform_compression_mode accurate|clock_detailed .
+[03/22 12:35:36     11s] AAE DB initialization (MEM=1688.21 CPU=0:00:00.0 REAL=0:00:00.0) 
+[03/22 12:35:36     11s] #################################################################################
+[03/22 12:35:36     11s] # Design Name: mcrb
+[03/22 12:35:36     11s] # Design Mode: 65nm
+[03/22 12:35:36     11s] # Analysis Mode: MMMC OCV 
+[03/22 12:35:36     11s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 12:35:36     11s] # Signoff Settings: SI On 
+[03/22 12:35:36     11s] #################################################################################
+[03/22 12:35:36     12s] Topological Sorting (REAL = 0:00:00.0, MEM = 1827.9M, InitMEM = 1827.9M)
+[03/22 12:35:36     12s] Start delay calculation (fullDC) (8 T). (MEM=1836.07)
+[03/22 12:35:36     12s] Start AAE Lib Loading. (MEM=1836.07)
+[03/22 12:35:36     12s] End AAE Lib Loading. (MEM=1836.07 CPU=0:00:00.0 Real=0:00:00.0)
+[03/22 12:35:36     12s] End AAE Lib Interpolated Model. (MEM=1836.07 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[03/22 12:35:36     12s] Total number of fetched objects 33
+[03/22 12:35:36     12s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[03/22 12:35:36     12s] End delay calculation. (MEM=2300.64 CPU=0:00:00.1 REAL=0:00:00.0)
+[03/22 12:35:36     12s] End delay calculation (fullDC). (MEM=2300.64 CPU=0:00:00.2 REAL=0:00:00.0)
+[03/22 12:35:36     12s] *** CDM Built up (cpu=0:00:00.3  real=0:00:00.0  mem= 2300.6M) ***
+[03/22 12:35:36     12s] <CMD> report_timing
+[03/22 12:35:36     12s] <CMD> report_timing -max_paths 10000000 -retime path_slew_propagation -retime_mode exhaustive -max_slack 0.200 > epba_${DATE}.rpt
+[03/22 12:35:37     12s] <CMD> report_noise -txtfile reports_Mar22-12:35:35/glitch.rpt
+[03/22 12:35:37     12s] Output report file name prefix is reports_Mar22-12:35:35/glitch.rpt 
+[03/22 12:35:37     12s] **ERROR: (IMPESI-2109):	Glitch results are not available for reporting. Ensure that parasitics are correctly annotated for all active RC corners, and glitch analysis has also been performed before running report_noise.
+<CMD> check_design -type timing -out_file reports_Mar22-12:35:35/check_design.rpt
+[03/22 12:35:37     12s] Output file 'reports_Mar22-12:35:35/check_design.rpt' created. Sourcing this file will create a $design_checks TCL dictionary that can be parsed for more information.
+[03/22 12:35:37     12s] *** Message Summary: 0 warning(s), 0 error(s)
+[03/22 12:35:37     12s] 
+[03/22 12:35:37     12s] <CMD> check_timing -verbose > ${reportDir}/check_timing.rpt
+[03/22 12:35:37     12s] <CMD> report_annotated_parasitics > reports_Mar22-12:35:35/annotated.rpt
+[03/22 12:35:37     12s] **WARN: (IMPEXT-6165):	Command report_annotated_parasitics is issued before the parasitic data is made available. Parasitic annotation summary will be reported with zero parasitic data. Load the parasitic data for correct annotation report before issuing report_annotated_parasitics.
+[03/22 12:35:37     12s] <CMD> report_analysis_coverage            > ${reportDir}/coverage.rpt
+[03/22 12:35:37     12s] <CMD> report_clocks                       > ${reportDir}/clocks.rpt
+[03/22 12:35:37     12s] <CMD> report_case_analysis                > ${reportDir}/case_analysis.rpt
+[03/22 12:35:37     12s] <CMD> report_inactive_arcs                > ${reportDir}/inactive_arcs.rpt
+[03/22 12:35:37     12s] <CMD> report_constraint -all_violators > reports_Mar22-12:35:35/allviol.rpt
+[03/22 12:35:37     12s] <CMD> report_analysis_summary                                         > ${reportDir}/analysis_summary.rpt
+[03/22 12:35:37     12s] <CMD> report_timing -path_type summary_slack_only -late -max_paths 5  > ${reportDir}/start_end_slack.rpt
+[03/22 12:35:37     12s] <CMD> report_timing -late   -max_paths 50 -nworst 1 -path_type full_clock -net  > ${reportDir}/worst_max_path.rpt
+[03/22 12:35:37     12s] <CMD> report_timing -early  -max_paths 50 -nworst 1 -path_type full_clock -net  > ${reportDir}/worst_min_path.rpt
+[03/22 12:35:37     12s] <CMD> report_timing -path_type end_slack_only                       > ${reportDir}/setup_1.rpt
+[03/22 12:35:37     12s] <CMD> report_timing -path_type end_slack_only  -early               > ${reportDir}/hold_1.rpt
+[03/22 12:35:37     12s] <CMD> report_timing -late    -max_paths 100                         > ${reportDir}/setup_100.rpt.gz
+[03/22 12:35:37     12s] <CMD> report_timing -early   -max_paths 100                         > ${reportDir}/hold_100.rpt.gz
+[03/22 12:35:37     12s] <CMD> report_timing -retime path_slew_propagation -max_paths 50 -nworst 1 -path_type full_clock    > ${reportDir}/pba_50_paths.rpt
+[03/22 12:35:37     12s] **ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+[03/22 12:35:37     12s] **ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+[03/22 12:35:37     12s] **ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+[03/22 12:35:37     12s] **ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+[03/22 12:35:37     12s] **ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+[03/22 12:35:37     12s] **ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+[03/22 12:35:37     12s] **ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+[03/22 12:35:37     12s] **ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+[03/22 12:35:37     12s] INFO: Path Based Analysis (PBA) performed on total '12' paths
+[03/22 12:35:37     12s] All done
+[03/22 12:35:37     12s] Loading  (mcrb)
+[03/22 12:35:37     12s] Traverse HInst (mcrb)
+[03/22 12:35:37     12s] Deleting Cell Server ...
+[03/22 12:35:37     12s] Creating Cell Server ...(0, 0, 0, 0)
+[03/22 12:35:37     12s] Summary for sequential cells identification: 
+[03/22 12:35:37     12s]   Identified SBFF number: 16
+[03/22 12:35:37     12s]   Identified MBFF number: 0
+[03/22 12:35:37     12s]   Identified SB Latch number: 0
+[03/22 12:35:37     12s]   Identified MB Latch number: 0
+[03/22 12:35:37     12s]   Not identified SBFF number: 0
+[03/22 12:35:37     12s]   Not identified MBFF number: 0
+[03/22 12:35:37     12s]   Not identified SB Latch number: 0
+[03/22 12:35:37     12s]   Not identified MB Latch number: 0
+[03/22 12:35:37     12s]   Number of sequential cells which are not FFs: 13
+[03/22 12:35:37     12s]  Visiting view : default_emulate_view
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/22 12:35:37     12s]  Visiting view : default_emulate_view
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/22 12:35:37     12s] Creating Cell Server, finished. 
+[03/22 12:35:37     12s] 
+[03/22 12:35:37     12s] Deleting Cell Server ...
+[03/22 12:35:37     12s] Creating Cell Server ...(0, 0, 0, 0)
+[03/22 12:35:37     12s] Summary for sequential cells identification: 
+[03/22 12:35:37     12s]   Identified SBFF number: 16
+[03/22 12:35:37     12s]   Identified MBFF number: 0
+[03/22 12:35:37     12s]   Identified SB Latch number: 0
+[03/22 12:35:37     12s]   Identified MB Latch number: 0
+[03/22 12:35:37     12s]   Not identified SBFF number: 0
+[03/22 12:35:37     12s]   Not identified MBFF number: 0
+[03/22 12:35:37     12s]   Not identified SB Latch number: 0
+[03/22 12:35:37     12s]   Not identified MB Latch number: 0
+[03/22 12:35:37     12s]   Number of sequential cells which are not FFs: 13
+[03/22 12:35:37     12s]  Visiting view : default_emulate_view
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/22 12:35:37     12s]  Visiting view : default_emulate_view
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/22 12:35:37     12s] Creating Cell Server, finished. 
+[03/22 12:35:37     12s] 
+[03/22 12:35:37     12s] Deleting Cell Server ...
+[03/22 12:35:37     12s] Creating Cell Server ...(0, 0, 0, 0)
+[03/22 12:35:37     12s] Summary for sequential cells identification: 
+[03/22 12:35:37     12s]   Identified SBFF number: 16
+[03/22 12:35:37     12s]   Identified MBFF number: 0
+[03/22 12:35:37     12s]   Identified SB Latch number: 0
+[03/22 12:35:37     12s]   Identified MB Latch number: 0
+[03/22 12:35:37     12s]   Not identified SBFF number: 0
+[03/22 12:35:37     12s]   Not identified MBFF number: 0
+[03/22 12:35:37     12s]   Not identified SB Latch number: 0
+[03/22 12:35:37     12s]   Not identified MB Latch number: 0
+[03/22 12:35:37     12s]   Number of sequential cells which are not FFs: 13
+[03/22 12:35:37     12s]  Visiting view : default_emulate_view
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/22 12:35:37     12s]  Visiting view : default_emulate_view
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/22 12:35:37     12s] Creating Cell Server, finished. 
+[03/22 12:35:37     12s] 
+[03/22 12:35:37     12s] Deleting Cell Server ...
+[03/22 12:35:37     12s] Creating Cell Server ...(0, 0, 0, 0)
+[03/22 12:35:37     12s] Summary for sequential cells identification: 
+[03/22 12:35:37     12s]   Identified SBFF number: 16
+[03/22 12:35:37     12s]   Identified MBFF number: 0
+[03/22 12:35:37     12s]   Identified SB Latch number: 0
+[03/22 12:35:37     12s]   Identified MB Latch number: 0
+[03/22 12:35:37     12s]   Not identified SBFF number: 0
+[03/22 12:35:37     12s]   Not identified MBFF number: 0
+[03/22 12:35:37     12s]   Not identified SB Latch number: 0
+[03/22 12:35:37     12s]   Not identified MB Latch number: 0
+[03/22 12:35:37     12s]   Number of sequential cells which are not FFs: 13
+[03/22 12:35:37     12s]  Visiting view : default_emulate_view
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/22 12:35:37     12s]  Visiting view : default_emulate_view
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/22 12:35:37     12s] Creating Cell Server, finished. 
+[03/22 12:35:37     12s] 
+[03/22 12:35:37     12s] Deleting Cell Server ...
+[03/22 12:35:37     12s] Creating Cell Server ...(0, 0, 0, 0)
+[03/22 12:35:37     12s] Summary for sequential cells identification: 
+[03/22 12:35:37     12s]   Identified SBFF number: 16
+[03/22 12:35:37     12s]   Identified MBFF number: 0
+[03/22 12:35:37     12s]   Identified SB Latch number: 0
+[03/22 12:35:37     12s]   Identified MB Latch number: 0
+[03/22 12:35:37     12s]   Not identified SBFF number: 0
+[03/22 12:35:37     12s]   Not identified MBFF number: 0
+[03/22 12:35:37     12s]   Not identified SB Latch number: 0
+[03/22 12:35:37     12s]   Not identified MB Latch number: 0
+[03/22 12:35:37     12s]   Number of sequential cells which are not FFs: 13
+[03/22 12:35:37     12s]  Visiting view : default_emulate_view
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/22 12:35:37     12s]  Visiting view : default_emulate_view
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/22 12:35:37     12s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/22 12:35:37     12s] Creating Cell Server, finished. 
+[03/22 12:35:37     12s] 
+[03/22 12:35:37     12s] Deleting Cell Server ...
+[03/22 12:40:07     30s] -checkType setup                           # enums={setup hold}, default=setup
+[03/22 12:40:14     30s] <CMD> get_time_unit
+[03/22 12:40:14     30s] <CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -early > top.mtarpt
+[03/22 12:40:14     30s] <CMD> load_timing_debug_report -name default_report top.mtarpt
+[03/22 12:40:14     30s] Parsing file top.mtarpt...
+[03/22 12:42:59     43s] <CMD> selectInst {skew_addr_cntr_reg[0]}
+[03/22 12:43:00     43s] <CMD> deselectInst {skew_addr_cntr_reg[0]}
+[03/22 12:45:47     54s] <CMD> selectObject Net gctl_rclk_orst_n_i
+[03/22 12:45:49     54s] <CMD> deselectObject Net gctl_rclk_orst_n_i
+[03/22 12:45:49     54s] <CMD> selectObject Net {skew_addr_cntr_o[0]}
+[03/22 12:48:38     65s] -checkType setup                           # enums={setup hold}, default=setup
+[03/22 12:48:44     65s] <CMD> get_time_unit
+[03/22 12:48:44     65s] <CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -early > top.mtarpt
+[03/22 12:48:44     65s] <CMD> load_timing_debug_report -name default_report top.mtarpt
+[03/22 12:48:44     65s] Parsing file top.mtarpt...
+[03/22 12:51:45     77s] -checkType setup                           # enums={setup hold}, default=setup
+[03/22 12:52:13     79s] <CMD> get_time_unit
+[03/22 12:52:13     79s] <CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -retime aocv -path_exceptions all -early > top.mtarpt
+[03/22 12:52:13     79s] **ERROR: (TCLCMD-1237):	AOCV analysis could not be done as either AOCV mode in timing analysis is not turned on or AOCV libraries are not read. To proceed further, please load AOCV library if it is not read and set the analysis mode to aocv.
+
+[03/22 12:52:13     79s] **WARN: (IMPSYT-3142):	<CMD> analyze_paths_by_basic_path_group
+[03/22 12:52:56     82s] INFO(analyze_paths_by_basic_path_group):  examined 12 paths.
+[03/22 12:52:56     82s] INFO(analyze_paths_by_basic_path_group):  created 1 groups.
+[03/22 12:53:36     85s] <CMD> analyze_paths_by_clock_domain
+[03/22 12:53:36     85s] INFO(analyze_paths_by_clock_domain):  examined 12 paths.
+[03/22 12:53:36     85s] INFO(analyze_paths_by_clock_domain):  created 1 clock-domain based groups.
+[03/22 13:02:02    118s] INFO:  processing SDC file "/dev/null" for SDC<->STA report cross-probing....
+[03/22 13:02:02    118s] INFO:  processed 0 commands in 0 lines from file "/dev/null", with 0 errors.
+[03/22 13:02:02    118s] INFO:  registered 0 SDC constraints for cross-probing.
+[03/22 13:02:02    118s] INFO:  processing SDC file "/tmp/ssv_tmpdir_36075_TQD0nj/BinarySdcB8JcTY/mmmc/modes/default_emulate_constraint_mode/default_emulate_constraint_mode.sdc" for SDC<->STA report cross-probing....
+[03/22 13:02:02    118s] INFO:  processed 2 commands in 8 lines from file "/tmp/ssv_tmpdir_36075_TQD0nj/BinarySdcB8JcTY/mmmc/modes/default_emulate_constraint_mode/default_emulate_constraint_mode.sdc", with 0 errors.
+[03/22 13:02:02    118s] INFO:  registered 2 SDC constraints for cross-probing.
+[03/22 13:02:28    119s] <CMD> all_setup_analysis_views
+[03/22 13:02:28    119s] <CMD> all_setup_analysis_views
+[03/22 13:02:28    119s] <CMD> all_hold_analysis_views
+[03/22 13:02:28    119s] <CMD> get_analysis_view $view -delay_corner
+[03/22 13:02:28    119s] <CMD> get_delay_corner $dc -rc_corner
+[03/22 13:02:33    120s] <CMD> all_setup_analysis_views
+[03/22 13:02:33    120s] <CMD> all_setup_analysis_views
+[03/22 13:02:33    120s] <CMD> all_hold_analysis_views
+[03/22 13:02:33    120s] <CMD> get_analysis_view $view -delay_corner
+[03/22 13:02:33    120s] <CMD> get_delay_corner $dc -rc_corner
+[03/22 13:02:40    120s] **ERROR: (IMPQTF-4005):	Cannot find item 'addbufapplyb1' in form 'ecoopt'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+**ERROR: (IMPQTF-4005):	Cannot find item 'addbufapplyb2' in form 'ecoopt'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+**ERROR: (IMPQTF-4005):	Cannot find item 'delbufapplyb1' in form 'ecoopt'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+<CMD> change_cell -inst {skew_addr_cntr_reg[0]} -cell DFFR_X1
+[03/22 13:03:34    124s] #################################################################################
+[03/22 13:03:34    124s] # Design Name: mcrb
+[03/22 13:03:34    124s] # Design Mode: 65nm
+[03/22 13:03:34    124s] # Analysis Mode: MMMC OCV 
+[03/22 13:03:34    124s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:03:34    124s] # Signoff Settings: SI On 
+[03/22 13:03:34    124s] #################################################################################
+[03/22 13:03:34    124s] #################################################################################
+[03/22 13:03:34    124s] # Design Name: mcrb
+[03/22 13:03:34    124s] # Design Mode: 65nm
+[03/22 13:03:34    124s] # Analysis Mode: MMMC OCV 
+[03/22 13:03:34    124s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:03:34    124s] # Signoff Settings: SI On 
+[03/22 13:03:34    124s] #################################################################################
+[03/22 13:03:34    124s] #################################################################################
+[03/22 13:03:34    124s] # Design Name: mcrb
+[03/22 13:03:34    124s] # Design Mode: 65nm
+[03/22 13:03:34    124s] # Analysis Mode: MMMC OCV 
+[03/22 13:03:34    124s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:03:34    124s] # Signoff Settings: SI On 
+[03/22 13:03:34    124s] #################################################################################
+[03/22 13:03:34    124s] #################################################################################
+[03/22 13:03:34    124s] # Design Name: mcrb
+[03/22 13:03:34    124s] # Design Mode: 65nm
+[03/22 13:03:34    124s] # Analysis Mode: MMMC OCV 
+[03/22 13:03:34    124s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:03:34    124s] # Signoff Settings: SI On 
+[03/22 13:03:34    124s] #################################################################################
+[03/22 13:03:34    124s] #################################################################################
+[03/22 13:03:34    124s] # Design Name: mcrb
+[03/22 13:03:34    124s] # Design Mode: 65nm
+[03/22 13:03:34    124s] # Analysis Mode: MMMC OCV 
+[03/22 13:03:34    124s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:03:34    124s] # Signoff Settings: SI On 
+[03/22 13:03:34    124s] #################################################################################
+[03/22 13:03:34    124s] #################################################################################
+[03/22 13:03:34    124s] # Design Name: mcrb
+[03/22 13:03:34    124s] # Design Mode: 65nm
+[03/22 13:03:34    124s] # Analysis Mode: MMMC OCV 
+[03/22 13:03:34    124s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:03:34    124s] # Signoff Settings: SI On 
+[03/22 13:03:34    124s] #################################################################################
+[03/22 13:03:34    124s] Resize skew_addr_cntr_reg[0] (DFFR_X2) to DFFR_X1.
+[03/22 13:03:34    124s] <CMD_INTERNAL> redraw
+[03/22 13:03:45    124s] <CMD> change_cell -inst {skew_addr_cntr_reg[0]} -cell DFFR_X1
+[03/22 13:03:45    124s] #################################################################################
+[03/22 13:03:45    124s] # Design Name: mcrb
+[03/22 13:03:45    124s] # Design Mode: 65nm
+[03/22 13:03:45    124s] # Analysis Mode: MMMC OCV 
+[03/22 13:03:45    124s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:03:45    124s] # Signoff Settings: SI On 
+[03/22 13:03:45    124s] #################################################################################
+[03/22 13:03:45    124s] #################################################################################
+[03/22 13:03:45    124s] # Design Name: mcrb
+[03/22 13:03:45    124s] # Design Mode: 65nm
+[03/22 13:03:45    124s] # Analysis Mode: MMMC OCV 
+[03/22 13:03:45    124s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:03:45    124s] # Signoff Settings: SI On 
+[03/22 13:03:45    124s] #################################################################################
+[03/22 13:03:45    124s] #################################################################################
+[03/22 13:03:45    124s] # Design Name: mcrb
+[03/22 13:03:45    124s] # Design Mode: 65nm
+[03/22 13:03:45    124s] # Analysis Mode: MMMC OCV 
+[03/22 13:03:45    124s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:03:45    124s] # Signoff Settings: SI On 
+[03/22 13:03:45    124s] #################################################################################
+[03/22 13:03:45    124s] #################################################################################
+[03/22 13:03:45    124s] # Design Name: mcrb
+[03/22 13:03:45    124s] # Design Mode: 65nm
+[03/22 13:03:45    124s] # Analysis Mode: MMMC OCV 
+[03/22 13:03:45    124s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:03:45    124s] # Signoff Settings: SI On 
+[03/22 13:03:45    124s] #################################################################################
+[03/22 13:03:45    124s] #################################################################################
+[03/22 13:03:45    124s] # Design Name: mcrb
+[03/22 13:03:45    124s] # Design Mode: 65nm
+[03/22 13:03:45    124s] # Analysis Mode: MMMC OCV 
+[03/22 13:03:45    124s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:03:45    124s] # Signoff Settings: SI On 
+[03/22 13:03:45    124s] #################################################################################
+[03/22 13:03:45    124s] Resize skew_addr_cntr_reg[0] (DFFR_X1) to DFFR_X1.
+[03/22 13:03:45    124s] Parsing file eco.mtarpt...
+[03/22 13:03:45    124s] **WARN: (IMPGTD-801):	File (eco.mtarpt) does not contain any timing paths.
+[03/22 13:03:45    124s] This could be because the report is not of the correct format,
+[03/22 13:03:45    124s] or because it does not contain any paths (because there are no
+[03/22 13:03:45    124s] failing paths in the design, for instance).
+[03/22 13:03:45    124s] **ERROR: (IMPQTF-4044):	Error occurs when '::Rda_Timing::EcoOpt::applylist ecoopt ecolist' is executed with the error message: ''. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+**ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::pathList:tipcb etsgtd@frameOnly 0 3' is executed with the error message: 'ERROR: TA report not loaded in.'. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+**ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::pathList:tipcb etsgtd@frameOnly 0 3' is executed with the error message: 'ERROR: TA report not loaded in.'. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+<CMD> change_cell -inst {skew_addr_cntr_reg[0]} -cell DFFR_X2
+[03/22 13:04:08    126s] #################################################################################
+[03/22 13:04:08    126s] # Design Name: mcrb
+[03/22 13:04:08    126s] # Design Mode: 65nm
+[03/22 13:04:08    126s] # Analysis Mode: MMMC OCV 
+[03/22 13:04:08    126s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:04:08    126s] # Signoff Settings: SI On 
+[03/22 13:04:08    126s] #################################################################################
+[03/22 13:04:08    126s] #################################################################################
+[03/22 13:04:08    126s] # Design Name: mcrb
+[03/22 13:04:08    126s] # Design Mode: 65nm
+[03/22 13:04:08    126s] # Analysis Mode: MMMC OCV 
+[03/22 13:04:08    126s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:04:08    126s] # Signoff Settings: SI On 
+[03/22 13:04:08    126s] #################################################################################
+[03/22 13:04:08    126s] #################################################################################
+[03/22 13:04:08    126s] # Design Name: mcrb
+[03/22 13:04:08    126s] # Design Mode: 65nm
+[03/22 13:04:08    126s] # Analysis Mode: MMMC OCV 
+[03/22 13:04:08    126s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:04:08    126s] # Signoff Settings: SI On 
+[03/22 13:04:08    126s] #################################################################################
+[03/22 13:04:08    126s] #################################################################################
+[03/22 13:04:08    126s] # Design Name: mcrb
+[03/22 13:04:08    126s] # Design Mode: 65nm
+[03/22 13:04:08    126s] # Analysis Mode: MMMC OCV 
+[03/22 13:04:08    126s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:04:08    126s] # Signoff Settings: SI On 
+[03/22 13:04:08    126s] #################################################################################
+[03/22 13:04:08    126s] #################################################################################
+[03/22 13:04:08    126s] # Design Name: mcrb
+[03/22 13:04:08    126s] # Design Mode: 65nm
+[03/22 13:04:08    126s] # Analysis Mode: MMMC OCV 
+[03/22 13:04:08    126s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:04:08    126s] # Signoff Settings: SI On 
+[03/22 13:04:08    126s] #################################################################################
+[03/22 13:04:08    126s] Resize skew_addr_cntr_reg[0] (DFFR_X1) to DFFR_X2.
+[03/22 13:04:08    126s] <CMD> redraw
+[03/22 13:04:10    126s] <CMD> change_cell -inst {skew_addr_cntr_reg[0]} -cell DFFR_X1
+[03/22 13:04:10    126s] #################################################################################
+[03/22 13:04:10    126s] # Design Name: mcrb
+[03/22 13:04:10    126s] # Design Mode: 65nm
+[03/22 13:04:10    126s] # Analysis Mode: MMMC OCV 
+[03/22 13:04:10    126s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:04:10    126s] # Signoff Settings: SI On 
+[03/22 13:04:10    126s] #################################################################################
+[03/22 13:04:10    126s] #################################################################################
+[03/22 13:04:10    126s] # Design Name: mcrb
+[03/22 13:04:10    126s] # Design Mode: 65nm
+[03/22 13:04:10    126s] # Analysis Mode: MMMC OCV 
+[03/22 13:04:10    126s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:04:10    126s] # Signoff Settings: SI On 
+[03/22 13:04:10    126s] #################################################################################
+[03/22 13:04:10    126s] #################################################################################
+[03/22 13:04:10    126s] # Design Name: mcrb
+[03/22 13:04:10    126s] # Design Mode: 65nm
+[03/22 13:04:10    126s] # Analysis Mode: MMMC OCV 
+[03/22 13:04:10    126s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:04:10    126s] # Signoff Settings: SI On 
+[03/22 13:04:10    126s] #################################################################################
+[03/22 13:04:10    126s] #################################################################################
+[03/22 13:04:10    126s] # Design Name: mcrb
+[03/22 13:04:10    126s] # Design Mode: 65nm
+[03/22 13:04:10    126s] # Analysis Mode: MMMC OCV 
+[03/22 13:04:10    126s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:04:10    126s] # Signoff Settings: SI On 
+[03/22 13:04:10    126s] #################################################################################
+[03/22 13:04:10    126s] #################################################################################
+[03/22 13:04:10    126s] # Design Name: mcrb
+[03/22 13:04:10    126s] # Design Mode: 65nm
+[03/22 13:04:10    126s] # Analysis Mode: MMMC OCV 
+[03/22 13:04:10    126s] # Parasitics Mode: No SPEF/RCDB 
+[03/22 13:04:10    126s] # Signoff Settings: SI On 
+[03/22 13:04:10    126s] #################################################################################
+[03/22 13:04:10    126s] Resize skew_addr_cntr_reg[0] (DFFR_X2) to DFFR_X1.
+[03/22 13:04:17    127s] **ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+
+[03/22 13:04:33    128s] **ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+
+[03/22 13:04:38    128s] **ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+
+[03/22 13:04:38    128s] **ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+
+[03/22 13:04:38    128s] **ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::dpathList:popup gtdDetail@frameOnly tabfpan1detail 371 21' is executed with the error message: ''. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::dpathList:b1cb gtdDetail@frameOnly tabfpan1detail 371 21 0' is executed with the error message: ''. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+
+[03/22 13:04:39    128s] **ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+
+[03/22 13:04:39    128s] **ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::dpathList:popup gtdDetail@frameOnly tabfpan1detail 346 21' is executed with the error message: ''. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::pathList:popup etsgtd@frameOnly tabfmpan3 299 8' is executed with the error message: 'ERROR: Incorrect usage for command "tdGetPathInfo".'. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**WARN: (EMS-62):	Message <IMPGTD-904> has exceeded the default message display limit of 20.
+[03/22 13:04:56    129s] To avoid this warning, increase the display limit per unique message by
+[03/22 13:04:56    129s] using the set_message -limit <number> command.
+[03/22 13:04:56    129s] The message limit can be removed by using the set_message -no_limit command.
+[03/22 13:04:56    129s] Note that setting a very large number using the set_message -limit command
+[03/22 13:04:56    129s] or removing the message limit using the set_message -no_limit command can
+[03/22 13:04:56    129s] significantly increase the log file size.
+[03/22 13:04:56    129s] To suppress a message, use the set_message -suppress command.
+[03/22 13:04:56    129s] **ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::pathList:popup etsgtd@frameOnly tabfmpan3 299 7' is executed with the error message: 'ERROR: Incorrect usage for command "tdGetPathInfo".'. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+<CMD> report_slack_histogram
+[03/22 13:05:19    131s] 
+[03/22 13:05:19    131s] #####################################################################
+[03/22 13:05:19    131s] # report_slack_histogram at Sat Mar 22 13:05:19 IST 2025
+[03/22 13:05:19    131s] #   slack file: /tmp/ssv_tmpdir_36075_TQD0nj/.histogram.36075.slk
+[03/22 13:05:19    131s] #   format    : not compact, step=0.5 ns
+[03/22 13:05:19    131s] #   slack (ns): target=0.000  violating_only
+[03/22 13:05:19    131s] #####################################################################
+[03/22 13:05:19    131s] 
+[03/22 13:05:19    131s] ---------------------------------------------
+[03/22 13:05:19    131s] | Slack Range (ns)     |  Count  |     Sum  |
+[03/22 13:05:19    131s] +----------------------+---------+----------+
+[03/22 13:05:19    131s] ---------------------------------------------
+[03/22 13:06:18    135s] <CMD> report_slack_histogram -plus_non_violating
+[03/22 13:06:18    135s] 
+[03/22 13:06:18    135s] #####################################################################
+[03/22 13:06:18    135s] # report_slack_histogram at Sat Mar 22 13:06:18 IST 2025
+[03/22 13:06:18    135s] #   slack file: /tmp/ssv_tmpdir_36075_TQD0nj/.histogram.36075.slk
+[03/22 13:06:18    135s] #   format    : not compact, step=0.5 ns
+[03/22 13:06:18    135s] #   slack (ns): target=0.000  plus_non_violating
+[03/22 13:06:18    135s] #####################################################################
+[03/22 13:06:18    135s] 
+[03/22 13:06:18    135s] ---------------------------------------------
+[03/22 13:06:18    135s] | Slack Range (ns)     |  Count  |     Sum  |
+[03/22 13:06:18    135s] +----------------------+---------+----------+
+[03/22 13:06:18    135s] | (  3.005 ~   3.505]  |      5  |        5 |
+[03/22 13:06:18    135s] | (  3.505 ~   4.005]  |      0  |        5 |
+[03/22 13:06:18    135s] | (  4.005 ~   4.505]  |      0  |        5 |
+[03/22 13:06:18    135s] | (  4.505 ~   5.005]  |      1  |        6 |
+[03/22 13:06:18    135s] | (  5.005 ~   5.505]  |      6  |       12 |
+[03/22 13:06:18    135s] ---------------------------------------------
+[03/22 13:06:18    135s] <CMD> redirect -quiet {eval "report_timing -max_paths $num  $pathGroupArgs > $vioFile"} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {set slack($i,$j) [eval calWorstSlack $pathGroupArgs -outfile $slackFile($fromType,$toType)]} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {set slack($i,$j) [calWorstSlack -infile $slackFile($fromType,$toType)]} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {report_slack_clockdomain -plus_non_violating -count -infile $slackFile($fromType,$toType)} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {report_slack_histogram -plus_non_violating -compact -infile $slackFile($fromType,$toType)} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {eval "report_timing -max_paths $num  $pathGroupArgs > $vioFile"} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {set slack($i,$j) [eval calWorstSlack $pathGroupArgs -outfile $slackFile($fromType,$toType)]} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {set slack($i,$j) [calWorstSlack -infile $slackFile($fromType,$toType)]} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {report_slack_clockdomain -plus_non_violating -count -infile $slackFile($fromType,$toType)} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {report_slack_histogram -plus_non_violating -compact -infile $slackFile($fromType,$toType)} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {eval "report_timing -max_paths $num  $pathGroupArgs > $vioFile"} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {set slack($i,$j) [eval calWorstSlack $pathGroupArgs -outfile $slackFile($fromType,$toType)]} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {set slack($i,$j) [calWorstSlack -infile $slackFile($fromType,$toType)]} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {report_slack_clockdomain -plus_non_violating -count -infile $slackFile($fromType,$toType)} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {report_slack_histogram -plus_non_violating -compact -infile $slackFile($fromType,$toType)} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {eval "report_timing -max_paths $num  $pathGroupArgs > $vioFile"} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {set slack($i,$j) [eval calWorstSlack $pathGroupArgs -outfile $slackFile($fromType,$toType)]} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {set slack($i,$j) [calWorstSlack -infile $slackFile($fromType,$toType)]} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {report_slack_clockdomain -plus_non_violating -count -infile $slackFile($fromType,$toType)} > @file40
+[03/22 13:06:18    135s] <CMD> redirect -quiet {report_slack_histogram -plus_non_violating -compact -infile $slackFile($fromType,$toType)} > @file40
+[03/22 13:07:43    140s] <CMD> report_slack_histogram >slack_hist.txt
+[03/22 13:07:43    140s] 
+[03/22 13:07:43    140s] Usage: report_slack_histogram [-help] [-compact] [-early] [-infile <string>]
+[03/22 13:07:43    140s]                               [-late] [-max_slack <float>] [-min_slack <float>]
+[03/22 13:07:43    140s]                               [-outfile <string>] [-plus_non_violating]
+[03/22 13:07:43    140s]                               [-retime {aocv ssta path_slew_propagation aocv_path_slew_propagation}]
+[03/22 13:07:43    140s]                               [-retime_mode {path exhaustive infinite_depth}]
+[03/22 13:07:43    140s]                               [-step <float>] [-target_slack <float>]
+[03/22 13:07:43    140s]                               [-view <string>]
+[03/22 13:07:43    140s] 
+[03/22 13:07:43    140s] **ERROR: (IMPTCM-48):	">slack_hist.txt" is not a legal option for command "report_slack_histogram". Either the current option or an option prior to it is not specified correctly.
+  
+[03/22 13:16:30    173s] **ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+-checkType setup                           # enums={setup hold}, default=setup
+[03/22 13:16:42    174s] <CMD> get_time_unit
+[03/22 13:16:42    174s] <CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -retime aocv -path_exceptions all -early > top.mtarpt
+[03/22 13:16:42    174s] **ERROR: (TCLCMD-1237):	AOCV analysis could not be done as either AOCV mode in timing analysis is not turned on or AOCV libraries are not read. To proceed further, please load AOCV library if it is not read and set the analysis mode to aocv.
+
+[03/22 13:16:42    174s] **WARN: (IMPSYT-3142):	-checkType setup                           # enums={setup hold}, default=setup
+[03/22 13:16:52    175s] <CMD> get_time_unit
+[03/22 13:16:52    175s] <CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -late > top.mtarpt
+[03/22 13:16:52    175s] Parsing file top.mtarpt...
+[03/22 13:16:52    175s] **WARN: (IMPGTD-801):	File (top.mtarpt) does not contain any timing paths.
+[03/22 13:16:52    175s] This could be because the report is not of the correct format,
+[03/22 13:16:52    175s] or because it does not contain any paths (because there are no
+[03/22 13:16:52    175s] failing paths in the design, for instance).
+[03/22 13:16:52    175s] **ERROR: (IMPGTD-223):	load_timing_debug_report top.mtarpt failed.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPGTD-904):	TA report not loaded in. Please load a machine readable timing analysis report using load_timing_debug_report. To generate a machine readable timing analysis report, run report_timing with the -machine_readable option.
+**ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::pathList:popup etsgtd@frameOnly tabfmpan3 157 13' is executed with the error message: 'ERROR: Incorrect usage for command "tdGetPathInfo".'. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+-checkType setup                           # enums={setup hold}, default=setup
+[03/22 13:17:18    176s] <CMD> get_time_unit
+[03/22 13:17:18    176s] <CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -early > top.mtarpt
+[03/22 13:17:18    176s] Parsing file top.mtarpt...
+[03/22 13:21:12    192s] <CMD> report_slack_histogram -plus_non_violating -early -retime -retime_mode exhaustive -outfile setupslack.txt
+[03/22 13:21:12    192s] 
+[03/22 13:21:12    192s] Usage: report_slack_histogram [-help] [-compact] [-early] [-infile <string>]
+[03/22 13:21:12    192s]                               [-late] [-max_slack <float>] [-min_slack <float>]
+[03/22 13:21:12    192s]                               [-outfile <string>] [-plus_non_violating]
+[03/22 13:21:12    192s]                               [-retime {aocv ssta path_slew_propagation aocv_path_slew_propagation}]
+[03/22 13:21:12    192s]                               [-retime_mode {path exhaustive infinite_depth}]
+[03/22 13:21:12    192s]                               [-step <float>] [-target_slack <float>]
+[03/22 13:21:12    192s]                               [-view <string>]
+[03/22 13:21:12    192s] 
+[03/22 13:21:12    192s] **ERROR: (IMPTCM-23):	"-retime_mode" is not a valid enum for "-retime", the allowed values are {aocv ssta path_slew_propagation aocv_path_slew_propagation}.
+  
+[03/22 13:22:25    196s] <CMD> report_slack_histogram -plus_non_violating -early -retime path_slew_propagation -retime_mode exhaustive -outfile setupslack.txt
+[03/22 13:22:57    198s] <CMD> report_slack_histogram -plus_non_violating -late -retime path_slew_propagation -retime_mode exhaustive -outfile holdslack.txt

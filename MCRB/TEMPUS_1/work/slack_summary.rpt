@@ -1,0 +1,120 @@
+Total negative slacks(TNS)=0
+Worst negative slacks(WNS)=0
+Number of timing violation paths=0
+Number of total timing paths=0
+Total negative slacks(TNS)=0
+Worst negative slacks(WNS)=0
+Number of timing violation paths=0
+Number of total timing paths=0
+**WARN: (UI-138):	Unknown parameter.
+Usage: report_slack_category [-clock]
+		 -clock: report slack by clock domain.
+		 *default report slack by path group.
+#####################################################################
+# report_slack_histogram at Sat Mar 22 13:06:18 IST 2025
+#   slack file: ./input_output.slk
+#   format    : compact, step=0.5 ns
+#   slack (ns): target=0.000  plus_non_violating
+#####################################################################
+
+---------------------------------------------
+| Slack Range (ns)     |  Count  |     Sum  |
++----------------------+---------+----------+
+---------------------------------------------
+Total negative slacks(TNS)=0
+Worst negative slacks(WNS)=0
+Number of timing violation paths=0
+Number of total timing paths=0
+Total negative slacks(TNS)=0
+Worst negative slacks(WNS)=0
+Number of timing violation paths=0
+Number of total timing paths=0
+**WARN: (UI-138):	Unknown parameter.
+Usage: report_slack_category [-clock]
+		 -clock: report slack by clock domain.
+		 *default report slack by path group.
+#####################################################################
+# report_slack_histogram at Sat Mar 22 13:06:18 IST 2025
+#   slack file: ./input_register.slk
+#   format    : compact, step=0.5 ns
+#   slack (ns): target=0.000  plus_non_violating
+#####################################################################
+
+---------------------------------------------
+| Slack Range (ns)     |  Count  |     Sum  |
++----------------------+---------+----------+
+---------------------------------------------
+Total negative slacks(TNS)=0
+Worst negative slacks(WNS)=0
+Number of timing violation paths=0
+Number of total timing paths=0
+Total negative slacks(TNS)=0
+Worst negative slacks(WNS)=0
+Number of timing violation paths=0
+Number of total timing paths=0
+**WARN: (UI-138):	Unknown parameter.
+Usage: report_slack_category [-clock]
+		 -clock: report slack by clock domain.
+		 *default report slack by path group.
+#####################################################################
+# report_slack_histogram at Sat Mar 22 13:06:18 IST 2025
+#   slack file: ./register_output.slk
+#   format    : compact, step=0.5 ns
+#   slack (ns): target=0.000  plus_non_violating
+#####################################################################
+
+---------------------------------------------
+| Slack Range (ns)     |  Count  |     Sum  |
++----------------------+---------+----------+
+---------------------------------------------
+Total negative slacks(TNS)=0
+Worst negative slacks(WNS)=0
+Number of timing violation paths=0
+Number of total timing paths=0
+Total negative slacks(TNS)=0
+Worst negative slacks(WNS)=0
+Number of timing violation paths=0
+Number of total timing paths=0
+**WARN: (UI-138):	Unknown parameter.
+Usage: report_slack_category [-clock]
+		 -clock: report slack by clock domain.
+		 *default report slack by path group.
+#####################################################################
+# report_slack_histogram at Sat Mar 22 13:06:18 IST 2025
+#   slack file: ./register_register.slk
+#   format    : compact, step=0.5 ns
+#   slack (ns): target=0.000  plus_non_violating
+#####################################################################
+
+---------------------------------------------
+| Slack Range (ns)     |  Count  |     Sum  |
++----------------------+---------+----------+
+---------------------------------------------
+################################################################
+# report_slack_category at  Sat Mar 22 13:06:18 IST 2025
+# slack files: ./input_output.slk
+#              ./input_register.slk
+#              ./register_output.slk
+#              ./register_register.slk
+################################################################
+# End Point Count (mcrb)
+ ----------------------------------------------
+ |     form/to|	      output|	    register  |
+ +------------+-------------+-----------------+
+ |       input|	          0 |	          0   |
+ |    register|	          0 |	          0   |
+ ----------------------------------------------
+# Total Negative Slack (mcrb)
+ ----------------------------------------------
+ |     form/to|	      output|	    register  |
+ +------------+-------------+-----------------+
+ |       input|	          * |	          *   |
+ |    register|	          * |	          *   |
+ ----------------------------------------------
+# Worst Slack (mcrb)
+ ----------------------------------------------
+ |     form/to|	      output|	    register  |
+ +------------+-------------+-----------------+
+ |       input|	          * |	          *   |
+ |    register|	          * |	          *   |
+ ----------------------------------------------

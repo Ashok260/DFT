@@ -1,0 +1,61 @@
+
+Cadence Tempus(TM) Timing Signoff Solution.
+Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v15.20-p004_1, built Mon Nov 9 12:44:57 PST 2015
+Options:	-nowin -overwrite -log tempus_sta.log 
+Date:		Wed Feb 17 14:14:04 2016
+Host:		vlsj-schritz (x86_64 w/Linux 2.6.18-371.el5) (1core*1cpu* Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz 25600KB)
+OS:		Red Hat Enterprise Linux Client release 5.10 (Tikanga)
+
+License:
+		tpsxl	Tempus Timing Signoff Solution XL	15.2	checkout succeeded
+environment variable TMPDIR is '/tmp/tempus_tmpdir_8146_R8oTwB'.
+Sourcing tcl/tk file "/home/schritz/.tpsrc" ...
+Starting user home directory file ~/.tpsrc
+<CMD> get_distribute_host -help
+
+Usage: get_distribute_host [-help] [-args] [-custom_script] [-hosts] [-mode] [-queue] [-reportLsfInfo <file>] [-resource] [-shellTimeout] [-single_cpu_lsf_args] [-timeOut]
+                           [-waitForLsfInfo <integer>]
+
+-help                         # Prints out the command usage
+-args                         # Get additional arguments to use with the LSF/SGE submit command (bsub/qsub). Example: -x -P PROJ1 -W 10. (bool, optional)
+-custom_script                # Get the custom job submission script for distributed processing if the mode is set to "custom". (bool, optional)
+-hosts                        # Get the list of hosts for distributed processing via rsh/ssh. A host can be named multiple times (bool, optional)
+-mode                         # Get the distributed processing mode (lsf|rsh|ssh|sge|local|custom) (bool, optional)
+-queue                        # Get the name of the job submission queue for LSF or SGE (Sun Grid Engine) queuing systems. (bool, optional)
+-reportLsfInfo <file>         # Restore the lsf resource to file (string, optional)
+-resource                     # Get the resource string for LSF or SGE queuing systems (bool, optional)
+-shellTimeout                 # Get the value of the rsh/ssh machine timeout in seconds (the time by which a remote machine responds to a rsh/ssh request) (bool, optional)
+-single_cpu_lsf_args          # Get additional arguments to use with the LSF submit command (bsub) for single cpu distributed application only. Example: -x -P PROJ1 -W 10.
+                              # (bool, optional)
+-timeOut                      # Get the value of the timeout in seconds (the time by which a remote job must come up and respond to the master) (bool, optional)
+-waitForLsfInfo <integer>     # Timeout period for waiting for task exit and generate the lsf information (int, optional)
+
+
+<CMD> get_distribute_host -help
+
+Usage: get_distribute_host [-help] [-args] [-custom_script] [-hosts] [-mode] [-queue] [-reportLsfInfo <file>] [-resource] [-shellTimeout] [-single_cpu_lsf_args] [-timeOut]
+                           [-waitForLsfInfo <integer>]
+
+-help                         # Prints out the command usage
+-args                         # Get additional arguments to use with the LSF/SGE submit command (bsub/qsub). Example: -x -P PROJ1 -W 10. (bool, optional)
+-custom_script                # Get the custom job submission script for distributed processing if the mode is set to "custom". (bool, optional)
+-hosts                        # Get the list of hosts for distributed processing via rsh/ssh. A host can be named multiple times (bool, optional)
+-mode                         # Get the distributed processing mode (lsf|rsh|ssh|sge|local|custom) (bool, optional)
+-queue                        # Get the name of the job submission queue for LSF or SGE (Sun Grid Engine) queuing systems. (bool, optional)
+-reportLsfInfo <file>         # Restore the lsf resource to file (string, optional)
+-resource                     # Get the resource string for LSF or SGE queuing systems (bool, optional)
+-shellTimeout                 # Get the value of the rsh/ssh machine timeout in seconds (the time by which a remote machine responds to a rsh/ssh request) (bool, optional)
+-single_cpu_lsf_args          # Get additional arguments to use with the LSF submit command (bsub) for single cpu distributed application only. Example: -x -P PROJ1 -W 10.
+                              # (bool, optional)
+-timeOut                      # Get the value of the timeout in seconds (the time by which a remote job must come up and respond to the master) (bool, optional)
+-waitForLsfInfo <integer>     # Timeout period for waiting for task exit and generate the lsf information (int, optional)
+
+
+<CMD> exit
+
+*** Memory Usage v#1 (Current mem = 433.953M, initial mem = 184.328M) ***
+*** Message Summary: 0 warning(s), 0 error(s)
+
+--- Ending "Tempus Timing Signoff Solution" (totcpu=0:00:05.4, real=0:04:36, mem=434.0M) ---
