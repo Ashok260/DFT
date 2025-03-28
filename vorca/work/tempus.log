@@ -1,0 +1,193 @@
+
+Cadence Tempus(TM) Timing Signoff Solution.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.20-p001_1, built Wed Dec 2 16:07:28 PST 2020
+Options:	
+Date:		Fri Mar 28 12:34:50 2025
+Host:		APL10.kletech.ac.in (x86_64 w/Linux 4.18.0-425.3.1.el8.x86_64) (6cores*12cpus*12th Gen Intel(R) Core(TM) i5-12500 18432KB)
+OS:		Red Hat Enterprise Linux release 8.7 (Ootpa)
+
+License:
+		tpsxl	Tempus Timing Signoff Solution XL	20.2	checkout succeeded
+		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_92266_sQMQiZ'.
+<CMD> read_lib ../Tech_files/slow.lib
+<CMD> read_verilog ../Tech_files/vorca_fixed.v
+<CMD> set_top_module
+#% Begin Load MMMC data ... (date=03/28 12:35:42, mem=775.6M)
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#% End Load MMMC data ... (date=03/28 12:35:42, total cpu=0:00:00.0, real=0:00:00.0, peak res=775.6M, current mem=775.1M)
+default_emulate_early_rc_corner default_emulate_late_rc_corner default_emulate_rc_corner
+Loading view definition file from .ssv_emulate_view_definition_92266.tcl
+Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT/DFT/vorca/Tech_files/slow.lib' ...
+Read 477 cells in library 'slow' 
+*** End library_loading (cpu=0.00min, real=0.00min, mem=29.0M, fe_cpu=0.16min, fe_real=0.87min, fe_mem=806.3M) ***
+#% Begin Load netlist data ... (date=03/28 12:35:42, mem=782.4M)
+*** Begin netlist parsing (mem=806.3M) ***
+Reading verilog netlist '../Tech_files/vorca_fixed.v'
+
+*** Memory Usage v#1 (Current mem = 958.316M, initial mem = 299.711M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=958.3M) ***
+#% End Load netlist data ... (date=03/28 12:35:43, total cpu=0:00:00.2, real=0:00:01.0, peak res=888.6M, current mem=880.8M)
+Top level cell is vorca.
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Building hierarchical netlist for Cell vorca ...
+*** Netlist is unique.
+** info: there are 479 modules.
+** info: there are 1038 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1172.348M, initial mem = 299.711M) ***
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+/dev/null
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Reading timing constraints file '/dev/null' ...
+Current (total cpu=0:00:10.3, real=0:00:53.0, peak res=1245.4M, current mem=1245.4M)
+Total number of combinational cells: 316
+Total number of sequential cells: 150
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX12 BUFX16 BUFX2 BUFX20 BUFX3 BUFX4 CLKBUFX12 CLKBUFX16 CLKBUFX2 CLKBUFX20 CLKBUFX4 CLKBUFX6 CLKBUFX8 BUFX8 CLKBUFX3 BUFX6
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX2 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX6 INVX1 INVX12 INVX2 INVX3 CLKINVX8 INVX20 INVX4 INVX6 INVX16 INVXL INVX8
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X4 DLY2X4 DLY3X4 DLY1X1 DLY4X1 DLY2X1 DLY4X4 DLY3X1
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+default_emulate_constraint_mode
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+default_emulate_libset_max default_emulate_libset_min
+Loading  (vorca)
+Traverse HInst (vorca)
+invalid command name "create_clk"
+<CMD> create_clock -name sclk -period 5 [get_ports clk]
+<CMD> set_delay_cal_mode -siAware true
+AAE_INFO: switching -siAware from false to true ...
+<CMD> set_si_mode -enable_delay_report true
+<CMD> set_si_mode -enable_glitch_report true
+<CMD> set_si_mode -enable_glitch_propagation true
+<CMD> set_global timing_pba_exhaustive_path_nworst_limit 2
+<CMD> set_global timing_path_based_exhaustive_max_paths_limit 1000
+<CMD> update_timing -full
+**WARN: (IMPESI-3468):	User needs to specify -equivalent_waveform_model propagation first before specifying -waveform_compression_mode accurate|clock_detailed .
+AAE DB initialization (MEM=1456.78 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Name: vorca
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+Start delay calculation (fullDC) (1 T). (MEM=1483.54)
+/dev/null
+/dev/null
+Total number of fetched objects 2182
+End delay calculation. (MEM=1493.16 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1493.16 CPU=0:00:00.1 REAL=0:00:00.0)
+<CMD> report_timing
+Path 1: MET Setup Check with Pin f32_mux_1_data_reg_10_/CK 
+Endpoint:   f32_mux_1_data_reg_10_/D (^) checked with  leading edge of 'sclk'
+Beginpoint: o_reg_addr_reg_2_/Q      (^) triggered by  leading edge of 'sclk'
+Path Groups: {sclk}
+Other End Arrival Time          0.000
+- Setup                         0.236
++ Phase Shift                   5.000
+= Required Time                 4.764
+- Arrival Time                  1.515
+= Slack Time                    3.249
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ------------------------------------------------------------------------------
+      Instance                       Arc          Cell      Delay  Arrival  Required  
+                                                                   Time     Time  
+      ------------------------------------------------------------------------------
+      o_reg_addr_reg_2_              CK ^         -         -      0.000    3.249  
+      o_reg_addr_reg_2_              CK ^ -> Q ^  SDFFRX1   0.309  0.309    3.558  
+      o_reg_addr_reg_2__scan_iso_or  A ^ -> Y ^   AND2X1    0.149  0.458    3.707  
+      U43                            B ^ -> Y v   NAND2BX1  0.256  0.714    3.963  
+      U31                            A v -> Y ^   NOR2X2    0.206  0.919    4.169  
+      U466                           B ^ -> Y ^   AND2X2    0.232  1.151    4.401  
+      U593                           A ^ -> Y ^   BUFX4     0.128  1.280    4.529  
+      U778                           B0 ^ -> Y v  AOI22X1   0.062  1.342    4.591  
+      U779                           D v -> Y ^   NAND4X1   0.059  1.401    4.650  
+      U785                           A1 ^ -> Y v  AOI21X1   0.067  1.468    4.718  
+      U141                           B v -> Y ^   NAND3X1   0.046  1.515    4.764  
+      f32_mux_1_data_reg_10_         D ^          SDFFRX1   0.000  1.515    4.764  
+      ------------------------------------------------------------------------------
+
+<CMD> report_timing -max_paths 10000000 -retime path_slew_propagation -retime_mode exhaustive -max_slack 0.200 > epba_${DATE}.rpt
+couldn't read file "../scripts/reports.tcl": no such file or directory
+save out the reporting file "scanChain.rpt"
+save out the reporting file "scanChain.rpt"
+save out the reporting file "scanChain.rpt"
+ambiguous command name "*scan*": check_scan_chain_loaded check_scan_connected clearscandisplay clearscannetisselected deleteallscancells deletescancell deletescanchain deletescanchainpartition displayscanchain getscanreordermode rdagetscanlist read_scan_control_file refinescanchainstartstopinst report_scan_chain reportscancell reportscanchainpartition scan scanDisconnect scanReorder scanSkipBuffer scanTrace scan_and_check_waveforms scandisconnect scanreorder scanskipbuffer scantrace setscanchainstartstopinststatus setscanreordermode specifyscancell specifyscanchain specifyscanchainpartition ...
+...too many match (>30)
+ambiguous command name "*_scan_*": check_scan_chain_loaded check_scan_connected read_scan_control_file report_scan_chain
