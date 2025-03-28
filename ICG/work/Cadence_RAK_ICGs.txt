@@ -1,0 +1,27 @@
+Command used:
+grep -B 5 "clock_gating_integrated_cell" ../Liberty/slow.lib | grep "cell (" | sed s/.*(// | sed s/).*//
+--------------------------------------------------------------------------------------------------------
+
+List of ICG's:
+TLATNCAX12
+TLATNCAX2
+TLATNCAX20
+TLATNCAX6
+TLATNTSCAX16
+TLATNTSCAX4
+TLATNTSCAX8
+TLATNCAX16
+TLATNTSCAX12
+TLATNTSCAX2
+TLATNTSCAX20
+TLATNTSCAX6
+TLATNCAX4
+TLATNCAX3
+TLATNCAX8
+TLATNTSCAX3
+--------------------------------------------------------------------------------------------------------
+Command used:
+grep -B 5 "clock_gating_integrated_cell" ../Liberty/slow.lib | grep "cell (" | wc -l
+
+output:
+16
