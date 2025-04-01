@@ -49,7 +49,7 @@ report_timing -max_paths 10000000 -retime path_slew_propagation -retime_mode exh
 ###################################
 set reportDir reports_${DATE}
 file mkdir $reportDir
-source ../scripts/reports.tcl
+source reports.tcl
 
 Puts "All done"
 ###################################

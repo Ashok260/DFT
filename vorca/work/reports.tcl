@@ -1,14 +1,14 @@
 ##########################
 #Generate SI glitch report
 ##########################
-report_noise -txtfile ${reportDir}/glitch.rpt
+#report_noise -txtfile ${reportDir}/glitch.rpt
 
 #####################
 # Reports that check design health
 #####################
 check_design -type timing -out_file    ${reportDir}/check_design.rpt
 check_timing -verbose > ${reportDir}/check_timing.rpt
-report_annotated_parasitics         > ${reportDir}/annotated.rpt
+#report_annotated_parasitics         > ${reportDir}/annotated.rpt
 report_analysis_coverage            > ${reportDir}/coverage.rpt
 
 #####################

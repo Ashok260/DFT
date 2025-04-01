@@ -1,0 +1,4 @@
+**WARN: (IMPGTD-207):	WARN(analyze_paths_by_basic_path_group):  group IN->REG already exists.   Paths will be added to this group anyway.
+**WARN: (IMPGTD-207):	WARN(analyze_paths_by_basic_path_group):  group REG->REG already exists.   Paths will be added to this group anyway.
+INFO(analyze_paths_by_basic_path_group):  examined 618 paths.
+INFO(analyze_paths_by_basic_path_group):  created 2 groups.
