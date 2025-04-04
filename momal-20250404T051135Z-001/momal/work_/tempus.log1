@@ -1,0 +1,244 @@
+
+Cadence Tempus(TM) Timing Signoff Solution.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.20-p001_1, built Wed Dec 2 16:07:28 PST 2020
+Options:	
+Date:		Fri Apr  4 17:08:46 2025
+Host:		APL4.kletech.ac.in (x86_64 w/Linux 4.18.0-425.3.1.el8.x86_64) (6cores*12cpus*12th Gen Intel(R) Core(TM) i5-12500 18432KB)
+OS:		Red Hat Enterprise Linux release 8.7 (Ootpa)
+
+License:
+		tpsxl	Tempus Timing Signoff Solution XL	20.2	checkout succeeded
+		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_522401_1S6721'.
+**ERROR: (IMPSYT-6299):	Cannot find restore design file.
+Suppress "**WARN ..." messages.
+<CMD> read_design /home/01fe21bec223/DFT/DFT/momal-20250404T051135Z-001/momal/work_/momal.dat momal
+# Tempus Timing Signoff Solution 20.20-p001_1
+# read_design
+#  dir /home/01fe21bec223/DFT/DFT/momal-20250404T051135Z-001/momal/work_/momal.dat momal
+Set DBUPerIGU to 380.
+**WARN: (IMPDC-3276):	set_use_elmore_delay_limit command is no longer supported. It will be ignored.
+Set Default Input Pin Transition as 0.1 ps.
+Loading design 'momal' saved by 'Tempus' '20.20-p001_1' on 'Fri Apr 4 16:52:33 2025'.
+#% Begin Load MMMC data ... (date=04/04 17:09:38, mem=766.5M)
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#% End Load MMMC data ... (date=04/04 17:09:38, total cpu=0:00:00.0, real=0:00:00.0, peak res=767.0M, current mem=767.0M)
+default_emulate_early_rc_corner default_emulate_late_rc_corner default_emulate_rc_corner
+
+Loading LEF file /home/01fe21bec223/DFT/DFT/momal-20250404T051135Z-001/momal/work_/momal.dat/libs/lef/NangateOpenCellLibrary.lef ...
+Set DBUPerIGU to M2 pitch 380.
+
+viaInitial starts at Fri Apr  4 17:09:38 2025
+viaInitial ends at Fri Apr  4 17:09:38 2025
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from /home/01fe21bec223/DFT/DFT/momal-20250404T051135Z-001/momal/work_/momal.dat/viewDefinition.tcl
+Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT/DFT/momal-20250404T051135Z-001/momal/NangateOpenCellLibrary_slow_conditional_ccs.lib' ...
+Read 134 cells in library 'NangateOpenCellLibrary' 
+*** End library_loading (cpu=0.01min, real=0.00min, mem=24.0M, fe_cpu=0.16min, fe_real=0.87min, fe_mem=856.9M) ***
+#% Begin Load netlist data ... (date=04/04 17:09:38, mem=819.9M)
+*** Begin netlist parsing (mem=856.9M) ***
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2_X2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2_X2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2_X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2_X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XNOR2_X2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XNOR2_X2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XNOR2_X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XNOR2_X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'TLAT_X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'TLAT_X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'TINV_X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'TINV_X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'TBUF_X8' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'TBUF_X8' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'TBUF_X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'TBUF_X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'TBUF_X2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'TBUF_X2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'TBUF_X16' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'TBUF_X16' is defined in LEF but not in the timing library.
+**WARN: (EMS-62):	Message <IMPVL-159> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+Reading verilogBinary netlist '/home/01fe21bec223/DFT/DFT/momal-20250404T051135Z-001/momal/work_/momal.dat/momal.v.bin'
+
+*** Memory Usage v#1 (Current mem = 998.895M, initial mem = 299.711M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=998.9M) ***
+#% End Load netlist data ... (date=04/04 17:09:38, total cpu=0:00:00.2, real=0:00:00.0, peak res=922.6M, current mem=909.7M)
+Top level cell is momal.
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Building hierarchical netlist for Cell momal ...
+*** Netlist is unique.
+** info: there are 135 modules.
+** info: there are 70127 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1227.840M, initial mem = 299.711M) ***
+*info: set bottom ioPad orient R0
+Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal9 is different from 1.6 defined in technology file in unpreferred direction.
+Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in unpreferred direction.
+Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.28 in metal7 is different from 0.8 defined in technology file in unpreferred direction.
+Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.14 in metal4 is different from 0.28 defined in technology file in unpreferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+Loading preference file /home/01fe21bec223/DFT/DFT/momal-20250404T051135Z-001/momal/work_/momal.dat/gui.pref.tcl ...
+/dev/null
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Total number of combinational cells: 99
+Total number of sequential cells: 29
+Total number of tristate cells: 6
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUF_X2 BUF_X1 BUF_X4 BUF_X8 CLKBUF_X1 CLKBUF_X3 CLKBUF_X2
+Total number of usable buffers: 7
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INV_X2 INV_X1 INV_X16 INV_X32 INV_X4 INV_X8
+Total number of usable inverters: 6
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: BUF_X16 BUF_X32
+Total number of identified usable delay cells: 2
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+default_emulate_constraint_mode
+#% Begin Load MMMC data post ... (date=04/04 17:09:39, mem=1379.1M)
+#% End Load MMMC data post ... (date=04/04 17:09:39, total cpu=0:00:00.0, real=0:00:00.0, peak res=1379.4M, current mem=1379.4M)
+#% Begin Load SymbolTable ... (date=04/04 17:09:39, mem=1379.4M)
+#% End Load SymbolTable ... (date=04/04 17:09:39, total cpu=0:00:00.1, real=0:00:00.0, peak res=1389.0M, current mem=1389.0M)
+#% Begin Load DEF data ... (date=04/04 17:09:39, mem=1389.0M)
+Reading DEF file '/home/01fe21bec223/DFT/DFT/momal-20250404T051135Z-001/momal/work_/momal.dat/momal.def', current time is Fri Apr  4 17:09:39 2025 ...
+defIn read 10000 lines...
+DEF file '/home/01fe21bec223/DFT/DFT/momal-20250404T051135Z-001/momal/work_/momal.dat/momal.def' is parsed, current time is Fri Apr  4 17:09:39 2025.
+#% End Load DEF data ... (date=04/04 17:09:39, total cpu=0:00:00.1, real=0:00:00.0, peak res=1393.5M, current mem=1393.5M)
+#% Begin Load DEF data ... (date=04/04 17:09:39, mem=1393.5M)
+Reading DEF file '/home/01fe21bec223/DFT/DFT/momal-20250404T051135Z-001/momal/work_/momal.dat/def/momal.def', current time is Fri Apr  4 17:09:39 2025 ...
+--- DIVIDERCHAR '/'
+**WARN: (IMPDF-64):	UnitsPerDBU is not unity (you may have rounding problems).
+--- UnitsPerDBU = 0.5000
+defIn read 10000 lines...
+DEF file '/home/01fe21bec223/DFT/DFT/momal-20250404T051135Z-001/momal/work_/momal.dat/def/momal.def' is parsed, current time is Fri Apr  4 17:09:39 2025.
+#% End Load DEF data ... (date=04/04 17:09:39, total cpu=0:00:00.1, real=0:00:00.0, peak res=1393.5M, current mem=1393.5M)
+Reading property file /home/01fe21bec223/DFT/DFT/momal-20250404T051135Z-001/momal/work_/momal.dat/momal.prop
+*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1598.2M) ***
+Set Default Input Pin Transition as 0.1 ps.
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+#% Begin Load power constraints ... (date=04/04 17:09:39, mem=1397.1M)
+#% End Load power constraints ... (date=04/04 17:09:39, total cpu=0:00:00.0, real=0:00:00.0, peak res=1397.7M, current mem=1397.7M)
+default_emulate_delay_corner default_emulate_delay_corner_max default_emulate_delay_corner_min
+#% Begin load AAE data ... (date=04/04 17:09:40, mem=1538.2M)
+**WARN: (IMPESI-3468):	User needs to specify -equivalent_waveform_model propagation first before specifying -waveform_compression_mode accurate|clock_detailed .
+AAE DB initialization (MEM=1766.41 CPU=0:00:00.0 REAL=0:00:00.0) 
+/dev/null
+#% End load AAE data ... (date=04/04 17:09:40, total cpu=0:00:00.4, real=0:00:00.0, peak res=1559.3M, current mem=1559.3M)
+**WARN: (IMPCTE-107):	The following globals have been obsoleted since version 20.20-p001_1. They will be removed in the next release. 
+timing_enable_default_delay_arc
+Un-suppress "**WARN ..." messages.
+<CMD> check_design -type timing -out_file outputs/check_design.rpt
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup74 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup73 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup72 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup71 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup70 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup69 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup68 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup67 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup66 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup65 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup64 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup63 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup62 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup61 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup60 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup59 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup58 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup57 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup56 has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin GN of instance lckup55 has no clock constraint for view name default_emulate_view.
+**WARN: (EMS-62):	Message <CHKTIM-4> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+Output file 'outputs/check_design.rpt' created. Sourcing this file will create a $design_checks TCL dictionary that can be parsed for more information.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   CHKTIM-4         14150   Clock pin %s of instance %s has no cloc...
+*** Message Summary: 14150 warning(s), 0 error(s)
+
+<CMD> check_timing -verbose > outputs/check_timing.rpt
+<CMD> report_analysis_coverage            > outputs/coverage.rpt
+<CMD> report_clocks                       > outputs/clocks.rpt
+<CMD> report_case_analysis                > outputs/case_analysis.rpt
+<CMD> report_inactive_arcs                > outputs/inactive_arcs.rpt
+<CMD> report_constraint -all_violators > outputs/allviol.rpt
+<CMD> report_analysis_summary                                         > outputs/analysis_summary.rpt
+<CMD> report_timing -path_type summary_slack_only -late -max_paths 5  > outputs/start_end_slack.rpt
+<CMD> report_timing -late   -max_paths 50 -nworst 1 -path_type full_clock -net  > outputs/worst_max_path.rpt
+<CMD> report_timing -early  -max_paths 50 -nworst 1 -path_type full_clock -net  > outputs/worst_min_path.rpt
+<CMD> report_timing -path_type end_slack_only                       > outputs/setup_1.rpt
+<CMD> report_timing -path_type end_slack_only  -early               > outputs/hold_1.rpt
+<CMD> report_timing -late    -max_paths 100                         > outputs/setup_100.rpt.gz
+<CMD> report_timing -early   -max_paths 100                         > outputs/hold_100.rpt.gz
+<CMD> report_timing -retime path_slew_propagation -max_paths 50 -nworst 1 -path_type full_clock    > outputs/pba_50_paths.rpt
+INFO: Path Based Analysis (PBA) performed on total '50' paths
+<CMD> exit
+
+*** Memory Usage v#1 (Current mem = 1740.648M, initial mem = 299.711M) ***
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPDF-64             1  UnitsPerDBU is not unity (you may have r...
+ERROR     IMPSYT-6299          1  Cannot find restore design file.         
+WARNING   IMPVL-159          268  Pin '%s' of cell '%s' is defined in LEF ...
+WARNING   IMPDC-3276           1  set_use_elmore_delay_limit command is no...
+WARNING   IMPESI-3468          1  User needs to specify -equivalent_wavefo...
+WARNING   IMPCTE-107           1  The following globals have been obsolete...
+WARNING   CHKTIM-4         14150   Clock pin %s of instance %s has no cloc...
+*** Message Summary: 14422 warning(s), 1 error(s)
+
+--- Ending "Tempus Timing Signoff Solution" (totcpu=0:01:02, real=0:13:53, mem=1740.6M) ---
