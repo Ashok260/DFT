@@ -4,22 +4,22 @@ Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v20.20-p001_1, built Wed Dec 2 16:07:28 PST 2020
 Options:	
-Date:		Sat Apr  5 15:06:03 2025
-Host:		APL9.kletech.ac.in (x86_64 w/Linux 4.18.0-425.3.1.el8.x86_64) (6cores*12cpus*12th Gen Intel(R) Core(TM) i5-12500 18432KB)
-OS:		Red Hat Enterprise Linux release 8.7 (Ootpa)
+Date:		Mon Apr  7 11:27:11 2025
+Host:		APL10.kletech.ac.in (x86_64 w/Linux 4.18.0-553.47.1.el8_10.x86_64) (6cores*12cpus*12th Gen Intel(R) Core(TM) i5-12500 18432KB)
+OS:		Red Hat Enterprise Linux release 8.10 (Ootpa)
 
 License:
 		tpsxl	Tempus Timing Signoff Solution XL	20.2	checkout succeeded
 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
 Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
-environment variable TMPDIR is '/tmp/ssv_tmpdir_98720_zYzIUc'.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_13757_ku1vYj'.
 <CMD> read_lib ../Tech_files/slow.lib
 <CMD> read_lib -lef ../Tech_files/all.lef
 <CMD> read_verilog ../Netlist/scan_netlist.v
 <CMD> set_top_module
-#% Begin Load MMMC data ... (date=04/05 15:06:28, mem=772.2M)
+#% Begin Load MMMC data ... (date=04/07 11:27:48, mem=710.3M)
 Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
-#% End Load MMMC data ... (date=04/05 15:06:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=772.6M, current mem=772.6M)
+#% End Load MMMC data ... (date=04/07 11:27:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=710.6M, current mem=710.6M)
 default_emulate_early_rc_corner default_emulate_late_rc_corner default_emulate_rc_corner
 
 Loading LEF file ../Tech_files/all.lef ...
@@ -57,24 +57,24 @@ To suppress a message, use the set_message -suppress command.
 **WARN: (IMPLF-200):	Pin 'OEN' in macro 'PDB04DGZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 **WARN: (IMPLF-200):	Pin 'I' in macro 'PDB04DGZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 
-viaInitial starts at Sat Apr  5 15:06:28 2025
+viaInitial starts at Mon Apr  7 11:27:49 2025
 **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM1 GENERATE.
 **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM2 GENERATE.
 **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM3 GENERATE.
 **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM4 GENERATE.
 **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM5 GENERATE.
 **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM6 GENERATE.
-viaInitial ends at Sat Apr  5 15:06:28 2025
+viaInitial ends at Mon Apr  7 11:27:49 2025
 
 ##  Check design process and node:  
 ##  Both design process and tech node are not set.
 
-Loading view definition file from .ssv_emulate_view_definition_98720.tcl
+Loading view definition file from .ssv_emulate_view_definition_13757.tcl
 Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT/DFT/vorca/Tech_files/slow.lib' ...
 Read 477 cells in library 'slow' 
-*** End library_loading (cpu=0.00min, real=0.00min, mem=29.0M, fe_cpu=0.14min, fe_real=0.42min, fe_mem=856.8M) ***
-#% Begin Load netlist data ... (date=04/05 15:06:28, mem=831.0M)
-*** Begin netlist parsing (mem=856.8M) ***
+*** End library_loading (cpu=0.00min, real=0.00min, mem=29.0M, fe_cpu=0.16min, fe_real=0.63min, fe_mem=773.7M) ***
+#% Begin Load netlist data ... (date=04/07 11:27:49, mem=769.0M)
+*** Begin netlist parsing (mem=773.7M) ***
 **WARN: (IMPVL-159):	Pin 'VSS' of cell 'OAI211XL' is defined in LEF but not in the timing library.
 **WARN: (IMPVL-159):	Pin 'VDD' of cell 'OAI211XL' is defined in LEF but not in the timing library.
 **WARN: (IMPVL-159):	Pin 'VSS' of cell 'SEDFFHQX1' is defined in LEF but not in the timing library.
@@ -103,103 +103,317 @@ Note that setting a very large number using the set_message -limit command
 or removing the message limit using the set_message -no_limit command can
 significantly increase the log file size.
 To suppress a message, use the set_message -suppress command.
-**ERROR: (IMPVL-209):	In Verilog file '../Netlist/scan_netlist.v', check line 307 near the text '0x0' for the issue: 'syntax error'.  Update the text accordingly.
-Verilog file '../Netlist/scan_netlist.v' has errors!  See above.
+Reading verilog netlist '../Netlist/scan_netlist.v'
 
-*** Memory Usage v#1 (Current mem = 936.785M, initial mem = 299.711M) ***
-#% End Load netlist data ... (date=04/05 15:06:28, total cpu=0:00:00.2, real=0:00:00.0, peak res=860.4M, current mem=860.4M)
-**ERROR: (IMPVL-902):	Failed to read netlist ../Netlist/scan_netlist.v. See previous error messages for details.  Resolve the issues and reload the design.
+*** Memory Usage v#1 (Current mem = 917.719M, initial mem = 299.730M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=917.7M) ***
+#% End Load netlist data ... (date=04/07 11:27:49, total cpu=0:00:00.2, real=0:00:00.0, peak res=867.8M, current mem=858.0M)
+Top level cell is f32_data_reg_module.
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Building hierarchical netlist for Cell f32_data_reg_module ...
+*** Netlist is unique.
+** info: there are 618 modules.
+** info: there are 33 stdCell insts.
 
-<CMD> read_lib ../Tech_files/slow.lib
-**WARN: (UI-235):	The  timing library file ../Tech_files/slow.lib has already been scheduled for reading, skip this specification for this read_lib command.
-<CMD> read_lib -lef ../Tech_files/all.lef
-**WARN: (UI-235):	The LEF file ../Tech_files/all.lef has already been scheduled for reading, skip this specification for this read_lib command.
-<CMD> read_verilog ../Netlist/scan_netlist.v
-<CMD> set_top_module
-#% Begin Load MMMC data ... (date=04/05 15:08:41, mem=859.8M)
+*** Memory Usage v#1 (Current mem = 1124.664M, initial mem = 299.730M) ***
+**WARN: (IMPFP-3961):	The techSite 'corner' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Horizontal Layer M1 offset = 560 (derived)
+Vertical Layer M2 offset = 660 (derived)
+Generated pitch 0.99 in Metal6 is different from 1.32 defined in technology file in preferred direction.
+Generated pitch 0.56 in Metal5 is different from 1.12 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+/dev/null
 Extraction setup Started 
-Tempus Timing Signoff Solution terminated by internal (SEGV) error/signal...
-Current time: Sat Apr  5 15:08:42 2025
-*** Stack trace:
-*** Stack trace:
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus[0x139d2835]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(syStackTrace+0xb6)[0x139d2cb7]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus[0x509e83e]
-/lib64/libpthread.so.0(+0x12cef)[0x7f99d3066cef]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_ZN12peLayerPitch17computeLayerPitchEv+0x4f)[0xd04a6bf]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_ZN14peEngineClient16getLayerInfoByIdERSt6vectorI11eeLayerInfoSaIS1_EE+0xb0e)[0xd0414fe]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_ZN14peEngineClient12getLayerInfoERSt6vectorI11eeLayerInfoSaIS1_EE+0xafe)[0xd0422be]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_ZN21eeExtEngineDesignData12setLayerInfoEv+0x4b)[0x5658f9b]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus[0xcf61f78]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_Z10dbMCRCInitv+0x8)[0xcf69db8]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_Z28peiInitializeExtractionSetUpb+0x27)[0xcf69ef7]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus[0x1024f202]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_ZN6TAMmmc14updateRcCornerEP14TAMmmcRcCornerPKcf9tabooleanR18TAMmmcTripleFactorS4_fS4_S6_S4_S6_S4_fS4_fS4_S6_S4_S6_S4_S3_S3_S3_fS4_S3_+0x397)[0x13c574a7]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_Z30TaCmd_createOrUpdate_rc_cornerPvP10Tcl_InterpiPPc9tabooleanP6tcmCmd+0x88f)[0x14eb05ff]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_ZN10tcmBaseCmd7executeEP10Tcl_InterpiPPc+0x2d3)[0x15e9f273]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_ZN6tcmMgr9cmdParserEPvP10Tcl_InterpiPPc+0x693)[0x15e92423]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(TclInvokeStringCommand+0x7f)[0x21d1d7df]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(TclNRRunCallbacks+0x46)[0x21d22156]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus[0x21d24627]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(Tcl_EvalEx+0x15)[0x21d24f55]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(TclNREvalObjEx+0x6e)[0x21d24ffe]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus[0x21dda9aa]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus[0x21d38250]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(TclNRRunCallbacks+0x46)[0x21d22156]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus[0x21d24627]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(Tcl_EvalEx+0x15)[0x21d24f55]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(TclNREvalObjEx+0x6e)[0x21d24ffe]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus[0x21dda9aa]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus[0x21d38250]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(TclNRRunCallbacks+0x46)[0x21d22156]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(Tcl_RecordAndEvalObj+0xf3)[0x21dc09f3]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(Tcl_RecordAndEval+0x37)[0x21dc0b57]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_Z17rdaEditCmdLineEndPc+0x33c)[0x51d9e2c]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_ZN9seConsole7sesMode9DoExecuteERKSsPv+0xc6)[0x102fcde6]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_ZN7Redline9EmacsMode10AcceptLineEv+0x3b)[0x1161771b]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_ZN7Redline11ModeCommandINS_9EmacsModeEE15CommandFnNoKeysERKN5boost8functionIFvRS1_EEERNS_6EditorE+0x60)[0x1161fc90]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_ZN5boost6detail8function26void_function_obj_invoker2INS_3_bi6bind_tINS3_11unspecifiedENS_8functionIFvRN7Redline6EditorEEEENS3_5list1INS_3argILi1EEEEEEEvS9_RKNS7_14KeyCombinationEE6invokeERNS1_15function_bufferES9_SJ_+0x1a)[0x1162f50a]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_ZNK7Redline7Command3RunERNS_6EditorERKNS_14KeyCombinationE+0x1b)[0x1162f22b]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_ZN7Redline6Editor9Internals3RunEb+0xdf)[0x11613d3f]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus[0x21e250d6]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(Tcl_ServiceEvent+0x86)[0x21de6b26]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(Tcl_DoOneEvent+0x128)[0x21de6e28]
-/icp/SSV202/tools.lnx86/lib/64bit/libtq.so(_ZN17TqEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x69)[0x7f99daf5b239]
-/icp/SSV202/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE+0xe9)[0x7f99da11a0c9]
-/icp/SSV202/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN16QCoreApplication4execEv+0x83)[0x7f99da122953]
-/icp/SSV202/tools.lnx86/lib/64bit/libtq.so(_ZN13TqApplication4execEv+0x176)[0x7f99daf5a896]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(_Z12edi_app_initP10Tcl_Interp+0x280)[0x50a2420]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(Tcl_MainEx+0x176)[0x21de1666]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus[0x50b181a]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus(main+0x5b)[0x46fbb2b]
-/lib64/libc.so.6(__libc_start_main+0xe4)[0x7f99d241bd84]
-/icp/SSV202/tools.lnx86/ssv/bin/64bit/tempus[0x509b430]
-========================================
-               pstack
-========================================
-========================================
-                gdb
-========================================
-Using: gdb
-Could not find platform independent libraries <prefix>
-Could not find platform dependent libraries <exec_prefix>
-Consider setting $PYTHONHOME to <prefix>[:<exec_prefix>]
-Fatal Python error: Py_Initialize: Unable to get the locale encoding
-ModuleNotFoundError: No module named 'encodings'
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Reading timing constraints file '/dev/null' ...
+Current (total cpu=0:00:09.8, real=0:00:39.0, peak res=1210.4M, current mem=1210.4M)
+Total number of combinational cells: 234
+Total number of sequential cells: 105
+Total number of tristate cells: 9
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2 BUFX12 BUFX16 BUFX20 CLKBUFX2 BUFX3 BUFX4 CLKBUFX12 CLKBUFX16 CLKBUFX20 CLKBUFX4 CLKBUFX8 BUFX8 CLKBUFX3
+Total number of usable buffers: 14
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX2 CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX20 INVX1 CLKINVX3 CLKINVX4 INVX12 INVX2 INVX3 CLKINVX8 INVX20 INVX4 INVX16 INVXL INVX8
+Total number of usable inverters: 17
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY4X1 DLY2X1 DLY3X1
+Total number of identified usable delay cells: 4
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+default_emulate_constraint_mode
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+default_emulate_libset_max default_emulate_libset_min
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk'
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'clk'
+<CMD> create_clock -name sclk -period 5 [get_ports clk]
+**ERROR: (TCLCMD-1109):	Could not find source for create_clock command
+<CMD> set_delay_cal_mode -siAware true
+AAE_INFO: switching -siAware from false to true ...
+<CMD> set_si_mode -enable_delay_report true
+<CMD> set_si_mode -enable_glitch_report true
+<CMD> set_si_mode -enable_glitch_propagation true
+<CMD> set_global timing_pba_exhaustive_path_nworst_limit 2
+<CMD> set_global timing_path_based_exhaustive_max_paths_limit 1000
+<CMD> update_timing -full
+**WARN: (IMPESI-3468):	User needs to specify -equivalent_waveform_model propagation first before specifying -waveform_compression_mode accurate|clock_detailed .
+AAE DB initialization (MEM=1401.12 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Name: f32_data_reg_module
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+Start delay calculation (fullDC) (1 T). (MEM=1427.89)
+/dev/null
+/dev/null
+Total number of fetched objects 102
+End delay calculation. (MEM=1436.52 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1436.52 CPU=0:00:00.0 REAL=0:00:00.0)
+<CMD> report_timing
+No constrained timing paths found.
+Design may not be constrained or  library is missing timing information.
 
-Current thread 0x00007fe6fa2460c0 (most recent call first):
-
-*** Memory Usage v#1 (Current mem = 908.047M, initial mem = 299.711M) ***
+<CMD> report_timing -max_paths 10000000 -retime path_slew_propagation -retime_mode exhaustive -max_slack 0.200 > epba_${DATE}.rpt
+<CMD> check_design -type timing -out_file reports_Apr07-11:27:48/check_design.rpt
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_0_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_1_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_2_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_3_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_4_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_5_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_6_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_7_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_8_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_9_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_10_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_11_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_12_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_13_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_14_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_15_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_16_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_17_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_18_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_data_reg_19_ has no clock constraint for view name default_emulate_view.
+**WARN: (EMS-62):	Message <CHKTIM-4> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**ERROR: (CHKTIM-3):	 No clock found for constraint mode default_emulate_constraint_mode.
+Output file 'reports_Apr07-11:27:48/check_design.rpt' created. Sourcing this file will create a $design_checks TCL dictionary that can be parsed for more information.
 
 *** Summary of all messages that are not suppressed in this session:
 Severity  ID               Count  Summary                                  
-WARNING   IMPLF-200            4  Pin '%s' in macro '%s' has no ANTENNAGAT...
-WARNING   IMPLF-201           50  Pin '%s' in macro '%s' has no ANTENNADIF...
-WARNING   UI-235               2  The %s file %s has already been schedule...
-ERROR     IMPVL-902            1  Failed to read netlist %s. See previous ...
-ERROR     IMPVL-209            1  In Verilog file '%s', check line %d near...
-WARNING   IMPVL-159          696  Pin '%s' of cell '%s' is defined in LEF ...
-WARNING   IMPPP-557            6  A single-layer VIARULE GENERATE for turn...
-*** Message Summary: 758 warning(s), 2 error(s)
+WARNING   CHKTIM-4            32   Clock pin %s of instance %s has no cloc...
+ERROR     CHKTIM-3             1   No clock found for constraint mode %s.  
+*** Message Summary: 32 warning(s), 1 error(s)
 
---- Ending "Tempus Timing Signoff Solution" (totcpu=0:00:17.7, real=0:02:40, mem=908.0M) ---
+<CMD> check_timing -verbose > ${reportDir}/check_timing.rpt
+<CMD> report_analysis_coverage            > ${reportDir}/coverage.rpt
+<CMD> report_clocks                       > ${reportDir}/clocks.rpt
+<CMD> report_case_analysis                > ${reportDir}/case_analysis.rpt
+<CMD> report_inactive_arcs                > ${reportDir}/inactive_arcs.rpt
+<CMD> report_constraint -all_violators > reports_Apr07-11:27:48/allviol.rpt
+<CMD> report_analysis_summary                                         > ${reportDir}/analysis_summary.rpt
+<CMD> report_timing -path_type summary_slack_only -late -max_paths 5  > ${reportDir}/start_end_slack.rpt
+<CMD> report_timing -late   -max_paths 50 -nworst 1 -path_type full_clock -net  > ${reportDir}/worst_max_path.rpt
+<CMD> report_timing -early  -max_paths 50 -nworst 1 -path_type full_clock -net  > ${reportDir}/worst_min_path.rpt
+<CMD> report_timing -path_type end_slack_only                       > ${reportDir}/setup_1.rpt
+<CMD> report_timing -path_type end_slack_only  -early               > ${reportDir}/hold_1.rpt
+<CMD> report_timing -late    -max_paths 100                         > ${reportDir}/setup_100.rpt.gz
+<CMD> report_timing -early   -max_paths 100                         > ${reportDir}/hold_100.rpt.gz
+<CMD> report_timing -retime path_slew_propagation -max_paths 50 -nworst 1 -path_type full_clock    > ${reportDir}/pba_50_paths.rpt
+All done
+Loading  (f32_data_reg_module)
+Traverse HInst (f32_data_reg_module)
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk'
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'clk'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk'
+**ERROR: (TCLCMD-929):	Command foreach_in_collection exited: invalid command name "+"
+
+invalid command name "Explain"
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk'
+invalid command name "Just"
+**ERROR: (TCLCMD-929):	Command foreach_in_collection exited: invalid command name "+"
+
+invalid command name "Explain"
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk'
+invalid command name "Just"
+**ERROR: (TCLCMD-929):	Command foreach_in_collection exited: invalid command name "+"
+
+invalid command name "Explain"
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk'
+invalid command name "Just"
+**ERROR: (TCLCMD-929):	Command foreach_in_collection exited: invalid command name "+"
+
+invalid command name "Explain"
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk'
+**ERROR: (TCLCMD-929):	Command foreach_in_collection exited: invalid command name "+"
+
+invalid command name "Explain"
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk'
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'clk'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match '*'
+**ERROR: (TCLCMD-917):	Cannot find 'pins' that match '*'
+**ERROR: (TCLCMD-917):	Cannot find 'pins' that match '*'
+**ERROR: (TCLCMD-1022):	Property 'name' is not boolean type
+**ERROR: (TCLCMD-917):	Cannot find 'pins' that match '*'
+**ERROR: (TCLCMD-1022):	Property 'name' is not boolean type
+**ERROR: (TCLCMD-917):	Cannot find 'pins' that match '*'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk'
+**ERROR: (TCLCMD-929):	Command foreach_in_collection exited: invalid command name "+"
+
+invalid command name "Explain"
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk'
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'clk'
+<CMD> create_clock -name sclk -period 5 [get_ports clk]
+**ERROR: (TCLCMD-1109):	Could not find source for create_clock command
+<CMD> create_clock -name sclk -period 5 [get_ports net121977]
+<CMD> report_timing -late
+#################################################################################
+# Design Name: f32_data_reg_module
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+Start delay calculation (fullDC) (1 T). (MEM=1418.52)
+Total number of fetched objects 102
+End delay calculation. (MEM=1437.6 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1437.6 CPU=0:00:00.0 REAL=0:00:00.0)
+Path 1: MET Setup Check with Pin f32_data_reg_11_/CK 
+Endpoint:   f32_data_reg_11_/SI (^) checked with  leading edge of 'sclk'
+Beginpoint: f32_data_reg_12_/Q  (^) triggered by  leading edge of 'sclk'
+Path Groups: {sclk}
+Other End Arrival Time          0.000
+- Setup                         0.220
++ Phase Shift                   5.000
+= Required Time                 4.780
+- Arrival Time                  0.378
+= Slack Time                    4.402
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ---------------------------------------------------------------------------
+      Instance                      Arc          Cell    Delay  Arrival  Required  
+                                                                Time     Time  
+      ---------------------------------------------------------------------------
+      f32_data_reg_12_              CK ^         -       -      0.000    4.402  
+      f32_data_reg_12_              CK ^ -> Q ^  SDFFX1  0.215  0.215    4.617  
+      f32_data_reg_11__ti_over_mux  A ^ -> Y ^   MX2X2   0.163  0.378    4.780  
+      f32_data_reg_11_              SI ^         SDFFX1  0.000  0.378    4.780  
+      ---------------------------------------------------------------------------
+
+<CMD> report_timing -early
+Path 1: MET Hold Check with Pin f32_data_reg_0_/CK 
+Endpoint:   f32_data_reg_0_/SE (v) checked with  leading edge of 'sclk'
+Beginpoint: scan_enable        (v) triggered by  leading edge of '@'
+Path Groups: {sclk}
+Other End Arrival Time          0.000
++ Hold                         -0.012
++ Phase Shift                   0.000
+= Required Time                -0.012
+  Arrival Time                  0.000
+  Slack Time                    0.012
+     Clock Rise Edge                      0.000
+     + Input Delay                        0.000
+     = Beginpoint Arrival Time            0.000
+      ----------------------------------------------------------------
+      Instance         Arc            Cell    Delay  Arrival  Required  
+                                                     Time     Time  
+      ----------------------------------------------------------------
+      -                scan_enable v  -       -      0.000    -0.012  
+      f32_data_reg_0_  SE v           SDFFX1  0.000  0.000    -0.012  
+      ----------------------------------------------------------------
+
+ambiguous command name "*schematic*": close_schematic get_schematic open_schematic print_schematic
+No help is available for 'print_schematic'.
+      You might have typed the command name incorrectly
+      (command names are case sensitive), or this is an
+      unknown or unsupported command.
+
+
+Usage: print_schematic [-help] -file <string> [-name <string>]
+                       [-type {GIF PNG}]
+
+-help              # Prints out the command usage
+-file <string>     # Specify file name. (string, required)
+-name <string>     # Specify unique window name for the opened schematic view.
+                   # (string, optional)
+-type {GIF PNG}    # Specify file type. (enum, optional)
+
+

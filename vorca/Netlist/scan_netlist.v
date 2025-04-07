@@ -1,4 +1,4 @@
-module f32_data_reg_chain (
+module f32_data_reg_module (
   input wire [31:0] i_wr_data,
   input wire [31:0] i_agg_su_count_a,
   input wire scan_enable,
@@ -9,36 +9,7 @@ module f32_data_reg_chain (
   output wire n_94_
 );
 
-  wire n_125_;
-  wire n_124_;
-  wire n_123_;
-  wire n_122_;
-  wire n_121_;
-  wire n_120_;
-  wire n_119_;
-  wire n_118_;
-  wire n_117_;
-  wire n_116_;
-  wire n_114_;
-  wire n_113_;
-  wire n_112_;
-  wire n_111_;
-  wire n_110_;
-  wire n_109_;
-  wire n_108_;
-  wire n_107_;
-  wire n_106_;
-  wire n_105_;
-  wire n_104_;
-  wire n_103_;
-  wire n_102_;
-  wire n_101_;
-  wire n_100_;
-  wire n_99_;
-  wire n_98_;
-  wire n_97_;
-  wire n_96_;
-  wire n_95_;
+  wire n_125_, n_124_, n_123_, n_122_, n_121_, n_120_, n_119_, n_118_, n_117_, n_116_, n_114_, n_113_, n_112_, n_111_, n_110_, n_109_, n_108_, n_107_, n_106_, n_105_, n_104_, n_103_, n_102_, n_101_, n_100_, n_99_, n_98_, n_97_, n_96_, n_95_;
   wire n1;
 
   SDFFX1 f32_data_reg_0_ (
@@ -129,19 +100,19 @@ module f32_data_reg_chain (
     .Q(test_so1)
   );
 
-  MX2X2 f32_data_reg_11__ti_over_mux (
-    .A(n_113_),
-    .B(test_si1),
-    .S0(raw_scan_en),
-    .Y(n1)
-  );
-
   SDFFX1 f32_data_reg_11_ (
     .D(i_wr_data[11]),
     .SI(n1),
     .SE(scan_enable),
     .CK(net121977),
     .Q(n_114_)
+  );
+
+  MX2X2 f32_data_reg_11__ti_over_mux (
+    .A(n_113_),
+    .B(test_si1),
+    .S0(raw_scan_en),
+    .Y(n1)
   );
 
   SDFFX1 f32_data_reg_12_ (
@@ -303,4 +274,5 @@ module f32_data_reg_chain (
     .CK(net121977),
     .Q(n_94_)
   );
+
 endmodule
