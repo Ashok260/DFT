@@ -929,3 +929,16 @@ environment variable TMPDIR is '/tmp/ssv_tmpdir_27944_cCQW4G'.
 
 [04/07 15:20:38     35s] **ERROR: (TCLCMD-929):	Command foreach_in_collection exited: wrong # args: should be "puts ?-nonewline? ?channelId? string"
 
+[04/07 15:29:13     67s] <CMD> exit
+[04/07 15:29:13     67s] 
+[04/07 15:29:13     67s] *** Memory Usage v#1 (Current mem = 1347.125M, initial mem = 299.730M) ***
+[04/07 15:29:13     67s] 
+[04/07 15:29:13     67s] *** Summary of all messages that are not suppressed in this session:
+[04/07 15:29:13     67s] Severity  ID               Count  Summary                                  
+[04/07 15:29:13     67s] WARNING   IMPDC-3276           1  set_use_elmore_delay_limit command is no...
+[04/07 15:29:13     67s] WARNING   IMPESI-3468          1  User needs to specify -equivalent_wavefo...
+[04/07 15:29:13     67s] WARNING   IMPCTE-107           1  The following globals have been obsolete...
+[04/07 15:29:13     67s] ERROR     TCLCMD-929           2  Command foreach_in_collection exited: %s 
+[04/07 15:29:13     67s] *** Message Summary: 3 warning(s), 2 error(s)
+[04/07 15:29:13     67s] 
+[04/07 15:29:13     67s] --- Ending "Tempus Timing Signoff Solution" (totcpu=0:01:07, real=0:15:49, mem=1347.1M) ---

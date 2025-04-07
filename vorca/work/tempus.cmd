@@ -13,3 +13,4 @@
 #@(#)CDS: CPE v20.20-p009
 
 read_design /home/01fe21bec223/DFT/DFT/vorca/work/vorca.dat vorca
+exit

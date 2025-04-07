@@ -117,3 +117,16 @@ Traverse HInst (vorca)
 
 **ERROR: (TCLCMD-929):	Command foreach_in_collection exited: wrong # args: should be "puts ?-nonewline? ?channelId? string"
 
+<CMD> exit
+
+*** Memory Usage v#1 (Current mem = 1347.125M, initial mem = 299.730M) ***
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPDC-3276           1  set_use_elmore_delay_limit command is no...
+WARNING   IMPESI-3468          1  User needs to specify -equivalent_wavefo...
+WARNING   IMPCTE-107           1  The following globals have been obsolete...
+ERROR     TCLCMD-929           2  Command foreach_in_collection exited: %s 
+*** Message Summary: 3 warning(s), 2 error(s)
+
+--- Ending "Tempus Timing Signoff Solution" (totcpu=0:01:07, real=0:15:49, mem=1347.1M) ---
