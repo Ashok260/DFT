@@ -17,4 +17,4 @@ read_lib -lef ../NangateOpenCellLibrary.lef
 read_verilog ../momal_scan.v
 set_top_module
 read_def ../momal_scan_def.def
-exit
+

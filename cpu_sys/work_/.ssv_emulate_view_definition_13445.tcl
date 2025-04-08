@@ -1,0 +1,11 @@
+create_constraint_mode -name default_emulate_constraint_mode -sdc_files [list /dev/null]
+create_rc_corner -name default_emulate_rc_corner 
+create_rc_corner -name default_emulate_early_rc_corner 
+create_rc_corner -name default_emulate_late_rc_corner 
+create_library_set -name default_emulate_libset_max -timing [list ../LIBS/slow.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/rf_2p_136d_74w_1m_4b.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/rf_2p_256d_76w_1m_4b.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/rf_2p_512d_76w_2m_4b.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/sram_sp_16384d_36w_16m_8b.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/sram_sp_32768d_33w_16m_8b.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/sram_sp_512d_32w_4m_2b.lib]
+create_library_set -name default_emulate_libset_min -timing [list ../LIBS/slow.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/rf_2p_136d_74w_1m_4b.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/rf_2p_256d_76w_1m_4b.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/rf_2p_512d_76w_2m_4b.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/sram_sp_16384d_36w_16m_8b.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/sram_sp_32768d_33w_16m_8b.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/sram_sp_512d_32w_4m_2b.lib]
+create_delay_corner -name default_emulate_delay_corner -early_library_set default_emulate_libset_min -late_library_set default_emulate_libset_max -rc_corner default_emulate_rc_corner
+create_delay_corner -name default_emulate_delay_corner_max -library_set default_emulate_libset_max -rc_corner default_emulate_rc_corner
+create_delay_corner -name default_emulate_delay_corner_min -library_set default_emulate_libset_min -rc_corner default_emulate_rc_corner
+create_analysis_view -name default_emulate_view -constraint_mode default_emulate_constraint_mode -delay_corner default_emulate_delay_corner
+set_analysis_view -setup default_emulate_view -hold default_emulate_view

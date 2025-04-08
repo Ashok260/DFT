@@ -1,0 +1,19 @@
+**WARN: (IMPOPT-7279):	The command reportVtInstCount will be made obsolete in a future release. Please use report_power -leakage to get the vt based instance count.
+
+Power view               = default_emulate_view
+Number of VT partitions  = 3
+Standard cells in design = 348
+Instances in design      = 303327
+
+Instance distribution across the VT partitions:
+
+ LVT : inst = 175322 (57.8%), cells = 196 (56.32%)
+   Lib slow                 : inst = 175322 (57.8%)
+
+ SVT : inst = 83467 (27.5%), cells = 143 (41.09%)
+   Lib slow                 : inst = 83467 (27.5%)
+
+ HVT : inst = 1491 (0.5%), cells = 6 (1.72%)
+   Lib slow                 : inst = 1491 (0.5%)
+
+Reporting took 0 sec

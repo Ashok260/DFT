@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Tempus Timing Signoff Solution Command Logging File                     
-#  Created on Tue Apr  8 10:07:45 2025                
+#  Created on Tue Apr  8 14:30:25 2025                
 #                                                     
 #######################################################
 
@@ -16,3 +16,526 @@ read_verilog ../RTL/cpu_sys.v
 read_lib ../LIBS/slow.lib
 read_lib -lef ../LIBS/all.lef
 set_top_module
+read_sdc ../SDC/cpu_sys.sdc
+report_clocks -hierarchy -arrival_points -groups > clock_details.txt
+report_clocks -groups -hierarchy -description -arrival_points > clocks_details.txt
+get_power_analysis_mode -analysis_view -quiet
+all_analysis_views -type leakage
+get_eco_opt_mode -quiet -defineVtPartition
+all_analysis_views -type leakage -quiet
+get_power_analysis_mode -leakage_power_view -quiet
+get_power_analysis_mode -analysis_view -quiet
+all_setup_analysis_views
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+get_power_analysis_mode -analysis_view -quiet
+all_analysis_views -type leakage
+get_eco_opt_mode -quiet -defineVtPartition
+all_analysis_views -type leakage -quiet
+get_power_analysis_mode -leakage_power_view -quiet
+get_power_analysis_mode -analysis_view -quiet
+all_setup_analysis_views
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+all_setup_analysis_views
+all_analysis_views -type dynamic -quiet
+all_analysis_views -type leakage -quiet
+report_module_model -help
+report_module_model
