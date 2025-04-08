@@ -395,3 +395,29 @@ Output file 'reports_Apr07-15:30:19/check_design.rpt' created. Sourcing this fil
 [04/07 15:30:21      9s]    : PowerDomain = none : Weighted F : unweighted  = 11.60 (1.000) with rcCorner = -1
 [04/07 15:30:21      9s] Creating Cell Server, finished. 
 [04/07 15:30:21      9s] 
+[04/07 18:14:48    641s] 
+--------------------------------------------------------------------------------
+Exiting Tempus Timing Signoff Solution on Mon Apr  7 18:14:48 2025
+  Total CPU time:     0:10:41
+  Total real time:    2:44:47
+  Peak memory (main): 1293.87MB
+
+[04/07 18:14:48    641s] 
+[04/07 18:14:48    641s] *** Memory Usage v#1 (Current mem = 1529.391M, initial mem = 299.730M) ***
+[04/07 18:14:48    641s] 
+[04/07 18:14:48    641s] *** Summary of all messages that are not suppressed in this session:
+[04/07 18:14:48    641s] Severity  ID               Count  Summary                                  
+[04/07 18:14:48    641s] WARNING   IMPLF-200            4  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[04/07 18:14:48    641s] WARNING   IMPLF-201           50  Pin '%s' in macro '%s' has no ANTENNADIF...
+[04/07 18:14:48    641s] WARNING   IMPFP-3961           2  The techSite '%s' has no related standar...
+[04/07 18:14:48    641s] WARNING   IMPVL-159          696  Pin '%s' of cell '%s' is defined in LEF ...
+[04/07 18:14:48    641s] WARNING   IMPESI-3468          1  User needs to specify -equivalent_wavefo...
+[04/07 18:14:48    641s] WARNING   IMPPP-557            6  A single-layer VIARULE GENERATE for turn...
+[04/07 18:14:48    641s] WARNING   CHKTIM-4            32   Clock pin %s of instance %s has no cloc...
+[04/07 18:14:48    641s] ERROR     CHKTIM-3             1   No clock found for constraint mode %s.  
+[04/07 18:14:48    641s] WARNING   TCLCMD-513           1  The software could not find a matching o...
+[04/07 18:14:48    641s] ERROR     TCLCMD-917           1  Cannot find '%s' that match '%s'         
+[04/07 18:14:48    641s] ERROR     TCLCMD-1109          1  Could not find source for %s command     
+[04/07 18:14:48    641s] *** Message Summary: 792 warning(s), 3 error(s)
+[04/07 18:14:48    641s] 
+[04/07 18:14:48    641s] --- Ending "Tempus Timing Signoff Solution" (totcpu=0:10:41, real=2:44:46, mem=1529.4M) ---
