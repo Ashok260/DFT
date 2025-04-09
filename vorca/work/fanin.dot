@@ -1,0 +1,54 @@
+digraph fanin {
+    rankdir=LR; // Left-to-right direction
+    node [shape=record fontsize=10];
+    
+    // Output port
+    "o_rd_data[5]" [shape=oval style=filled fillcolor=yellow];
+    
+    // U422 cell cluster
+    subgraph cluster_U422 {
+        label="OA21X1: U422";
+        "U422/Y" [label="Y"];
+        "U422/B0" [label="B0"];
+        "U422/A1" [label="A1"];
+        "U422/A0" [label="A0"];
+    }
+    
+    // U395 cell cluster
+    subgraph cluster_U395 {
+        label="BUFX4: U395";
+        "U395/Y" [label="Y"];
+        "U395/A" [label="A"];
+    }
+    
+    // Flip-flops and other cells
+    "f32_mux_1_data_reg_5_/Q" [shape=box];
+    "f32_mux_0_data_reg_5_/Q" [shape=box];
+    "U69/Y" -> "U395/A";
+    
+    // Connections
+    "U422/Y" -> "o_rd_data[5]";
+    "U395/Y" -> "U422/B0";
+    "f32_mux_1_data_reg_5_/Q" -> "U422/A1";
+    "f32_mux_0_data_reg_5_/Q" -> "U422/A0";
+    
+    // U69 NOR2X2 cluster
+    subgraph cluster_U69 {
+        label="NOR2X2: U69";
+        "U69/Y" [label="Y"];
+        "U69/B" [label="B"];
+        "U69/A" [label="A"];
+    }
+    
+    // Continue hierarchical connections
+    "n_write_reg/Q" -> "U69/B";
+    "U20/Y" -> "U69/A";
+    
+    // Add remaining connections following the same pattern...
+    
+    // Final registers
+    "f_state_reg_0_/Q" [shape=box];
+    "f_state_reg_1_/Q" [shape=box];
+    "f_state_reg_2_/Q" [shape=box];
+}
+

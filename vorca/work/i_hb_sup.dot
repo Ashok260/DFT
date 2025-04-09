@@ -1,0 +1,32 @@
+digraph FanoutNetwork {
+    rankdir=LR; // Left-to-right layout
+    node [shape=box, style=filled, fillcolor=lightgrey];
+    
+    // Define nodes with cell types
+    i_hb_sup_1 [label="i_hb_sup[1]"];
+    U263_A1 [label="U263/A1"];
+    U263_Y [label="U263/Y (AOI22X1)"];
+    U264_INV_A [label="U264_INV/A"];
+    U264_INV_Y [label="U264_INV/Y (INVX1)"];
+    U264_B0 [label="U264/B0"];
+    U264_Y [label="U264/Y (AO21X1)"];
+    U46_A0 [label="U46/A0"];
+    U46_Y [label="U46/Y (OAI21X1)"];
+    U92_A [label="U92/A"];
+    U92_Y [label="U92/Y (NAND4X1)"];
+    f32_mux_0_data_reg [label="f32_mux_0_data_reg_1_/D"];
+    
+    // Define connections
+    i_hb_sup_1 -> U263_A1;
+    U263_A1 -> U263_Y;
+    U263_Y -> U264_INV_A;
+    U264_INV_A -> U264_INV_Y;
+    U264_INV_Y -> U264_B0;
+    U264_B0 -> U264_Y;
+    U264_Y -> U46_A0;
+    U46_A0 -> U46_Y;
+    U46_Y -> U92_A;
+    U92_A -> U92_Y;
+    U92_Y -> f32_mux_0_data_reg;
+}
+

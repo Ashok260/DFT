@@ -1,0 +1,14 @@
+digraph fanout {
+  node[shape=box];
+  "f32_mux_1_data_reg_5_/Q" [label="f32_mux_1_data_reg_5_/Q"];
+  "f32_mux_1_data_reg_6_/SI" [label="f32_mux_1_data_reg_6_/SI"];
+  "U422/A1" [label="U422/A1"];
+  "U422/Y" [label="U422/Y"];
+  "o_rd_data[5]" [label="o_rd_data[5]"];
+  
+  "f32_mux_1_data_reg_5_/Q" -> "f32_mux_1_data_reg_6_/SI";
+  "f32_mux_1_data_reg_5_/Q" -> "U422/A1";
+  "U422/A1" -> "U422/Y";
+  "U422/Y" -> "o_rd_data[5]";
+}
+

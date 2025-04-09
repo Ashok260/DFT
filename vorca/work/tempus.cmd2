@@ -1,0 +1,55 @@
+#######################################################
+#                                                     
+#  Tempus Timing Signoff Solution Command Logging File                     
+#  Created on Wed Apr  9 10:36:49 2025                
+#                                                     
+#######################################################
+
+#@(#)CDS: Tempus Timing Signoff Solution v20.20-p001_1 (64bit) 12/02/2020 16:07 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: NanoRoute 20.20-p001_1 NR200917-0125/MT (database version 18.20.530) {superthreading v2.11}
+#@(#)CDS: AAE 20.20-p005 (64bit) 12/02/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: CTE 20.20-p010_1 () Dec  2 2020 14:35:30 ( )
+#@(#)CDS: SYNTECH 20.20-p001_1 () Nov 24 2020 02:28:20 ( )
+#@(#)CDS: CPE v20.20-p009
+
+read_design /home/01fe21bec223/DFT/DFT/vorca/work/vorca.dat vorca
+report_module_model
+current_design 
+current_instance 
+current_design -help 
+current_design
+report_timing -from $fanout 
+report_fanout -from $fanout 
+report_timing -max_paths 10 -from $fout -to endpoints_only
+report_timing -max_paths 10 -from $fout -to [all_fanout -from $fout -endpoints_only]
+report_timing -max_paths 10 -from $fout 
+report_timing -max_paths 10 -from $fout -to [all_fanout -from $fout -endpoints_only]
+report_timing -max_paths 10 -from $fout 
+report_timing -max_paths 10 -from $fout -unconstrained 
+report_fanout -from f32_mux_1_data_reg_5_/Q -view
+report_fanout -from f32_mux_1_data_reg_5_/Q 
+report_fanin -to  f32_mux_1_data_reg_6_/SI 
+report_fanin -to  o_rd_data[5] 
+report_fanout -from clk -trace_through 
+report_fanout -from clk -trace_through clk
+report_fanout -from clk -trace_through all
+report_fanout -from clk -clock_tree 
+report_fanout  -clock_tree 
+report_clock_gating_check
+ui::getColorByName blue
+selectInst clk_gate_data
+deselectInst clk_gate_data
+selectObject Module u_survik
+ui::getColorByName blue
+report_clock_gating_check
+report_fanout -from clock -pin_levels 
+report_fanout -from -pin_levels 
+report_fanout -clock_tree -pin_levels 
+report_fanout -help 
+report_fanout -clock_tree -pin_levels 1
+report_fanout -clock_tree -pin_levels 2
+report_fanout -clock_tree -pin_levels 3
+report_fanout -clock_tree -pin_levels 1
+report_fanout -from i_hb_sup[1] 
+report_fanout -from f32_mux_1_data_reg_5_/Q 
+report_fanout -from i_hb_sup[1] > i_hb_sup.txt
