@@ -1,0 +1,707 @@
+[04/08 17:01:47      0s] 
+[04/08 17:01:47      0s] Cadence Tempus(TM) Timing Signoff Solution.
+[04/08 17:01:47      0s] Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+[04/08 17:01:47      0s] 
+[04/08 17:01:47      0s] Version:	v20.20-p001_1, built Wed Dec 2 16:07:28 PST 2020
+[04/08 17:01:47      0s] Options:	
+[04/08 17:01:47      0s] Date:		Tue Apr  8 17:01:47 2025
+[04/08 17:01:47      0s] Host:		APL10.kletech.ac.in (x86_64 w/Linux 4.18.0-553.47.1.el8_10.x86_64) (6cores*12cpus*12th Gen Intel(R) Core(TM) i5-12500 18432KB)
+[04/08 17:01:47      0s] OS:		Red Hat Enterprise Linux release 8.10 (Ootpa)
+[04/08 17:01:47      0s] 
+[04/08 17:01:47      0s] License:
+[04/08 17:01:48      0s] 		tpsxl	Tempus Timing Signoff Solution XL	20.2	checkout succeeded
+[04/08 17:01:48      0s] 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[04/08 17:01:55      6s] @(#)CDS: Tempus Timing Signoff Solution v20.20-p001_1 (64bit) 12/02/2020 16:07 (Linux 2.6.32-431.11.2.el6.x86_64)
+[04/08 17:01:55      6s] @(#)CDS: NanoRoute 20.20-p001_1 NR200917-0125/MT (database version 18.20.530) {superthreading v2.11}
+[04/08 17:01:55      6s] @(#)CDS: AAE 20.20-p005 (64bit) 12/02/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[04/08 17:01:55      6s] @(#)CDS: CTE 20.20-p010_1 () Dec  2 2020 14:35:30 ( )
+[04/08 17:01:55      6s] @(#)CDS: SYNTECH 20.20-p001_1 () Nov 24 2020 02:28:20 ( )
+[04/08 17:01:55      6s] @(#)CDS: CPE v20.20-p009
+[04/08 17:01:55      6s] @(#)CDS: OA 22.60-s011 Tue Jun 16 12:27:00 2020
+[04/08 17:01:55      6s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[04/08 17:01:55      6s] @(#)CDS: RCDB 11.15.0
+[04/08 17:01:55      6s] @(#)CDS: STYLUS 21.10-d018_1 (08/28/2020 09:14 PDT)
+[04/08 17:01:55      6s] Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+[04/08 17:01:56      6s] **INFO: (TMPDIR-1001): The environment variable TMPDIR is not set.
+Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_22343_wW9bpf'.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_22343_wW9bpf'.
+[04/08 17:02:08      7s] <CMD> read_verilog ../RTL/cpu_sys.v
+[04/08 17:02:08      7s] <CMD> read_lib {../LIBS/slow.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/rf_2p_136d_74w_1m_4b.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/rf_2p_256d_76w_1m_4b.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/rf_2p_512d_76w_2m_4b.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/sram_sp_16384d_36w_16m_8b.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/sram_sp_32768d_33w_16m_8b.lib ../dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/sram_sp_512d_32w_4m_2b.lib}
+[04/08 17:02:09      7s] <CMD> read_lib -lef ../LIBS/all.lef
+[04/08 17:02:09      7s] <CMD> set_top_module
+[04/08 17:02:09      7s] #% Begin Load MMMC data ... (date=04/08 17:02:09, mem=717.1M)
+[04/08 17:02:09      7s] Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+[04/08 17:02:09      7s] #% End Load MMMC data ... (date=04/08 17:02:09, total cpu=0:00:00.0, real=0:00:00.0, peak res=717.6M, current mem=717.6M)
+[04/08 17:02:09      7s] 
+[04/08 17:02:09      7s] Loading LEF file ../LIBS/all.lef ...
+[04/08 17:02:09      7s] Set DBUPerIGU to M2 pitch 1320.
+[04/08 17:02:09      7s] **WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[0]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[10]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[11]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[12]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[13]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[14]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[15]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[1]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[2]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[3]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[4]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[5]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[6]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[7]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[8]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[9]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[0]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[10]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[11]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-201):	Pin 'Q[12]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (EMS-62):	Message <IMPLF-201> has exceeded the default message display limit of 20.
+[04/08 17:02:09      7s] To avoid this warning, increase the display limit per unique message by
+[04/08 17:02:09      7s] using the set_message -limit <number> command.
+[04/08 17:02:09      7s] The message limit can be removed by using the set_message -no_limit command.
+[04/08 17:02:09      7s] Note that setting a very large number using the set_message -limit command
+[04/08 17:02:09      7s] or removing the message limit using the set_message -no_limit command can
+[04/08 17:02:09      7s] significantly increase the log file size.
+[04/08 17:02:09      7s] To suppress a message, use the set_message -suppress command.
+[04/08 17:02:09      7s] **WARN: (IMPLF-200):	Pin 'PAD' in macro 'PDB04DGZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-200):	Pin 'OEN' in macro 'PDB04DGZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] **WARN: (IMPLF-200):	Pin 'I' in macro 'PDB04DGZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[04/08 17:02:09      7s] 
+[04/08 17:02:09      7s] viaInitial starts at Tue Apr  8 17:02:09 2025
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM1 GENERATE.
+[04/08 17:02:09      7s] **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM2 GENERATE.
+[04/08 17:02:09      7s] **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM3 GENERATE.
+[04/08 17:02:09      7s] **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM4 GENERATE.
+[04/08 17:02:09      7s] **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM5 GENERATE.
+[04/08 17:02:09      7s] **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM6 GENERATE.
+[04/08 17:02:09      7s] viaInitial ends at Tue Apr  8 17:02:09 2025
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[04/08 17:02:09      7s] Loading view definition file from .ssv_emulate_view_definition_22343.tcl
+[04/08 17:02:09      7s] Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT/DFT/cpu_sys/LIBS/slow.lib' ...
+[04/08 17:02:09      8s] Read 477 cells in library 'slow' 
+[04/08 17:02:09      8s] Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT/DFT/cpu_sys/dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/rf_2p_136d_74w_1m_4b.lib' ...
+[04/08 17:02:09      8s] Read 1 cells in library 'rf_2p_136d_74w_1m_4b' 
+[04/08 17:02:09      8s] Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT/DFT/cpu_sys/dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/rf_2p_256d_76w_1m_4b.lib' ...
+[04/08 17:02:09      8s] Read 1 cells in library 'rf_2p_256d_76w_1m_4b' 
+[04/08 17:02:09      8s] Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT/DFT/cpu_sys/dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/rf_2p_512d_76w_2m_4b.lib' ...
+[04/08 17:02:09      8s] Read 1 cells in library 'rf_2p_512d_76w_2m_4b' 
+[04/08 17:02:09      8s] Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT/DFT/cpu_sys/dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/sram_sp_16384d_36w_16m_8b.lib' ...
+[04/08 17:02:09      8s] Read 1 cells in library 'sram_sp_16384d_36w_16m_8b' 
+[04/08 17:02:09      8s] Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT/DFT/cpu_sys/dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/sram_sp_32768d_33w_16m_8b.lib' ...
+[04/08 17:02:09      8s] Read 1 cells in library 'sram_sp_32768d_33w_16m_8b' 
+[04/08 17:02:09      8s] Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT/DFT/cpu_sys/dummyNL4KLE_tech-20250115T065802Z-001/dummyNL4KLE_tech/memories/sram_sp_512d_32w_4m_2b.lib' ...
+[04/08 17:02:09      8s] Read 1 cells in library 'sram_sp_512d_32w_4m_2b' 
+[04/08 17:02:09      8s] Ending "PreSetAnalysisView" (total cpu=0:00:00.3, real=0:00:00.0, peak res=819.1M, current mem=776.2M)
+[04/08 17:02:09      8s] *** End library_loading (cpu=0.01min, real=0.00min, mem=30.0M, fe_cpu=0.14min, fe_real=0.37min, fe_mem=772.5M) ***
+[04/08 17:02:09      8s] #% Begin Load netlist data ... (date=04/08 17:02:09, mem=776.1M)
+[04/08 17:02:09      8s] *** Begin netlist parsing (mem=772.5M) ***
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'OAI211XL' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'OAI211XL' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'SEDFFHQX1' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'SEDFFHQX1' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'EDFFTRX2' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'EDFFTRX2' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR3X4' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR3X4' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'DFFHQX4' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'DFFHQX4' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'OAI222XL' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'OAI222XL' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR4X4' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR4X4' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR4BXL' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR4BXL' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'NAND4BBX1' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'NAND4BBX1' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'MXI2X4' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'MXI2X4' is defined in LEF but not in the timing library.
+[04/08 17:02:09      8s] **WARN: (EMS-62):	Message <IMPVL-159> has exceeded the default message display limit of 20.
+[04/08 17:02:09      8s] To avoid this warning, increase the display limit per unique message by
+[04/08 17:02:09      8s] using the set_message -limit <number> command.
+[04/08 17:02:09      8s] The message limit can be removed by using the set_message -no_limit command.
+[04/08 17:02:09      8s] Note that setting a very large number using the set_message -limit command
+[04/08 17:02:09      8s] or removing the message limit using the set_message -no_limit command can
+[04/08 17:02:09      8s] significantly increase the log file size.
+[04/08 17:02:09      8s] To suppress a message, use the set_message -suppress command.
+[04/08 17:02:10      9s] Reading verilog netlist '../RTL/cpu_sys.v'
+[04/08 17:02:11     10s] 
+[04/08 17:02:11     10s] *** Memory Usage v#1 (Current mem = 1232.562M, initial mem = 307.730M) ***
+[04/08 17:02:11     10s] *** End netlist parsing (cpu=0:00:02.2, real=0:00:02.0, mem=1232.6M) ***
+[04/08 17:02:11     10s] #% End Load netlist data ... (date=04/08 17:02:11, total cpu=0:00:02.4, real=0:00:02.0, peak res=1221.1M, current mem=1135.8M)
+[04/08 17:02:11     10s] Top level cell is cpu_sys_emep_top.
+[04/08 17:02:12     10s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+[04/08 17:02:12     10s] late library set: default_emulate_libset_max
+[04/08 17:02:12     10s] early library set: default_emulate_libset_min
+[04/08 17:02:12     10s] Completed consistency checks. Status: Successful
+[04/08 17:02:12     10s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+[04/08 17:02:12     10s] late library set: default_emulate_libset_max
+[04/08 17:02:12     10s] early library set: default_emulate_libset_min
+[04/08 17:02:12     10s] Completed consistency checks. Status: Successful
+[04/08 17:02:12     10s] Ending "BindLib:" (total cpu=0:00:00.0, real=0:00:01.0, peak res=1167.4M, current mem=1167.4M)
+[04/08 17:02:12     10s] Building hierarchical netlist for Cell cpu_sys_emep_top ...
+[04/08 17:02:12     12s] *** Netlist is unique.
+[04/08 17:02:12     12s] Setting Std. cell height to 10080 DBU (smallest netlist inst).
+[04/08 17:02:12     12s] ** info: there are 5448 modules.
+[04/08 17:02:12     12s] ** info: there are 303355 stdCell insts.
+[04/08 17:02:12     12s] 
+[04/08 17:02:12     12s] *** Memory Usage v#1 (Current mem = 1605.594M, initial mem = 307.730M) ***
+[04/08 17:02:12     12s] **WARN: (IMPFP-3961):	The techSite 'corner' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[04/08 17:02:12     12s] **WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[04/08 17:02:12     12s] Horizontal Layer M1 offset = 560 (derived)
+[04/08 17:02:12     12s] Vertical Layer M2 offset = 660 (derived)
+[04/08 17:02:12     12s] Generated pitch 0.99 in Metal6 is different from 1.32 defined in technology file in preferred direction.
+[04/08 17:02:12     12s] Generated pitch 0.56 in Metal5 is different from 1.12 defined in technology file in preferred direction.
+[04/08 17:02:12     13s] Set Default Net Delay as 1000 ps.
+[04/08 17:02:12     13s] Set Default Net Load as 0.5 pF. 
+[04/08 17:02:12     13s] Set Default Input Pin Transition as 0.1 ps.
+[04/08 17:02:13     13s] Extraction setup Started 
+[04/08 17:02:13     13s] Summary of Active RC-Corners : 
+[04/08 17:02:13     13s]  
+[04/08 17:02:13     13s]  Analysis View: default_emulate_view
+[04/08 17:02:13     13s]     RC-Corner Name        : default_emulate_rc_corner
+[04/08 17:02:13     13s]     RC-Corner Index       : 0
+[04/08 17:02:13     13s]     RC-Corner Temperature : 25 Celsius
+[04/08 17:02:13     13s]     RC-Corner Cap Table   : ''
+[04/08 17:02:13     13s]     RC-Corner PostRoute Res Factor        : 1
+[04/08 17:02:13     13s]     RC-Corner PostRoute Cap Factor        : 1
+[04/08 17:02:13     13s]     RC-Corner PostRoute XCap Factor       : 1
+[04/08 17:02:13     13s] LayerId::1 widthSet size::1
+[04/08 17:02:13     13s] LayerId::2 widthSet size::1
+[04/08 17:02:13     13s] LayerId::3 widthSet size::1
+[04/08 17:02:13     13s] LayerId::4 widthSet size::1
+[04/08 17:02:13     13s] LayerId::5 widthSet size::1
+[04/08 17:02:13     13s] LayerId::6 widthSet size::1
+[04/08 17:02:13     13s] Initializing multi-corner resistance tables ...
+[04/08 17:02:13     13s] Preroute length aware model : n: 40 ; LLS: 2-3 ; HLS: 3-5 ; rDens: 0.000000 ; uaWl: 0.000000 ; uaWlH: 0.000000 ; aWlH: 0.000000 ; Pmax: 0.850000 ; wcR: 0.000000 ; newSi: 0.000000 ; pMod: 82 ; 
+[04/08 17:02:13     13s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+[04/08 17:02:13     13s] late library set: default_emulate_libset_max
+[04/08 17:02:13     13s] early library set: default_emulate_libset_min
+[04/08 17:02:13     13s] Completed consistency checks. Status: Successful
+[04/08 17:02:13     13s] Ending "SetAnalysisView" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1855.7M, current mem=1659.6M)
+[04/08 17:02:13     13s] Reading timing constraints file '/dev/null' ...
+[04/08 17:02:13     13s] Current (total cpu=0:00:13.4, real=0:00:26.0, peak res=1881.4M, current mem=1881.4M)
+[04/08 17:02:13     13s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[04/08 17:02:13     13s] Creating Cell Server ...(0, 1, 1, 1)
+[04/08 17:02:13     13s] Summary for sequential cells identification: 
+[04/08 17:02:13     13s]   Identified SBFF number: 70
+[04/08 17:02:13     13s]   Identified MBFF number: 0
+[04/08 17:02:13     13s]   Identified SB Latch number: 0
+[04/08 17:02:13     13s]   Identified MB Latch number: 0
+[04/08 17:02:13     13s]   Not identified SBFF number: 19
+[04/08 17:02:13     13s]   Not identified MBFF number: 0
+[04/08 17:02:13     13s]   Not identified SB Latch number: 0
+[04/08 17:02:13     13s]   Not identified MB Latch number: 0
+[04/08 17:02:13     13s]   Number of sequential cells which are not FFs: 16
+[04/08 17:02:13     13s] Total number of combinational cells: 234
+[04/08 17:02:13     13s] Total number of sequential cells: 105
+[04/08 17:02:13     13s] Total number of tristate cells: 9
+[04/08 17:02:13     13s] Total number of level shifter cells: 0
+[04/08 17:02:13     13s] Total number of power gating cells: 0
+[04/08 17:02:13     13s] Total number of isolation cells: 0
+[04/08 17:02:13     13s] Total number of power switch cells: 0
+[04/08 17:02:13     13s] Total number of pulse generator cells: 0
+[04/08 17:02:13     13s] Total number of always on buffers: 0
+[04/08 17:02:13     13s] Total number of retention cells: 0
+[04/08 17:02:13     13s] List of usable buffers: BUFX2 BUFX12 BUFX16 BUFX20 CLKBUFX2 BUFX3 BUFX4 CLKBUFX12 CLKBUFX16 CLKBUFX20 CLKBUFX4 CLKBUFX8 BUFX8 CLKBUFX3
+[04/08 17:02:13     13s] Total number of usable buffers: 14
+[04/08 17:02:13     13s] List of unusable buffers:
+[04/08 17:02:13     13s] Total number of unusable buffers: 0
+[04/08 17:02:13     13s] List of usable inverters: CLKINVX2 CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX20 INVX1 CLKINVX3 CLKINVX4 INVX12 INVX2 INVX3 CLKINVX8 INVX20 INVX4 INVX16 INVXL INVX8
+[04/08 17:02:13     13s] Total number of usable inverters: 17
+[04/08 17:02:13     13s] List of unusable inverters:
+[04/08 17:02:13     13s] Total number of unusable inverters: 0
+[04/08 17:02:13     13s] List of identified usable delay cells: DLY1X1 DLY4X1 DLY2X1 DLY3X1
+[04/08 17:02:13     13s] Total number of identified usable delay cells: 4
+[04/08 17:02:13     13s] List of identified unusable delay cells:
+[04/08 17:02:13     13s] Total number of identified unusable delay cells: 0
+[04/08 17:02:13     13s] Creating Cell Server, finished. 
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] Deleting Cell Server ...
+[04/08 17:02:13     13s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1911.5M, current mem=1911.5M)
+[04/08 17:02:13     13s] Creating Cell Server ...(0, 0, 0, 0)
+[04/08 17:02:13     13s] Summary for sequential cells identification: 
+[04/08 17:02:13     13s]   Identified SBFF number: 70
+[04/08 17:02:13     13s]   Identified MBFF number: 0
+[04/08 17:02:13     13s]   Identified SB Latch number: 0
+[04/08 17:02:13     13s]   Identified MB Latch number: 0
+[04/08 17:02:13     13s]   Not identified SBFF number: 19
+[04/08 17:02:13     13s]   Not identified MBFF number: 0
+[04/08 17:02:13     13s]   Not identified SB Latch number: 0
+[04/08 17:02:13     13s]   Not identified MB Latch number: 0
+[04/08 17:02:13     13s]   Number of sequential cells which are not FFs: 16
+[04/08 17:02:13     13s]  Visiting view : default_emulate_view
+[04/08 17:02:13     13s]    : PowerDomain = none : Weighted F : unweighted  = 24.20 (1.000) with rcCorner = 0
+[04/08 17:02:13     13s]    : PowerDomain = none : Weighted F : unweighted  = 11.60 (1.000) with rcCorner = -1
+[04/08 17:02:13     13s]  Visiting view : default_emulate_view
+[04/08 17:02:13     13s]    : PowerDomain = none : Weighted F : unweighted  = 24.20 (1.000) with rcCorner = 0
+[04/08 17:02:13     13s]    : PowerDomain = none : Weighted F : unweighted  = 11.60 (1.000) with rcCorner = -1
+[04/08 17:02:13     13s] Creating Cell Server, finished. 
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] Extraction setup Started 
+[04/08 17:02:13     13s] Summary of Active RC-Corners : 
+[04/08 17:02:13     13s]  
+[04/08 17:02:13     13s]  Analysis View: default_emulate_view
+[04/08 17:02:13     13s]     RC-Corner Name        : default_emulate_rc_corner
+[04/08 17:02:13     13s]     RC-Corner Index       : 0
+[04/08 17:02:13     13s]     RC-Corner Temperature : 125 Celsius
+[04/08 17:02:13     13s]     RC-Corner Cap Table   : ''
+[04/08 17:02:13     13s]     RC-Corner PostRoute Res Factor        : 1
+[04/08 17:02:13     13s]     RC-Corner PostRoute Cap Factor        : 1
+[04/08 17:02:13     13s]     RC-Corner PostRoute XCap Factor       : 1
+[04/08 17:02:13     13s] LayerId::1 widthSet size::1
+[04/08 17:02:13     13s] LayerId::2 widthSet size::1
+[04/08 17:02:13     13s] LayerId::3 widthSet size::1
+[04/08 17:02:13     13s] LayerId::4 widthSet size::1
+[04/08 17:02:13     13s] LayerId::5 widthSet size::1
+[04/08 17:02:13     13s] LayerId::6 widthSet size::1
+[04/08 17:02:13     13s] Initializing multi-corner resistance tables ...
+[04/08 17:02:13     13s] Preroute length aware model : n: 40 ; LLS: 2-3 ; HLS: 3-5 ; rDens: 0.000000 ; uaWl: 0.000000 ; uaWlH: 0.000000 ; aWlH: 0.000000 ; Pmax: 0.850000 ; wcR: 0.000000 ; newSi: 0.000000 ; pMod: 82 ; 
+[04/08 17:02:13     13s] Extraction setup Started 
+[04/08 17:02:13     13s] Summary of Active RC-Corners : 
+[04/08 17:02:13     13s]  
+[04/08 17:02:13     13s]  Analysis View: default_emulate_view
+[04/08 17:02:13     13s]     RC-Corner Name        : default_emulate_rc_corner
+[04/08 17:02:13     13s]     RC-Corner Index       : 0
+[04/08 17:02:13     13s]     RC-Corner Temperature : 125 Celsius
+[04/08 17:02:13     13s]     RC-Corner Cap Table   : ''
+[04/08 17:02:13     13s]     RC-Corner PostRoute Res Factor        : 1
+[04/08 17:02:13     13s]     RC-Corner PostRoute Cap Factor        : 1
+[04/08 17:02:13     13s]     RC-Corner PostRoute XCap Factor       : 1
+[04/08 17:02:13     13s] LayerId::1 widthSet size::1
+[04/08 17:02:13     13s] LayerId::2 widthSet size::1
+[04/08 17:02:13     13s] LayerId::3 widthSet size::1
+[04/08 17:02:13     13s] LayerId::4 widthSet size::1
+[04/08 17:02:13     13s] LayerId::5 widthSet size::1
+[04/08 17:02:13     13s] LayerId::6 widthSet size::1
+[04/08 17:02:13     13s] Initializing multi-corner resistance tables ...
+[04/08 17:02:13     13s] Preroute length aware model : n: 40 ; LLS: 2-3 ; HLS: 3-5 ; rDens: 0.000000 ; uaWl: 0.000000 ; uaWlH: 0.000000 ; aWlH: 0.000000 ; Pmax: 0.850000 ; wcR: 0.000000 ; newSi: 0.000000 ; pMod: 82 ; 
+[04/08 17:02:13     13s] Extraction setup Started 
+[04/08 17:02:13     13s] Summary of Active RC-Corners : 
+[04/08 17:02:13     13s]  
+[04/08 17:02:13     13s]  Analysis View: default_emulate_view
+[04/08 17:02:13     13s]     RC-Corner Name        : default_emulate_rc_corner
+[04/08 17:02:13     13s]     RC-Corner Index       : 0
+[04/08 17:02:13     13s]     RC-Corner Temperature : 125 Celsius
+[04/08 17:02:13     13s]     RC-Corner Cap Table   : ''
+[04/08 17:02:13     13s]     RC-Corner PostRoute Res Factor        : 1
+[04/08 17:02:13     13s]     RC-Corner PostRoute Cap Factor        : 1
+[04/08 17:02:13     13s]     RC-Corner PostRoute XCap Factor       : 1
+[04/08 17:02:13     13s] LayerId::1 widthSet size::1
+[04/08 17:02:13     13s] LayerId::2 widthSet size::1
+[04/08 17:02:13     13s] LayerId::3 widthSet size::1
+[04/08 17:02:13     13s] LayerId::4 widthSet size::1
+[04/08 17:02:13     13s] LayerId::5 widthSet size::1
+[04/08 17:02:13     13s] LayerId::6 widthSet size::1
+[04/08 17:02:13     13s] Initializing multi-corner resistance tables ...
+[04/08 17:02:13     13s] Preroute length aware model : n: 40 ; LLS: 2-3 ; HLS: 3-5 ; rDens: 0.000000 ; uaWl: 0.000000 ; uaWlH: 0.000000 ; aWlH: 0.000000 ; Pmax: 0.850000 ; wcR: 0.000000 ; newSi: 0.000000 ; pMod: 82 ; 
+[04/08 17:02:13     13s] <CMD> read_sdc ../SDC/cpu_sys.sdc
+[04/08 17:02:13     13s] Current (total cpu=0:00:13.9, real=0:00:26.0, peak res=1912.2M, current mem=1793.6M)
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../SDC/cpu_sys.sdc, Line 8).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[3]' (File ../SDC/cpu_sys.sdc, Line 9).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[2]' (File ../SDC/cpu_sys.sdc, Line 10).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[1]' (File ../SDC/cpu_sys.sdc, Line 11).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[0]' (File ../SDC/cpu_sys.sdc, Line 12).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[3]' (File ../SDC/cpu_sys.sdc, Line 13).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[2]' (File ../SDC/cpu_sys.sdc, Line 14).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[1]' (File ../SDC/cpu_sys.sdc, Line 15).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[0]' (File ../SDC/cpu_sys.sdc, Line 16).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[3]' (File ../SDC/cpu_sys.sdc, Line 17).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[2]' (File ../SDC/cpu_sys.sdc, Line 18).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[1]' (File ../SDC/cpu_sys.sdc, Line 19).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[0]' (File ../SDC/cpu_sys.sdc, Line 20).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/atfrtc010/CTL/clk_sel' (File ../SDC/cpu_sys.sdc, Line 21).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1142):	Virtual clock 'HPC_CLK_VIR' is being created with no source objects. (File ../SDC/cpu_sys.sdc, Line 32).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1142):	Virtual clock 'GPIO_CLK_VIR' is being created with no source objects. (File ../SDC/cpu_sys.sdc, Line 33).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'create_generated_clock' has been applied on hierarchical pin 'U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_BUF_00/Y' (File ../SDC/cpu_sys.sdc, Line 36).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'create_generated_clock' has been applied on hierarchical pin 'U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_BUF_00/Y' (File ../SDC/cpu_sys.sdc, Line 37).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'create_generated_clock' has been applied on hierarchical pin 'U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_BUF_04/Y' (File ../SDC/cpu_sys.sdc, Line 42).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_false_path' has been applied on hierarchical pin 'U_cpu_sys_top/U_gpio_glbl_mux/gpio_out_52_i[39]' (File ../SDC/cpu_sys.sdc, Line 115).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_false_path' has been applied on hierarchical pin 'U_cpu_sys_top/U_gpio_glbl_mux/gpio_out_52_i[38]' (File ../SDC/cpu_sys.sdc, Line 115).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_false_path' has been applied on hierarchical pin 'U_cpu_sys_top/U_gpio_glbl_mux/gpio_out_52_i[37]' (File ../SDC/cpu_sys.sdc, Line 115).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] **WARN: (TCLCMD-1531):	'set_false_path' has been applied on hierarchical pin 'U_cpu_sys_top/U_gpio_glbl_mux/gpio_out_52_i[36]' (File ../SDC/cpu_sys.sdc, Line 115).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     13s] Message <TCLCMD-1531> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit. (File ../SDC/cpu_sys.sdc, Line 115).
+[04/08 17:02:13     13s] 
+[04/08 17:02:13     14s] Number of path exceptions in the constraint file = 137
+[04/08 17:02:13     14s] INFO (CTE): Reading of timing constraints file ../SDC/cpu_sys.sdc completed, with 23 WARNING
+[04/08 17:02:13     14s] Ending "Constraint file reading stats" (total cpu=0:00:00.2, real=0:00:00.0, peak res=1819.6M, current mem=1819.6M)
+[04/08 17:02:13     14s] Current (total cpu=0:00:14.1, real=0:00:26.0, peak res=1912.2M, current mem=1819.6M)
+[04/08 17:02:13     14s] **ERROR: (TCLCMD-1022):	Property 'is_memory' is not supported for object type 'db instance'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+[04/08 17:02:13     14s] **ERROR: (TCLCMD-917):	Cannot find 'cells' that match '*'
+**ERROR: (TCLCMD-1022):	Property 'is_memory' is not supported for object type 'db instance'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+[04/08 17:02:13     14s] **ERROR: (TCLCMD-917):	Cannot find 'cells' that match '*'
+extra characters after close-quote
+[04/08 17:02:13     14s] Loading  (cpu_sys_emep_top)
+[04/08 17:02:13     14s] Traverse HInst (cpu_sys_emep_top)
+[04/08 17:02:13     14s] Deleting Cell Server ...
+[04/08 17:02:13     14s] Creating Cell Server ...(0, 0, 0, 0)
+[04/08 17:02:13     14s] Summary for sequential cells identification: 
+[04/08 17:02:13     14s]   Identified SBFF number: 70
+[04/08 17:02:13     14s]   Identified MBFF number: 0
+[04/08 17:02:13     14s]   Identified SB Latch number: 0
+[04/08 17:02:13     14s]   Identified MB Latch number: 0
+[04/08 17:02:13     14s]   Not identified SBFF number: 19
+[04/08 17:02:13     14s]   Not identified MBFF number: 0
+[04/08 17:02:13     14s]   Not identified SB Latch number: 0
+[04/08 17:02:13     14s]   Not identified MB Latch number: 0
+[04/08 17:02:13     14s]   Number of sequential cells which are not FFs: 16
+[04/08 17:02:13     14s]  Visiting view : default_emulate_view
+[04/08 17:02:13     14s]    : PowerDomain = none : Weighted F : unweighted  = 24.20 (1.000) with rcCorner = 0
+[04/08 17:02:13     14s]    : PowerDomain = none : Weighted F : unweighted  = 11.60 (1.000) with rcCorner = -1
+[04/08 17:02:13     14s]  Visiting view : default_emulate_view
+[04/08 17:02:13     14s]    : PowerDomain = none : Weighted F : unweighted  = 24.20 (1.000) with rcCorner = 0
+[04/08 17:02:13     14s]    : PowerDomain = none : Weighted F : unweighted  = 11.60 (1.000) with rcCorner = -1
+[04/08 17:02:13     14s] Creating Cell Server, finished. 
+[04/08 17:02:13     14s] 
+[04/08 17:02:13     14s] Deleting Cell Server ...
+[04/08 17:02:13     14s] Creating Cell Server ...(0, 0, 0, 0)
+[04/08 17:02:13     14s] Summary for sequential cells identification: 
+[04/08 17:02:13     14s]   Identified SBFF number: 70
+[04/08 17:02:13     14s]   Identified MBFF number: 0
+[04/08 17:02:13     14s]   Identified SB Latch number: 0
+[04/08 17:02:13     14s]   Identified MB Latch number: 0
+[04/08 17:02:13     14s]   Not identified SBFF number: 19
+[04/08 17:02:13     14s]   Not identified MBFF number: 0
+[04/08 17:02:13     14s]   Not identified SB Latch number: 0
+[04/08 17:02:13     14s]   Not identified MB Latch number: 0
+[04/08 17:02:13     14s]   Number of sequential cells which are not FFs: 16
+[04/08 17:02:13     14s]  Visiting view : default_emulate_view
+[04/08 17:02:13     14s]    : PowerDomain = none : Weighted F : unweighted  = 24.20 (1.000) with rcCorner = 0
+[04/08 17:02:13     14s]    : PowerDomain = none : Weighted F : unweighted  = 11.60 (1.000) with rcCorner = -1
+[04/08 17:02:13     14s]  Visiting view : default_emulate_view
+[04/08 17:02:13     14s]    : PowerDomain = none : Weighted F : unweighted  = 24.20 (1.000) with rcCorner = 0
+[04/08 17:02:13     14s]    : PowerDomain = none : Weighted F : unweighted  = 11.60 (1.000) with rcCorner = -1
+[04/08 17:02:13     14s] Creating Cell Server, finished. 
+[04/08 17:02:13     14s] 
+[04/08 17:02:13     14s] Deleting Cell Server ...
+[04/08 17:04:15     22s] invalid command name "sizeof_collectionz"
+[04/08 17:05:58     29s] invalid command name "sizeof_collectionz"
+[04/08 17:06:33     31s] **WARN: (IMPOPT-7279):	The command reportVtInstCount will be made obsolete in a future release. Please use report_power -leakage to get the vt based instance count.
+[04/08 17:06:33     31s] <CMD> get_power_analysis_mode -analysis_view -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage
+[04/08 17:06:33     31s] <CMD> get_eco_opt_mode -quiet -defineVtPartition
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> get_power_analysis_mode -leakage_power_view -quiet
+[04/08 17:06:33     31s] <CMD> get_power_analysis_mode -analysis_view -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] <CMD> all_setup_analysis_views
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type dynamic -quiet
+[04/08 17:06:33     31s] <CMD> all_analysis_views -type leakage -quiet
+[04/08 17:06:33     31s] 
+[04/08 17:06:33     31s] Power view               = default_emulate_view
+[04/08 17:06:33     31s] Number of VT partitions  = 3
+[04/08 17:06:33     31s] Standard cells in design = 348
+[04/08 17:06:33     31s] Instances in design      = 303355
+[04/08 17:06:33     31s] 
+[04/08 17:06:33     31s] Instance distribution across the VT partitions:
+[04/08 17:06:33     31s] 
+[04/08 17:06:33     31s]  LVT : inst = 175322 (57.8%), cells = 196 (56.32%)
+[04/08 17:06:33     31s]    Lib slow                 : inst = 175322 (57.8%)
+[04/08 17:06:33     31s] 
+[04/08 17:06:33     31s]  SVT : inst = 83467 (27.5%), cells = 143 (41.09%)
+[04/08 17:06:33     31s]    Lib slow                 : inst = 83467 (27.5%)
+[04/08 17:06:33     31s] 
+[04/08 17:06:33     31s]  HVT : inst = 1491 (0.5%), cells = 6 (1.72%)
+[04/08 17:06:33     31s]    Lib slow                 : inst = 1491 (0.5%)
+[04/08 17:06:33     31s] 
+[04/08 17:06:33     31s] Reporting took 0 sec
+[04/08 17:06:33     31s] <CMD> report_clocks -generated >> clock_source.rpt
+[04/08 17:06:33     31s] **WARN: (TCLCMD-1150):	Obsolete option '-generated'. This is now turned on by default
+[04/08 17:12:15     52s] wrong # args: should be "llength list"
+[04/08 17:19:54     81s] 
+[04/08 17:19:54     81s] Usage: get_cells [-help] [-filter <expr>] [-hierarchical] [-hsc <char>] [-leaf]
+[04/08 17:19:54     81s]                  [-nocase] [-quiet] [-regexp] [ <patterns> | -of_objects <object_list> ]
+[04/08 17:19:54     81s] 
+[04/08 17:19:54     81s] **ERROR: (IMPTCM-44):	Argument "-of_objects" is already specified.
+
+[04/08 17:22:39     91s] invalid command name "get_objects"
+[04/08 17:26:36    106s] 
+[04/08 17:26:36    106s] Usage: get_cells [-help] [-filter <expr>] [-hierarchical] [-hsc <char>] [-leaf]
+[04/08 17:26:36    106s]                  [-nocase] [-quiet] [-regexp] [ <patterns> | -of_objects <object_list> ]
+[04/08 17:26:36    106s] 
+[04/08 17:26:36    106s] **ERROR: (IMPTCM-48):	"rf_2p_*" is not a legal option for command "get_cells". Either the current option or an option prior to it is not specified correctly.
+
+[04/08 17:28:12    112s] **ERROR: (TCLCMD-923):	Specified argument '1' is not a valid collection
+can't read "(llength U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_1 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_2 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_3 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_4 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_1 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_2 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_3 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_4 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_5 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_6 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/macahb/rxfifo/U_mem U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/macahb/txfifo/U_mem U_emep_top/i_pcie4_rxbuf/rx_buf_x16_x16_U_pcie_ip_rx_buf_0_ U_emep_top/i_pcie4_rxbuf/rx_buf_x16_x16_U_pcie_ip_rx_buf_1_ U_emep_top/i_pcie4_rxbuf/rx_buf_x16_x16_U_pcie_ip_rx_buf_2_ U_emep_top/i_pcie4_rxbuf/rx_buf_x16_x16_U_pcie_ip_rx_buf_3_ U_emep_top/i_pcie4_txbuf/tx_buf_x16_x8_x4_U_pcie_ip_tx_buf_0_ U_emep_top/i_pcie4_txbuf/tx_buf_x16_x8_x4_U_pcie_ip_tx_buf_1_ U_emep_top/i_pcie4_txbuf/tx_buf_x16_x8_x4_U_pcie_ip_tx_buf_2_ U_emep_top/i_pcie4_txbuf/tx_buf_x16_x8_x4_U_pcie_ip_tx_buf_3_ U_emep_top/i_emep_app_top/i_app_rx_top/i_pcie_sw_sram_emep_rx_top/U_pcie_sw_2pram160x82_inst_0_ U_emep_top/i_emep_app_top/i_app_rx_top/i_pcie_sw_sram_emep_rx_top/U_pcie_sw_2pram160x82_inst_1_ U_emep_top/i_emep_app_top/i_app_rx_top/i_pcie_sw_sram_emep_rx_top/U_pcie_sw_2pram160x82_inst_2_ U_emep_top/i_emep_app_top/i_app_rx_top/i_pcie_sw_sram_emep_rx_top/U_pcie_sw_2pram160x82_inst_3_ U_emep_top/i_emep_app_top/i_app_tx_top/i_cpu_txpkt_gen/i_pcie_sw_sram_emep_rx_top/U_pcie_sw_2pram160x82_inst_0_ U_emep_top/i_emep_app_top/i_app_tx_top/i_cpu_txpkt_gen/i_pcie_sw_sram_emep_rx_top/U_pcie_sw_2pram160x82_inst_1_ U_emep_top/i_emep_app_top/i_app_tx_top/i_cpu_txpkt_gen/i_pcie_sw_sram_emep_rx_top/U_pcie_sw_2pram160x82_inst_2_ U_emep_top/i_emep_app_top/i_app_tx_top/i_cpu_txpkt_gen/i_pcie_sw_sram_emep_rx_top/U_pcie_sw_2pram160x82_inst_3_ )": no such variable
+[04/08 17:32:13    127s] wrong # args: should be "puts ?-nonewline? ?channelId? string"
+[04/08 17:33:22    131s] wrong # args: should be "set varName ?newValue?"
+[04/08 17:46:46    180s] <CMD> report_clocks -description 
+[04/08 17:51:01    196s] <CMD> report_clocks -generated 
+[04/08 17:51:01    196s] **WARN: (TCLCMD-1150):	Obsolete option '-generated'. This is now turned on by default
