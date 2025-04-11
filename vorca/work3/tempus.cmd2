@@ -1,0 +1,31 @@
+#######################################################
+#                                                     
+#  Tempus Timing Signoff Solution Command Logging File                     
+#  Created on Fri Apr 11 15:11:28 2025                
+#                                                     
+#######################################################
+
+#@(#)CDS: Tempus Timing Signoff Solution v20.20-p001_1 (64bit) 12/02/2020 16:07 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: NanoRoute 20.20-p001_1 NR200917-0125/MT (database version 18.20.530) {superthreading v2.11}
+#@(#)CDS: AAE 20.20-p005 (64bit) 12/02/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: CTE 20.20-p010_1 () Dec  2 2020 14:35:30 ( )
+#@(#)CDS: SYNTECH 20.20-p001_1 () Nov 24 2020 02:28:20 ( )
+#@(#)CDS: CPE v20.20-p009
+
+read_design vorca.dat/ vorca
+report_fanout -from f32_mux_1_data_reg_5_/Q 
+report_fanin -to  o_rd_data[5] -trace_through all
+report_fanout -from i_hb_sup[1]  -trace_through all
+report_fanout -clocktree
+report_fanout -clock_tree 
+report_clock_gating_check -view 
+report_clock_gating_check -view 1
+report_clock_gating_check -view all
+report_clock_gating_check
+create_clock -name clk -period $clk_period [get_ports clk]
+set_input_delay [expr $clk_period/2] -clock clk[get_clocks clk] [all_inputs]
+set_output_delay [expr $clk_period/2] -clock clk[get_clocks clk] [all_outputs]set_input_delay [expr $clk_period/2] [get_clocks clk] [all_inputs]
+set_input_delay [expr $clk_period/2] [get_clocks clk] [all_inputs]
+set_input_delay [expr $clk_period/2] -clock clk[get_clocks clk] [all_inputs]
+set_input_delay [expr $clk_period/2] -clock [get_clocks clk] [all_inputs]
+set_output_delay [expr $clk_period/2] -clock [get_clocks clk] [all_outputs]

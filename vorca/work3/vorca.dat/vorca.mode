@@ -1,0 +1,18 @@
+catch { set_analysis_mode -analysisType onChipVariation }
+catch { set_analysis_mode -clockPropagation sdcControl }
+catch { setExtractRCMode  -effortLevel signoff -engine postRoute -total_c_th 5 -relative_c_th 0.03 -coupling_c_th 3 }
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepInstInSdc false -keepFlatten true }
+catch { set_import_mode -discardFloatingVNets true }
+catch { set_import_mode -keepEmptyModule true }
+catch { set_import_mode -timerMode true }
+catch { set_si_mode -enable_delay_report true }
+catch { set_si_mode -enable_glitch_propagation true }
+catch { set_si_mode -enable_glitch_report true }
+catch { set_delay_cal_mode -engine aae }
+catch { set_delay_cal_mode -sgs2set { disableCteSlewDelayCacheInit:true } }
+catch { set_delay_cal_mode -SIAware true }
+catch { set_analysis_mode -analysisType onChipVariation }
+catch { set_analysis_mode -clockPropagation sdcControl }
+catch { set_ilm_mode -mergeModel false }
+catch { setFPlanMode -maxIoHeight true }
+catch { setFPlanMode -powerRailLayer {} }

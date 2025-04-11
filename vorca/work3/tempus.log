@@ -1,0 +1,616 @@
+
+Cadence Tempus(TM) Timing Signoff Solution.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.20-p001_1, built Wed Dec 2 16:07:28 PST 2020
+Options:	
+Date:		Fri Apr 11 11:12:30 2025
+Host:		APL10.kletech.ac.in (x86_64 w/Linux 4.18.0-553.47.1.el8_10.x86_64) (6cores*12cpus*12th Gen Intel(R) Core(TM) i5-12500 18432KB)
+OS:		Red Hat Enterprise Linux release 8.10 (Ootpa)
+
+License:
+		tpsxl	Tempus Timing Signoff Solution XL	20.2	checkout succeeded
+		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_162220_O1ye6u'.
+<CMD> read_verilog ../Netlist/vorca.v
+<CMD> read_lib ../Tech_files/slow.lib
+<CMD> read_lib -lef ../Tech_files/all.lef
+<CMD> set_top_module
+#% Begin Load MMMC data ... (date=04/11 11:13:34, mem=724.9M)
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#% End Load MMMC data ... (date=04/11 11:13:34, total cpu=0:00:00.0, real=0:00:00.0, peak res=725.5M, current mem=725.5M)
+default_emulate_early_rc_corner default_emulate_late_rc_corner default_emulate_rc_corner
+
+Loading LEF file ../Tech_files/all.lef ...
+Set DBUPerIGU to M2 pitch 1320.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[0]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[10]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[11]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[12]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[13]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[14]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[15]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[1]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[2]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[3]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[4]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[5]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[6]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[7]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[8]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[9]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[0]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[10]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[11]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[12]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (EMS-62):	Message <IMPLF-201> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'PDB04DGZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'OEN' in macro 'PDB04DGZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'I' in macro 'PDB04DGZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+
+viaInitial starts at Fri Apr 11 11:13:34 2025
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM1 GENERATE.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM2 GENERATE.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM3 GENERATE.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM4 GENERATE.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM5 GENERATE.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM6 GENERATE.
+viaInitial ends at Fri Apr 11 11:13:34 2025
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from .ssv_emulate_view_definition_162220.tcl
+Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT/DFT/vorca/Tech_files/slow.lib' ...
+Read 477 cells in library 'slow' 
+*** End library_loading (cpu=0.00min, real=0.02min, mem=38.0M, fe_cpu=0.18min, fe_real=1.08min, fe_mem=772.6M) ***
+#% Begin Load netlist data ... (date=04/11 11:13:35, mem=787.6M)
+*** Begin netlist parsing (mem=772.6M) ***
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'OAI211XL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'OAI211XL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'SEDFFHQX1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'SEDFFHQX1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'EDFFTRX2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'EDFFTRX2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR3X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR3X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'DFFHQX4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'DFFHQX4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'OAI222XL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'OAI222XL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR4X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR4X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR4BXL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR4BXL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NAND4BBX1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NAND4BBX1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'MXI2X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'MXI2X4' is defined in LEF but not in the timing library.
+**WARN: (EMS-62):	Message <IMPVL-159> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+Reading verilog netlist '../Netlist/vorca.v'
+**WARN: (IMPVL-346):	Module 'ICGX1' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+
+*** Memory Usage v#1 (Current mem = 916.555M, initial mem = 299.730M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=916.6M) ***
+#% End Load netlist data ... (date=04/11 11:13:35, total cpu=0:00:00.1, real=0:00:00.0, peak res=887.3M, current mem=879.3M)
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'ICGX1' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+**WARN: (UI-418):	Undefined cells that are instantiated in the netlist are allowed because load_netlist_ignore_undefined_cell is true. Unexpected results may occur due to missing library data or missing netlist data. For accurate results, provide a consistent library and netlist.
+Top level cell is vorca.
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+1 empty module found.
+Building hierarchical netlist for Cell vorca ...
+*** Netlist is unique.
+** info: there are 620 modules.
+** info: there are 1033 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1122.500M, initial mem = 299.730M) ***
+**WARN: (IMPFP-3961):	The techSite 'corner' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Horizontal Layer M1 offset = 560 (derived)
+Vertical Layer M2 offset = 660 (derived)
+Generated pitch 0.99 in Metal6 is different from 1.32 defined in technology file in preferred direction.
+Generated pitch 0.56 in Metal5 is different from 1.12 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+/dev/null
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Reading timing constraints file '/dev/null' ...
+Current (total cpu=0:00:11.5, real=0:01:05, peak res=1241.9M, current mem=1241.9M)
+Total number of combinational cells: 234
+Total number of sequential cells: 105
+Total number of tristate cells: 9
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2 BUFX12 BUFX16 BUFX20 CLKBUFX2 BUFX3 BUFX4 CLKBUFX12 CLKBUFX16 CLKBUFX20 CLKBUFX4 CLKBUFX8 BUFX8 CLKBUFX3
+Total number of usable buffers: 14
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX2 CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX20 INVX1 CLKINVX3 CLKINVX4 INVX12 INVX2 INVX3 CLKINVX8 INVX20 INVX4 INVX16 INVXL INVX8
+Total number of usable inverters: 17
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY4X1 DLY2X1 DLY3X1
+Total number of identified usable delay cells: 4
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+default_emulate_constraint_mode
+**ERROR: (IMPSYC-2):	Timing information is not defined for cell ICGX1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+default_emulate_libset_max default_emulate_libset_min
+**ERROR: (IMPSYC-2):	Timing information is not defined for cell ICGX1; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
+Loading  (vorca)
+Traverse HInst (vorca)
+<CMD> create_clock -name clk -period 5 [get_ports clk]
+<CMD> set_delay_cal_mode -siAware true
+AAE_INFO: switching -siAware from false to true ...
+<CMD> set_si_mode -enable_delay_report true
+<CMD> set_si_mode -enable_glitch_report true
+<CMD> set_si_mode -enable_glitch_propagation true
+<CMD> set_global timing_pba_exhaustive_path_nworst_limit 2
+<CMD> set_global timing_path_based_exhaustive_max_paths_limit 1000
+<CMD> update_timing -full
+**WARN: (IMPESI-3468):	User needs to specify -equivalent_waveform_model propagation first before specifying -waveform_compression_mode accurate|clock_detailed .
+AAE DB initialization (MEM=1410.25 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Name: vorca
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+Start delay calculation (fullDC) (1 T). (MEM=1438.02)
+/dev/null
+/dev/null
+Total number of fetched objects 2172
+End delay calculation. (MEM=1443.64 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1443.64 CPU=0:00:00.1 REAL=0:00:00.0)
+<CMD> report_timing
+Path 1: MET Setup Check with Pin f_err_ack_reg/CK 
+Endpoint:   f_err_ack_reg/D (^) checked with  leading edge of 'clk'
+Beginpoint: test_se         (^) triggered by  leading edge of '@'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.235
++ Phase Shift                   5.000
+= Required Time                 4.765
+- Arrival Time                  0.813
+= Slack Time                    3.952
+     Clock Rise Edge                      0.000
+     + Input Delay                        0.000
+     = Beginpoint Arrival Time            0.000
+      -----------------------------------------------------------------------------
+      Instance                       Arc          Cell     Delay  Arrival  Required  
+                                                                  Time     Time  
+      -----------------------------------------------------------------------------
+      -                              test_se ^    -        -      0.000    3.952  
+      o_reg_addr_reg_3__scan_iso_or  B ^ -> Y ^   AND2X1   0.139  0.139    4.091  
+      U65                            A ^ -> Y v   NAND2X2  0.218  0.358    4.309  
+      U73                            A1 v -> Y ^  OAI21X1  0.150  0.508    4.460  
+      U72                            A1 ^ -> Y v  AOI21X1  0.086  0.594    4.545  
+      U71                            B0 v -> Y ^  OAI31X1  0.052  0.645    4.597  
+      U235                           A ^ -> Y ^   AND2X1   0.168  0.813    4.765  
+      f_err_ack_reg                  D ^          SDFFRX1  0.000  0.813    4.765  
+      -----------------------------------------------------------------------------
+
+<CMD> report_timing -max_paths 10000000 -retime path_slew_propagation -retime_mode exhaustive -max_slack 0.200 > epba_${DATE}.rpt
+<CMD> check_design -type timing -out_file reports_Apr11-11:14:20/check_design.rpt
+**WARN: (CHKTIM-4):	 Clock pin CK of instance o_reg_addr_reg_7_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance o_reg_addr_reg_6_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance o_reg_addr_reg_5_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance o_reg_addr_reg_4_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance o_reg_addr_reg_3_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance o_reg_addr_reg_2_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance o_reg_addr_reg_1_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance o_reg_addr_reg_0_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_mux_1_data_reg_0_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_mux_1_data_reg_1_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_mux_1_data_reg_2_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_mux_1_data_reg_3_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_mux_1_data_reg_4_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_mux_1_data_reg_5_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_mux_1_data_reg_6_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_mux_1_data_reg_7_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_mux_1_data_reg_8_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_mux_1_data_reg_9_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_mux_1_data_reg_10_ has no clock constraint for view name default_emulate_view.
+**WARN: (CHKTIM-4):	 Clock pin CK of instance f32_mux_1_data_reg_11_ has no clock constraint for view name default_emulate_view.
+**WARN: (EMS-62):	Message <CHKTIM-4> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+Output file 'reports_Apr11-11:14:20/check_design.rpt' created. Sourcing this file will create a $design_checks TCL dictionary that can be parsed for more information.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   CHKTIM-4           152   Clock pin %s of instance %s has no cloc...
+*** Message Summary: 152 warning(s), 0 error(s)
+
+<CMD> check_timing -verbose > ${reportDir}/check_timing.rpt
+<CMD> report_analysis_coverage            > ${reportDir}/coverage.rpt
+<CMD> report_clocks                       > ${reportDir}/clocks.rpt
+<CMD> report_case_analysis                > ${reportDir}/case_analysis.rpt
+<CMD> report_inactive_arcs                > ${reportDir}/inactive_arcs.rpt
+<CMD> report_constraint -all_violators > reports_Apr11-11:14:20/allviol.rpt
+<CMD> report_analysis_summary                                         > ${reportDir}/analysis_summary.rpt
+<CMD> report_timing -path_type summary_slack_only -late -max_paths 5  > ${reportDir}/start_end_slack.rpt
+<CMD> report_timing -late   -max_paths 50 -nworst 1 -path_type full_clock -net  > ${reportDir}/worst_max_path.rpt
+<CMD> report_timing -early  -max_paths 50 -nworst 1 -path_type full_clock -net  > ${reportDir}/worst_min_path.rpt
+<CMD> report_timing -path_type end_slack_only                       > ${reportDir}/setup_1.rpt
+<CMD> report_timing -path_type end_slack_only  -early               > ${reportDir}/hold_1.rpt
+<CMD> report_timing -late    -max_paths 100                         > ${reportDir}/setup_100.rpt.gz
+<CMD> report_timing -early   -max_paths 100                         > ${reportDir}/hold_100.rpt.gz
+<CMD> report_timing -retime path_slew_propagation -max_paths 50 -nworst 1 -path_type full_clock    > ${reportDir}/pba_50_paths.rpt
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 2.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+INFO: Path Based Analysis (PBA) performed on total '29' paths
+All done
+-checkType setup                           # enums={setup hold}, default=setup
+<CMD> get_time_unit
+<CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -late > top.mtarpt
+<CMD> load_timing_debug_report -name default_report top.mtarpt
+Parsing file top.mtarpt...
+**WARN: (IMPGTD-801):	File (top.mtarpt) does not contain any timing paths.
+This could be because the report is not of the correct format,
+or because it does not contain any paths (because there are no
+failing paths in the design, for instance).
+**ERROR: (IMPGTD-223):	load_timing_debug_report top.mtarpt failed.
+-checkType setup                           # enums={setup hold}, default=setup
+<CMD> get_time_unit
+<CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -early > top.mtarpt
+<CMD> load_timing_debug_report -name default_report top.mtarpt
+Parsing file top.mtarpt...
+-checkType setup                           # enums={setup hold}, default=setup
+<CMD> get_time_unit
+<CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -late > top.mtarpt
+<CMD> load_timing_debug_report -name default_report top.mtarpt
+Parsing file top.mtarpt...
+**WARN: (IMPGTD-801):	File (top.mtarpt) does not contain any timing paths.
+This could be because the report is not of the correct format,
+or because it does not contain any paths (because there are no
+failing paths in the design, for instance).
+**ERROR: (IMPGTD-223):	load_timing_debug_report top.mtarpt failed.
+**ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::pathList:tipcb etsgtd@frameOnly 27 4' is executed with the error message: 'ERROR: TA report not loaded in.'. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+can't read "clk_fo": no such variable
+**INFO (INTERRUPT): One more Ctrl-C to exit Tempus Timing Signoff Solution ...
+invalid command name "uts"
+<CMD> report_fanout -from f32_mux_1_data_reg_5_/Q 
+       -------------------------------------------------------------------------------------------------------  
+        Source Pin             Sink Pin               Cell Type         Timing Sense      Arc        Case       
+                                                                                          Disabled   Analysis   
+       -------------------------------------------------------------------------------------------------------  
+       f32_mux_1_data_reg_5_/Q
+                              f32_mux_1_data_reg_6_/SI
+                                                     (net)             -                 -          -
+       f32_mux_1_data_reg_5_/Q
+                              U422/A1                (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+       U422/A1                U422/Y                 OA21X1            positive_unate    -          -
+       -------------------------------------------------------------------------------------------------------
+       U422/Y                 o_rd_data[5]           (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+
+Usage: all_registers [-help] [-async_pins] [-cells] [-clock <clock_list>]
+                     [-clock_pins] [-data_pins] [-fall_clock <clock_list>]
+                     [-macros] [-master_slave] [-no_hierarchy]
+                     [-output_pins] [-rise_clock <clock_list>]
+                     [-slave_clock_pins] [-flops  | -edge_triggered ] [-latches  | -level_sensitive ]
+
+**ERROR: (IMPTCM-48):	"-of_objects" is not a legal option for command "all_registers". Either the current option or an option prior to it is not specified correctly.
+
+invalid command name "0x16"
+f_state_reg_0_/CK f_state_reg_0_/D f_state_reg_0_/Q f_state_reg_0_/QN f_state_reg_0_/RN f_state_reg_0_/SE f_state_reg_0_/SI f_state_reg_1_/CK f_state_reg_1_/D f_state_reg_1_/Q f_state_reg_1_/QN f_state_reg_1_/RN f_state_reg_1_/SE f_state_reg_1_/SI f_state_reg_2_/CK f_state_reg_2_/D f_state_reg_2_/Q f_state_reg_2_/QN f_state_reg_2_/RN f_state_reg_2_/SE f_state_reg_2_/SI f_ack_reg/CK f_ack_reg/D f_ack_reg/Q f_ack_reg/QN f_ack_reg/RN f_ack_reg/SE f_ack_reg/SI n_write_reg/CK n_write_reg/D n_write_reg/Q n_write_reg/QN n_write_reg/RN n_write_reg/SE n_write_reg/SI o_reg_addr_reg_7_/CK o_reg_addr_reg_7_/D o_reg_addr_reg_7_/Q o_reg_addr_reg_7_/QN o_reg_addr_reg_7_/RN o_reg_addr_reg_7_/SE o_reg_addr_reg_7_/SI o_reg_addr_reg_6_/CK o_reg_addr_reg_6_/D o_reg_addr_reg_6_/Q o_reg_addr_reg_6_/QN o_reg_addr_reg_6_/RN o_reg_addr_reg_6_/SE o_reg_addr_reg_6_/SI o_reg_addr_reg_5_/CK o_reg_addr_reg_5_/D o_reg_addr_reg_5_/Q o_reg_addr_reg_5_/QN o_reg_addr_reg_5_/RN o_reg_addr_reg_5_/SE o_reg_addr_reg_5_/SI o_reg_addr_reg_4_/CK o_reg_addr_reg_4_/D o_reg_addr_reg_4_/Q o_reg_addr_reg_4_/QN o_reg_addr_reg_4_/RN o_reg_addr_reg_4_/SE o_reg_addr_reg_4_/SI o_reg_addr_reg_3_/CK o_reg_addr_reg_3_/D o_reg_addr_reg_3_/Q o_reg_addr_reg_3_/QN o_reg_addr_reg_3_/RN o_reg_addr_reg_3_/SE o_reg_addr_reg_3_/SI o_reg_addr_reg_2_/CK o_reg_addr_reg_2_/D o_reg_addr_reg_2_/Q o_reg_addr_reg_2_/QN o_reg_addr_reg_2_/RN o_reg_addr_reg_2_/SE o_reg_addr_reg_2_/SI o_reg_addr_reg_1_/CK o_reg_addr_reg_1_/D o_reg_addr_reg_1_/Q o_reg_addr_reg_1_/QN o_reg_addr_reg_1_/RN o_reg_addr_reg_1_/SE o_reg_addr_reg_1_/SI o_reg_addr_reg_0_/CK o_reg_addr_reg_0_/D o_reg_addr_reg_0_/Q o_reg_addr_reg_0_/QN o_reg_addr_reg_0_/RN o_reg_addr_reg_0_/SE o_reg_addr_reg_0_/SI f_err_ack_reg/CK f_err_ack_reg/D f_err_ack_reg/Q f_err_ack_reg/QN f_err_ack_reg/RN f_err_ack_reg/SE f_err_ack_reg/SI f32_mux_1_data_reg_0_/CK f32_mux_1_data_reg_0_/D ...
+
+Usage: get_pins [-help] [-filter <expr>] [-hierarchical] [-hsc <char>]
+                [-leaf] [-nocase] [-quiet] [-regexp] [ <patterns> | -of_objects <object_list> ]
+
+**ERROR: (IMPTCM-6):	Missing string value for option "-of_objects".  
+
+**ERROR: (TCLCMD-927):	Cannot find 'pins' for specified 'instances or nets'
+ambiguous command name "*instance*": addioinstance addspareinstance all_instances bindinstancecell changecellforselectedinstance check_instance_library_in_views checksdpcolumninstanceoverlap cte_create_instance cte_delete_instance cte_instance_exists current_instance current_instance_sdc debug_set_instance_library deleteioinstance pdi_delete_instance_pin placeinstance ptncopyinstanceattributepropfromto read_instance_temp read_instance_voltage report_cell_instance_timing report_critical_instance report_instance_cdb report_instance_irDrop_delta_delay report_instance_irdrop_delta_delay report_instance_library report_instance_power report_instance_rail report_pba_critical_instance report_reference_instance reportcritinstance reportisolationinstances ...
+...too many match (>30)
+
+Usage: all_instances [-help] <object> [-hierarchical ]
+
+**ERROR: (IMPTCM-46):	Argument "<object>" is required for command "all_instances", either this option is not specified or an option prior to it is not specified correctly.
+
+**ERROR: (TCLCMD-917):	Cannot find 'designs or library cells' that match 'o_rd_data'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'o_rd_data'
+**ERROR: (TCLCMD-917):	Cannot find 'pins' that match 'o_rd_data'
+o_rd_data[31] o_rd_data[30] o_rd_data[29] o_rd_data[28] o_rd_data[27] o_rd_data[26] o_rd_data[25] o_rd_data[24] o_rd_data[23] o_rd_data[22] o_rd_data[21] o_rd_data[20] o_rd_data[19] o_rd_data[18] o_rd_data[17] o_rd_data[16] o_rd_data[15] o_rd_data[14] o_rd_data[13] o_rd_data[12] o_rd_data[11] o_rd_data[10] o_rd_data[9] o_rd_data[8] o_rd_data[7] o_rd_data[6] o_rd_data[5] o_rd_data[4] o_rd_data[3] o_rd_data[2] o_rd_data[1] o_rd_data[0]
+invalid command name "set_ff_eps"
+extra characters after close-brace
+can't read "ffeps": no such variable
+invalid command name "get_collection_size"
+invalid command name "get_collection_size"
+**ERROR: (TCLCMD-927):	Cannot find 'ports' for specified 'nets'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '$<pre>f32_mux_1_data_reg_5_EP'
+
+Usage: all_fanout [-help] [-endpoints_only] [-hpin] [-only_cells]
+                  [-trace_through {case_disable|user_disable|all|clocks|loop_snipped}]
+                  [-view <view_name>] [-levels <value> | -pin_levels <value>] {-from {collection | object_list} } [ > | >> ]
+
+**ERROR: (IMPTCM-48):	"false" is not a legal option for command "all_fanout". Either the current option or an option prior to it is not specified correctly.
+
+**ERROR: (TCLCMD-1022):	Property 'is_ports' is not supported for object type 'db timing pin'
+
+Usage: get_property [-help] <var_name> <property> [-clock <clock_name>]
+                    [-quiet] [-view <view_name>]
+
+
+
+Usage: get_property [-help] <var_name> <property> [-clock <clock_name>]
+                    [-quiet] [-view <view_name>]
+
+
+
+Usage: get_property [-help] <var_name> <property> [-clock <clock_name>]
+                    [-quiet] [-view <view_name>]
+
+
+
+Usage: get_property [-help] <var_name> <property> [-clock <clock_name>]
+                    [-quiet] [-view <view_name>]
+
+-help                   # Prints out the command usage
+<var_name>              # Specifies the single object collection
+                        # (string, required)
+<property>              # Specifies the property to retrieve the value
+                        # (string, required)
+-clock <clock_name>     # Specifies the clock for which to query certain
+                        # object properties (string, optional)
+-quiet                  # Specifies to exit quietly without issuing error
+                        # (bool, optional)
+-view <view_name>       # Specifies the analysis view in which to query
+                        # the object attribute (string, optional)
+
+
+o_rd_data[5]
+o_rd_data[5]
+
+Usage: get_ports [-help] [-filter <expr>] [-nocase] [-quiet] [-regexp] [ <patterns> | -of_objects <object_list> ]
+
+-help                         # Prints out the command usage
+<patterns>                    # Patterns for port names
+                              # (string, optional)
+-filter <expr>                # Filters the collection with the specified
+                              # expression (string, optional)
+-nocase                       # Pattern matching is not case sensitive
+                              # (bool, optional)
+-of_objects <object_list>     # Creates a collection of all ports
+                              # associated with the specified nets
+                              # (string, optional)
+-quiet                        # Suppresses all error and warning messages
+                              # generated when the get_ports command is
+                              # run (bool, optional)
+-regexp                       # Suppresses all error and warning messages
+                              # generated when the get_ports command is
+                              # run (bool, optional)
+
+
+**ERROR: (TCLCMD-927):	Cannot find 'ports' for specified 'nets'
+<CMD> report_fanin -to  o_rd_data[5] -trace_through all 
+       -------------------------------------------------------------------------------------------------------  
+        Source Pin             Sink Pin               Cell Type         Timing Sense      Arc        Case       
+                                                                                          Disabled   Analysis   
+       -------------------------------------------------------------------------------------------------------  
+       U422/Y                 o_rd_data[5]           (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+       U422/B0                U422/Y                 OA21X1            positive_unate    -          -
+       U422/A1                U422/Y                 OA21X1            positive_unate    -          -
+       U422/A0                U422/Y                 OA21X1            positive_unate    -          -
+       -------------------------------------------------------------------------------------------------------
+       U395/Y                 U422/B0                (net)             -                 -          -
+       f32_mux_1_data_reg_5_/Q
+                              U422/A1                (net)             -                 -          -
+       f32_mux_0_data_reg_5_/Q
+                              U422/A0                (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+       U395/A                 U395/Y                 BUFX4             positive_unate    -          -
+       f32_mux_1_data_reg_5_/CK
+                              f32_mux_1_data_reg_5_/Q
+                                                     SDFFRX1           non_unate         -          -
+       f32_mux_0_data_reg_5_/CK
+                              f32_mux_0_data_reg_5_/Q
+                                                     SDFFRX1           non_unate         -          -
+       -------------------------------------------------------------------------------------------------------
+       U69/Y                  U395/A                 (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+       U69/B                  U69/Y                  NOR2X2            negative_unate    -          -
+       U69/A                  U69/Y                  NOR2X2            negative_unate    -          -
+       -------------------------------------------------------------------------------------------------------
+       n_write_reg/Q          U69/B                  (net)             -                 -          -
+       U20/Y                  U69/A                  (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+       n_write_reg/CK         n_write_reg/Q          SDFFRX1           non_unate         -          -
+       U20/B                  U20/Y                  NOR2X2            negative_unate    -          -
+       U20/A                  U20/Y                  NOR2X2            negative_unate    -          -
+       -------------------------------------------------------------------------------------------------------
+       f_ack_reg/Q            U20/B                  (net)             -                 -          -
+       U66/Y                  U20/A                  (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+       f_ack_reg/CK           f_ack_reg/Q            SDFFRX1           non_unate         -          -
+       U66/B                  U66/Y                  NOR2X2            negative_unate    -          -
+       U66/A                  U66/Y                  NOR2X2            negative_unate    -          -
+       -------------------------------------------------------------------------------------------------------
+       U75/Y                  U66/B                  (net)             -                 -          -
+       f_state_reg_2_/Q       U66/A                  (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+       U75/B                  U75/Y                  NAND2BX1          negative_unate    -          -
+       U75/AN                 U75/Y                  NAND2BX1          positive_unate    -          -
+       f_state_reg_2_/CK      f_state_reg_2_/Q       SDFFRX1           non_unate         -          -
+       -------------------------------------------------------------------------------------------------------
+       f_state_reg_0_/Q       U75/B                  (net)             -                 -          -
+       f_state_reg_1_/Q       U75/AN                 (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+       f_state_reg_0_/CK      f_state_reg_0_/Q       SDFFRX1           non_unate         -          -
+       f_state_reg_1_/CK      f_state_reg_1_/Q       SDFFRX1           non_unate         -          -
+       -------------------------------------------------------------------------------------------------------
+**ERROR: (TCLCMD-981):	Unsupported extra argument 'n_write_reg/CK f_ack_reg/CK f_state_reg_0_/CK ...' in command 'get_object_name'.
+
+**ERROR: (TCLCMD-981):	Unsupported extra argument 'n_write_reg/CK f_ack_reg/CK f_state_reg_0_/CK ...' in command 'get_object_name'.
+
+**ERROR: (TCLCMD-927):	Cannot find 'ports' for specified 'nets'
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match '0x37'
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match '0x37'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'n_write_reg/CK'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'f_ack_reg/CK'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'f_state_reg_0_/CK'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'f_state_reg_1_/CK'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'f_state_reg_2_/CK'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'f32_mux_1_data_reg_5_/CK'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'f32_mux_0_data_reg_5_/CK'
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match 'n_write_reg/CK f_ack_reg/CK f_state_reg_0_/CK f_state_reg_1_/CK f_state_reg_2_/CK f32_mux_1_data_reg_5_/CK f32_mux_0_data_reg_5_/CK'
+invalid command name "n_write_reg/CK f_ack_reg/CK f_state_reg_0_/CK f_state_reg_1_/CK f_state_reg_2_/CK f32_mux_1_data_reg_5_/CK f32_mux_0_data_reg_5_/CK"
+**WARN: (TCLCMD-746):	Empty collection specified as argument to 'get_object_name'
+<CMD> selectObject Net {i_hisbuf1_4[0]}
+<CMD> selectObject Net {i_hisbuf1_4[1]}
+<CMD> selectObject Net {i_hisbuf1_4[2]}
+<CMD> selectObject Net {i_hisbuf1_4[3]}
+<CMD> selectObject Net {i_hisbuf1_4[4]}
+<CMD> selectObject Net {i_hisbuf1_4[5]}
+<CMD> selectObject Net {i_hisbuf1_4[6]}
+<CMD> selectObject Net {i_hisbuf1_4[7]}
+<CMD> selectObject Net {i_hisbuf1_4[8]}
+<CMD> selectObject Net {i_hisbuf1_4[9]}
+<CMD> selectObject Net {i_hisbuf1_4[10]}
+<CMD> selectObject Net {i_hisbuf1_4[11]}
+<CMD> selectObject Net {i_hisbuf1_4[12]}
+<CMD> selectObject Net {i_hisbuf1_4[13]}
+<CMD> selectObject Net {i_hisbuf1_4[14]}
+<CMD> selectObject Net {i_hisbuf1_4[15]}
+<CMD> selectObject Net {i_hisbuf1_4[16]}
+<CMD> selectObject Net {i_hisbuf1_4[17]}
+<CMD> selectObject Net {i_hisbuf1_4[18]}
+<CMD> selectObject Net {i_hisbuf1_4[19]}
+<CMD> selectObject Net {i_hisbuf1_4[20]}
+<CMD> selectObject Net {i_hisbuf1_4[21]}
+<CMD> selectObject Net {i_hisbuf1_4[22]}
+<CMD> selectObject Net {i_hisbuf1_4[23]}
+clk i_reset_ i_sw_init i_addr[7] i_addr[6] i_addr[5] i_addr[4] i_addr[3] i_addr[2] i_addr[1] i_addr[0] i_wr_strb i_wr_data[31] i_wr_data[30] i_wr_data[29] i_wr_data[28] i_wr_data[27] i_wr_data[26] i_wr_data[25] i_wr_data[24] i_wr_data[23] i_wr_data[22] i_wr_data[21] i_wr_data[20] i_wr_data[19] i_wr_data[18] i_wr_data[17] i_wr_data[16] i_wr_data[15] i_wr_data[14] i_wr_data[13] i_wr_data[12] i_wr_data[11] i_wr_data[10] i_wr_data[9] i_wr_data[8] i_wr_data[7] i_wr_data[6] i_wr_data[5] i_wr_data[4] i_wr_data[3] i_wr_data[2] i_wr_data[1] i_wr_data[0] i_rd_strb i_revision_config[7] i_revision_config[6] i_revision_config[5] i_revision_config[4] i_revision_config[3] i_revision_config[2] i_revision_config[1] i_revision_config[0] i_spare_config[31] i_spare_config[30] i_spare_config[29] i_spare_config[28] i_spare_config[27] i_spare_config[26] i_spare_config[25] i_spare_config[24] i_spare_config[23] i_spare_config[22] i_spare_config[21] i_spare_config[20] i_spare_config[19] i_spare_config[18] i_spare_config[17] i_spare_config[16] i_spare_config[15] i_spare_config[14] i_spare_config[13] i_spare_config[12] i_spare_config[11] i_spare_config[10] i_spare_config[9] i_spare_config[8] i_spare_config[7] i_spare_config[6] i_spare_config[5] i_spare_config[4] i_spare_config[3] i_spare_config[2] i_spare_config[1] i_spare_config[0] i_hb_sup[2] i_hb_sup[1] i_hb_sup[0] i_hisbuf0_0[23] i_hisbuf0_0[22] i_hisbuf0_0[21] i_hisbuf0_0[20] i_hisbuf0_0[19] i_hisbuf0_0[18] i_hisbuf0_0[17] i_hisbuf0_0[16] i_hisbuf0_0[15] i_hisbuf0_0[14] i_hisbuf0_0[13] i_hisbuf0_0[12] ...
+**ERROR: (TCLCMD-927):	Cannot find 'ports' for specified 'nets'
+**WARN: (TCLCMD-746):	Empty collection specified as argument to 'get_object_name'
+**ERROR: (TCLCMD-923):	Specified argument 'not_clk_ff' is not a valid collection
+**ERROR: (TCLCMD-917):	Cannot find 'pins' that match '0x4f/CLK'
+invalid command name "get_driver"
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'o_reg_addr_reg_7_'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'o_reg_addr_reg_6_'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'o_reg_addr_reg_5_'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'o_reg_addr_reg_4_'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'o_reg_addr_reg_3_'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'o_reg_addr_reg_2_'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'o_reg_addr_reg_1_'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'o_reg_addr_reg_0_'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'f32_mux_1_data_reg_0_'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'f32_mux_1_data_reg_1_'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'f32_mux_1_data_reg_2_'
+Message <TCLCMD-513> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+**ERROR: (TCLCMD-917):	Cannot find 'pins' that match 'o_reg_addr_reg_7_ o_reg_addr_reg_6_ o_reg_addr_reg_5_ o_reg_addr_reg_4_ o_reg_addr_reg_3_ o_reg_addr_reg_2_ o_reg_addr_reg_1_ o_reg_addr_reg_0_ f32_mux_1_data_reg_0_ f32_mux_1_data_reg_1_ f32_mux_1_data_reg_2_ f32_mux_1_data_reg_3_ f32_mux_1_data_reg_4_ f32_mux_1_data_reg_5_ f32_mux_1_data_reg_6_ f32_mux_1_data_reg_7_ f32_mux_1_data_reg_8_ f32_mux_1_data_reg_9_ f32_mux_1_data_reg_10_ f32_mux_1_data_reg_11_ f32_mux_1_data_reg_12_ f32_mux_1_data_reg_13_ f32_mux_1_data_reg_14_ f32_mux_1_data_reg_15_ f32_mux_1_data_reg_16_ f32_mux_1_data_reg_17_ f32_mux_1_data_reg_18_ f32_mux_1_data_reg_19_ f32_mux_1_data_reg_20_ f32_mux_1_data_reg_21_ f32_mux_1_data_reg_22_ f32_mux_1_data_reg_23_ f32_mux_1_data_reg_24_ f32_mux_1_data_reg_25_ f32_mux_1_data_reg_26_ f32_mux_1_data_reg_27_ f32_mux_1_data_reg_28_ f32_mux_1_data_reg_29_ f32_mux_1_data_reg_30_ f32_mux_1_data_reg_31_ f32_mux_0_data_reg_31_ f32_mux_0_data_reg_30_ f32_mux_0_data_reg_29_ f32_mux_0_data_reg_28_ f32_mux_0_data_reg_27_ f32_mux_0_data_reg_26_ f32_mux_0_data_reg_25_ f32_mux_0_data_reg_24_ f32_mux_0_data_reg_23_ f32_mux_0_data_reg_22_ f32_mux_0_data_reg_21_ f32_mux_0_data_reg_20_ f32_mux_0_data_reg_19_ f32_mux_0_data_reg_18_ f32_mux_0_data_reg_17_ f32_mux_0_data_reg_16_ f32_mux_0_data_reg_0_ f32_mux_0_data_reg_1_ f32_mux_0_data_reg_2_ f32_mux_0_data_reg_3_ f32_mux_0_data_reg_4_ f32_mux_0_data_reg_5_ f32_mux_0_data_reg_6_ f32_mux_0_data_reg_7_ f32_mux_0_data_reg_8_ f32_mux_0_data_reg_9_ f32_mux_0_data_reg_10_ f32_mux_0_data_reg_11_ f32_mux_0_data_reg_12_ f32_mux_0_data_reg_13_ f32_mux_0_data_reg_14_ f32_mux_0_data_reg_15_ f32_data_reg_31_ f32_data_reg_30_ f32_data_reg_29_ f32_data_reg_28_ f32_data_reg_27_ f32_data_reg_26_ f32_data_reg_25_ f32_data_reg_24_ f32_data_reg_23_ f32_data_reg_22_ f32_data_reg_21_ f32_data_reg_20_ f32_data_reg_19_ f32_data_reg_18_ f32_data_reg_17_ f32_data_reg_16_ f32_data_reg_15_ f32_data_reg_14_ f32_data_reg_13_ f32_data_reg_12_ f32_data_reg_11_ f32_data_reg_10_ f32_data_reg_9_ f32_data_reg_8_ f32_data_reg_7_ f32_data_reg_6_ f32_data_reg_5_ f32_data_reg_4_ f32_data_reg_3_ f32_data_reg_2_ f32_data_reg_1_ f32_data_reg_0_ u_survik/o_spare_config_reg_31_ u_survik/o_spare_config_reg_30_ u_survik/o_spare_config_reg_29_ u_survik/o_spare_config_reg_28_ u_survik/o_spare_config_reg_27_ u_survik/o_spare_config_reg_26_ u_survik/o_spare_config_reg_25_ u_survik/o_spare_config_reg_24_ u_survik/o_spare_config_reg_23_ u_survik/o_spare_config_reg_22_ u_survik/o_spare_config_reg_21_ u_survik/o_spare_config_reg_20_ u_survik/o_spare_config_reg_19_ u_survik/o_spare_config_reg_18_ u_survik/o_spare_config_reg_17_ u_survik/o_spare_config_reg_16_ u_survik/o_spare_config_reg_15_ u_survik/o_spare_config_reg_14_ u_survik/o_spare_config_reg_13_ u_survik/o_spare_config_reg_12_ u_survik/o_spare_config_reg_11_ u_survik/o_spare_config_reg_10_ u_survik/o_spare_config_reg_9_ u_survik/o_spare_config_reg_8_ u_survik/o_spare_config_reg_7_ u_survik/o_spare_config_reg_6_ u_survik/o_spare_config_reg_5_ u_survik/o_spare_config_reg_4_ u_survik/o_spare_config_reg_3_ u_survik/o_spare_config_reg_2_ u_survik/o_spare_config_reg_1_ u_survik/o_spare_config_reg_0_ u_survik/o_adj_config_reg_15_ u_survik/o_adj_config_reg_14_ u_survik/o_adj_config_reg_13_ u_survik/o_adj_config_reg_12_ u_survik/o_adj_config_reg_11_ u_survik/o_adj_config_reg_10_ u_survik/o_adj_config_reg_9_ u_survik/o_adj_config_reg_8_ u_survik/o_adj_config_reg_7_ u_survik/o_adj_config_reg_6_ u_survik/o_adj_config_reg_5_ u_survik/o_adj_config_reg_4_ u_survik/o_adj_config_reg_3_ u_survik/o_adj_config_reg_2_ u_survik/o_adj_config_reg_1_ u_survik/o_adj_config_reg_0_/CLK'
+invalid command name "get_driver"
+<CMD> report_fanout -clocktree
+**ERROR: (TCLCMD-176):	Mandatory option -from|-clock_tree not specified
+
+<CMD> report_fanout -from clk -clocktree
+**ERROR: (TCLCMD-981):	Unsupported extra argument '-clocktree' in command 'report_fanout'.
+
+<CMD> report_fanout -from clk
