@@ -136,7 +136,7 @@ grep -i "TLA" ../Tech_files/vorca_fixed.v
 #8.Write an SDC for vorca with clock definitions and with input and output delays set at
 #half the clock period. Parameterize the clock period in the SDC, and set its value
 #such that the clock frequency is 1 GHz.
- ----------sdc-------------------------
+ ----------sdc----read_design ---------------------
 set clk_period 1
 create_clock -name clk -period $clk_period [get_ports clk]
  set_input_delay [expr $clk_period/2] -clock [get_clocks clk] [all_inputs]
