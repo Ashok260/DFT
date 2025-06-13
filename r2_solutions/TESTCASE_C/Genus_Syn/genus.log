@@ -1,0 +1,254 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[17:08:03.239513] Configured Lic search path (21.01-s002): 5280@10.3.0.68
+
+Version: 21.14-s082_1, built Thu Jun 23 02:02:08 PDT 2022
+Options: -files ../scripts/genus.tcl 
+Date:    Fri Jun 13 17:08:03 2025
+Host:    CICS1.kletech.ac.in (x86_64 w/Linux 4.18.0-425.3.1.el8.x86_64) (16cores*24cpus*1physical cpu*13th Gen Intel(R) Core(TM) i7-13700 30720KB) (15881900KB)
+PID:     34704
+OS:      Red Hat Enterprise Linux release 8.7 (Ootpa)
+
+
+[17:08:03.241504] Periodic Lic check successful
+[17:08:03.241504] Feature usage summary:
+[17:08:03.241504] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (4 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source ../scripts/genus.tcl
+#@ Begin verbose source ../scripts/genus.tcl
+@file(genus.tcl) 1: set TC TESTCASE_C
+@file(genus.tcl) 2: set BASE_RTL_DIR /home/01fe21bec223/ITC_2025/Round2/$TC
+@file(genus.tcl) 3: set LIBS_DIR /home/01fe21bec223/ITC_2025/inputs/LIB
+@file(genus.tcl) 5: find $BASE_RTL_DIR -name *.v > rtl_path.f
+@file(genus.tcl) 6: read_hdl -f rtl_path.f
+initial 
+      |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Initial in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/sdModel.v' on line 25, column 7.
+        : For example, the following constructs will be ignored:
+    - initial block
+    - final block
+    - program block
+    - property block
+    - sequence block
+    - covergroup
+    - checker block
+    - gate drive strength
+    - system task enable
+    - reg declaration with initial value
+    - specify block.
+    @(posedge spiClk);
+    |
+Error   : Unsynthesizable construct. [VLOGPT-34] [read_hdl]
+        : Event control statement in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/sdModel.v' on line 41, column 5.
+        : The following statements are not supported for synthesis:
+    - deassign
+    - procedural assign
+    - force
+    - release
+    - wait
+    - ->
+    - fork.
+    @(posedge spiClk);
+                     |
+Warning : Ignoring Null Statement. [VLOGPT-13]
+        : Null statement ';' is not allowed inside a begin-end block in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/sdModel.v' on line 41, column 22.
+    @(negedge spiClk);
+    |
+Error   : Unsynthesizable construct. [VLOGPT-34] [read_hdl]
+        : Event control statement in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/sdModel.v' on line 44, column 5.
+    @(negedge spiClk);
+                     |
+Warning : Ignoring Null Statement. [VLOGPT-13]
+        : Null statement ';' is not allowed inside a begin-end block in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/sdModel.v' on line 44, column 22.
+  initial
+        |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Initial in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/wb_master_model.v' on line 71, column 9.
+      #1;
+       |
+Warning : Ignoring unsynthesizable delay specifier (#<n>) mentioned in verilog file. These delay numbers are for simulation purpose only. [VLOGPT-35]
+        : in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/wb_master_model.v' on line 79, column 8.
+        : All delay numbers assigned or used in behavioral code are for simulation purposes only and are not synthesizable. These values are ignored during synthesis. This warning is issued only once per module.
+      repeat(delay) @(posedge clk);
+                    |
+Error   : Unsynthesizable construct. [VLOGPT-34] [read_hdl]
+        : Event control statement in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/wb_master_model.v' on line 93, column 21.
+      @(posedge clk);
+      |
+Error   : Unsynthesizable construct. [VLOGPT-34] [read_hdl]
+        : Event control statement in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/wb_master_model.v' on line 103, column 7.
+      @(posedge clk);
+                    |
+Warning : Ignoring Null Statement. [VLOGPT-13]
+        : Null statement ';' is not allowed inside a begin-end block in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/wb_master_model.v' on line 103, column 21.
+      while(~ack) @(posedge clk);
+                  |
+Error   : Unsynthesizable construct. [VLOGPT-34] [read_hdl]
+        : Event control statement in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/wb_master_model.v' on line 106, column 19.
+      repeat(delay) @(posedge clk);
+                    |
+Error   : Unsynthesizable construct. [VLOGPT-34] [read_hdl]
+        : Event control statement in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/wb_master_model.v' on line 131, column 21.
+      @(posedge clk);
+      |
+Error   : Unsynthesizable construct. [VLOGPT-34] [read_hdl]
+        : Event control statement in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/wb_master_model.v' on line 141, column 7.
+      @(posedge clk);
+                    |
+Warning : Ignoring Null Statement. [VLOGPT-13]
+        : Null statement ';' is not allowed inside a begin-end block in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/wb_master_model.v' on line 141, column 21.
+      while(~ack) @(posedge clk);
+                  |
+Error   : Unsynthesizable construct. [VLOGPT-34] [read_hdl]
+        : Event control statement in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/wb_master_model.v' on line 144, column 19.
+initial
+      |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Initial in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 15, column 7.
+  $write("\n\n");
+        |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 17, column 9.
+  #1000;
+      |
+Warning : Ignoring unsynthesizable delay specifier (#<n>) mentioned in verilog file. These delay numbers are for simulation purpose only. [VLOGPT-35]
+        : in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 19, column 7.
+  $write("Testing register read/write\n");
+        |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 23, column 9.
+  $write("Testing SPI bus direct access\n");
+        |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 36, column 9.
+  $write("Testing SD init\n");
+        |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 52, column 9.
+    $write("SD init test passed\n");
+          |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 63, column 11.
+    $write("---- ERROR: SD init test failed. Error code = 0x%01x\n", dataRead[1:0] );
+          |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 65, column 11.
+  $write("Testing block write\n");
+        |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 68, column 9.
+    $write("---- ERROR: SD block write failed to complete\n");
+          |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 93, column 11.
+      $write("SD block write passed\n");
+            |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 98, column 13.
+      $write("---- ERROR: SD block write failed. Error code = 0x%01x\n", dataRead[5:4] );
+            |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 100, column 13.
+  $write("Testing block read\n");
+        |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 104, column 9.
+    $write("---- ERROR: SD block read failed to complete\n");
+          |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 119, column 11.
+      $write("SD block read passed\n");
+            |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 124, column 13.
+        $write("Data 0x%0x = ",j*32);
+              |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 126, column 15.
+          $write("0x%0x ",dataRead);
+                |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 129, column 17.
+        $write("\n");
+              |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 131, column 15.
+      $write("---- ERROR: SD block read failed. Error code = 0x%01x\n", dataRead[3:2] );
+            |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Call to system task '$write' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testCase0.v' on line 135, column 13.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'VLOGPT-37'.
+$dumpvars(0, u_spiMaster); 
+             |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'u_spiMaster' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testHarness.v' on line 26, column 14.
+        : Verilog module is using a parameter that is not defined in the module. You will get a notification for this, if you read the verilog file using the read_hdl command.
+  @(posedge clk);
+                |
+Warning : Ignoring Null Statement. [VLOGPT-13]
+        : Null statement ';' is not allowed inside a begin-end block in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testHarness.v' on line 73, column 17.
+  @(posedge clk);
+                |
+Warning : Ignoring Null Statement. [VLOGPT-13]
+        : Null statement ';' is not allowed inside a begin-end block in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testHarness.v' on line 74, column 17.
+  @(posedge clk);
+                |
+Warning : Ignoring Null Statement. [VLOGPT-13]
+        : Null statement ';' is not allowed inside a begin-end block in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testHarness.v' on line 75, column 17.
+  @(posedge clk);
+                |
+Warning : Ignoring Null Statement. [VLOGPT-13]
+        : Null statement ';' is not allowed inside a begin-end block in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testHarness.v' on line 76, column 17.
+  @(posedge clk);
+                |
+Warning : Ignoring Null Statement. [VLOGPT-13]
+        : Null statement ';' is not allowed inside a begin-end block in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testHarness.v' on line 77, column 17.
+  @(posedge clk);
+                |
+Warning : Ignoring Null Statement. [VLOGPT-13]
+        : Null statement ';' is not allowed inside a begin-end block in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testHarness.v' on line 78, column 17.
+  @(posedge clk);
+                |
+Warning : Ignoring Null Statement. [VLOGPT-13]
+        : Null statement ';' is not allowed inside a begin-end block in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testHarness.v' on line 79, column 17.
+  @(posedge clk);
+                |
+Warning : Ignoring Null Statement. [VLOGPT-13]
+        : Null statement ';' is not allowed inside a begin-end block in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testHarness.v' on line 80, column 17.
+  @(posedge clk);
+                |
+Warning : Ignoring Null Statement. [VLOGPT-13]
+        : Null statement ';' is not allowed inside a begin-end block in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testHarness.v' on line 82, column 17.
+  @(posedge clk);
+                |
+Warning : Ignoring Null Statement. [VLOGPT-13]
+        : Null statement ';' is not allowed inside a begin-end block in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testHarness.v' on line 84, column 17.
+  #20 clk <= 1'b0;
+    |
+Warning : Ignoring unsynthesizable delay specifier (#<n>) mentioned in verilog file. These delay numbers are for simulation purpose only. [VLOGPT-35]
+        : in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/testHarness.v' on line 92, column 5.
+`define START 4'b0000
+                    |
+Warning : Redefinition of macro. [VLOGPT-647]
+        : Macro 'START' in file '/home/01fe21bec223/ITC_2025/Round2/TESTCASE_C/initSD.v' on line 109, column 21.
+        : The latest definition of the macro will be used.
+#@ End verbose source ../scripts/genus.tcl
+1
+Encountered problems processing file: ../scripts/genus.tcl
+WARNING: This version of the tool is 1086 days old.

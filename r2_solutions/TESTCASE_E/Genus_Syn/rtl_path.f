@@ -1,0 +1,11 @@
+/home/01fe21bec223/ITC_2025/Round2/TESTCASE_E/trunk/rtl/key_expander.v
+/home/01fe21bec223/ITC_2025/Round2/TESTCASE_E/trunk/rtl/datapath.v
+/home/01fe21bec223/ITC_2025/Round2/TESTCASE_E/trunk/rtl/mix_columns.v
+/home/01fe21bec223/ITC_2025/Round2/TESTCASE_E/trunk/rtl/aes_ip.v
+/home/01fe21bec223/ITC_2025/Round2/TESTCASE_E/trunk/rtl/sBox.v
+/home/01fe21bec223/ITC_2025/Round2/TESTCASE_E/trunk/rtl/aes_core.v
+/home/01fe21bec223/ITC_2025/Round2/TESTCASE_E/trunk/rtl/host_interface.v
+/home/01fe21bec223/ITC_2025/Round2/TESTCASE_E/trunk/rtl/control_unit.v
+/home/01fe21bec223/ITC_2025/Round2/TESTCASE_E/trunk/rtl/shift_rows.v
+/home/01fe21bec223/ITC_2025/Round2/TESTCASE_E/trunk/rtl/sBox_8.v
+/home/01fe21bec223/ITC_2025/Round2/TESTCASE_E/trunk/rtl/data_swap.v
