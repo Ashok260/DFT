@@ -1,0 +1,124 @@
+//-------------------------------------------------
+//  File created by: Tessent Shell
+//          Version: 2022.4
+//       Created on: Thu May 29 12:58:23 IST 2025
+//-------------------------------------------------
+
+
+Core(cpu_sys_emep_top) {
+  Scan {
+    allow_internal_pins : 1;
+    is_hard_module : 1;
+    exclude_from_concatenated_netlist : 1;
+    internal_scan_only : 1;
+    TestEn(ltest_en) {
+      active_polarity : all_ones;
+    }
+    Mode(unwrapped) {
+      type : unwrapped;
+      traceable : 1;
+      make_active_automatically : 1;
+      ScanChain {
+        length : 5051;
+        scan_in_clock : ~io_in_bus[28];
+        scan_out_clock : io_in_bus[28];
+        scan_in_port : scan_in_0;
+        scan_out_port : scan_out_0;
+      }
+      ScanChain {
+        length : 5050;
+        scan_in_clock : ~io_in_bus[28];
+        scan_out_clock : io_in_bus[28];
+        scan_in_port : scan_in_1;
+        scan_out_port : scan_out_1;
+      }
+      ScanChain {
+        length : 5050;
+        scan_in_clock : ~io_in_bus[28];
+        scan_out_clock : io_in_bus[28];
+        scan_in_port : scan_in_2;
+        scan_out_port : scan_out_2;
+      }
+      ScanChain {
+        length : 5050;
+        scan_in_clock : ~io_in_bus[28];
+        scan_out_clock : io_in_bus[28];
+        scan_in_port : scan_in_3;
+        scan_out_port : scan_out_3;
+      }
+      ScanChain {
+        length : 5050;
+        scan_in_clock : ~io_in_bus[28];
+        scan_out_clock : io_in_bus[28];
+        scan_in_port : scan_in_4;
+        scan_out_port : scan_out_4;
+      }
+      ScanChain {
+        length : 5050;
+        scan_in_clock : ~io_in_bus[28];
+        scan_out_clock : io_in_bus[28];
+        scan_in_port : scan_in_5;
+        scan_out_port : scan_out_5;
+      }
+      ScanChain {
+        length : 5050;
+        scan_in_clock : ~io_in_bus[28];
+        scan_out_clock : io_in_bus[28];
+        scan_in_port : scan_in_6;
+        scan_out_port : scan_out_6;
+      }
+      ScanChain {
+        length : 5050;
+        scan_in_clock : ~io_in_bus[28];
+        scan_out_clock : io_in_bus[28];
+        scan_in_port : scan_in_7;
+        scan_out_port : scan_out_7;
+      }
+      ScanChain {
+        length : 5050;
+        scan_in_clock : ~io_in_bus[28];
+        scan_out_clock : io_in_bus[28];
+        scan_in_port : scan_in_8;
+        scan_out_port : scan_out_8;
+      }
+      ScanChain {
+        length : 5050;
+        scan_in_clock : ~io_in_bus[28];
+        scan_out_clock : ~pll0_cmu_ck_ref;
+        scan_in_port : scan_in_9;
+        scan_out_port : scan_out_9;
+      }
+      ScanEn(scan_en) {
+        pipeline_count : 0;
+        active_polarity : all_ones;
+      }
+      Clock(io_in_bus[28]) {
+        off_state : 1'b1;
+      }
+      Clock(pll0_cmu_ck_aux) {
+        off_state : 1'b0;
+      }
+      Clock(pll0_cmu_ck_ref) {
+        off_state : 1'b0;
+      }
+      Clock(pll0_cmu_ck_soc) {
+        off_state : 1'b0;
+      }
+      Clock(pll0_cmu_life_clk) {
+        off_state : 1'b0;
+      }
+      SetReset(scan_reset) {
+        active_polarity : all_ones;
+      }
+      SetReset(scan_set) {
+        active_polarity : all_ones;
+      }
+    }
+  }
+  DesignInfo {
+    design_id : gate;
+    design_level : chip;
+    ChildBlockModules {
+    }
+  }
+}

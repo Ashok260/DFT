@@ -1,0 +1,47 @@
+#
+#  Written by Tessent Shell 2022.4 on Thu May 29 12:58:20 IST 2025
+#
+proc tessent_scan_common {} {
+   add_clocks 1 {{io_in_bus[34]}}
+   add_clocks 1 die_is_master
+   add_clocks 1 {{io_in_bus[28]}}
+   add_clocks 0 pll0_cmu_life_clk
+   add_clocks 0 pll0_cmu_ck_ref
+   add_clocks 0 pll0_cmu_ck_aux
+   add_clocks 0 pll0_cmu_ck_soc
+   add_clocks 0 scan_reset
+   add_clocks 0 scan_set
+   add_pin_constraints ltest_en C1
+add_black_boxes -auto
+}
+
+
+proc tessent_scan_unwrapped_mode {} {
+   add_scan_groups grp1 cpu_sys_atpg_setup.testproc
+
+   add_scan_chains chain0 grp1 /scan_in_0 /scan_out_0
+   add_scan_chains chain1 grp1 /scan_in_1 /scan_out_1
+   add_scan_chains chain2 grp1 /scan_in_2 /scan_out_2
+   add_scan_chains chain3 grp1 /scan_in_3 /scan_out_3
+   add_scan_chains chain4 grp1 /scan_in_4 /scan_out_4
+   add_scan_chains chain5 grp1 /scan_in_5 /scan_out_5
+   add_scan_chains chain6 grp1 /scan_in_6 /scan_out_6
+   add_scan_chains chain7 grp1 /scan_in_7 /scan_out_7
+   add_scan_chains chain8 grp1 /scan_in_8 /scan_out_8
+   add_scan_chains chain9 grp1 /scan_in_9 /scan_out_9
+
+   tessent_scan_common
+
+}
+
+
+proc tessent_scan_setup { {mode unwrapped} } {
+   switch -exact -- $mode {
+      unwrapped { tessent_scan_unwrapped_mode }
+      default {
+         display_message -error "invalid scan mode: $mode"
+      }
+   }
+}
+
+

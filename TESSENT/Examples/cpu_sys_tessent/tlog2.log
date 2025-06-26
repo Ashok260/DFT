@@ -1,0 +1,169 @@
+/siemens/bin/tessent -shell -log tlog2.log -replace
+//  Warning: Tessent user documentation not found
+//  Tessent Shell  2022.4    Tue Nov 29 21:19:37 GMT 2022
+//                Unpublished work. Copyright 2022 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Wed May 28 16:45:53 IST 2025.
+//  64 bit version
+//  Host: APL5.kletech.ac.in (31644 MB RAM, 61034 MB Swap)
+//
+//  command: set_context dft -scan
+//  command: read
+//  Error: wrong # args: should be "_tessent_read channelId ?numChars?" or "_tessent_read ?-nonewline? channelId"
+//  command: read_verilog ../../RTL/RTL/cpu_sys.v 
+//  command: read_cell_library ../../TECHFILES/slow.atpglib 
+//  Reading DFT Library file ../../TECHFILES/slow.atpglib
+//  Finished reading file ../../TECHFILES/slow.atpglib
+//  command: 
+//  command: 
+//  command: set_current_design 
+//  Note: Top design is 'cpu_sys_emep_top'.
+//  Warning: Undefined modules were found.
+//           Before using "set_system_mode" or "create_flat_model", you must either define
+//           the missing modules using "read_verilog" and/or "read_cell_library", or use the
+//           following command to treat them as black boxes:
+             add_black_boxes -modules { \
+                    DPRAM_512x24 \
+                    SPRAM_64x32 \
+                    SPRAM_8192x36 \
+                    rd3_256x8 \
+                    rd3_512x16 \
+                    spram_8192_5 \
+                    spram_8192_7 \
+             }
+//           You can also use "add_black_boxes -auto" to black box all undefined modules but
+//           it is recommended that you do not add this command to your dofile. Doing so may
+//           unintentionally black-box new undefined modules in future runs.
+//  Warning: 255514 cases: Undriven net in netlist module
+//  Warning: 48 cases: Undriven primary inout pin in netlist module
+//  Warning: 605 cases: Net in netlist not connected
+//  Warning: 1 case: Undefined module pin assumed to be input
+//  Warning: 3 cases: Undefined module pin assumed to be inout
+//  Note: Issue set_current_design with the -show_elaboration_warnings option to see more details about previous warnings
+//  command: add_black_boxes -modules {                      DPRAM_512x24                      SPRAM_64x32                      SPRAM_8192x36                      rd3_256x8                      rd3_512x16                      spram_8192_5                      spram_8192_7               }
+//  command: set_design_level top
+//  command: set_test_logic -clock on -reset on -set on
+//  command: analyze_control_signals -auto
+//  Warning: Rule FN1 violation occurs 256403 times
+//  Warning: Rule FN4 violation occurs 61161 times
+//  Flattening process completed, cell instances=304527, gates=610162, PIs=3767, POs=6578, CPU time=3.12 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=1.30 sec.
+//  ---------------------------------------------------------------------------
+//  Begin control signals identification analysis.
+//  ---------------------------------------------------------------------------
+//  Identified 6 clock control primary inputs.
+//     '/io_in_bus[28]' (1519) with off-state = 1.
+//     '/pll0_cmu_life_clk' (1862) with off-state = 0.
+//     '/pll0_cmu_ck_ref' (1860) with off-state = 0.
+//     '/pll0_cmu_ck_aux' (1859) with off-state = 0.
+//     '/pll0_cmu_ck_soc' (1861) with off-state = 0.
+//     '/die_is_master' (59) with off-state = 1.
+//  Identified 1 set control primary inputs.
+//     '/io_in_bus[34]' (1513) with off-state = 1.
+//  Identified 2 reset control primary inputs.
+//     '/io_in_bus[34]' (1513) with off-state = 1.
+//     '/die_is_master' (59) with off-state = 1.
+//  Identified 0 read control primary inputs.
+//  Identified 0 write control primary inputs.
+//  ---------------------------------------------------------------------------
+//  Total number of internal lines is 183483 (61161 clocks, 61161 sets , 61161 resets, 0 reads, 0 writes).
+//  Total number of potentially clockable internal lines is 1074 (598 clocks, 8 sets , 468 resets, 0 reads, 0 writes).
+//  Total number of not clockable internal lines is 182409 (60563 clocks, 61153 sets , 60693 resets, 0 reads, 0 writes).
+//  Total number of added primary input controls 7 (5 clocks, 0 sets , 2 resets, 0 reads, 0 writes).
+//  ---------------------------------------------------------------------------
+//  Warning: Flattened model deleted.
+//  command: check_design_rules 
+//  Warning: Rule FN1 violation occurs 256403 times
+//  Warning: Rule FN4 violation occurs 61161 times
+//  Flattening process completed, cell instances=304527, gates=610162, PIs=3767, POs=6578, CPU time=3.11 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=1.31 sec.
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 61161,
+//  sequential library cells = 61161.
+//  ---------------------------------------------------------------------------
+//  Warning: Model 'SMDFFHQX2' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'SMDFFHQX4' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'SMDFFHQX1' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'SEDFFHQX2' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'EDFFHQX1' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'MDFFHQX8' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'SMDFFHQX8' has no muxscan scan equivalent and is treated as nonscan model
+//  ------------------------------------------------------------------------------
+//  2640 sequential library cells are treated as non-scan.
+//  ------------------------------------------------------------------------------
+//    2640 sequential library cells missing mux-scan equivalent.
+//  ---------------------------------------------------------------------------
+//  Begin scannability rules checking for 58521 sequential library cells.
+//  ---------------------------------------------------------------------------
+//  Note: There was 1 S7 violation (Potentially scannable cell that is not in the clock path is driven by a constant value).
+//  222 sequential library cells identified as scannable.
+//  Error: There were 1775 S6 violations (driven scan-in pin of a sub chain or of a scan cell in unspecified scan chain).
+//         For failed scan cells, use "add_scan_chains" or "add_scan_segment" commands to declare previously inserted scan chains.
+//  Error: Rules checking unsuccessful, cannot exit SETUP mode.
+//  command: report_drc_rules S6-1
+//  Error: Scan input pin of scan cell /U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_regif/hready_r_reg (543905) is driven, but the cell is not in a scan chain. (S6-1)
+//  command: set_system_mode analysis --force
+//  Warning: Unused arguments.
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 61161,
+//  sequential library cells = 61161.
+//  ---------------------------------------------------------------------------
+//  Warning: Model 'SMDFFHQX2' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'SMDFFHQX4' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'SMDFFHQX1' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'SEDFFHQX2' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'EDFFHQX1' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'MDFFHQX8' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'SMDFFHQX8' has no muxscan scan equivalent and is treated as nonscan model
+//  ------------------------------------------------------------------------------
+//  2640 sequential library cells are treated as non-scan.
+//  ------------------------------------------------------------------------------
+//    2640 sequential library cells missing mux-scan equivalent.
+//  ---------------------------------------------------------------------------
+//  Begin scannability rules checking for 58521 sequential library cells.
+//  ---------------------------------------------------------------------------
+//  Note: There was 1 S7 violation (Potentially scannable cell that is not in the clock path is driven by a constant value).
+//  222 sequential library cells identified as scannable.
+//  Error: There were 1775 S6 violations (driven scan-in pin of a sub chain or of a scan cell in unspecified scan chain).
+//         For failed scan cells, use "add_scan_chains" or "add_scan_segment" commands to declare previously inserted scan chains.
+//  Error: Rules checking unsuccessful, cannot exit SETUP mode.
+//  command: analyze_drc_violation 
+//  Error: Missing options ( <drc_id> [ -append ]  ) ( help analyze_drc_violation )
+//  command: analyze_drc_violation S6
+//  Error: Incorrect argument 'S6'.
+//  command: analyze_drc_violation S6 -1
+//  Error: Unrecognized argument '-1'. ( help analyze_drc_violation )
+//  command: add_black_boxes SDFF*
+//  Error: Illegal argument 'SDFF*'
+//  command: add_cell_models -type scancell 
+//  Error: Command syntax error
+//  command: add_cell_models -type scancell SDFF*
+//  Error: Command syntax error
+//  command: add_cell_models -type scancell SDFF
+//  Error: Command syntax error
+//  command: help add_cell_models 
+add_cell_models <modelname> -Type
+               { BUFfer | INVerter | AND | OR | NAND | NOR | XOR | CLOCK_BUFfer
+               | { MUX <mux_select> <mux_in0> <mux_in1> }
+               | { DFF <clock> <data_in> [-POSEDGE_clock | -NEGEDGE_clock] }
+               | { LATCH <enable> <data_in> [-ACTIVE_HIGH_clock | -ACTIVE_LOW_clock ] }
+               | { SCAN_CELL <clock> <data_in> [-POSEDGE_clock | -NEGEDGE_clock] } }
+
+//  command: open_visualizer 
+//  Note: Generating flat model helper data for visualization purposes... done.
+//  Note: Grouping DRC violations for visualization purposes... done.
+//  Note: Tessent Visualizer client successfully started and connected to the server.
+//  command: open_visualizer 
+//  Note: Tessent Visualizer client successfully started and connected to the server.

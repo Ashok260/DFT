@@ -1,0 +1,67 @@
+//  command: set dofileName atpg_setup.dofile
+//  command: set designFile /home/01fe21bec223/DFT_TESSENT/TESSENT/work_atpg/tsdb_outdir/dft_inserted_designs/counter_16bit_gate.dft_inserted_design/counter_16bit.vg
+//  command: set topName {counter_16bit}
+//  command: set libName "../TECHFILES/test_Nangate.mdt"
+//  command: proc verify_all_scan_modes {} {
+//  command: set_context patterns -scan
+//  command: delete_design 
+//  command: read_cell_library $libName
+//  command: read_verilog $designFile
+//  command: set_current_design $topName
+//  command: dofile $dofileName
+//    command: #
+//    command: #  Written by Tessent Shell 2022.4 on Mon May 19 16:57:51 IST 2025
+//    command: #
+//    command: proc tessent_scan_common {} {
+//    command: proc tessent_scan_unwrapped_mode {} {
+//    command: proc tessent_scan_setup { {mode unwrapped} } {
+//  command: verify_all_scan_modes
+//  sub-command: set_system_mode setup 
+//  sub-command: reset_design 
+//  sub-command: add_scan_groups grp1 atpg_setup.testproc 
+//  sub-command: add_scan_chains chain grp1 /scan_in_0 /scan_out_0 
+//  sub-command: add_clocks 1 rst 
+//  sub-command: add_clocks 0 clk 
+//  sub-command: set_edt_options off 
+//  sub-command: add_black_boxes -auto 
+//  sub-command: set_system_mode analysis 
+//  sub-command: report_scan_cells 
+//  command: add_faults -all
+//  command: help create_patterns
+//  command: help create_patterns -COMpaction_effort High -COVerage_effort High -NO_REDundancy_analysis
+//  command: help create_patterns -COMpaction_effort High -COVerage_effort High -NO_REDundancy_analysis on
+//  command: create_patterns -COMpaction_effort High -COVerage_effort High -NO_REDundancy_analysis 
+//  command: report_statistics 
+//  command: reset_au_faults 
+//  command: report_statistics 
+//  command: create_patterns 
+//  command: reset_au_faults 
+//  command: create_patterns 
+//  command: add_faults -all
+//  command: create_patterns 
+//  command: compress_patterns 
+//  command: run_testbench_simulations 
+//  command: write_patterns pat.ascii -ascii -parallel -replace
+//  command: read_patterns pat.ascii 
+//  command: run_testbench_simulations 
+//  command: simulate_patterns 
+//  command: add_faults -all
+//  command: simulate_patterns 
+//  command: report_statistics 
+//  command: report_simulation_contexts 
+//  command: report_drc_rules 
+//  command: TestKompress
+//  command: Testcompress
+//  command: get_drc_handling D5
+//  command: get_drc_handling D5 -auto_fix 
+//  command: encoding 
+//  command: write_design_import_script 
+//  command: scan 
+//  command: vim
+//  command: helpcompress_patterns 
+//  command: help compress_patterns
+//  command: compress_patterns -Reset_au -muxed Essential
+//  command: compress_patterns -Reset_au -muxed
+//  command: compress_patterns -Reset_au -Muxed
+//  command: compress_patterns -Reset_au
+//  command: exit 

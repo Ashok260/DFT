@@ -1,0 +1,196 @@
+/siemens/bin/tessent -shell -log tlog1.log -replace
+//  Warning: Tessent user documentation not found
+//  Tessent Shell  2022.4    Tue Nov 29 21:19:37 GMT 2022
+//                Unpublished work. Copyright 2022 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Fri May 30 11:00:53 IST 2025.
+//  64 bit version
+//  Host: APL10.kletech.ac.in (31578 MB RAM, 15983 MB Swap)
+//
+//  command: set_context dft -scan
+//  command: read_verilog ../../RTL/RTL/cpu_sys.v
+//  command: read_cell_library ../../TECHFILES/slow.atpglib 
+//  Reading DFT Library file ../../TECHFILES/slow.atpglib
+//  Finished reading file ../../TECHFILES/slow.atpglib
+//  command: set_current_design 
+//  Note: Top design is 'cpu_sys_emep_top'.
+//  Warning: Undefined modules were found.
+//           Before using "set_system_mode" or "create_flat_model", you must either define
+//           the missing modules using "read_verilog" and/or "read_cell_library", or use the
+//           following command to treat them as black boxes:
+             add_black_boxes -modules { \
+                    DPRAM_512x24 \
+                    SPRAM_64x32 \
+                    SPRAM_8192x36 \
+                    rd3_256x8 \
+                    rd3_512x16 \
+                    spram_8192_5 \
+                    spram_8192_7 \
+             }
+//           You can also use "add_black_boxes -auto" to black box all undefined modules but
+//           it is recommended that you do not add this command to your dofile. Doing so may
+//           unintentionally black-box new undefined modules in future runs.
+//  Warning: 255514 cases: Undriven net in netlist module
+//  Warning: 48 cases: Undriven primary inout pin in netlist module
+//  Warning: 605 cases: Net in netlist not connected
+//  Warning: 1 case: Undefined module pin assumed to be input
+//  Warning: 3 cases: Undefined module pin assumed to be inout
+//  Note: Issue set_current_design with the -show_elaboration_warnings option to see more details about previous warnings
+//  command: add_black_boxes -auto
+//  command: set_design_level top
+//  command: set_test_logic -clock on -reset on -set on
+//  command: analyze_control_signals -auto
+//  Warning: Rule FN1 violation occurs 256403 times
+//  Warning: Rule FN4 violation occurs 61161 times
+//  Flattening process completed, cell instances=304527, gates=610162, PIs=3767, POs=6578, CPU time=3.95 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=1.40 sec.
+//  ---------------------------------------------------------------------------
+//  Begin control signals identification analysis.
+//  ---------------------------------------------------------------------------
+//  Identified 6 clock control primary inputs.
+//     '/io_in_bus[28]' (1519) with off-state = 1.
+//     '/pll0_cmu_life_clk' (1862) with off-state = 0.
+//     '/pll0_cmu_ck_ref' (1860) with off-state = 0.
+//     '/pll0_cmu_ck_aux' (1859) with off-state = 0.
+//     '/pll0_cmu_ck_soc' (1861) with off-state = 0.
+//     '/die_is_master' (59) with off-state = 1.
+//  Identified 1 set control primary inputs.
+//     '/io_in_bus[34]' (1513) with off-state = 1.
+//  Identified 2 reset control primary inputs.
+//     '/io_in_bus[34]' (1513) with off-state = 1.
+//     '/die_is_master' (59) with off-state = 1.
+//  Identified 0 read control primary inputs.
+//  Identified 0 write control primary inputs.
+//  ---------------------------------------------------------------------------
+//  Total number of internal lines is 183483 (61161 clocks, 61161 sets , 61161 resets, 0 reads, 0 writes).
+//  Total number of potentially clockable internal lines is 1074 (598 clocks, 8 sets , 468 resets, 0 reads, 0 writes).
+//  Total number of not clockable internal lines is 182409 (60563 clocks, 61153 sets , 60693 resets, 0 reads, 0 writes).
+//  Total number of added primary input controls 7 (5 clocks, 0 sets , 2 resets, 0 reads, 0 writes).
+//  ---------------------------------------------------------------------------
+//  Warning: Flattened model deleted.
+//  command: set_drc_handling S7 warning
+//  command: set_drc_handling S6 warning
+//  command: set_drc_handling S1 warning
+//  command: check_design_rules 
+//  Warning: Rule FN1 violation occurs 256403 times
+//  Warning: Rule FN4 violation occurs 61161 times
+//  Flattening process completed, cell instances=304527, gates=610162, PIs=3767, POs=6578, CPU time=3.12 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=1.31 sec.
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 61161,
+//  sequential library cells = 61161.
+//  ---------------------------------------------------------------------------
+//  Warning: Model 'SMDFFHQX2' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'SMDFFHQX4' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'SMDFFHQX1' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'SEDFFHQX2' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'EDFFHQX1' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'MDFFHQX8' has no muxscan scan equivalent and is treated as nonscan model
+//  Warning: Model 'SMDFFHQX8' has no muxscan scan equivalent and is treated as nonscan model
+//  ------------------------------------------------------------------------------
+//  2640 sequential library cells are treated as non-scan.
+//  ------------------------------------------------------------------------------
+//    2640 sequential library cells missing mux-scan equivalent.
+//  ---------------------------------------------------------------------------
+//  Begin scannability rules checking for 58521 sequential library cells.
+//  ---------------------------------------------------------------------------
+//  Warning: There were 125 S7 violations (Potentially scannable cell that is not in the clock path is driven by a constant value).
+//  221 sequential library cells identified as scannable.
+//  Warning: There were 1775 S6 violations (driven scan-in pin of a sub chain or of a scan cell in unspecified scan chain).
+//           For failed scan cells, use "add_scan_chains" or "add_scan_segment" commands to declare previously inserted scan chains.
+//  ---------------------------------------------------------------------------
+//  Begin transparent latch checking for 2513 latches.
+//  ---------------------------------------------------------------------------
+//  Warning: 720 latches not transparent due to clock interaction. (D6)
+//  Number transparent latches = 1793. (1190 latches are sequential transparent latch)
+//  ---------------------------------------------------------------------------
+//  Begin scan clock rules checking.
+//  ---------------------------------------------------------------------------
+//  7 scan clock/set/reset lines have been identified.
+//  All scan clocks successfully passed off-state check.
+//  222 sequential cells passed clock stability checking.
+//  Warning: 1253 PO(s) are connected to a clock line. (C8)
+//  Warning: 42 POs are connected to a clock line gated by scan cell that uses same clock. (C9)
+//  There were 59 clock rule C3 fails (clock may capture data affected by its captured data).
+//  Warning: There were 1276 clock rule C4 fails (clock may be affected by its captured data).
+//  Note: Trailing edge triggered device can capture data affected by leading edge.
+//  ---------------------------------------------------------------------------
+//  60940 non-scan memory elements are identified.
+//  ---------------------------------------------------------------------------
+//  58794 non-scan memory elements are identified as TIE-X.  (D5)
+//    353 non-scan memory elements are identified as INIT-X. (D5)
+//   1793 non-scan memory elements are identified as TLA.    (D5)
+//  ---------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------
+//  Begin gating checking
+//  ---------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------
+//  Checking clock set and reset for 56434 non-scannable sequential instances
+//  ---------------------------------------------------------------------------
+//  56434 sequential instances can be gated to be scannable
+//  0 sequential instances remain non-scannable
+//  Warning: There were 111602 S1 violations (unstable nonscan cells when clocks off).
+//  Note: There were 107914 S1 violations that will be fixed by adding test logic.
+//        In addition, there were 3688 S1 violations that could not be fixed.
+//  ---------------------------------------------------------------------------
+//  Checking test clocks
+//  ---------------------------------------------------------------------------
+//  Number of test clocks required = 1
+//  Warning: This design includes scan cells whose scan enable pins are driven by non scan enable signals.
+//           1) These scan cells have been added to the non-scan cell list by the tool.
+//           2) You can use i.e. 'report_scan_elements [get_scan_elements -state ignored]'
+//              to examine these cells that are ignored by DRC.
+//           3) You can use the 'set_scan_enable' command to define scan enable signals
+//              and have these cells re-evaluated.
+//  ---------------------------------------------------------------------------
+//  Begin shift register identification for 56655 sequential library cells.
+//  ---------------------------------------------------------------------------
+//  Number of shift register flops recorded for scan insertion: 6792 (11.11%)
+//  Number of shift registers recorded for scan insertion: 2807
+//  Longest shift register has 26 flops.
+//  Shortest shift register has 2 flops.
+//  Potential number of nonscan flops to be converted to scan cells: 2807
+//  Potential number of scan cells to be converted to nonscan flops: 103
+//  Number of targeted sequential library cells = 50501
+//  Warning: The tool may require a shift-capture clock during insertion, 
+//           but no 'shift_capture_clock' DFT signal was identified 
+//           and no TCLK source was specified using the command 'set_scan_signals -tclk'.
+//  Note: The system clock 'io_in_bus[28]' will be used as the shift-capture clock, if needed.
+//  command: set_case_analysis 0 [get_pins {U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[3]}]
+//  Error: Command 'set_case_analysis 0 @215' is unknown
+//  command: set_case_analysis 0 [get_pins {U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[2]}]
+//  Error: Command 'set_case_analysis 0 @217' is unknown
+//  command: set_case_analysis 0 [get_pins {U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[1]}]
+//  Error: Command 'set_case_analysis 0 @219' is unknown
+//  command: set_case_analysis 1 [get_pins {U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[0]}]
+//  Error: Command 'set_case_analysis 1 @221' is unknown
+//  command: set_case_analysis 0 [get_pins {U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[3]}]
+//  Error: Command 'set_case_analysis 0 @223' is unknown
+//  command: set_case_analysis 0 [get_pins {U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[2]}]
+//  Error: Command 'set_case_analysis 0 @225' is unknown
+//  command: set_case_analysis 0 [get_pins {U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[1]}]
+//  Error: Command 'set_case_analysis 0 @227' is unknown
+//  command: set_case_analysis 1 [get_pins {U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[0]}]
+//  Error: Command 'set_case_analysis 1 @229' is unknown
+//  command: set_case_analysis 0 [get_pins {U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[3]}]
+//  Error: Command 'set_case_analysis 0 @231' is unknown
+//  command: set_case_analysis 0 [get_pins {U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[2]}]
+//  Error: Command 'set_case_analysis 0 @233' is unknown
+//  command: set_case_analysis 0 [get_pins {U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[1]}]
+//  Error: Command 'set_case_analysis 0 @235' is unknown
+//  command: set_case_analysis 1 [get_pins {U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[0]}]
+//  Error: Command 'set_case_analysis 1 @237' is unknown
+//  command: set_case_analysis 1 [get_pins U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/atfrtc010/CTL/clk_sel]
+//  Error: Command 'set_case_analysis 1 @239' is unknown

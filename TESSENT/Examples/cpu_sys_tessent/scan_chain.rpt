@@ -1,0 +1,18 @@
+
+===============================
+Scan Chains Created by the Tool
+===============================
+
+   Scan mode 'unwrapped' scan chains:
+   ----------------------------------
+      chain = chain0   group = dummy  input = /scan_in_0  output = /scan_out_0  length = 5051
+      chain = chain1   group = dummy  input = /scan_in_1  output = /scan_out_1  length = 5050
+      chain = chain2   group = dummy  input = /scan_in_2  output = /scan_out_2  length = 5050
+      chain = chain3   group = dummy  input = /scan_in_3  output = /scan_out_3  length = 5050
+      chain = chain4   group = dummy  input = /scan_in_4  output = /scan_out_4  length = 5050
+      chain = chain5   group = dummy  input = /scan_in_5  output = /scan_out_5  length = 5050
+      chain = chain6   group = dummy  input = /scan_in_6  output = /scan_out_6  length = 5050
+      chain = chain7   group = dummy  input = /scan_in_7  output = /scan_out_7  length = 5050
+      chain = chain8   group = dummy  input = /scan_in_8  output = /scan_out_8  length = 5050
+      chain = chain9   group = dummy  input = /scan_in_9  output = /scan_out_9  length = 5050
+

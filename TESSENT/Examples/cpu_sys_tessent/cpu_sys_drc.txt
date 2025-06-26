@@ -1,0 +1,8 @@
+C3:  #fails=165 handling=note (clock may capture data affected by its captured data)
+C4:  #fails=787 handling=warning (clock may be affected by its captured data)
+C8:  #fails=1256 handling=warning (PO connected to a clock line)
+C9:  #fails=39 handling=warning (PO connected to a clock line gated by scan cell that uses same clock)
+C26:  #fails=822 handling=warning (sequential element with race on data and clock ports)
+D5:  #fails=10674 handling=warning (non-scan memory element)
+D7:  #fails=268 handling=warning (stable high edge-triggered clock ports)
+E5:  #fails=10548 handling=note (X-state propagation)
