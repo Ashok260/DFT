@@ -1,6 +1,0 @@
-*** Scan Trace Summary (runtime: cpu: 0:00:00.0 , real: 0:00:00.0): 
-Successfully traced 75 scan chains (total 14554 scan bits).
-Start applying DEF ordered sections ...
-Successfully applied all DEF ordered sections.
-*** Scan Sanity Check Summary:
-*** 75 scan chains passed sanity check.
