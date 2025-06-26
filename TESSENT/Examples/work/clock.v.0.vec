@@ -1,0 +1,36 @@
+//
+// Verilog format test patterns produced by Tessent Shell 2022.4
+// Filename       : clock.v.0.vec
+// Idstamp        : 2022.4:827d:4603:4:91ca
+// Fault          : STUCK
+// Coverage       : 7.51(TC) 7.26(FC)
+// Date           : Tue Apr 22 18:27:46 2025
+//
+// Format of broadside vector:
+//   PI_bits PO_bits MASK_bits Increment_bit Timeplate_bits(1) PatType_bits(3)
+//   VecType_bits(4)
+//   Increment_bit  - indicates when to increment pattern count
+//   Timeplate_bits - encodes timeplate number to use
+//   PatType_bits   - encodes pattern type
+//   VecType_bits   - encodes vector type
+
+// Scan test block
+
+// Pattern 0 Cycle 0 Timestamp 0 ns 
+000000000000000000000000000001000110000 // Start Pattern (0) MSG
+// Simulation Cycle 0  Timestamp 0 ns
+011010000000000000000000000000011111111111111111111111111Z10101011
+// Pattern 1 Type clock_sequential
+000000000000000000000000000001000110000 // Start Pattern (1) MSG
+00101XXXXXXXXXXXXXXXXXXXXXXXXXX00000000000000000000000000110101011
+10110XX0XXXXXXXXXXXXXXXXXXXXXXX00100000000000000000000000010101011
+// Pattern 2 Type clock_sequential
+000000000000000000000000000001000110000 // Start Pattern (2) MSG
+00011XXXXXXXXXXXXXXXXXXXXXXXXXX00000000000000000000000000110101011
+111110000000000000000000000000X11111111111111111111111110010101011
+// Pattern 3 Type clock_sequential
+000000000000000000000000000001000110000 // Start Pattern (3) MSG
+00111XXXXXXXXXXXXXXXXXXXXXXXXXX00000000000000000000000000110101011
+10011XX1XXXXXXXXXXXXXXXXXXXXXXX00100000000000000000000000010101011
+// end of Vec file MSG
+000000000000000000000000000000110110000

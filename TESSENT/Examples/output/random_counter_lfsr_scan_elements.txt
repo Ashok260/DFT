@@ -1,0 +1,9 @@
+=================================================================================================
+name                      type            length  si_so_clocks  state     is_non_scannable_reason
+------------------------  --------------  ------  ------------  --------  -----------------------
+/u0/q_reg                 leaf_cell       1       +clk          usable    --                     
+/u1/q_reg                 leaf_cell       1       +clk          usable    --                     
+/u2/q_reg                 leaf_cell       1       +clk          usable    --                     
+/u3/q_reg                 leaf_cell       1       +clk          usable    --                     
+/u4/q_reg                 leaf_cell       1       +clk          usable    --                     
+shift_register#/u2/q_reg  shift_register  5       +clk          unusable  --                     

@@ -1,0 +1,23 @@
+Reporting registers that pass DFT rules
+Reporting registers that fail DFT rules
+  u0/q_reg 	FAIL; violations: vid_0 ) async set_async reset 
+  u1/q_reg 	FAIL; violations: vid_2 ) async set_async reset 
+  u2/q_reg 	FAIL; violations: vid_4 ) async set_async reset 
+  u3/q_reg 	FAIL; violations: vid_6 ) async set_async reset 
+  u4/q_reg 	FAIL; violations: vid_8 ) async set_async reset 
+Reporting registers that are preserved or marked dont-scan
+Reporting registers that are marked Abstract Segment Dont Scan
+Reporting registers that are part of shift register segments
+Reporting registers that are identified as lockup elements
+Reporting registers that are level-sensitive elements
+Reporting misc. non-scan registers
+Summary: 
+Total registers that pass DFT rules: 0
+Total registers that fail DFT rules: 5
+Total registers that are marked preserved or dont-scan: 0
+Total registers that are marked Abstract Segment dont-scan: 0
+Total registers that are part of shift register segments: 0
+Total registers that are lockup elements: 0
+Total registers that are level-sensitive: 0
+Total registers that are misc. non-scan: 0
+

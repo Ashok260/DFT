@@ -1,0 +1,69 @@
+//
+//  Tessent Shell  2022.4
+//
+//  Design  = ../output/clock_scan.v
+//  Created = Tue Apr 22 18:27:16 IST 2025
+//
+//  Statistics:
+//      Test Coverage   =  7.51%
+//      Total Faults    =  998
+//          UO (unobserved)        =  1
+//          DS (det_simulation)    =  71
+//          DI (det_implication)   =  1
+//          PT (posdet_testable)   =  1
+//          UU (unused)            =  32
+//          AU (atpg_untestable)   =  892
+//      Total            Patterns  =  4
+//
+//  Settings:
+//      Simulation Mode =  combinational, seq_depth = 2
+//      Fault Type      =  stuck
+//      Fault Mode      =  uncollapsed
+//      Pos_Det Credit  =  50%
+//      Z external      =  X
+//      Z internal      =  X
+//      wired_net       =  WIRE
+//
+//  Warnings:
+//      25 rule C7 fails (scan cell capture ability check)
+//      26 rule D5 fails (non-scan memory element)
+//
+
+ASCII_PATTERN_FILE_VERSION = 3;
+
+
+SETUP = 
+
+    declare input bus "PI" = "/clk", "/reset", "/ena", "/scan_in_0", "/scan_en";
+
+    declare output bus "PO" = "/pm", "/hh[7]", "/hh[6]", "/hh[5]", "/hh[4]",
+         "/hh[3]", "/hh[2]", "/hh[1]", "/hh[0]", "/mm[7]", "/mm[6]",
+         "/mm[5]", "/mm[4]", "/mm[3]", "/mm[2]", "/mm[1]", "/mm[0]",
+         "/ss[7]", "/ss[6]", "/ss[5]", "/ss[4]", "/ss[3]", "/ss[2]",
+         "/ss[1]", "/ss[0]", "/scan_out_0";
+
+end;
+
+SCAN_TEST =
+
+    pattern = 0;
+    force   "PI" "01101" 0;
+    measure "PO" "00000000000000000000000000" 1;
+
+    pattern = 1  clock_sequential ;
+    force   "PI" "00101" 0;
+    force   "PI" "10110" 1;
+    measure "PO" "XX0XXXXXXXXXXXXXXXXXXXXXXX" 2;
+
+    pattern = 2  clock_sequential ;
+    force   "PI" "00011" 0;
+    force   "PI" "11111" 1;
+    measure "PO" "0000000000000000000000000X" 2;
+
+    pattern = 3  clock_sequential ;
+    force   "PI" "00111" 0;
+    force   "PI" "10011" 1;
+    measure "PO" "XX1XXXXXXXXXXXXXXXXXXXXXXX" 2;
+
+end;
+

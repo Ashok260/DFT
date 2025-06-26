@@ -1,0 +1,60 @@
+// Memory template for a rd3_512x16 synchronous SRAM 
+MemoryTemplate(rd3_512x16) { 
+  // ---- Memory Characteristics ---- 
+  MemoryType             : sram;               // Type of memory (DRAM) 
+  CellName               : rd3_512x16;         // Unique identifier for this memory cell 
+  LogicalPorts           : 0R0W2RW;                // two port supporting both read and write 
+  OperationSet           : Sync;               // Synchronous read/write operations 
+  Algorithm              : SMarch;             // Built-in self-test algorithm (March) 
+  BitGrouping            : auto;                  // Number of bits grouped per data operation 
+  NumberOfWords          : 512;                 // Total addressable words in the memory 
+  NumberOfBits           : 16;                  // Data width (bits per word) 
+  ObservationLogic       : Off;                // Disable observation logic for test 
+  InternalScanLogic      : Off;                // Disable internal scan chains 
+  ShadowRead             : Off;                // No shadow read support 
+  TransparentMode        : None;               // No transparent mode enabled 
+  MinHold                : 0.00;               // Minimum hold time (in ns) 
+  MilliWattsPerMegaHertz : 0.0;                // Power consumption per MHz (mW/MHz) 
+ 
+  // ---- Address Counter Configuration ---- 
+  AddressCounter { 
+    Function(Address) { 
+      LogicalAddressMap { 
+        ColumnAddress[1:0] : Address[1:0];    // Map physical column bits to address bits [1:0] 
+        RowAddress   [6:0] : Address[8:2];    // Map physical row bits to address bits [8:2] 
+      } 
+    } 
+    Function(RowAddress)    { CountRange [0:127]; }  // Row address cycles through 0 to 127 
+    Function(ColumnAddress) { CountRange [0:3]; }  // Column address cycles through 0 to 3 
+  } 
+ 
+  // ---- Physical Pin Mapping for Address ---- 
+  PhysicalAddressMap { 
+    ColumnAddress[0] : c[0];                  // Pin c[0] drives column bit 0 
+    ColumnAddress[1] : c[1];                  // Pin c[1] drives column bit 1 
+    RowAddress[0]    : r[0];                  // Pin r[0] drives row bit 0 
+    RowAddress[1]    : r[1];                  // Pin r[1] drives row bit 1 
+    RowAddress[2]    : r[2];                  // Pin r[2] drives row bit 2 
+    RowAddress[3]    : r[3];                  // Pin r[3] drives row bit 3 
+    RowAddress[4]    : r[4];                  // Pin r[4] drives row bit 4 
+    RowAddress[5]    : r[5];                  // Pin r[5] drives row bit 5 
+    RowAddress[6]    : r[6];                  // Pin r[6] drives row bit 6
+  } 
+ 
+// ---- Port Definitions ----
+Port(A1[8:0]) { Direction : Input; Function : Address; LogicalPort : Port1;} // 8-bit address input bus
+Port(A2[8:0]) { Direction : Input; Function : Address; LogicalPort : Port2;} // 8-bit address input bus
+Port(CE1) { Direction : Input; Function : Clock; Polarity : ActiveHigh; LogicalPort : Port1;} // Clock enable (activehigh)
+Port(CE2) { Direction : Input; Function : Clock; Polarity : ActiveHigh; LogicalPort : Port2;} // Clock enable (activehigh)
+Port(WEB1) { Direction : Input; Function : WriteEnable; Polarity : ActiveLow; LogicalPort : Port1;} // Write enable(active low)
+Port(WEB2) { Direction : Input; Function : WriteEnable; Polarity : ActiveLow; LogicalPort : Port2;} // Write enable(active low)
+Port(OEB1) { Direction : Input; Function : OutputEnable; Polarity : ActiveLow; LogicalPort : Port1;} // Outputenable (active low)
+Port(OEB2) { Direction : Input; Function : OutputEnable; Polarity : ActiveLow; LogicalPort : Port2;} // Outputenable (active low)
+Port(CSB1) { Direction : Input; Function : Select; Polarity : ActiveLow; LogicalPort : Port1;} // Chip select (activelow)
+Port(CSB2) { Direction : Input; Function : Select; Polarity : ActiveLow; LogicalPort : Port2;} // Chip select (activelow)
+Port(I1[15:0]){ Direction : Input; Function : Data; LogicalPort : Port1;} // 8-bit data input bus
+Port(I2[15:0]){ Direction : Input; Function : Data; LogicalPort : Port2;} // 8-bit data input bus
+Port(O1[15:0]){ Direction : Output; Function : Data; LogicalPort : Port1;} // 8-bit data output bus
+Port(O2[15:0]){ Direction : Output; Function : Data; LogicalPort : Port2;} // 8-bit data output bus
+
+}

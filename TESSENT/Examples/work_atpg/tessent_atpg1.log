@@ -1,0 +1,415 @@
+/siemens/bin/tessent -shell -log tessent_atpg1.log -dofile atpg_setup_verify_scan_modes.dofile
+//  Warning: Tessent user documentation not found
+//  Tessent Shell  2022.4    Tue Nov 29 21:19:37 GMT 2022
+//                Unpublished work. Copyright 2022 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Mon May 19 17:02:10 IST 2025.
+//  64 bit version
+//  Host: APL9.kletech.ac.in (31644 MB RAM, 61034 MB Swap)
+//
+//  command: set dofileName atpg_setup.dofile
+//  command: set designFile /home/01fe21bec223/DFT_TESSENT/TESSENT/work_atpg/tsdb_outdir/dft_inserted_designs/counter_16bit_gate.dft_inserted_design/counter_16bit.vg
+//  command: set topName {counter_16bit}
+//  command: set libName "../TECHFILES/test_Nangate.mdt"
+//  command: proc verify_all_scan_modes {} {
+//              set modeList [list unwrapped]
+//              foreach mode $modeList {
+//                 set_system_mode setup
+//                 reset_design
+//                 tessent_scan_setup $mode
+//                 set_edt_options off
+//                 add_black_box -auto
+//                 set_system_mode analysis
+//                 report_scan_cells
+//              }
+//           }
+//  command: set_context patterns -scan
+//  command: delete_design 
+//  command: read_cell_library $libName
+//  Reading DFT Library file ../TECHFILES/test_Nangate.mdt
+//  Finished reading file ../TECHFILES/test_Nangate.mdt
+//  command: read_verilog $designFile
+//  command: set_current_design $topName
+//  command: dofile $dofileName
+//    command: #
+//    command: #  Written by Tessent Shell 2022.4 on Mon May 19 16:57:51 IST 2025
+//    command: #
+//    command: proc tessent_scan_common {} {
+//                add_clocks 1 rst
+//                add_clocks 0 clk
+//             }
+//    command: proc tessent_scan_unwrapped_mode {} {
+//                add_scan_groups grp1 atpg_setup.testproc
+//             
+//                add_scan_chains chain grp1 /scan_in_0 /scan_out_0
+//             
+//                tessent_scan_common
+//             
+//             }
+//    command: proc tessent_scan_setup { {mode unwrapped} } {
+//                switch -exact -- $mode {
+//                   unwrapped { tessent_scan_unwrapped_mode }
+//                   default {
+//                      display_message -error "invalid scan mode: $mode"
+//                   }
+//                }
+//             }
+//  command: verify_all_scan_modes
+//  sub-command: set_system_mode setup 
+//  Warning: Already in requested state.
+//  sub-command: reset_design 
+//  sub-command: add_scan_groups grp1 atpg_setup.testproc 
+//  sub-command: add_scan_chains chain grp1 /scan_in_0 /scan_out_0 
+//  sub-command: add_clocks 1 rst 
+//  sub-command: add_clocks 0 clk 
+//  sub-command: set_edt_options off 
+//  sub-command: add_black_boxes -auto 
+//  sub-command: set_system_mode analysis 
+//  Warning: Rule FN1 violation occurs 3 times
+//  Warning: Rule FN4 violation occurs 17 times
+//  Flattening process completed, cell instances=34, gates=227, PIs=4, POs=17, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 17.
+//  ---------------------------------------------------------------------------
+//  Reading group test procedure file atpg_setup.testproc.
+//  Begin simulation of load_unload procedure.
+//  Simulation of load_unload procedure completed, CPU time=0.0 sec.
+//  Chain = chain successfully traced with scan_cells = 16.
+//  16 scan cells have been identified in 1 scan chain.
+//  ---------------------------------------------------------------------------
+//  Begin transparent latch checking for 1 latches.
+//  ---------------------------------------------------------------------------
+//  Number transparent latches = 1.
+//  ---------------------------------------------------------------------------
+//  Begin scan clock rules checking.
+//  ---------------------------------------------------------------------------
+//  2 scan clock/set/reset lines have been identified.
+//  All scan clocks successfully passed off-state check.
+//  Capture clock is set to clk.
+//  ---------------------------------------------------------------------------
+//  1 non-scan memory element is identified.
+//  ---------------------------------------------------------------------------
+//  1 non-scan memory element is identified as TLA. (D5)
+//  ---------------------------------------------------------------------------
+//  sub-command: report_scan_cells 
+ cell#  chain    memory_type     inv   gate#    shift_clock  inv  cell_name                       instance_name                       (ext. pin names)
+ -----  -----  ---------------  ----  -------  -----------------  ---------  -------------------------------------------------------  ----------------
+ 0      chain  MASTER  (FF-LE)  FFFF      209  /clk          F    SDFFR_X2   /\Q_reg[0]                         mlc_inst24/mlc_dff    (SI,Q)          
+               TLA     (LA-AL)  F---      210  /clk          T    DLL_X2     /ts_lockup_latchn_clkc1_intno15_i  mlc_inst20/mlc_latch  (-,-)           
+ 1      chain  MASTER  (FF-LE)  FFFF      208  /clk          F    SDFFR_X2   /\Q_reg[1]                         mlc_inst24/mlc_dff    (SI,Q)          
+ 2      chain  MASTER  (FF-LE)  FFFF      207  /clk          F    SDFFR_X2   /\Q_reg[2]                         mlc_inst24/mlc_dff    (SI,Q)          
+ 3      chain  MASTER  (FF-LE)  FFFF      206  /clk          F    SDFFR_X2   /\Q_reg[3]                         mlc_inst24/mlc_dff    (SI,Q)          
+ 4      chain  MASTER  (FF-LE)  FFFF      205  /clk          F    SDFFR_X2   /\Q_reg[4]                         mlc_inst24/mlc_dff    (SI,Q)          
+ 5      chain  MASTER  (FF-LE)  FFFF      204  /clk          F    SDFFR_X1   /\Q_reg[5]                         mlc_inst23/mlc_dff    (SI,Q)          
+ 6      chain  MASTER  (FF-LE)  FFFF      203  /clk          F    SDFFR_X1   /\Q_reg[6]                         mlc_inst23/mlc_dff    (SI,Q)          
+ 7      chain  MASTER  (FF-LE)  FFFF      202  /clk          F    SDFFR_X1   /\Q_reg[7]                         mlc_inst23/mlc_dff    (SI,Q)          
+ 8      chain  MASTER  (FF-LE)  FFFF      201  /clk          F    SDFFR_X1   /\Q_reg[8]                         mlc_inst23/mlc_dff    (SI,Q)          
+ 9      chain  MASTER  (FF-LE)  FFFF      200  /clk          F    SDFFR_X1   /\Q_reg[9]                         mlc_inst23/mlc_dff    (SI,Q)          
+ 10     chain  MASTER  (FF-LE)  FFFF      199  /clk          F    SDFFR_X1   /\Q_reg[12]                        mlc_inst23/mlc_dff    (SI,Q)          
+ 11     chain  MASTER  (FF-LE)  FFFF      198  /clk          F    SDFFR_X1   /\Q_reg[10]                        mlc_inst23/mlc_dff    (SI,Q)          
+ 12     chain  MASTER  (FF-LE)  FFFF      197  /clk          F    SDFFR_X1   /\Q_reg[13]                        mlc_inst23/mlc_dff    (SI,Q)          
+ 13     chain  MASTER  (FF-LE)  FFFF      196  /clk          F    SDFFR_X1   /\Q_reg[11]                        mlc_inst23/mlc_dff    (SI,Q)          
+ 14     chain  MASTER  (FF-LE)  FFFF      195  /clk          F    SDFFR_X1   /\Q_reg[14]                        mlc_inst23/mlc_dff    (SI,Q)          
+ 15     chain  MASTER  (FF-LE)  FFFF      194  /clk          F    SDFFR_X1   /\Q_reg[15]                        mlc_inst23/mlc_dff    (SI,Q)          
+
+//  command: add_faults -all
+//  command: help create_patterns
+Usage:  create_patterns      [ -OVerride_user_settings  | -NO_AUto ] 
+                             [ -COMpaction_effort { Low |  High | Maximum | integer } ]  [ -NO_Analyze ] 
+                             [ -COVerage_effort { Low | Medium | High } ] 
+                             [ -NO_REDundancy_analysis ] 
+                             [ -NO_TERMINATE_ineffective_atpg ] 
+                             [ -PATterns_per_pass integer ] 
+                             [ -NO_REPort_statistics ] 
+//  command: help create_patterns -COMpaction_effort High -COVerage_effort High -NO_REDundancy_analysis
+//  Error: Unrecognized argument '-COMpaction_effort'.
+//  command: help create_patterns -COMpaction_effort High -COVerage_effort High -NO_REDundancy_analysis on
+//  Error: Unrecognized argument '-COMpaction_effort'.
+//  command: create_patterns -COMpaction_effort High -COVerage_effort High -NO_REDundancy_analysis 
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                             Analyzing the design                                                   |
+// |                                                                                                                    |
+// |      Current clock restriction setting:     Domain_clock (edge interaction)                                        |
+// |                                             (optimal)                                                              |
+// |                                                                                                                    |
+// |            Current abort limit setting:     30                                                                     |
+// |                                Calling:     set_abort_limit 300 100                                                |
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                                                                                                    |
+// |               Current sequential depth:     0 (optimal)                                                            |
+// |                                                                                                                    |
+// | ------------------------------------------------------------------------------------------------------------------ |
+//  ------------------------------------------------------------------------
+//  Simulation performed for #gates = 227  #faults = 243
+//  system mode = analysis    pattern source = internal patterns
+//  ------------------------------------------------------------------------
+//  #patterns  test      #faults  #faults    # eff.    # test         process      RE/AU/AAB
+//  simulated  coverage  in list  detected   patterns  patterns       CPU time
+//   ---        ------      ---       ---      ---       ---          0.02 sec     0/0/0
+//   3          74.19%       96       147        2         2          0.02 sec
+//   ---        ------      ---       ---      ---       ---          0.02 sec     0/0/0
+//   19        100.00%        0        96       10        12          0.02 sec
+
+           Statistics Report          
+            Stuck-at Faults           
+--------------------------------------
+Fault Classes               #faults   
+                            (total)   
+----------------------  --------------
+  FU (full)                   402     
+  --------------------  --------------
+  DS (det_simulation)     243 (60.45%)
+  DI (det_implication)    129 (32.09%)
+  UU (unused)              30 ( 7.46%)
+--------------------------------------
+Coverage                              
+  --------------------                
+  test_coverage               100.00% 
+  fault_coverage               92.54% 
+  atpg_effectiveness          100.00% 
+--------------------------------------
+#test_patterns                     12 
+#simulated_patterns                19 
+CPU_time (secs)                 141.6 
+--------------------------------------
+
+//  command: report_statistics 
+           Statistics Report          
+            Stuck-at Faults           
+--------------------------------------
+Fault Classes               #faults   
+                            (total)   
+----------------------  --------------
+  FU (full)                   402     
+  --------------------  --------------
+  DS (det_simulation)     243 (60.45%)
+  DI (det_implication)    129 (32.09%)
+  UU (unused)              30 ( 7.46%)
+--------------------------------------
+Coverage                              
+  --------------------                
+  test_coverage               100.00% 
+  fault_coverage               92.54% 
+  atpg_effectiveness          100.00% 
+--------------------------------------
+#test_patterns                     12 
+#simulated_patterns                19 
+CPU_time (secs)                 163.2 
+--------------------------------------
+
+//  command: reset_au_faults 
+//  command: report_statistics 
+           Statistics Report          
+            Stuck-at Faults           
+--------------------------------------
+Fault Classes               #faults   
+                            (total)   
+----------------------  --------------
+  FU (full)                   402     
+  --------------------  --------------
+  DS (det_simulation)     243 (60.45%)
+  DI (det_implication)    129 (32.09%)
+  UU (unused)              30 ( 7.46%)
+--------------------------------------
+Coverage                              
+  --------------------                
+  test_coverage               100.00% 
+  fault_coverage               92.54% 
+  atpg_effectiveness          100.00% 
+--------------------------------------
+#test_patterns                     12 
+#simulated_patterns                19 
+CPU_time (secs)                 178.1 
+--------------------------------------
+
+//  command: create_patterns 
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                             Analyzing the design                                                   |
+// |                                                                                                                    |
+// |      Current clock restriction setting:     Domain_clock (edge interaction)                                        |
+// |                                             (optimal)                                                              |
+// |                                                                                                                    |
+// |            Current abort limit setting:     300(Combinational) 100(Sequential)                                     |
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                                                                                                    |
+// |               Current sequential depth:     0 (optimal)                                                            |
+// |                                                                                                                    |
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                                                                                                    |
+// |                        Checking faults:     No undetected faults available. Exit.                                  |
+// | ------------------------------------------------------------------------------------------------------------------ |
+//  command: reset_au_faults 
+//  command: create_patterns 
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                             Analyzing the design                                                   |
+// |                                                                                                                    |
+// |      Current clock restriction setting:     Domain_clock (edge interaction)                                        |
+// |                                             (optimal)                                                              |
+// |                                                                                                                    |
+// |            Current abort limit setting:     300(Combinational) 100(Sequential)                                     |
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                                                                                                    |
+// |               Current sequential depth:     0 (optimal)                                                            |
+// |                                                                                                                    |
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                                                                                                    |
+// |                        Checking faults:     No undetected faults available. Exit.                                  |
+// | ------------------------------------------------------------------------------------------------------------------ |
+//  command: add_faults -all
+//  Warning: Previous internal test pattern set has been deleted.
+//  command: create_patterns 
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                             Analyzing the design                                                   |
+// |                                                                                                                    |
+// |      Current clock restriction setting:     Domain_clock (edge interaction)                                        |
+// |                                             (optimal)                                                              |
+// |                                                                                                                    |
+// |            Current abort limit setting:     300(Combinational) 100(Sequential)                                     |
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                                                                                                    |
+// |               Current sequential depth:     0 (optimal)                                                            |
+// |                                                                                                                    |
+// | ------------------------------------------------------------------------------------------------------------------ |
+//  ------------------------------------------------------------------------
+//  Simulation performed for #gates = 227  #faults = 243
+//  system mode = analysis    pattern source = internal patterns
+//  ------------------------------------------------------------------------
+//  #patterns  test      #faults  #faults    # eff.    # test         process      RE/AU/AAB
+//  simulated  coverage  in list  detected   patterns  patterns       CPU time
+//   ---        ------      ---       ---      ---       ---          0.00 sec     0/0/0
+//   2          81.45%       69       174        2         2          0.01 sec
+//   ---        ------      ---       ---      ---       ---          0.01 sec     0/0/0
+//   13        100.00%        0        69        7         9          0.01 sec
+
+           Statistics Report          
+            Stuck-at Faults           
+--------------------------------------
+Fault Classes               #faults   
+                            (total)   
+----------------------  --------------
+  FU (full)                   402     
+  --------------------  --------------
+  DS (det_simulation)     243 (60.45%)
+  DI (det_implication)    129 (32.09%)
+  UU (unused)              30 ( 7.46%)
+--------------------------------------
+Coverage                              
+  --------------------                
+  test_coverage               100.00% 
+  fault_coverage               92.54% 
+  atpg_effectiveness          100.00% 
+--------------------------------------
+#test_patterns                      9 
+#simulated_patterns                13 
+CPU_time (secs)                 226.0 
+--------------------------------------
+
+//  command: compress_patterns 
+//  ------------------------------------------------------------------------
+//  Pass#1: reverse pattern compression performed for 243 faults on 9 patterns
+//  ------------------------------------------------------------------------
+//  #patterns  test      #faults  #faults    # eff.    # test         process 
+//  simulated  coverage  in list  detected   patterns  patterns       CPU time
+//   9         100.00%        0       243        8         8          0.00 sec
+//  command: run_testbench_simulations 
+//  Error: There were no patterns sub-directories matching 'counter_16bit_*.patterns_signoff' found
+//         in current TSDB output directory './tsdb_outdir'
+//         and there are no other opened TSDB(s).
+//  command: write_patterns pat.ascii -ascii -parallel -replace
+//  command: read_patterns pat.ascii 
+//  command: run_testbench_simulations 
+//  Error: There were no patterns sub-directories matching 'counter_16bit_*.patterns_signoff' found
+//         in current TSDB output directory './tsdb_outdir'
+//         and there are no other opened TSDB(s).
+//  command: simulate_patterns 
+//  No active faults in current fault list.
+//  command: add_faults -all
+//  Warning: Previous internal test pattern set has been deleted.
+//  command: simulate_patterns 
+//  ------------------------------------------------------------------------
+//  Simulation performed for #gates = 227  #faults = 243
+//  Run fault simulation without storing patterns.  pattern source = 8 external patterns
+//  ------------------------------------------------------------------------
+//  #patterns  test      #faults  #faults    # eff.    # test         process 
+//  simulated  coverage  in list  detected   patterns  patterns       CPU time
+//   8         100.00%        0       243        8         0          0.00 sec
+//  command: report_statistics 
+           Statistics Report          
+            Stuck-at Faults           
+--------------------------------------
+Fault Classes               #faults   
+                            (total)   
+----------------------  --------------
+  FU (full)                   402     
+  --------------------  --------------
+  DS (det_simulation)     243 (60.45%)
+  DI (det_implication)    129 (32.09%)
+  UU (unused)              30 ( 7.46%)
+--------------------------------------
+Coverage                              
+  --------------------                
+  test_coverage               100.00% 
+  fault_coverage               92.54% 
+  atpg_effectiveness          100.00% 
+--------------------------------------
+#test_patterns                      0 
+#simulated_patterns                 8 
+CPU_time (secs)                 416.2 
+--------------------------------------
+
+//  command: report_simulation_contexts 
+Simulation Context Report
+
+Name                  Class       Populated
+--------------------  ----------  ---------
+* stable_after_setup  Predefined  yes      
+  stable_capture      Predefined  yes      
+  stable_load_unload  Predefined  yes      
+  stable_shift        Predefined  yes      
+  tie_value           Predefined  yes      
+
+* = current simulation context
+
+//  command: report_drc_rules 
+D5:  #fails=1 handling=warning (non-scan memory element)
+//  command: TestKompress
+//  Error: Command 'TestKompress' is unknown
+//  command: Testcompress
+//  Error: Command 'Testcompress' is unknown
+//  command: get_drc_handling D5
+warning
+//  command: get_drc_handling D5 -auto_fix 
+0
+//  command: encoding 
+//  Error: wrong # args: should be "encoding option ?arg ...?"
+//  command: write_design_import_script 
+//  Note: Since a 'counter_16bit.design_source_dictionary' file could not be found, the in-memory design source dictionary is used.
+//  Writing file 'counter_16bit.dc_shell_import_script'.
+//  command: scan 
+//  Error: wrong # args: should be "scan string format ?varName ...?"
+//  command: vim
+//  Error: Command 'vim' is unknown
+//  command: helpcompress_patterns 
+//  Error: Command 'helpcompress_patterns' is unknown
+//  command: help compress_patterns
+Usage:  compress_patterns  [passes_integer] [-Reset_au] [-MAx_useless_passes integer] [-MIn_elim_per_pass integer] [-MUltiple_detection [-Order]]
+                           [-MIXed {Essential | Order [-Delta percentage] [-Limit integer]}]
+//  command: compress_patterns -Reset_au -muxed Essential
+//  Error: Incorrect argument -muxed.
+//  command: compress_patterns -Reset_au -muxed
+//  Error: Incorrect argument -muxed.
+//  command: compress_patterns -Reset_au -Muxed
+//  Error: Incorrect argument -Muxed.
+//  command: compress_patterns -Reset_au
+//  Warning: No patterns in test pattern set.
+//  command: exit 

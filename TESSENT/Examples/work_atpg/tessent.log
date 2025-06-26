@@ -1,0 +1,127 @@
+/siemens/bin/tessent -shell -log tessent.log
+//  Warning: Tessent user documentation not found
+//  Tessent Shell  2022.4    Tue Nov 29 21:19:37 GMT 2022
+//                Unpublished work. Copyright 2022 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Fri May 16 09:34:43 IST 2025.
+//  64 bit version
+//  Host: APL7.kletech.ac.in (31644 MB RAM, 61034 MB Swap)
+//
+//  command: set_context dft -scan
+//  command: read_verilog ../NETLIST/cntr_16net.v 
+//  command: read_cell_library ../TECHFILES/test_Nangate.mdt 
+//  Reading DFT Library file ../TECHFILES/test_Nangate.mdt
+//  Finished reading file ../TECHFILES/test_Nangate.mdt
+//  command: set_design_sources -format verilog -y ../NETLIST -extension v
+//  command: set_current_design 
+//  Warning: The 'read_verilog' command was not issued after 'set_design_sources' was used to change the verilog design sources.
+//           'set_design_sources' only impacts subsequent 'read_verilog' commands.
+//  Note: Top design is 'counter_16bit'.
+//  command: read_verilog ../NETLIST/cntr_16net.v 
+//  Warning: File: ../NETLIST/cntr_16net.v, Line: 7:  Definition of module 'counter_16bit' already exists and will be overwritten.
+//  Note: The elaborated design is no longer available.
+//        Use the 'set_current_design' command to re-elaborate the design.
+//  command: set_current_design 
+//  Note: Top design is 'counter_16bit'.
+//  command: set_design_level chip
+//  command: set_scan_enable scan_en -single_global_scan_enable on
+//  command: get_clocks 
+{}
+//  command: set_scan_signals -tclk clk -ten scan_en
+//  Warning: Pin 'scan_en' does not exist and will be created when inserting test logic
+//  command: analyze_control_signals -auto
+//  Warning: Rule FN1 violation occurs 2 times
+//  Warning: Rule FN4 violation occurs 16 times
+//  Flattening process completed, cell instances=32, gates=138, PIs=2, POs=16, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin control signals identification analysis.
+//  ---------------------------------------------------------------------------
+//  Identified 1 clock control primary inputs.
+//     '/clk' (1) with off-state = 0.
+//  Identified 0 set control primary inputs.
+//  Identified 1 reset control primary inputs.
+//     '/rst' (2) with off-state = 1.
+//  Identified 0 read control primary inputs.
+//  Identified 0 write control primary inputs.
+//  ---------------------------------------------------------------------------
+//  Total number of internal lines is 48 (16 clocks, 16 sets , 16 resets, 0 reads, 0 writes).
+//  Total number of potentially clockable internal lines is 32 (16 clocks, 0 sets , 16 resets, 0 reads, 0 writes).
+//  Total number of not clockable internal lines is 16 (0 clocks, 16 sets , 0 resets, 0 reads, 0 writes).
+//  Total number of added primary input controls 1 (0 clocks, 0 sets , 1 resets, 0 reads, 0 writes).
+//  ---------------------------------------------------------------------------
+//  Warning: Flattened model deleted.
+//  command: check_design_rules 
+//  Warning: Rule FN1 violation occurs 2 times
+//  Warning: Rule FN4 violation occurs 16 times
+//  Flattening process completed, cell instances=32, gates=138, PIs=2, POs=16, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 16,
+//  sequential library cells = 16.
+//  ---------------------------------------------------------------------------
+//  Error: No 'static_control' group value specified for the signal 'STE'.
+//  Error: Failed to parse equation 'STE'.
+//  Error: Attempting to add the logic signal instance 'STE:0', but its source equation expression 'STE' is invalid.
+//  ---------------------------------------------------------------------------
+//  Begin scannability rules checking for 16 sequential library cells.
+//  ---------------------------------------------------------------------------
+//  16 sequential library cells identified as scannable.
+//  ---------------------------------------------------------------------------
+//  Begin scan clock rules checking.
+//  ---------------------------------------------------------------------------
+//  2 scan clock/set/reset lines have been identified.
+//  All scan clocks successfully passed off-state check.
+//  16 sequential cells passed clock stability checking.
+//  ---------------------------------------------------------------------------
+//  Begin shift register identification for 16 sequential library cells.
+//  ---------------------------------------------------------------------------
+//  No shift registers identified.
+//  Number of targeted sequential library cells = 16
+//  command: set_scan_insertion_options -si_port_format scan_in_%d -so_port_format scan_out_%d -enable_scan_cell_mapping on -chain_count 2 -chain_length 8
+//  command: analyze_scan_chains 
+//  Chain allocation of 'unwrapped' mode completed:
+//         2 distributed chains of size 8
+//  command: insert_test_logic 
+=============================
+Test Logic Insertion Summary:
+=============================
+
+  Structural Data:
+  ----------------
+                           Added top-level port count:           5
+                                 Added instance count:           4
+
+  Logical Data:
+  -------------
+                           Added retiming logic count:           2
+                   Added scan chain count (unwrapped):           2
+
+//  Warning: Flattened model deleted.
+//  command: write_design > ../output/cntr_16bit_scan.v
+//  command: report_scan_chains > cntr_scan_chain.rpt
+//  command: report_scan_elements > cntr_scan_elements.rpt
+//  command: report_scan_cells > cntr_scan_cells.rpt
+//  command: report_scan_enable > cntr_scan_enable.rpt
+//  command: write_atpg_setup atpg_setup
+//  command: write_core_description cntr_core_description
+//  command: write_scan_order > cntr_scan_order.rpt
+//  command: open_visualizer 
+//  Note: Tessent Visualizer client successfully started and connected to the server.
+//  command: set_system_mode setup
+//  command: open_visualizer 
+//  Note: Tessent Visualizer client successfully started and connected to the server.
+//  command: set_system_mode insertion
+//  command: report_test_logic 

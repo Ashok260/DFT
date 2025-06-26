@@ -1,0 +1,1153 @@
+//
+// Verilog format test patterns produced by Tessent Shell 2022.4
+// Filename       : ./tsdb_outdir/patterns/sram_sp_16384d_36w_16m_8b_rtl.patterns_signoff/MemoryBist_P1.v.0.vec
+// Idstamp        : 2022.4:ec94:6099:0:0000
+// Date           : Sat Jun 21 12:24:18 2025
+//
+// Format of broadside vector:
+//   PI_bits PO_bits MASK_bits Increment_bit Timeplate_bits(1) PatType_bits(3)
+//   VecType_bits(4)
+//   Increment_bit  - indicates when to increment pattern count
+//   Timeplate_bits - encodes timeplate number to use
+//   PatType_bits   - encodes pattern type
+//   VecType_bits   - encodes vector type
+
+// Scan test block
+
+// Pattern 0 Cycle 0 Timestamp 0 ns 
+000000000000000000000000000001000110000
+ // Start Pattern (0) MSG
+// Pattern_set go_nogo 
+000000000000000000000000000101000110000
+// + System reset 
+// Simulation Cycle 0  Timestamp 0 ns
+1000000X0Z10101011
+1100000X0Z10101011
+000000000000000000000000000101010110000
+//  Setting up MemoryBist controller sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst 
+000000000000000000000000000101100110000
+//  Releasing asynchronous reset 
+000000000000000000000000000101110110000
+// + Targets: 
+//   Apply 0 
+//     reads: 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ctl_group_sib        =  x               
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.tdr[14:0]            =  xxxxxxxxxxxxxxx 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.tdr_bypass_sib_inst  =  x               
+//     writes: 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.BIST_SETUP[1]         =  0 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_ASYNC_RESETN  =  1 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_EN            =  0 
+//  
+//  
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 0:0    R 0:0   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_sti_inst.sib 
+// ) 
+// +  Loading: 1 
+// Unloading: 0 
+// + Associated TAP transition: IDLE -> DRSELECT 
+1100010X0Z10101011
+// + Associated TAP transition: DRSELECT -> DRCAPTURE 
+1110010X0Z10101011
+// + Associated TAP transition: DRCAPTURE -> DRSHIFT 
+1101010X0Z10101011
+// + Shift Cycle 
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+110001101Z10101011
+000000000000000000000000000110000110000
+// + Associated TAP transition: DREXIT1 -> DRUPDATE 
+1100110X0Z10101011
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 1:1    R 1:1   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_mbist_inst.sib 
+//        W 0:0    R 0:0   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_sti_inst.sib 
+// ) 
+// +  Loading: 1_1 
+// Unloading: 0_0 
+// + Associated TAP transition: DRUPDATE -> DRSELECT 
+1100010X0Z10101011
+// + Associated TAP transition: DRSELECT -> DRCAPTURE 
+1110010X0Z10101011
+// + Associated TAP transition: DRCAPTURE -> DRSHIFT 
+1101010X0Z10101011
+// + Shift Cycles 
+// Simulation Cycle 10  Timestamp 1000 ns
+110101101Z10101011
+000000000000000000000000000110000110000
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+110001101Z10101011
+000000000000000000000000000110010110000
+// + Associated TAP transition: DREXIT1 -> DRUPDATE 
+1100110X0Z10101011
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 3:3    R 3:3   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.tdr_bypass_sib_inst 
+//        W 2:2    R 2:2   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ctl_group_sib 
+//        W 1:1    R 1:1   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_mbist_inst.sib 
+//        W 0:0    R 0:0   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_sti_inst.sib 
+// ) 
+// +  Loading: 1_1_1_1 
+// Unloading: X_X_0_0 
+// + Associated TAP transition: DRUPDATE -> DRSELECT 
+1100010X0Z10101011
+// + Associated TAP transition: DRSELECT -> DRCAPTURE 
+1110010X0Z10101011
+// + Associated TAP transition: DRCAPTURE -> DRSHIFT 
+1101010X0Z10101011
+// + Shift Cycles 
+110101101Z10101011
+000000000000000000000000000110000110000
+110101101Z10101011
+000000000000000000000000000110010110000
+1101011X0Z10101011
+000000000000000000000000000110100110000
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+1100011X0Z10101011
+000000000000000000000000000110110110000
+// + Associated TAP transition: DREXIT1 -> DRUPDATE 
+// Simulation Cycle 20  Timestamp 2000 ns
+1100110X0Z10101011
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 20:18    R 20:18   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_SETUP_tdr[2:0] 
+//        W 17:17    R 17:17   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.TCK_MODE_tdr 
+//        W 16:16    R 16:16   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.CHAIN_BYPASS_EN_tdr 
+//        W 15:15    R 15:15   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.INCLUDE_MEM_RESULTS_REG_tdr 
+//        W 14:14    R 14:14   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.FL_CNT_MODE1_tdr 
+//        W 13:13    R 13:13   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.FL_CNT_MODE0_tdr 
+//        W 12:12    R 12:12   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ASYNC_RESET_tdr 
+//        W 11:11    R 11:11   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_DIAG_EN_tdr 
+//        W 10:10    R 10:10   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ALGO_MODE1_tdr 
+//        W  9: 9    R  9: 9   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ALGO_MODE0_tdr 
+//        W  8: 8    R  8: 8   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_SELECT_TEST_DATA_tdr 
+//        W  7: 7    R  7: 7   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.REDUCED_ADDRESS_COUNT_tdr 
+//        W  6: 6    R  6: 6   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ENABLE_MEM_RESET_tdr 
+//        W  5: 5    R  5: 5   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.tdr_bypass_sib_inst 
+//        W  4: 4    R  4: 4   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_done_0 
+//        W  3: 3    R  3: 3   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_go_0 
+//        W  2: 2    R  2: 2   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ctl_group_sib 
+//        W  1: 1    R  1: 1   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_mbist_inst.sib 
+//        W  0: 0    R  0: 0   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_sti_inst.sib 
+// ) 
+// +  Loading: 000_0_1_0_0_0_1_0_0_0_0_0_0_1_0_0_1_1_1 
+// Unloading: XXX_X_X_X_X_X_X_X_X_X_X_X_X_0_X_X_0_0_0 
+// + Associated TAP transition: DRUPDATE -> DRSELECT 
+1100010X0Z10101011
+// + Associated TAP transition: DRSELECT -> DRCAPTURE 
+1110010X0Z10101011
+// + Associated TAP transition: DRCAPTURE -> DRSHIFT 
+1101010X0Z10101011
+// + Shift Cycles 
+110101101Z10101011
+000000000000000000000000000110000110000
+110101101Z10101011
+000000000000000000000000000110010110000
+110101101Z10101011
+000000000000000000000000000110100110000
+1101010X0Z10101011
+1101010X0Z10101011
+110101101Z10101011
+000000000000000000000000000110110110000
+// Simulation Cycle 30  Timestamp 3000 ns
+1101010X0Z10101011
+000000000000000000000000000111000110000
+1101010X0Z10101011
+000000000000000000000000000111010110000
+1101010X0Z10101011
+000000000000000000000000000111100110000
+1101010X0Z10101011
+000000000000000000000000000111110110000
+1101010X0Z10101011
+000000000000000000000000001000000110000
+1101010X0Z10101011
+000000000000000000000000001000010110000
+1101011X0Z10101011
+000000000000000000000000001000100110000
+1101010X0Z10101011
+000000000000000000000000001000110110000
+1101010X0Z10101011
+000000000000000000000000001001000110000
+1101010X0Z10101011
+000000000000000000000000001001010110000
+// Simulation Cycle 40  Timestamp 4000 ns
+1101011X0Z10101011
+000000000000000000000000001001100110000
+1101010X0Z10101011
+000000000000000000000000001001110110000
+1101010X0Z10101011
+000000000000000000000000001010000110000
+1101010X0Z10101011
+000000000000000000000000001010010110000
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+1100010X0Z10101011
+000000000000000000000000001010100110000
+// + Associated TAP transition: DREXIT1 -> DRUPDATE 
+1100110X0Z10101011
+// + Targets: 
+//   Apply 0 
+//     writes: 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.BIST_SETUP[0]  =  0 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.LV_TM          =  0 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_EN     =  1 
+//  
+//  
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 20:18    R 20:18   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_SETUP_tdr[2:0] 
+//        W 17:17    R 17:17   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.TCK_MODE_tdr 
+//        W 16:16    R 16:16   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.CHAIN_BYPASS_EN_tdr 
+//        W 15:15    R 15:15   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.INCLUDE_MEM_RESULTS_REG_tdr 
+//        W 14:14    R 14:14   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.FL_CNT_MODE1_tdr 
+//        W 13:13    R 13:13   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.FL_CNT_MODE0_tdr 
+//        W 12:12    R 12:12   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ASYNC_RESET_tdr 
+//        W 11:11    R 11:11   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_DIAG_EN_tdr 
+//        W 10:10    R 10:10   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ALGO_MODE1_tdr 
+//        W  9: 9    R  9: 9   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ALGO_MODE0_tdr 
+//        W  8: 8    R  8: 8   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_SELECT_TEST_DATA_tdr 
+//        W  7: 7    R  7: 7   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.REDUCED_ADDRESS_COUNT_tdr 
+//        W  6: 6    R  6: 6   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ENABLE_MEM_RESET_tdr 
+//        W  5: 5    R  5: 5   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.tdr_bypass_sib_inst 
+//        W  4: 4    R  4: 4   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_done_0 
+//        W  3: 3    R  3: 3   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_go_0 
+//        W  2: 2    R  2: 2   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ctl_group_sib 
+//        W  1: 1    R  1: 1   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_mbist_inst.sib 
+//        W  0: 0    R  0: 0   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_sti_inst.sib 
+// ) 
+// +  Loading: 000_0_0_0_0_0_1_0_0_0_0_0_0_1_0_1_1_1_1 
+// Unloading: X00_0_1_X_0_0_1_0_0_0_0_0_0_0_X_X_0_0_0 
+// + Associated TAP transition: DRUPDATE -> DRSELECT 
+1100010X0Z10101011
+// + Associated TAP transition: DRSELECT -> DRCAPTURE 
+1110010X0Z10101011
+// + Associated TAP transition: DRCAPTURE -> DRSHIFT 
+1101010X0Z10101011
+// + Shift Cycles 
+110101101Z10101011
+000000000000000000000000000110000110000
+// Simulation Cycle 50  Timestamp 5000 ns
+110101101Z10101011
+000000000000000000000000000110010110000
+110101101Z10101011
+000000000000000000000000000110100110000
+1101011X0Z10101011
+1101010X0Z10101011
+110101101Z10101011
+000000000000000000000000000110110110000
+110101001Z10101011
+000000000000000000000000001010110110000
+110101001Z10101011
+000000000000000000000000001011000110000
+110101001Z10101011
+000000000000000000000000001011010110000
+110101001Z10101011
+000000000000000000000000001011100110000
+110101001Z10101011
+000000000000000000000000001011110110000
+// Simulation Cycle 60  Timestamp 6000 ns
+110101001Z10101011
+000000000000000000000000001100000110000
+110101111Z10101011
+000000000000000000000000001100010110000
+110101001Z10101011
+000000000000000000000000001100100110000
+110101001Z10101011
+000000000000000000000000001100110110000
+1101010X0Z10101011
+110101011Z10101011
+000000000000000000000000001101000110000
+110101001Z10101011
+000000000000000000000000001101010110000
+110101001Z10101011
+000000000000000000000000001101100110000
+110101001Z10101011
+000000000000000000000000001101110110000
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+1100010X0Z10101011
+// + Associated TAP transition: DREXIT1 -> DRUPDATE 
+// Simulation Cycle 70  Timestamp 7000 ns
+1100110X0Z10101011
+//  Enabling reduced address simulation 
+000000000000000000000000001110000110000
+// + Targets: 
+//   Apply 0 
+//     writes: 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.ALGO_SEL_CNT_REG[0]            =  0       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.A_ADD_REG_X[6:0]               =  0000000 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.A_ADD_REG_Y[5:0]               =  000000  
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.BIST_SETUP[0]                  =  1       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.B_ADD_REG_X[6:0]               =  0000000 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.B_ADD_REG_Y[5:0]               =  000000  
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.CMP_EN_MASK_EN[0]              =  0       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.DIAG_EN_REG[0]                 =  0       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.EDATA_REG[1:0]                 =  00      
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.FREEZE_STOP_ERROR_REG[0]       =  0       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_ALGO_MODE[1:0]         =  00      
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_EN                     =  0       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_MEM_RST                =  0       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_TESTDATA_SELECT        =  0       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MEM_SELECT_REG0[0]             =  1       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MEM_SELECT_REG1[0]             =  1       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.OPSET_SELECT_REG[0]            =  0       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.REDUCED_ADDR_CNT_EN_REG[0]     =  1       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.SELECT_COMMON_DATA_PAT_REG[0]  =  0       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.SELECT_COMMON_OPSET_REG[0]     =  0       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.STOP_ON_ERROR_REG[0]           =  0       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.WDATA_REG[1:0]                 =  00      
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.X_ADDR_BIT_SEL_REG[0]          =  0       
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.Y_ADDR_BIT_SEL_REG[0]          =  0       
+//  
+//  
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 92:90    R 92:90   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_SETUP_tdr[2:0] 
+//        W 89:89    R 89:89   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.TCK_MODE_tdr 
+//        W 88:88    R 88:88   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.CHAIN_BYPASS_EN_tdr 
+//        W 87:87    R 87:87   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.INCLUDE_MEM_RESULTS_REG_tdr 
+//        W 86:86    R 86:86   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.FL_CNT_MODE1_tdr 
+//        W 85:85    R 85:85   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.FL_CNT_MODE0_tdr 
+//        W 84:84    R 84:84   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ASYNC_RESET_tdr 
+//        W 83:83    R 83:83   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_DIAG_EN_tdr 
+//        W 82:82    R 82:82   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ALGO_MODE1_tdr 
+//        W 81:81    R 81:81   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ALGO_MODE0_tdr 
+//        W 80:80    R 80:80   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_SELECT_TEST_DATA_tdr 
+//        W 79:79    R 79:79   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.REDUCED_ADDRESS_COUNT_tdr 
+//        W 78:78    R 78:78   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ENABLE_MEM_RESET_tdr 
+//        W 77:77    R 77:77   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.tdr_bypass_sib_inst 
+//        W 76:76    R 76:76   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.BIST_SI_Pipeline 
+//        W 75:75    R 75:75   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.DIAG_EN_REG[0:0] 
+//        W 74:74    R 74:74   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.CMP_EN_MASK_EN[0:0] 
+//        W 73:73    R 73:73   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.CMP_EN_PARITY[0:0] 
+//        W 72:72    R 72:72   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MEM_SELECT_REG0[0:0] 
+//        W 71:71    R 71:71   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MEM_SELECT_REG1[0:0] 
+//        W 70:70    R 70:70   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.REDUCED_ADDR_CNT_EN_REG[0:0] 
+//        W 69:69    R 69:69   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.ALGO_SEL_CNT_REG[0:0] 
+//        W 68:68    R 68:68   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.SELECT_COMMON_OPSET_REG[0:0] 
+//        W 67:67    R 67:67   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.SELECT_COMMON_DATA_PAT_REG[0:0] 
+//        W 66:66    R 66:66   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MICROCODE_EN_REG[0:0] 
+//        W 65:62    R 65:62   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.INST_POINTER_REG_HW[0:3] 
+//        W 61:56    R 61:56   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.A_ADD_REG_Y_HW[0:5] 
+//        W 55:49    R 55:49   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.A_ADD_REG_X_HW[0:6] 
+//        W 48:43    R 48:43   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.B_ADD_REG_Y_HW[0:5] 
+//        W 42:36    R 42:36   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.B_ADD_REG_X_HW[0:6] 
+//        W 35:33    R 35:33   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.JCNT_HW[0:2] 
+//        W 32:32    R 32:32   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.OPSET_SELECT_REG[0:0] 
+//        W 31:30    R 31:30   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.WDATA_REG_HW[0:1] 
+//        W 29:28    R 29:28   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.EDATA_REG_HW[0:1] 
+//        W 27:27    R 27:27   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.X_ADDR_BIT_SEL_REG[0:0] 
+//        W 26:26    R 26:26   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.Y_ADDR_BIT_SEL_REG[0:0] 
+//        W 25:24    R 25:24   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.REPEATLOOP_A_CNTR_REG_HW[0:1] 
+//        W 23:22    R 23:22   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.REPEATLOOP_B_CNTR_REG_HW[0:1] 
+//        W 21:21    R 21:21   u_bank1_my_sram_interface_inst.FREEZE_STOP_ERROR_REG[0:0] 
+//        W 20:20    R 20:20   u_bank0_my_sram_interface_inst.FREEZE_STOP_ERROR_REG[0:0] 
+//        W 19:19    R 19:19   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.STOP_ON_ERROR_REG[0:0] 
+//        W 18:18    R 18:18   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.FREEZE_STOP_ERROR_REG[0:0] 
+//        W 17: 6    R 17: 6   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.STOP_ERROR_CNT_REG_HW[0:11] 
+//        W  5: 5    R  5: 5   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.BIST_SO_Pipeline 
+//        W  4: 4    R  4: 4   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_done_0 
+//        W  3: 3    R  3: 3   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_go_0 
+//        W  2: 2    R  2: 2   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ctl_group_sib 
+//        W  1: 1    R  1: 1   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_mbist_inst.sib 
+//        W  0: 0    R  0: 0   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_sti_inst.sib 
+// ) 
+// +  Loading: 001_0_0_0_0_0_1_0_0_0_0_0_0_1_0_0_0_0_1_1_1_0_0_0_0_0000_000000_0000000_000000_0000000_000_0_00_00_0_0_00_00_0_0_0_0_000000000000_0_0_0_0_1_1 
+// Unloading: 000_0_0_0_0_0_1_0_0_0_0_0_0_0_X_X_X_X_X_X_X_X_X_X_X_XXXX_XXXXXX_XXXXXXX_XXXXXX_XXXXXXX_XXX_X_XX_XX_X_X_XX_XX_X_X_X_X_XXXXXXXXXXXX_X_X_X_0_0_0 
+// + Associated TAP transition: DRUPDATE -> DRSELECT 
+1100010X0Z10101011
+// + Associated TAP transition: DRSELECT -> DRCAPTURE 
+1110010X0Z10101011
+// + Associated TAP transition: DRCAPTURE -> DRSHIFT 
+1101010X0Z10101011
+// + Shift Cycles 
+110101101Z10101011
+000000000000000000000000000110000110000
+110101101Z10101011
+000000000000000000000000000110010110000
+110101001Z10101011
+000000000000000000000000000110100110000
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+// Simulation Cycle 80  Timestamp 8000 ns
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+// Simulation Cycle 90  Timestamp 9000 ns
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+// Simulation Cycle 100  Timestamp 10000 ns
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+// Simulation Cycle 110  Timestamp 11000 ns
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+// Simulation Cycle 120  Timestamp 12000 ns
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+// Simulation Cycle 130  Timestamp 13000 ns
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+// Simulation Cycle 140  Timestamp 14000 ns
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101011X0Z10101011
+1101011X0Z10101011
+1101011X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+// Simulation Cycle 150  Timestamp 15000 ns
+1101010X0Z10101011
+110101101Z10101011
+000000000000000000000000000110110110000
+110101001Z10101011
+000000000000000000000000001010110110000
+110101001Z10101011
+000000000000000000000000001011000110000
+110101001Z10101011
+000000000000000000000000001011010110000
+110101001Z10101011
+000000000000000000000000001011100110000
+110101001Z10101011
+000000000000000000000000001011110110000
+110101001Z10101011
+000000000000000000000000001100000110000
+110101111Z10101011
+000000000000000000000000001100010110000
+110101001Z10101011
+000000000000000000000000001100100110000
+// Simulation Cycle 160  Timestamp 16000 ns
+110101001Z10101011
+000000000000000000000000001100110110000
+110101001Z10101011
+000000000000000000000000001110010110000
+110101001Z10101011
+000000000000000000000000001101000110000
+110101001Z10101011
+000000000000000000000000001101010110000
+110101101Z10101011
+000000000000000000000000001101100110000
+110101001Z10101011
+000000000000000000000000001101110110000
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+110001001Z10101011
+000000000000000000000000001110100110000
+// + Associated TAP transition: DREXIT1 -> DRUPDATE 
+1100110X0Z10101011
+// + Associated TAP transition: DRUPDATE -> IDLE 
+1100010X0Z10101011
+1100000X0Z10101011
+// + Targets: 
+//   Apply 0 
+//     writes: 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.RUN_MODE[2:0]  =  011 
+//  
+//  
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 18:16    R 18:16   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_SETUP_tdr[2:0] 
+//        W 15:15    R 15:15   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.TCK_MODE_tdr 
+//        W 14:14    R 14:14   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.CHAIN_BYPASS_EN_tdr 
+//        W 13:13    R 13:13   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.INCLUDE_MEM_RESULTS_REG_tdr 
+//        W 12:12    R 12:12   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.FL_CNT_MODE1_tdr 
+//        W 11:11    R 11:11   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.FL_CNT_MODE0_tdr 
+//        W 10:10    R 10:10   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ASYNC_RESET_tdr 
+//        W  9: 9    R  9: 9   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_DIAG_EN_tdr 
+//        W  8: 8    R  8: 8   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ALGO_MODE1_tdr 
+//        W  7: 7    R  7: 7   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ALGO_MODE0_tdr 
+//        W  6: 6    R  6: 6   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_SELECT_TEST_DATA_tdr 
+//        W  5: 5    R  5: 5   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.REDUCED_ADDRESS_COUNT_tdr 
+//        W  4: 4    R  4: 4   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ENABLE_MEM_RESET_tdr 
+//        W  3: 3    R  3: 3   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.tdr_bypass_sib_inst 
+//        W  2: 2    R  2: 2   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ctl_group_sib 
+//        W  1: 1    R  1: 1   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_mbist_inst.sib 
+//        W  0: 0    R  0: 0   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_sti_inst.sib 
+// ) 
+// +  Loading: 011_0_0_0_0_0_1_0_0_0_0_0_0_1_1_1_1 
+// Unloading: X01_0_X_X_0_0_1_0_0_0_0_0_0_0_0_0_0 
+// + Associated TAP transition: IDLE -> DRSELECT 
+// Simulation Cycle 170  Timestamp 17000 ns
+1100010X0Z10101011
+// + Associated TAP transition: DRSELECT -> DRCAPTURE 
+1110010X0Z10101011
+// + Associated TAP transition: DRCAPTURE -> DRSHIFT 
+1101010X0Z10101011
+// + Shift Cycles 
+110101101Z10101011
+000000000000000000000000000110000110000
+110101101Z10101011
+000000000000000000000000000110010110000
+110101101Z10101011
+000000000000000000000000000110100110000
+110101101Z10101011
+000000000000000000000000000110110110000
+110101001Z10101011
+000000000000000000000000001010110110000
+110101001Z10101011
+000000000000000000000000001011000110000
+110101001Z10101011
+000000000000000000000000001011010110000
+// Simulation Cycle 180  Timestamp 18000 ns
+110101001Z10101011
+000000000000000000000000001011100110000
+110101001Z10101011
+000000000000000000000000001011110110000
+110101001Z10101011
+000000000000000000000000001100000110000
+110101111Z10101011
+000000000000000000000000001100010110000
+110101001Z10101011
+000000000000000000000000001100100110000
+110101001Z10101011
+000000000000000000000000001100110110000
+1101010X0Z10101011
+1101010X0Z10101011
+110101001Z10101011
+000000000000000000000000001101010110000
+110101111Z10101011
+000000000000000000000000001101100110000
+// Simulation Cycle 190  Timestamp 19000 ns
+110101101Z10101011
+000000000000000000000000001101110110000
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+1100010X0Z10101011
+// + Associated TAP transition: DREXIT1 -> DRUPDATE 
+1100110X0Z10101011
+// + Associated TAP transition: DRUPDATE -> IDLE 
+1100010X0Z10101011
+1100000X0Z10101011
+//  Checking GO is FAIL before execution 
+000000000000000000000000001110110110000
+//  Checking DONE is FAIL before execution 
+000000000000000000000000001111000110000
+//  Starting MemoryBist controller execution : sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst 
+000000000000000000000000001111010110000
+// + Targets: 
+//   Apply 0 
+//     reads: 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_DONE  =  0 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_GO    =  0 
+//     writes: 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.CHAIN_BYPASS_EN       =  1 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_EN  =  1 
+//  
+//  
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 20:18    R 20:18   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_SETUP_tdr[2:0] 
+//        W 17:17    R 17:17   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.TCK_MODE_tdr 
+//        W 16:16    R 16:16   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.CHAIN_BYPASS_EN_tdr 
+//        W 15:15    R 15:15   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.INCLUDE_MEM_RESULTS_REG_tdr 
+//        W 14:14    R 14:14   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.FL_CNT_MODE1_tdr 
+//        W 13:13    R 13:13   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.FL_CNT_MODE0_tdr 
+//        W 12:12    R 12:12   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ASYNC_RESET_tdr 
+//        W 11:11    R 11:11   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_DIAG_EN_tdr 
+//        W 10:10    R 10:10   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ALGO_MODE1_tdr 
+//        W  9: 9    R  9: 9   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ALGO_MODE0_tdr 
+//        W  8: 8    R  8: 8   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_SELECT_TEST_DATA_tdr 
+//        W  7: 7    R  7: 7   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.REDUCED_ADDRESS_COUNT_tdr 
+//        W  6: 6    R  6: 6   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ENABLE_MEM_RESET_tdr 
+//        W  5: 5    R  5: 5   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.tdr_bypass_sib_inst 
+//        W  4: 4    R  4: 4   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_done_0 
+//        W  3: 3    R  3: 3   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_go_0 
+//        W  2: 2    R  2: 2   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ctl_group_sib 
+//        W  1: 1    R  1: 1   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_mbist_inst.sib 
+//        W  0: 0    R  0: 0   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_sti_inst.sib 
+// ) 
+// +  Loading: 011_0_1_0_0_0_1_0_0_0_0_0_0_0_0_1_1_1_1 
+// Unloading: 011_0_X_X_0_0_1_0_0_0_0_0_0_0_0_0_0_0_0 
+// + Associated TAP transition: IDLE -> DRSELECT 
+1100010X0Z10101011
+// + Associated TAP transition: DRSELECT -> DRCAPTURE 
+1110010X0Z10101011
+// + Associated TAP transition: DRCAPTURE -> DRSHIFT 
+1101010X0Z10101011
+// + Shift Cycles 
+110101101Z10101011
+000000000000000000000000000110000110000
+110101101Z10101011
+000000000000000000000000000110010110000
+// Simulation Cycle 200  Timestamp 20000 ns
+110101101Z10101011
+000000000000000000000000000110100110000
+110101101Z10101011
+000000000000000000000000001111100110000
+110101001Z10101011
+000000000000000000000000001111110110000
+110101001Z10101011
+000000000000000000000000000110110110000
+110101001Z10101011
+000000000000000000000000001010110110000
+110101001Z10101011
+000000000000000000000000001011000110000
+110101001Z10101011
+000000000000000000000000001011010110000
+110101001Z10101011
+000000000000000000000000001011100110000
+110101001Z10101011
+000000000000000000000000001011110110000
+110101001Z10101011
+000000000000000000000000001100000110000
+// Simulation Cycle 210  Timestamp 21000 ns
+110101111Z10101011
+000000000000000000000000001100010110000
+110101001Z10101011
+000000000000000000000000001100100110000
+110101001Z10101011
+000000000000000000000000001100110110000
+1101010X0Z10101011
+1101011X0Z10101011
+110101001Z10101011
+000000000000000000000000001101010110000
+110101111Z10101011
+000000000000000000000000001101100110000
+110101111Z10101011
+000000000000000000000000001101110110000
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+110001001Z10101011
+000000000000000000000000001110100110000
+// + Associated TAP transition: DREXIT1 -> DRUPDATE 
+1100110X0Z10101011
+// + Associated TAP transition: DRUPDATE -> IDLE 
+// Simulation Cycle 220  Timestamp 22000 ns
+1100010X0Z10101011
+1100000X0Z10101011
+000000000000000000000000000011111000000
+0100000X0Z10101011
+001010000
+//  Checking GO is PASS after execution completion 
+000000000000000000000000010000000110000
+//  Checking DONE is PASS after execution completion 
+000000000000000000000000010000010110000
+// + Targets: 
+//   Apply 0 
+//     reads: 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_DONE  =  1 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_GO    =  1 
+//     writes: 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_EN  =  0 
+//  
+//  
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 5:5    R 5:5   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.tdr_bypass_sib_inst 
+//        W 4:4    R 4:4   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_done_0 
+//        W 3:3    R 3:3   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_go_0 
+//        W 2:2    R 2:2   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ctl_group_sib 
+//        W 1:1    R 1:1   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_mbist_inst.sib 
+//        W 0:0    R 0:0   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_sti_inst.sib 
+// ) 
+// +  Loading: 1_0_0_1_1_1 
+// Unloading: 0_1_1_0_0_0 
+// + Associated TAP transition: IDLE -> DRSELECT 
+1100010X0Z10101011
+// + Associated TAP transition: DRSELECT -> DRCAPTURE 
+1110010X0Z10101011
+// + Associated TAP transition: DRCAPTURE -> DRSHIFT 
+1101010X0Z10101011
+// + Shift Cycles 
+// Simulation Cycle 240  Timestamp 24000 ns
+110101101Z10101011
+000000000000000000000000000110000110000
+110101101Z10101011
+000000000000000000000000000110010110000
+110101101Z10101011
+000000000000000000000000000110100110000
+110101011Z10101011
+000000000000000000000000001111100110000
+110101011Z10101011
+000000000000000000000000001111110110000
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+110001101Z10101011
+000000000000000000000000000110110110000
+// + Associated TAP transition: DREXIT1 -> DRUPDATE 
+1100110X0Z10101011
+// + Targets: 
+//   Apply 0 
+//     reads: 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_DONE  =  x 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_GO    =  x 
+//     writes: 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.RUN_MODE[1]  =  0 
+//  
+//  
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 20:18    R 20:18   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_SETUP_tdr[2:0] 
+//        W 17:17    R 17:17   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.TCK_MODE_tdr 
+//        W 16:16    R 16:16   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.CHAIN_BYPASS_EN_tdr 
+//        W 15:15    R 15:15   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.INCLUDE_MEM_RESULTS_REG_tdr 
+//        W 14:14    R 14:14   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.FL_CNT_MODE1_tdr 
+//        W 13:13    R 13:13   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.FL_CNT_MODE0_tdr 
+//        W 12:12    R 12:12   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ASYNC_RESET_tdr 
+//        W 11:11    R 11:11   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_DIAG_EN_tdr 
+//        W 10:10    R 10:10   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ALGO_MODE1_tdr 
+//        W  9: 9    R  9: 9   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_ALGO_MODE0_tdr 
+//        W  8: 8    R  8: 8   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.BIST_SELECT_TEST_DATA_tdr 
+//        W  7: 7    R  7: 7   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.REDUCED_ADDRESS_COUNT_tdr 
+//        W  6: 6    R  6: 6   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ENABLE_MEM_RESET_tdr 
+//        W  5: 5    R  5: 5   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.tdr_bypass_sib_inst 
+//        W  4: 4    R  4: 4   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_done_0 
+//        W  3: 3    R  3: 3   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_go_0 
+//        W  2: 2    R  2: 2   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ctl_group_sib 
+//        W  1: 1    R  1: 1   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_mbist_inst.sib 
+//        W  0: 0    R  0: 0   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_sti_inst.sib 
+// ) 
+// +  Loading: 001_0_0_1_0_0_1_0_0_0_0_0_0_0_0_0_1_1_1 
+// Unloading: X11_0_1_X_0_0_1_0_0_0_0_0_0_0_X_X_0_0_0 
+// + Associated TAP transition: DRUPDATE -> DRSELECT 
+1100010X0Z10101011
+// + Associated TAP transition: DRSELECT -> DRCAPTURE 
+1110010X0Z10101011
+// + Associated TAP transition: DRCAPTURE -> DRSHIFT 
+1101010X0Z10101011
+// + Shift Cycles 
+// Simulation Cycle 250  Timestamp 25000 ns
+110101101Z10101011
+000000000000000000000000000110000110000
+110101101Z10101011
+000000000000000000000000000110010110000
+110101101Z10101011
+000000000000000000000000000110100110000
+1101010X0Z10101011
+000000000000000000000000001111100110000
+1101010X0Z10101011
+000000000000000000000000001111110110000
+110101001Z10101011
+000000000000000000000000000110110110000
+110101001Z10101011
+000000000000000000000000001010110110000
+110101001Z10101011
+000000000000000000000000001011000110000
+110101001Z10101011
+000000000000000000000000001011010110000
+110101001Z10101011
+000000000000000000000000001011100110000
+// Simulation Cycle 260  Timestamp 26000 ns
+110101001Z10101011
+000000000000000000000000001011110110000
+110101001Z10101011
+000000000000000000000000001100000110000
+110101111Z10101011
+000000000000000000000000001100010110000
+110101001Z10101011
+000000000000000000000000001100100110000
+110101001Z10101011
+000000000000000000000000001100110110000
+1101011X0Z10101011
+110101011Z10101011
+000000000000000000000000001101000110000
+110101001Z10101011
+000000000000000000000000001101010110000
+110101111Z10101011
+000000000000000000000000001101100110000
+110101011Z10101011
+000000000000000000000000001101110110000
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+// Simulation Cycle 270  Timestamp 27000 ns
+1100010X0Z10101011
+// + Associated TAP transition: DREXIT1 -> DRUPDATE 
+1100110X0Z10101011
+// + Targets: 
+//   Apply 0 
+//     writes: 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_EN  =  1 
+//  
+//  
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 5:5    R 5:5   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.tdr_bypass_sib_inst 
+//        W 4:4    R 4:4   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_done_0 
+//        W 3:3    R 3:3   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_go_0 
+//        W 2:2    R 2:2   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ctl_group_sib 
+//        W 1:1    R 1:1   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_mbist_inst.sib 
+//        W 0:0    R 0:0   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_sti_inst.sib 
+// ) 
+// +  Loading: 0_0_1_1_1_1 
+// Unloading: 0_X_X_0_0_0 
+// + Associated TAP transition: DRUPDATE -> DRSELECT 
+1100010X0Z10101011
+// + Associated TAP transition: DRSELECT -> DRCAPTURE 
+1110010X0Z10101011
+// + Associated TAP transition: DRCAPTURE -> DRSHIFT 
+1101010X0Z10101011
+// + Shift Cycles 
+110101101Z10101011
+000000000000000000000000000110000110000
+110101101Z10101011
+000000000000000000000000000110010110000
+110101101Z10101011
+000000000000000000000000000110100110000
+1101011X0Z10101011
+1101010X0Z10101011
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+// Simulation Cycle 280  Timestamp 28000 ns
+110001001Z10101011
+000000000000000000000000000110110110000
+// + Associated TAP transition: DREXIT1 -> DRUPDATE 
+1100110X0Z10101011
+//  Checking GO_ID bits are PASS 
+000000000000000000000000010000100110000
+// + Targets: 
+//   Apply 0 
+//     reads: 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.ALGO_SEL_CNT_REG[0]            =  0                                    
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.CMP_EN_MASK_EN[0]              =  0                                    
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.DIAG_EN_REG[0]                 =  0                                    
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MEM_SELECT_REG0[0]             =  1                                    
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MEM_SELECT_REG1[0]             =  1                                    
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.REDUCED_ADDR_CNT_EN_REG[0]     =  1                                    
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.SELECT_COMMON_DATA_PAT_REG[0]  =  0                                    
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.SELECT_COMMON_OPSET_REG[0]     =  0                                    
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.STOP_ON_ERROR_REG[0]           =  0                                    
+//        u_bank0_my_sram_interface_inst.GO_ID_REG[35:0]                                                =  000000000000000000000000000000000000 
+//        u_bank1_my_sram_interface_inst.GO_ID_REG[35:0]                                                =  000000000000000000000000000000000000 
+//     writes: 
+//        sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MBISTPG_EN  =  0 
+//  
+//  
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 149:149    R 149:149   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.tdr_bypass_sib_inst 
+//        W 148:148    R 148:148   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.BIST_SI_Pipeline 
+//        W 147:147    R 147:147   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.DIAG_EN_REG[0:0] 
+//        W 146:146    R 146:146   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.CMP_EN_MASK_EN[0:0] 
+//        W 145:145    R 145:145   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.CMP_EN_PARITY[0:0] 
+//        W 144:144    R 144:144   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MEM_SELECT_REG0[0:0] 
+//        W 143:143    R 143:143   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MEM_SELECT_REG1[0:0] 
+//        W 142:142    R 142:142   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.REDUCED_ADDR_CNT_EN_REG[0:0] 
+//        W 141:141    R 141:141   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.ALGO_SEL_CNT_REG[0:0] 
+//        W 140:140    R 140:140   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.SELECT_COMMON_OPSET_REG[0:0] 
+//        W 139:139    R 139:139   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.SELECT_COMMON_DATA_PAT_REG[0:0] 
+//        W 138:138    R 138:138   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.MICROCODE_EN_REG[0:0] 
+//        W 137:134    R 137:134   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.INST_POINTER_REG_HW[0:3] 
+//        W 133:128    R 133:128   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.A_ADD_REG_Y_HW[0:5] 
+//        W 127:121    R 127:121   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.A_ADD_REG_X_HW[0:6] 
+//        W 120:115    R 120:115   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.B_ADD_REG_Y_HW[0:5] 
+//        W 114:108    R 114:108   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.B_ADD_REG_X_HW[0:6] 
+//        W 107:105    R 107:105   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.JCNT_HW[0:2] 
+//        W 104:104    R 104:104   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.OPSET_SELECT_REG[0:0] 
+//        W 103:102    R 103:102   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.WDATA_REG_HW[0:1] 
+//        W 101:100    R 101:100   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.EDATA_REG_HW[0:1] 
+//        W  99: 99    R  99: 99   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.X_ADDR_BIT_SEL_REG[0:0] 
+//        W  98: 98    R  98: 98   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.Y_ADDR_BIT_SEL_REG[0:0] 
+//        W  97: 96    R  97: 96   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.REPEATLOOP_A_CNTR_REG_HW[0:1] 
+//        W  95: 94    R  95: 94   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.REPEATLOOP_B_CNTR_REG_HW[0:1] 
+//        W  93: 58    R  93: 58   u_bank1_my_sram_interface_inst.GO_ID_REG[35:0] 
+//        W  57: 57    R  57: 57   u_bank1_my_sram_interface_inst.FREEZE_STOP_ERROR_REG[0:0] 
+//        W  56: 21    R  56: 21   u_bank0_my_sram_interface_inst.GO_ID_REG[35:0] 
+//        W  20: 20    R  20: 20   u_bank0_my_sram_interface_inst.FREEZE_STOP_ERROR_REG[0:0] 
+//        W  19: 19    R  19: 19   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.STOP_ON_ERROR_REG[0:0] 
+//        W  18: 18    R  18: 18   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.FREEZE_STOP_ERROR_REG[0:0] 
+//        W  17:  6    R  17:  6   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.STOP_ERROR_CNT_REG_HW[0:11] 
+//        W   5:  5    R   5:  5   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_inst.BIST_SO_Pipeline 
+//        W   4:  4    R   4:  4   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_done_0 
+//        W   3:  3    R   3:  3   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.mbist_go_0 
+//        W   2:  2    R   2:  2   sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_inst.ctl_group_sib 
+//        W   1:  1    R   1:  1   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_mbist_inst.sib 
+//        W   0:  0    R   0:  0   sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_sti_inst.sib 
+// ) 
+// +  Loading: 0_0_0_0_0_1_1_1_0_0_0_0_0000_000000_0000000_000000_0000000_000_0_00_00_0_0_00_00_000000000000000000000000000000000000_0_000000000000000000000000000000000000_0_0_0_000000000000_0_0_0_1_1_1 
+// Unloading: 0_X_0_0_X_1_1_1_0_0_0_X_XXXX_XXXXXX_XXXXXXX_XXXXXX_XXXXXXX_XXX_X_XX_XX_X_X_XX_XX_000000000000000000000000000000000000_X_000000000000000000000000000000000000_X_0_X_XXXXXXXXXXXX_X_X_X_0_0_0 
+// + Associated TAP transition: DRUPDATE -> DRSELECT 
+1100010X0Z10101011
+// + Associated TAP transition: DRSELECT -> DRCAPTURE 
+1110010X0Z10101011
+// + Associated TAP transition: DRCAPTURE -> DRSHIFT 
+1101010X0Z10101011
+// + Shift Cycles 
+110101101Z10101011
+000000000000000000000000000110000110000
+110101101Z10101011
+000000000000000000000000000110010110000
+110101101Z10101011
+000000000000000000000000000110100110000
+1101010X0Z10101011
+1101010X0Z10101011
+// Simulation Cycle 290  Timestamp 29000 ns
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+// Simulation Cycle 300  Timestamp 30000 ns
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+110101001Z10101011
+000000000000000000000000010000110110000
+1101010X0Z10101011
+110101001Z10101011
+000000000000000000000000010001000110000
+110101001Z10101011
+000000000000000000000000010001010110000
+110101001Z10101011
+000000000000000000000000010001100110000
+110101001Z10101011
+000000000000000000000000010001110110000
+// Simulation Cycle 310  Timestamp 31000 ns
+110101001Z10101011
+000000000000000000000000010010000110000
+110101001Z10101011
+000000000000000000000000010010010110000
+110101001Z10101011
+000000000000000000000000010010100110000
+110101001Z10101011
+000000000000000000000000010010110110000
+110101001Z10101011
+000000000000000000000000010011000110000
+110101001Z10101011
+000000000000000000000000010011010110000
+110101001Z10101011
+000000000000000000000000010011100110000
+110101001Z10101011
+000000000000000000000000010011110110000
+110101001Z10101011
+000000000000000000000000010100000110000
+110101001Z10101011
+000000000000000000000000010100010110000
+// Simulation Cycle 320  Timestamp 32000 ns
+110101001Z10101011
+000000000000000000000000010100100110000
+110101001Z10101011
+000000000000000000000000010100110110000
+110101001Z10101011
+000000000000000000000000010101000110000
+110101001Z10101011
+000000000000000000000000010101010110000
+110101001Z10101011
+000000000000000000000000010101100110000
+110101001Z10101011
+000000000000000000000000010101110110000
+110101001Z10101011
+000000000000000000000000010110000110000
+110101001Z10101011
+000000000000000000000000010110010110000
+110101001Z10101011
+000000000000000000000000010110100110000
+110101001Z10101011
+000000000000000000000000010110110110000
+// Simulation Cycle 330  Timestamp 33000 ns
+110101001Z10101011
+000000000000000000000000010111000110000
+110101001Z10101011
+000000000000000000000000010111010110000
+110101001Z10101011
+000000000000000000000000010111100110000
+110101001Z10101011
+000000000000000000000000010111110110000
+110101001Z10101011
+000000000000000000000000011000000110000
+110101001Z10101011
+000000000000000000000000011000010110000
+110101001Z10101011
+000000000000000000000000011000100110000
+110101001Z10101011
+000000000000000000000000011000110110000
+110101001Z10101011
+000000000000000000000000011001000110000
+110101001Z10101011
+000000000000000000000000011001010110000
+// Simulation Cycle 340  Timestamp 34000 ns
+110101001Z10101011
+000000000000000000000000011001100110000
+110101001Z10101011
+000000000000000000000000011001110110000
+1101010X0Z10101011
+110101001Z10101011
+000000000000000000000000011010000110000
+110101001Z10101011
+000000000000000000000000011010010110000
+110101001Z10101011
+000000000000000000000000011010100110000
+110101001Z10101011
+000000000000000000000000011010110110000
+110101001Z10101011
+000000000000000000000000011011000110000
+110101001Z10101011
+000000000000000000000000011011010110000
+110101001Z10101011
+000000000000000000000000011011100110000
+// Simulation Cycle 350  Timestamp 35000 ns
+110101001Z10101011
+000000000000000000000000011011110110000
+110101001Z10101011
+000000000000000000000000011100000110000
+110101001Z10101011
+000000000000000000000000011100010110000
+110101001Z10101011
+000000000000000000000000011100100110000
+110101001Z10101011
+000000000000000000000000011100110110000
+110101001Z10101011
+000000000000000000000000011101000110000
+110101001Z10101011
+000000000000000000000000011101010110000
+110101001Z10101011
+000000000000000000000000011101100110000
+110101001Z10101011
+000000000000000000000000011101110110000
+110101001Z10101011
+000000000000000000000000011110000110000
+// Simulation Cycle 360  Timestamp 36000 ns
+110101001Z10101011
+000000000000000000000000011110010110000
+110101001Z10101011
+000000000000000000000000011110100110000
+110101001Z10101011
+000000000000000000000000011110110110000
+110101001Z10101011
+000000000000000000000000011111000110000
+110101001Z10101011
+000000000000000000000000011111010110000
+110101001Z10101011
+000000000000000000000000011111100110000
+110101001Z10101011
+000000000000000000000000011111110110000
+110101001Z10101011
+000000000000000000000000100000000110000
+110101001Z10101011
+000000000000000000000000100000010110000
+110101001Z10101011
+000000000000000000000000100000100110000
+// Simulation Cycle 370  Timestamp 37000 ns
+110101001Z10101011
+000000000000000000000000100000110110000
+110101001Z10101011
+000000000000000000000000100001000110000
+110101001Z10101011
+000000000000000000000000100001010110000
+110101001Z10101011
+000000000000000000000000100001100110000
+110101001Z10101011
+000000000000000000000000100001110110000
+110101001Z10101011
+000000000000000000000000100010000110000
+110101001Z10101011
+000000000000000000000000100010010110000
+110101001Z10101011
+000000000000000000000000100010100110000
+110101001Z10101011
+000000000000000000000000100010110110000
+1101010X0Z10101011
+// Simulation Cycle 380  Timestamp 38000 ns
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+// Simulation Cycle 390  Timestamp 39000 ns
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+// Simulation Cycle 400  Timestamp 40000 ns
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+// Simulation Cycle 410  Timestamp 41000 ns
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+// Simulation Cycle 420  Timestamp 42000 ns
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+1101010X0Z10101011
+110101001Z10101011
+000000000000000000000000100011000110000
+110101001Z10101011
+000000000000000000000000100011010110000
+110101001Z10101011
+000000000000000000000000100011100110000
+110101111Z10101011
+000000000000000000000000100011110110000
+110101111Z10101011
+000000000000000000000000100100000110000
+110101111Z10101011
+000000000000000000000000100100010110000
+// Simulation Cycle 430  Timestamp 43000 ns
+1101010X0Z10101011
+110101001Z10101011
+000000000000000000000000100100100110000
+110101001Z10101011
+000000000000000000000000100100110110000
+1101010X0Z10101011
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+110001001Z10101011
+000000000000000000000000000110110110000
+// + Associated TAP transition: DREXIT1 -> DRUPDATE 
+1100110X0Z10101011
+// + Associated TAP transition: DRUPDATE -> IDLE 
+1100010X0Z10101011
+1100000X0Z10101011
+// end of Vec file MSG
+000000000000000000000000000000110110000

@@ -1,0 +1,219 @@
+# ####################################################################
+
+#  Created by Genus(TM) Synthesis Solution 20.11-s111_1 on Mon Apr 14 12:55:04 IST 2025
+
+# ####################################################################
+
+set sdc_version 2.0
+
+set_units -capacitance 1000fF
+set_units -time 1000ps
+
+# Set the current design
+current_design counter
+
+create_clock -name "clk" -period 5.0 -waveform {0.0 2.5} [get_ports clk]
+group_path -weight 1.000000 -name C2C -from [list \
+  [get_cells {q_reg[27]}]  \
+  [get_cells {q_reg[13]}]  \
+  [get_cells {q_reg[14]}]  \
+  [get_cells {q_reg[15]}]  \
+  [get_cells {q_reg[16]}]  \
+  [get_cells {q_reg[17]}]  \
+  [get_cells {q_reg[18]}]  \
+  [get_cells {q_reg[19]}]  \
+  [get_cells {q_reg[20]}]  \
+  [get_cells {q_reg[21]}]  \
+  [get_cells {q_reg[22]}]  \
+  [get_cells {q_reg[23]}]  \
+  [get_cells {q_reg[24]}]  \
+  [get_cells {q_reg[25]}]  \
+  [get_cells {q_reg[26]}]  \
+  [get_cells {q_reg[1]}]  \
+  [get_cells {q_reg[6]}]  \
+  [get_cells {q_reg[30]}]  \
+  [get_cells {q_reg[31]}]  \
+  [get_cells {q_reg[2]}]  \
+  [get_cells {q_reg[3]}]  \
+  [get_cells {q_reg[4]}]  \
+  [get_cells {q_reg[5]}]  \
+  [get_cells {q_reg[29]}]  \
+  [get_cells {q_reg[7]}]  \
+  [get_cells {q_reg[8]}]  \
+  [get_cells {q_reg[9]}]  \
+  [get_cells {q_reg[10]}]  \
+  [get_cells {q_reg[11]}]  \
+  [get_cells {q_reg[12]}]  \
+  [get_cells {q_reg[28]}]  \
+  [get_cells {q_reg[0]}] ] -to [list \
+  [get_cells {q_reg[27]}]  \
+  [get_cells {q_reg[13]}]  \
+  [get_cells {q_reg[14]}]  \
+  [get_cells {q_reg[15]}]  \
+  [get_cells {q_reg[16]}]  \
+  [get_cells {q_reg[17]}]  \
+  [get_cells {q_reg[18]}]  \
+  [get_cells {q_reg[19]}]  \
+  [get_cells {q_reg[20]}]  \
+  [get_cells {q_reg[21]}]  \
+  [get_cells {q_reg[22]}]  \
+  [get_cells {q_reg[23]}]  \
+  [get_cells {q_reg[24]}]  \
+  [get_cells {q_reg[25]}]  \
+  [get_cells {q_reg[26]}]  \
+  [get_cells {q_reg[1]}]  \
+  [get_cells {q_reg[6]}]  \
+  [get_cells {q_reg[30]}]  \
+  [get_cells {q_reg[31]}]  \
+  [get_cells {q_reg[2]}]  \
+  [get_cells {q_reg[3]}]  \
+  [get_cells {q_reg[4]}]  \
+  [get_cells {q_reg[5]}]  \
+  [get_cells {q_reg[29]}]  \
+  [get_cells {q_reg[7]}]  \
+  [get_cells {q_reg[8]}]  \
+  [get_cells {q_reg[9]}]  \
+  [get_cells {q_reg[10]}]  \
+  [get_cells {q_reg[11]}]  \
+  [get_cells {q_reg[12]}]  \
+  [get_cells {q_reg[28]}]  \
+  [get_cells {q_reg[0]}] ]
+group_path -weight 1.000000 -name C2O -from [list \
+  [get_cells {q_reg[27]}]  \
+  [get_cells {q_reg[13]}]  \
+  [get_cells {q_reg[14]}]  \
+  [get_cells {q_reg[15]}]  \
+  [get_cells {q_reg[16]}]  \
+  [get_cells {q_reg[17]}]  \
+  [get_cells {q_reg[18]}]  \
+  [get_cells {q_reg[19]}]  \
+  [get_cells {q_reg[20]}]  \
+  [get_cells {q_reg[21]}]  \
+  [get_cells {q_reg[22]}]  \
+  [get_cells {q_reg[23]}]  \
+  [get_cells {q_reg[24]}]  \
+  [get_cells {q_reg[25]}]  \
+  [get_cells {q_reg[26]}]  \
+  [get_cells {q_reg[1]}]  \
+  [get_cells {q_reg[6]}]  \
+  [get_cells {q_reg[30]}]  \
+  [get_cells {q_reg[31]}]  \
+  [get_cells {q_reg[2]}]  \
+  [get_cells {q_reg[3]}]  \
+  [get_cells {q_reg[4]}]  \
+  [get_cells {q_reg[5]}]  \
+  [get_cells {q_reg[29]}]  \
+  [get_cells {q_reg[7]}]  \
+  [get_cells {q_reg[8]}]  \
+  [get_cells {q_reg[9]}]  \
+  [get_cells {q_reg[10]}]  \
+  [get_cells {q_reg[11]}]  \
+  [get_cells {q_reg[12]}]  \
+  [get_cells {q_reg[28]}]  \
+  [get_cells {q_reg[0]}] ] -to [list \
+  [get_ports {q[31]}]  \
+  [get_ports {q[30]}]  \
+  [get_ports {q[29]}]  \
+  [get_ports {q[28]}]  \
+  [get_ports {q[27]}]  \
+  [get_ports {q[26]}]  \
+  [get_ports {q[25]}]  \
+  [get_ports {q[24]}]  \
+  [get_ports {q[23]}]  \
+  [get_ports {q[22]}]  \
+  [get_ports {q[21]}]  \
+  [get_ports {q[20]}]  \
+  [get_ports {q[19]}]  \
+  [get_ports {q[18]}]  \
+  [get_ports {q[17]}]  \
+  [get_ports {q[16]}]  \
+  [get_ports {q[15]}]  \
+  [get_ports {q[14]}]  \
+  [get_ports {q[13]}]  \
+  [get_ports {q[12]}]  \
+  [get_ports {q[11]}]  \
+  [get_ports {q[10]}]  \
+  [get_ports {q[9]}]  \
+  [get_ports {q[8]}]  \
+  [get_ports {q[7]}]  \
+  [get_ports {q[6]}]  \
+  [get_ports {q[5]}]  \
+  [get_ports {q[4]}]  \
+  [get_ports {q[3]}]  \
+  [get_ports {q[2]}]  \
+  [get_ports {q[1]}]  \
+  [get_ports {q[0]}] ]
+group_path -weight 1.000000 -name I2C -from [list \
+  [get_ports clk]  \
+  [get_ports rst]  \
+  [get_ports en] ] -to [list \
+  [get_cells {q_reg[27]}]  \
+  [get_cells {q_reg[13]}]  \
+  [get_cells {q_reg[14]}]  \
+  [get_cells {q_reg[15]}]  \
+  [get_cells {q_reg[16]}]  \
+  [get_cells {q_reg[17]}]  \
+  [get_cells {q_reg[18]}]  \
+  [get_cells {q_reg[19]}]  \
+  [get_cells {q_reg[20]}]  \
+  [get_cells {q_reg[21]}]  \
+  [get_cells {q_reg[22]}]  \
+  [get_cells {q_reg[23]}]  \
+  [get_cells {q_reg[24]}]  \
+  [get_cells {q_reg[25]}]  \
+  [get_cells {q_reg[26]}]  \
+  [get_cells {q_reg[1]}]  \
+  [get_cells {q_reg[6]}]  \
+  [get_cells {q_reg[30]}]  \
+  [get_cells {q_reg[31]}]  \
+  [get_cells {q_reg[2]}]  \
+  [get_cells {q_reg[3]}]  \
+  [get_cells {q_reg[4]}]  \
+  [get_cells {q_reg[5]}]  \
+  [get_cells {q_reg[29]}]  \
+  [get_cells {q_reg[7]}]  \
+  [get_cells {q_reg[8]}]  \
+  [get_cells {q_reg[9]}]  \
+  [get_cells {q_reg[10]}]  \
+  [get_cells {q_reg[11]}]  \
+  [get_cells {q_reg[12]}]  \
+  [get_cells {q_reg[28]}]  \
+  [get_cells {q_reg[0]}] ]
+group_path -weight 1.000000 -name I2O -from [list \
+  [get_ports clk]  \
+  [get_ports rst]  \
+  [get_ports en] ] -to [list \
+  [get_ports {q[31]}]  \
+  [get_ports {q[30]}]  \
+  [get_ports {q[29]}]  \
+  [get_ports {q[28]}]  \
+  [get_ports {q[27]}]  \
+  [get_ports {q[26]}]  \
+  [get_ports {q[25]}]  \
+  [get_ports {q[24]}]  \
+  [get_ports {q[23]}]  \
+  [get_ports {q[22]}]  \
+  [get_ports {q[21]}]  \
+  [get_ports {q[20]}]  \
+  [get_ports {q[19]}]  \
+  [get_ports {q[18]}]  \
+  [get_ports {q[17]}]  \
+  [get_ports {q[16]}]  \
+  [get_ports {q[15]}]  \
+  [get_ports {q[14]}]  \
+  [get_ports {q[13]}]  \
+  [get_ports {q[12]}]  \
+  [get_ports {q[11]}]  \
+  [get_ports {q[10]}]  \
+  [get_ports {q[9]}]  \
+  [get_ports {q[8]}]  \
+  [get_ports {q[7]}]  \
+  [get_ports {q[6]}]  \
+  [get_ports {q[5]}]  \
+  [get_ports {q[4]}]  \
+  [get_ports {q[3]}]  \
+  [get_ports {q[2]}]  \
+  [get_ports {q[1]}]  \
+  [get_ports {q[0]}] ]
+set_clock_gating_check -setup 0.0 
+set_wire_load_mode "enclosed"

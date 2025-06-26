@@ -1,0 +1,153 @@
+/home/Mentor/tessent/bin/tessent -shell -log sram.log -replace
+//  Warning: Tessent user documentation not found
+//  Tessent Shell  2022.4    Tue Nov 29 21:19:37 GMT 2022
+//                Unpublished work. Copyright 2022 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Wed Apr 16 14:32:02 IST 2025.
+//  64 bit version
+//  Host: APL10.kletech.ac.in (31578 MB RAM, 15983 MB Swap)
+//
+//  command: set_context dft -scan
+//  command: read_verilog ../NETLIST/single_port_sync_ram_opt.v 
+//  command: read_cell_library ../TECHFILES/test_Nangate.mdt
+//  Reading DFT Library file ../TECHFILES/test_Nangate.mdt
+//  Finished reading file ../TECHFILES/test_Nangate.mdt
+//  command: set_current_design 
+//  Note: Top design is 'single_port_sync_ram'.
+//  command: man analyze_control_signals
+//  Error: Command 'man analyze_control_signals' is unknown
+//  command: man analyze_control_signals 
+//  Error: Command 'man analyze_control_signals' is unknown
+//  command: help analyze_control_signals
+Usage:  analyze_control_signals [-Report_only|-Auto_fix] [-Verbose]
+//  command: help analyze_control_signals -Auto_fix
+//  Error: Unrecognized argument '-Auto_fix'.
+//  command: help analyze_control_signals -Auto_fix auto
+//  Error: Unrecognized argument '-Auto_fix'.
+//  command: help analyze_control_signals -auto_fix
+//  Error: Unrecognized argument '-auto_fix'.
+//  command: help analyze_control_signals -auto
+//  Error: Unrecognized argument '-auto'.
+//  command: analyze_control_signals -Auto_fix
+//  Warning: Rule FN1 violation occurs 2 times
+//  Warning: Rule FN4 violation occurs 544 times
+//  Flattening process completed, cell instances=1016, gates=6175, PIs=40, POs=32, CPU time=0.01 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.01 sec.
+//  ---------------------------------------------------------------------------
+//  Begin control signals identification analysis.
+//  ---------------------------------------------------------------------------
+//  Identified 1 clock control primary inputs.
+//     '/clk' (1) with off-state = 1.
+//  Identified 0 set control primary inputs.
+//  Identified 0 reset control primary inputs.
+//  Identified 0 read control primary inputs.
+//  Identified 0 write control primary inputs.
+//  ---------------------------------------------------------------------------
+//  Total number of internal lines is 1632 (544 clocks, 544 sets , 544 resets, 0 reads, 0 writes).
+//  Total number of potentially clockable internal lines is 544 (544 clocks, 0 sets , 0 resets, 0 reads, 0 writes).
+//  Total number of not clockable internal lines is 1088 (0 clocks, 544 sets , 544 resets, 0 reads, 0 writes).
+//  Total number of added primary input controls 1 (1 clocks, 0 sets , 0 resets, 0 reads, 0 writes).
+//  ---------------------------------------------------------------------------
+//  Warning: Flattened model deleted.
+//  command: check_design_rules 
+//  Warning: Rule FN1 violation occurs 2 times
+//  Warning: Rule FN4 violation occurs 544 times
+//  Flattening process completed, cell instances=1016, gates=6175, PIs=40, POs=32, CPU time=0.01 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.01 sec.
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 544,
+//  sequential library cells = 544.
+//  ---------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------
+//  Begin scannability rules checking for 544 sequential library cells.
+//  ---------------------------------------------------------------------------
+//  544 sequential library cells identified as scannable.
+//  Error: There were 256 S6 violations (driven scan-in pin of a sub chain or of a scan cell in unspecified scan chain).
+//         For failed scan cells, use "add_scan_chains" or "add_scan_segment" commands to declare previously inserted scan chains.
+//  Error: Rules checking unsuccessful, cannot exit SETUP mode.
+//  command: add_scan_chains -inteernal
+//  Error: Unrecognized argument '-inteernal'. ( help add_scan_chains )
+//  command: help add_scan_chains
+add_scan_chains [ -internal | -load_only ] <chain_specification>...
+
+DESCRIPTION 
+   <chain_specification>: chain_name group_name input_pin output_pin
+//  command: add_scan_chains chain -internal chain_sub0
+//  Error: Unrecognized argument 'chain_sub0'. ( help add_scan_chains )
+//  command: add_scan_chains 
+//  Error: Missing options ( [ -internal | -load_only ] <chain_specification>... ) ( help add_scan_chains )
+//  command: add_scan_chains -load_only
+//  Error: Missing options ( [ -internal | -load_only ] <chain_specification>... ) ( help add_scan_chains )
+//  command: add_scan_segments 
+//  Error: Missing options ( <name> [ -no_trace ] [ -length <int> ] [ -on_module <obj_spec> ] 
+-si_connections <obj_spec> -so_connections <obj_spec> -clock_pins <obj_spec> 
+[ -clock_update_edges { leading | trailing }... ] -scan_enable_pins <obj_spec> 
+[ -scan_enable_inversion { false | true }... ] [ -se_pipeline_count { 0 | 1 }... ] 
+[ -se_clock <string_list> ] [ -set_pins <spec> [ -set_inversion { false | true }... ] ] 
+[ -reset_pins <obj_spec> [ -reset_inversion { false | true }... ] ] 
+[ -ste_pins <obj_spec> [ -ste_inversion { false | true }... ] ]  ) ( help add_scan_segments )
+//  command: set_systen_mode analysis
+//  Error: Command 'set_systen_mode analysis' is unknown
+//  command: set_system_mode analysis
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 544,
+//  sequential library cells = 544.
+//  ---------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------
+//  Begin scannability rules checking for 544 sequential library cells.
+//  ---------------------------------------------------------------------------
+//  544 sequential library cells identified as scannable.
+//  Error: There were 256 S6 violations (driven scan-in pin of a sub chain or of a scan cell in unspecified scan chain).
+//         For failed scan cells, use "add_scan_chains" or "add_scan_segment" commands to declare previously inserted scan chains.
+//  Error: Rules checking unsuccessful, cannot exit SETUP mode.
+//  command: analyze_control_signals -auto
+//  ---------------------------------------------------------------------------
+//  Begin control signals identification analysis.
+//  ---------------------------------------------------------------------------
+//  Identified 1 clock control primary inputs.
+//     '/clk' (1) with off-state = 1.
+//  Identified 0 set control primary inputs.
+//  Identified 0 reset control primary inputs.
+//  Identified 0 read control primary inputs.
+//  Identified 0 write control primary inputs.
+//  ---------------------------------------------------------------------------
+//  Total number of internal lines is 1632 (544 clocks, 544 sets , 544 resets, 0 reads, 0 writes).
+//  Total number of potentially clockable internal lines is 544 (544 clocks, 0 sets , 0 resets, 0 reads, 0 writes).
+//  Total number of not clockable internal lines is 1088 (0 clocks, 544 sets , 544 resets, 0 reads, 0 writes).
+//  Total number of added primary input controls 0 (0 clocks, 0 sets , 0 resets, 0 reads, 0 writes).
+//  ---------------------------------------------------------------------------
+//  Warning: Flattened model deleted.
+//  command: analyze_scan_chains 
+//  Error: Command 'analyze_scan_chains' is not available in the current system mode.
+//         It is available in the following system modes: analysis.
+//  command: set_system_mode analysis
+//  Warning: Rule FN1 violation occurs 2 times
+//  Warning: Rule FN4 violation occurs 544 times
+//  Flattening process completed, cell instances=1016, gates=6175, PIs=40, POs=32, CPU time=0.01 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.01 sec.
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 544,
+//  sequential library cells = 544.
+//  ---------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------
+//  Begin scannability rules checking for 544 sequential library cells.
+//  ---------------------------------------------------------------------------
+//  544 sequential library cells identified as scannable.
+//  Error: There were 256 S6 violations (driven scan-in pin of a sub chain or of a scan cell in unspecified scan chain).
+//         For failed scan cells, use "add_scan_chains" or "add_scan_segment" commands to declare previously inserted scan chains.
+//  Error: Rules checking unsuccessful, cannot exit SETUP mode.

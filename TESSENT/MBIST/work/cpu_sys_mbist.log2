@@ -1,0 +1,317 @@
+/siemens/bin/tessent -shell -log cpu_sys_mbist.log2 -replace
+//  Warning: Tessent user documentation not found
+//  Tessent Shell  2022.4    Tue Nov 29 21:19:37 GMT 2022
+//                Unpublished work. Copyright 2022 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Wed Jun 11 16:23:21 IST 2025.
+//  64 bit version
+//  Host: CICS1.kletech.ac.in (15509 MB RAM, 7915 MB Swap)
+//
+//  command: set_context dft -no_rtl
+//  command: set_design_sources -format verilog -y ../Netlist -extension v
+//  command: set_design_sources -format tcd_memory -y ../memlibs/ -extension memlib
+//  command: read_cell_library ../mdt/slow.atpglib 
+//  Reading DFT Library file ../mdt/slow.atpglib
+//  Finished reading file ../mdt/slow.atpglib
+//  command: read_verilog ../Netlist/cpu_sys.v 
+//  command: read_verilog {/jk/SCLPDK_V3.0_KIT/scl180/memory/dpram/6M1L/DPRAM_512x24/DPRAM_512x24.v /jk/SCLPDK_V3.0_KIT/scl180/memory/dpram/6M1L/DP_SRAM_rd3_256x8/rd3_256x8.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SPRAM_64x32/SPRAM_64x32.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SP_SRAM_spram_8192_7/spram_8192_7.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SP_SRAM_spram_8192_5/spram_8192_5.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SPRAM_8192x36/SPRAM_8192x36.v /jk/SCLPDK_V3.0_KIT/scl180/memory/dpram/6M1L/DP_SRAM_rd3_512x16/rd3_512x16.v} -interface_only
+//  command: set_current_design cpu_sys_emep_top
+//  Warning: 255514 cases: Undriven net in netlist module
+//  Warning: 605 cases: Net in netlist not connected
+//  Note: Issue set_current_design with the -show_elaboration_warnings option to see more details about previous warnings
+//  command: set_design_level top
+//  command: set_dft_specification_requirements -memory_test on
+//  command: check_design_rules 
+//  Warning: Rule FN1 violation occurs 256339 times
+//  Warning: Rule FN4 violation occurs 61161 times
+//  Flattening process completed, cell instances=304807, gates=610106, PIs=3767, POs=6578, CPU time=2.87 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=1.16 sec.
+//  Error: The memory clock pin 'U_emep_top/i_pcie4_rxbuf/rx_buf_x16_x16_U_pcie_ip_rx_buf_0_/u_sram24_0_u_dpram_512x24/CE1' (12517.56) source tracing stopped at pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/i_clk_2or_inst/U1/Y' (131162.0).
+//         Correct the blocking conditions or use the 'add_clocks -period' if this is an embedded oscillator or
+//         'add_clocks -reference' if this is an active PLL or clock divider. (DFT_C1-1)
+//  Error: The memory clock pin 'U_emep_top/i_pcie4_rxbuf/rx_buf_x16_x16_U_pcie_ip_rx_buf_0_/u_sram24_0_u_dpram_512x24/CE2' (12517.55) source tracing stopped at pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/i_clk_2or_inst/U1/Y' (131161.0).
+//         Correct the blocking conditions or use the 'add_clocks -period' if this is an embedded oscillator or
+//         'add_clocks -reference' if this is an active PLL or clock divider. (DFT_C1-2)
+//  Error: The memory clock pin 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/macahb/rxfifo/U_mem/\mem_banks[0].u_sram_my_sram /CE' (6217.36) source tracing stopped at pin 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/macahb/pwr_manage/U4/Y' (344369.0).
+//         Correct the blocking conditions or use the 'add_clocks -period' if this is an embedded oscillator or
+//         'add_clocks -reference' if this is an active PLL or clock divider. (DFT_C1-3)
+//  Error: The memory clock pin 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_1/u_bank0_my_sram/CE' (4031.40) source tracing stopped at pin 'U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_MUX_21/U_clk_mux/Y' (202192.0).
+//         Correct the blocking conditions or use the 'add_clocks -period' if this is an embedded oscillator or
+//         'add_clocks -reference' if this is an active PLL or clock divider. (DFT_C1-4)
+//  Error: There were 4 DFT_C1 violations (Memory clock not properly sourced by a declared clock).
+//  Error: Rules checking unsuccessful, cannot exit SETUP mode.
+//  command: analyze_drc_violation DFT_C1-1
+//  Note: Generating flat model helper data for visualization purposes... done.
+//  Note: Grouping DRC violations for visualization purposes... done.
+//  command: report_gates U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/i_clk_2or_inst/U1/B
+//  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/i_clk_2or_inst/U1  OR2X1
+//      A      I  (X)  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/clk_gate_undiv_clk/U_charb_clk_gate/ECK    
+//      B      I  (X)  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/clk_gate_div_clk/U_charb_clk_gate/ECK    
+//      Y      O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/cdc_inst/g_2bits_0__resync_equ_req/gcdc_pulse_init_out_reg_0_/CK  /U_emep_top/i_pcie_ctrl/core_inst/cdc_inst/g_2bits_0__resync_equ_req/gcdc_pulse_req_sync/U_sync_cell_0_/CK  /U_emep_top/i_pcie_ctrl/core_inst/cdc_inst/g_2bits_0__resync_equ_req/gcdc_pulse_init_out_reg_1_/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_rst_gen/tl_rstn_r_reg/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_rst_gen/tl_crstn_r_reg/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_rst_gen/tl_crstncnt_reg_1_/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_rst_gen/tl_crstncnt_reg_0_/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_rst_gen/tl_cnt_reg_1_/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_rst_gen/tl_cnt_reg_0_/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_rst_gen/tl_npor_d1_reg/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_rst_gen/tl_npor_r_reg/CK  /U_emep_top/i_emep_app_top/vesc_cfg_reg_map_ready_reg/CK
+//                     /U_emep_top/i_emep_app_top/vesc_cfg_reg_map_wren_rr_reg/CK  /U_emep_top/i_emep_app_top/vesc_cfg_reg_map_wren_r_reg/CK  /U_emep_top/i_emep_app_top/vesc_cfg_reg_map_rden_rr_reg/CK
+//                     /U_emep_top/i_emep_app_top/vesc_cfg_reg_map_rden_r_reg/CK  /U_emep_top/i_emep_app_top/apptop_cfg_reg_map_ready_reg/CK  /U_emep_top/i_emep_app_top/apptop_cfg_reg_map_wren_rr_reg/CK
+//                     /U_emep_top/i_emep_app_top/apptop_cfg_reg_map_wren_r_reg/CK  /U_emep_top/i_emep_app_top/apptop_cfg_reg_map_rden_rr_reg/CK  /U_emep_top/i_emep_app_top/apptop_cfg_reg_map_rden_r_reg/CK
+//                     /U_emep_top/i_emep_app_top/core_cfg_reg_map_rden_rr_reg/CK  /U_emep_top/i_emep_app_top/core_cfg_reg_map_rden_r_reg/CK  /U_emep_top/i_emep_app_top/core_cfg_reg_map_ready_reg/CK
+//                     /U_emep_top/i_emep_app_top/core_cfg_reg_map_wren_rr_reg/CK  /U_emep_top/i_emep_app_top/core_cfg_reg_map_wren_r_reg/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_psel_r_reg/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wren_o_reg/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_rden_o_reg/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_reg_ready_r_reg/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_29_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_wrbe_o_reg_3_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_wrbe_o_reg_2_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_wrbe_o_reg_1_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_wrbe_o_reg_0_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_31_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_23_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_30_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_addr_o_reg_0_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_27_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_26_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_25_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_24_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_8_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_22_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_21_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_penable_r_reg/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_20_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_19_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_18_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_17_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_16_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_15_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_14_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_13_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_12_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_11_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_10_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_9_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_7_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_6_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_5_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_4_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_3_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_2_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_1_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_0_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_addr_o_reg_4_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_addr_o_reg_10_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_addr_o_reg_9_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_addr_o_reg_8_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_addr_o_reg_7_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_addr_o_reg_6_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_addr_o_reg_5_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_addr_o_reg_2_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_addr_o_reg_3_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_addr_o_reg_1_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_pready_r_reg/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/reg_map_wdata_o_reg_28_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_15_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_14_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_13_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_12_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_11_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_10_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_9_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_8_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_7_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_6_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_5_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_4_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_3_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_2_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_1_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_0_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_31_/CK
+//                     /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_30_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_29_/CK  /U_emep_top/i_emep_app_top/i_pcie_sw_emep_vesc_cfg_reg_map_apb_slave/slice_prdata_r_reg_28_/CK
+//  ... 2704 more fanouts are truncated. Use 'set_gate_report -max_fanouts' to change report limit.
+//  command: report_drc_rules DFT_C1-1
+//  Error: The memory clock pin 'U_emep_top/i_pcie4_rxbuf/rx_buf_x16_x16_U_pcie_ip_rx_buf_0_/u_sram24_0_u_dpram_512x24/CE1' (12517.56) source tracing stopped at pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/i_clk_2or_inst/U1/Y' (131162.0).
+//         Correct the blocking conditions or use the 'add_clocks -period' if this is an embedded oscillator or
+//         'add_clocks -reference' if this is an active PLL or clock divider. (DFT_C1-1)
+//  command: report_gates -Endpoints U_emep_top/i_pcie4_rxbuf/rx_buf_x16_x16_U_pcie_ip_rx_buf_0_/u_sram24_0_u_dpram_512x24/CE1 -Backward U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/i_clk_2or_inst/U1/Y
+//  /U_emep_top/i_pcie4_rxbuf/rx_buf_x16_x16_U_pcie_ip_rx_buf_0_/u_sram24_0_u_dpram_512x24  DPRAM_512x24
+//      A1[8]  I  (X)  /U_emep_top/g14/Y    
+//      A1[7]  I  (X)  /U_emep_top/g13/Y    
+//      A1[6]  I  (X)  /U_emep_top/g12/Y    
+//      A1[5]  I  (X)  /U_emep_top/g25/Y    
+//      A1[4]  I  (X)  /U_emep_top/g11/Y    
+//      A1[3]  I  (X)  /U_emep_top/g10/Y    
+//      A1[2]  I  (X)  /U_emep_top/g9/Y    
+//      A1[1]  I  (X)  /U_emep_top/g24/Y    
+//      A1[0]  I  (X)  /U_emep_top/g8/Y    
+//      A2[8]  I  (X)  /U_emep_top/g21/Y    
+//      A2[7]  I  (X)  /U_emep_top/g20/Y    
+//      A2[6]  I  (X)  /U_emep_top/g23/Y    
+//      A2[5]  I  (X)  /U_emep_top/g19/Y    
+//      A2[4]  I  (X)  /U_emep_top/g18/Y    
+//      A2[3]  I  (X)  /U_emep_top/g17/Y    
+//      A2[2]  I  (X)  /U_emep_top/g22/Y    
+//      A2[1]  I  (X)  /U_emep_top/g16/Y    
+//      A2[0]  I  (X)  /U_emep_top/g15/Y    
+//      CE1    I  (X)  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/i_clk_2or_inst/U1/Y    
+//      CE2    I  (X)  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/i_clk_2or_inst/U1/Y    
+//      WEB1   I  (1)      
+//      WEB2   I  (0)      
+//      OEB1   I  (0)      
+//      OEB2   I  (1)      
+//      CSB1   I  (X)  /U_emep_top/i_pcie4_rxbuf/g13/Y    
+//      CSB2   I  (X)  /U_emep_top/i_pcie4_rxbuf/g12/Y    
+//      I1[23]  I  (0)      
+//      I1[22]  I  (0)      
+//      I1[21]  I  (0)      
+//      I1[20]  I  (0)      
+//      I1[19]  I  (0)      
+//      I1[18]  I  (0)      
+//      I1[17]  I  (0)      
+//      I1[16]  I  (0)      
+//      I1[15]  I  (0)      
+//      I1[14]  I  (0)      
+//      I1[13]  I  (0)      
+//      I1[12]  I  (0)      
+//      I1[11]  I  (0)      
+//      I1[10]  I  (0)      
+//      I1[9]  I  (0)      
+//      I1[8]  I  (0)      
+//      I1[7]  I  (0)      
+//      I1[6]  I  (0)      
+//      I1[5]  I  (0)      
+//      I1[4]  I  (0)      
+//      I1[3]  I  (0)      
+//      I1[2]  I  (0)      
+//      I1[1]  I  (0)      
+//      I1[0]  I  (0)      
+//      I2[23]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_23_/Q    
+//      I2[22]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_22_/Q    
+//      I2[21]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_21_/Q    
+//      I2[20]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_20_/Q    
+//      I2[19]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_19_/Q    
+//      I2[18]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_18_/Q    
+//      I2[17]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_17_/Q    
+//      I2[16]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_16_/Q    
+//      I2[15]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_15_/Q    
+//      I2[14]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_14_/Q    
+//      I2[13]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_13_/Q    
+//      I2[12]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_12_/Q    
+//      I2[11]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_11_/Q    
+//      I2[10]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_10_/Q    
+//      I2[9]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_9_/Q    
+//      I2[8]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_8_/Q    
+//      I2[7]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_7_/Q    
+//      I2[6]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_6_/Q    
+//      I2[5]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_5_/Q    
+//      I2[4]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_4_/Q    
+//      I2[3]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_3_/Q    
+//      I2[2]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_2_/Q    
+//      I2[1]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_1_/Q    
+//      I2[0]  I  (X)  /U_emep_top/i_pcie_ctrl/core_inst/dlink_inst/tlpdec_inst/shiftreg_flowp_reg_0_/Q    
+//      O1[23]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_23_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3824/A  /U_emep_top/i_emep_tbus/U1143/C0
+//      O1[22]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_22_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3818/A  /U_emep_top/i_emep_tbus/U3008/A0
+//      O1[21]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_21_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3812/A  /U_emep_top/i_emep_tbus/U3045/A0
+//      O1[20]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_20_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3806/A  /U_emep_top/i_emep_tbus/U3083/B0
+//      O1[19]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_19_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3800/A  /U_emep_top/i_emep_tbus/U1493/B0
+//      O1[18]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_18_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3794/A  /U_emep_top/i_emep_tbus/U1597/B0
+//      O1[17]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_17_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3788/A  /U_emep_top/i_emep_tbus/U1623/B0
+//      O1[16]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_16_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3782/A  /U_emep_top/i_emep_tbus/U1746/B0
+//      O1[15]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_15_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3776/A  /U_emep_top/i_emep_tbus/U1801/B0
+//      O1[14]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_14_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3770/A  /U_emep_top/i_emep_tbus/U1847/B0
+//      O1[13]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_13_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3764/A  /U_emep_top/i_emep_tbus/U1973/B0
+//      O1[12]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_12_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3758/A  /U_emep_top/i_emep_tbus/U2049/B0
+//      O1[11]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_11_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3752/A  /U_emep_top/i_emep_tbus/U2123/A0
+//      O1[10]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_10_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3746/A  /U_emep_top/i_emep_tbus/U3412/A0
+//      O1[9]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_9_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3741/A  /U_emep_top/i_emep_tbus/U14/B0
+//      O1[8]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_8_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3737/A  /U_emep_top/i_emep_tbus/U96/B0
+//      O1[7]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_7_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3733/A  /U_emep_top/i_emep_tbus/U198/B0
+//      O1[6]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_6_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3729/A  /U_emep_top/i_emep_tbus/U266/B0
+//      O1[5]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_5_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3725/A  /U_emep_top/i_emep_tbus/U317/B0
+//      O1[4]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_4_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3721/A  /U_emep_top/i_emep_tbus/U369/B0
+//      O1[3]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_3_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3717/A  /U_emep_top/i_emep_tbus/U441/B0
+//      O1[2]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_2_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3713/A  /U_emep_top/i_emep_tbus/U688/B0
+//      O1[1]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_1_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3709/A  /U_emep_top/i_emep_tbus/U1426/B0
+//      O1[0]  O  (X)  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/rxbuf_datap_r_reg_0_/D  /U_emep_top/i_pcie_ctrl/core_inst/trans_inst/rxtl/rxvc0/U3705/A  /U_emep_top/i_emep_tbus/U3455/A0
+//      O2[23]  O  (X)      
+//      O2[22]  O  (X)      
+//      O2[21]  O  (X)      
+//      O2[20]  O  (X)      
+//      O2[19]  O  (X)      
+//      O2[18]  O  (X)      
+//      O2[17]  O  (X)      
+//      O2[16]  O  (X)      
+//      O2[15]  O  (X)      
+//      O2[14]  O  (X)      
+//      O2[13]  O  (X)      
+//      O2[12]  O  (X)      
+//      O2[11]  O  (X)      
+//      O2[10]  O  (X)      
+//      O2[9]  O  (X)      
+//      O2[8]  O  (X)      
+//      O2[7]  O  (X)      
+//      O2[6]  O  (X)      
+//      O2[5]  O  (X)      
+//      O2[4]  O  (X)      
+//      O2[3]  O  (X)      
+//      O2[2]  O  (X)      
+//      O2[1]  O  (X)      
+//      O2[0]  O  (X)      
+//  ---------------------------------------------------------------------------
+//  Begin backward trace for gate /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/i_clk_2or_inst/U1/mlc_or_1 (131162).
+//  ---------------------------------------------------------------------------
+//  /pll0_cmu_ck_soc  primary_input
+//      pll0_cmu_ck_soc  O  (X)  /U_emep_top/i_emep_top_clk_rst_gen/i_sync_master_reset_n/sync_rst_reg_r_reg_1_/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_sync_master_reset_n/sync_rst_reg_r_reg_0_/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_sync_swtop_final_reset_n/sync_rst_reg_r_reg_1_/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/i_sync_swtop_final_reset_n/sync_rst_reg_r_reg_0_/CK  /U_emep_top/i_emep_top_clk_rst_gen/ds_port_pl_rate_d1_reg_0_/CK  /U_emep_top/i_emep_top_clk_rst_gen/ds_port_pl_rate_r_reg_0_/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/ds_port_pl_rate_d1_reg_1_/CK  /U_emep_top/i_emep_top_clk_rst_gen/ds_port_pl_rate_r_reg_1_/CK  /U_emep_top/i_emep_top_clk_rst_gen/ep_core_pl_rate_d1_reg_1_/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/ep_core_pl_rate_r_reg_1_/CK  /U_emep_top/i_emep_top_clk_rst_gen/ep_core_pl_rate_d1_reg_0_/CK  /U_emep_top/i_emep_top_clk_rst_gen/ep_core_pl_rate_r_reg_0_/CK
+//                     /U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_sw_clkdivby2_0_reg/U_clk_dff/CK  /sw_clk_o  /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/clk_gate_undiv_clk/U_charb_clk_gate/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/i_pcie_sw_clk_dff/U_clk_dff/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/i_sync_div_en/signal_in_d1_reg/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/i_sync_div_en/signal_synched_reg/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_d_reg_1_/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_d_reg_0_/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_d_reg_2_/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_d_reg_3_/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_changed_reg/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_r_reg_0_/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_r_reg_1_/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_r_reg_2_/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/cntr_reg_0_/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/cntr_reg_3_/CK  /U_emep_top/i_emep_tbus/U2160/A0  /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/cntr_reg_1_/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/cntr_reg_2_/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/clk_gate_undiv_clk/U_charb_clk_gate/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/i_pcie_sw_clk_dff/U_clk_dff/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/i_sync_div_en/signal_in_d1_reg/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/i_sync_div_en/signal_synched_reg/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_d_reg_1_/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_d_reg_0_/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_d_reg_2_/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_d_reg_3_/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_changed_reg/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_r_reg_0_/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_r_reg_1_/CK
+//                     /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/cntr_reg_0_/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/cntr_reg_3_/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/cntr_reg_1_/CK
+//  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/clk_gate_div_clk/U_charb_clk_gate  TLATNTSCAX2
+//      CK     I  (X)  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/i_pcie_sw_clk_dff/U_clk_dff/Q    
+//      E      I  (1)  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/i_sync_div_en/signal_synched_reg/Q    
+//      SE     I  (0)  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/clk_gate_div_clk/U2/Y    
+//      ECK    O  (X)  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/i_clk_2or_inst/U1/B    
+//  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/clk_gate_undiv_clk/U_charb_clk_gate  TLATNTSCAX2
+//      CK     I  (X)  /pll0_cmu_ck_soc    
+//      E      I  (1)  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/U11/Y    
+//      SE     I  (0)  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/clk_gate_undiv_clk/U2/Y    
+//      ECK    O  (X)  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/i_clk_2or_inst/U1/A    
+//  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/i_pcie_sw_clk_dff/U_clk_dff  DFFRX1
+//      CK     I  (X)  /pll0_cmu_ck_soc    
+//      D      I  (X)  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/U10/Y    
+//      RN     I  (X)  /U_emep_top/i_emep_top_clk_rst_gen/U12/Y    
+//      Q      O  (X)  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/clk_gate_div_clk/U_charb_clk_gate/CK  /U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/U7/A0  
+//      QN     O  (X)      
+//  Number gates in trace = 4.
+//  command: help add_clocks 
+Usage for Sync source clocks:
+   add_clocks [ off_state ] <ports> [ -PULSE_Always | -PULSE_In_capture ] [ -Label <label> ]
+                                    [ -dft_inject_node <name> ] [ -no_dft_connections ]
+   add_clocks [ off_state ] <pins>  [ -PULSE_Always | -PULSE_In_capture ] [ -Label <label> ]
+                                    [ -PSEudo_port_name <name> ] [ -CAPture_only ] [ -silent ]  
+                                    [ -dft_inject_node <name> ] [ -no_dft_connections ]
+   add_clocks [ off_state ] <ports> [ -FREQ_Multiplier <int> -PULSE_Always ] [ -Label <label> ]
+                                    [ -dft_inject_node <name> ] [ -no_dft_connections ]
+Usage for Async source clocks:
+   add_clocks <ports> { -PEriod <time> [ s | ms | us | ns | ps | fs ] } 
+                                       [ -FREQ_Multiplier <int> ] [ -Label <label> ]
+                                       [ -dft_inject_node <name> ] [ -no_dft_connections ]
+   add_clocks <pins>  { -PEriod <time> [ s | ms | us | ns | ps | fs ] }
+                      [ -PSEudo_port_name <name> ]  [ -FREQ_Multiplier <int> ] [ -Label <label> ] [ -silent ]
+                      [ -dft_inject_node <name> ] [ -no_dft_connections ]
+Usage for Generated clocks:
+   add_clocks <pin> -REFERENCE {<pin|port|pPort} [ -REFERENCE_Inv {<pin>|<port>|<pPort>} ] 
+                    [ -FREQ_Multiplier <int> ] [ -FREQ_Divider <int> ] [ -Label <label> ]
+                    [ -dft_inject_node <name> ] [ -no_dft_connections ]
+                    [ -PSEudo_port_name <name> ]  [ -silent ] 
+
+Usage for Branch clocks:
+   add_clocks <pins>  -Branch [ -Label <label> ]
+//  command: add_clocks pll0_cmu_ck_soc -period 10ns -label LIFE_CLK
+//  command: check_design_rules 
+//  Error: The memory clock pin 'U_emep_top/i_pcie4_rxbuf/rx_buf_x16_x16_U_pcie_ip_rx_buf_0_/u_sram24_0_u_dpram_512x24/CE1' (12517.56) source tracing stopped at pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/i_clk_2or_inst/U1/Y' (131162.0).
+//         Correct the blocking conditions or use the 'add_clocks -period' if this is an embedded oscillator or
+//         'add_clocks -reference' if this is an active PLL or clock divider. (DFT_C1-1)
+//  Error: The memory clock pin 'U_emep_top/i_pcie4_rxbuf/rx_buf_x16_x16_U_pcie_ip_rx_buf_0_/u_sram24_0_u_dpram_512x24/CE2' (12517.55) source tracing stopped at pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/i_clk_2or_inst/U1/Y' (131161.0).
+//         Correct the blocking conditions or use the 'add_clocks -period' if this is an embedded oscillator or
+//         'add_clocks -reference' if this is an active PLL or clock divider. (DFT_C1-2)
+//  Error: The memory clock pin 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/macahb/rxfifo/U_mem/\mem_banks[0].u_sram_my_sram /CE' (6217.36) source tracing stopped at pin 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/macahb/pwr_manage/U4/Y' (344369.0).
+//         Correct the blocking conditions or use the 'add_clocks -period' if this is an embedded oscillator or
+//         'add_clocks -reference' if this is an active PLL or clock divider. (DFT_C1-3)
+//  Error: The memory clock pin 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_1/u_bank0_my_sram/CE' (4031.40) source tracing stopped at pin 'U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_MUX_21/U_clk_mux/Y' (202192.0).
+//         Correct the blocking conditions or use the 'add_clocks -period' if this is an embedded oscillator or
+//         'add_clocks -reference' if this is an active PLL or clock divider. (DFT_C1-4)
+//  Error: There were 4 DFT_C1 violations (Memory clock not properly sourced by a declared clock).
+//  Error: Rules checking unsuccessful, cannot exit SETUP mode.
+//  command: add_clocks pll0_cmu_ck_soc  -reference
+//  Error: The switch '-reference' requires a value. ( help add_clocks )
+//  command: set_drc_handling DFT_C1 warning
+//  Error: This DRC does not support the requested severity.
+//  command: read_sdc /home/01fe21bec223/DFT_TESSENT/GENUS/work_cpusys/cpu_sys.sdc 
+//  Error: The 'read_sdc' command is not available in dft context with no sub-context.
+//  command: add_clocks clk -period 12ns -label clk
+//  Error: 'clk' is not a primary input.
+//  command: get_clocks 
+{pll0_cmu_ck_soc}
+//  command: report_clocks 
+User-defined Clock (1):
+=========================
+
+  Sync and Async Source Clock
+  ============================
+   -----------------  --------  ---------  ------------  --------  ---------  
+   Name               Label     Off State   Constraints  Internal    Period   
+   -----------------  --------  ---------  ------------  --------  ---------  
+   'pll0_cmu_ck_soc'  LIFE_CLK      -      Asynchronous     No     10.00ns    
+

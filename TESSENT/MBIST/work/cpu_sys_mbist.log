@@ -1,0 +1,584 @@
+/siemens/bin/tessent -shell -log cpu_sys_mbist.log -replace
+//  Warning: Tessent user documentation not found
+//  Tessent Shell  2022.4    Tue Nov 29 21:19:37 GMT 2022
+//                Unpublished work. Copyright 2022 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Tue Jun 10 15:16:56 IST 2025.
+//  64 bit version
+//  Host: APL10.kletech.ac.in (31578 MB RAM, 15983 MB Swap)
+//
+//  command: set_context dft -no_rtl
+//  command: set_design_sources -format verilog -y ../Netlist -extension v
+//  command: set_design_sources -format tcd_memory -y ../memlibs/ -extension memlib
+//  command: read_cell_library ../mdt/slow.atpglib 
+//  Reading DFT Library file ../mdt/slow.atpglib
+//  Finished reading file ../mdt/slow.atpglib
+//  command: read_verilog ../Netlist/cpu_sys.v 
+//  command: set_current_design cpu_sys_emep_top
+//  Warning: Undefined modules were found.
+//           Before using "set_system_mode" or "create_flat_model", you must either define
+//           the missing modules using "read_verilog" and/or "read_cell_library", or use the
+//           following command to treat them as black boxes:
+             add_black_boxes -modules { \
+                    DPRAM_512x24 \
+                    SPRAM_64x32 \
+                    SPRAM_8192x36 \
+                    rd3_256x8 \
+                    rd3_512x16 \
+                    spram_8192_5 \
+                    spram_8192_7 \
+             }
+//           You can also use "add_black_boxes -auto" to black box all undefined modules but
+//           it is recommended that you do not add this command to your dofile. Doing so may
+//           unintentionally black-box new undefined modules in future runs.
+//  Warning: 255514 cases: Undriven net in netlist module
+//  Warning: 48 cases: Undriven primary inout pin in netlist module
+//  Warning: 605 cases: Net in netlist not connected
+//  Warning: 1 case: Undefined module pin assumed to be input
+//  Warning: 3 cases: Undefined module pin assumed to be inout
+//  Note: Issue set_current_design with the -show_elaboration_warnings option to see more details about previous warnings
+//  command: report_memory_instances 
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_1/u_bank0_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_1/u_bank1_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_2/u_bank0_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_2/u_bank1_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_3/u_bank0_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_3/u_bank1_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_4/u_bank0_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_4/u_bank1_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_1/\gen_banks[0].u_sram5_my_sram '
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_1/\gen_banks[0].u_sram7_0_my_sram '
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Reached limit of 10, skipping remaining 262 instances.
+//  command: read_config_data -partition tcd -levels 1
+//  Error: Unrecognized argument '-levels'. ( help read_config_data )
+//  command: read_config_data -partition tcd -level 1
+//  Error: Unrecognized argument '-level'. ( help read_config_data )
+//  command: read_config_data -partition tcd 
+//  Error: Syntax error   (  { <filename_list> | -from_string <from_string> } [ -in_wrapper <wrapper_object_spec> ] 
+[ -before <before> | -after <after> | -first | -last ] [ -replace ]  ) ( help read_config_data )
+//         Missing option (  { <filename_list> | -from_string <from_string> }  )
+//  command: report_design_sources 
+// Search design load path settings
+// ================================
+//  format              value
+//  ------------------  -----
+//  icl                 on   
+//  tcd_bscan           on   
+//  tcd_scan            on   
+//  tcd_fusebox         on   
+//  tcd_memory          on   
+//  tcd_memory_cluster  on   
+//
+// File and directory search path
+// ==============================
+//  format              type  path         file extensions                           
+//  ------------------  ----  -----------  ------------------------------------------
+//  verilog             dir   ../Netlist   v v.gz                                    
+//  icl                 dir                icl icl.gz                                
+//  tcd_bscan           dir                tcd_bscan lvbscan tcd_bscan.gz lvbscan.gz 
+//  tcd_scan            dir                tcd_scan tcd_scan.gz                      
+//  tcd_fusebox         dir                tcd_fbox tcd_fbox.gz                      
+//  tcd_memory          dir   ../memlibs/  memlib memlib.gz                          
+//  tcd_memory_cluster  dir                tcd_mem_cluster_lib tcd_mem_cluster_lib.gz
+//  command: set_dft_specification_requirements -memory_test on
+//  command: set dft_spec [create_dft_specification]
+//  sub-command: create_dft_specification 
+//  Error: Command 'create_dft_specification' is not available in the current system mode.
+//         It is available in the following system modes: analysis.
+//  command: check_design_rules 
+//  Error: You must set the design level using the 'set_design_level' command prior to issuing the 'check_design_rules' 
+//         or the 'set_system_mode analysis' commands.
+//  command: set_design_level top
+//  command: check_design_rules 
+//  Error: The following memory or Shared Bus memory cluster module definitions are missing:
+//         DPRAM_512x24,
+//         SPRAM_64x32,
+//         SPRAM_8192x36,
+//         rd3_256x8,
+//         spram_8192_5,
+//         spram_8192_7
+//         Use the 'read_verilog/read_vhdl <file_path> -interface_only' command to load the memory
+//         or Shared Bus memory cluster simulation model or use 'read_cell_library'
+//         command if your memory is described in tessent library format.
+//  command: add_black_boxes -auto
+//  command: check_design_rules 
+//  Error: The following memory or Shared Bus memory cluster module definitions are missing:
+//         DPRAM_512x24,
+//         SPRAM_64x32,
+//         SPRAM_8192x36,
+//         rd3_256x8,
+//         spram_8192_5,
+//         spram_8192_7
+//         Use the 'read_verilog/read_vhdl <file_path> -interface_only' command to load the memory
+//         or Shared Bus memory cluster simulation model or use 'read_cell_library'
+//         command if your memory is described in tessent library format.
+//  command: add_black_boxes -modules {                      DPRAM_512x24                      SPRAM_64x32                      SPRAM_8192x36                      rd3_256x8                      rd3_512x16                      spram_8192_5                      spram_8192_7               }
+//  command: check_design_rules 
+//  Error: The following memory or Shared Bus memory cluster module definitions are missing:
+//         DPRAM_512x24,
+//         SPRAM_64x32,
+//         SPRAM_8192x36,
+//         rd3_256x8,
+//         spram_8192_5,
+//         spram_8192_7
+//         Use the 'read_verilog/read_vhdl <file_path> -interface_only' command to load the memory
+//         or Shared Bus memory cluster simulation model or use 'read_cell_library'
+//         command if your memory is described in tessent library format.
+//  command: set_system_mode analysis
+//  Error: The following memory or Shared Bus memory cluster module definitions are missing:
+//         DPRAM_512x24,
+//         SPRAM_64x32,
+//         SPRAM_8192x36,
+//         rd3_256x8,
+//         spram_8192_5,
+//         spram_8192_7
+//         Use the 'read_verilog/read_vhdl <file_path> -interface_only' command to load the memory
+//         or Shared Bus memory cluster simulation model or use 'read_cell_library'
+//         command if your memory is described in tessent library format.
+//  command: set_design_level top
+//  command: check_design_rules 
+//  Error: The following memory or Shared Bus memory cluster module definitions are missing:
+//         DPRAM_512x24,
+//         SPRAM_64x32,
+//         SPRAM_8192x36,
+//         rd3_256x8,
+//         spram_8192_5,
+//         spram_8192_7
+//         Use the 'read_verilog/read_vhdl <file_path> -interface_only' command to load the memory
+//         or Shared Bus memory cluster simulation model or use 'read_cell_library'
+//         command if your memory is described in tessent library format.
+//  command: delete_design 
+//  command: set_context dft -no_rtl
+//  command: set_design_sources -format verilog -y ../Netlist -extension v
+//  command: set_design_sources -format tcd_memory -y ../memlibs/ -extension memlib
+//  command: read_cell_library ../mdt/slow.atpglib
+//  Reading DFT Library file ../mdt/slow.atpglib
+//  Finished reading file ../mdt/slow.atpglib
+//  command: read_verilog ../Netlist/cpu_sys.v
+//  command: read_core_descriptions 
+//  Error: Missing options ( <file_names> ) ( help read_core_descriptions )
+//  command: read_core_descriptions ../memlibs/*.memlib
+//  Warning: /Core(DPRAM_512x24)/Memory
+//           Read from file: /home/01fe21bec223/DFT_TESSENT/TESSENT/MBIST/memlibs/DPRAM_512x24.memlib, line number: 2
+//           The wrapper already exists in memory and it will be overwritten with the data from file
+//           ../memlibs/DPRAM_512x24.memlib.
+//  Warning: /Core(SPRAM_64x32)/Memory
+//           Read from file: /home/01fe21bec223/DFT_TESSENT/TESSENT/MBIST/memlibs/SPRAM_64x32.memlib, line number: 1
+//           The wrapper already exists in memory and it will be overwritten with the data from file
+//           ../memlibs/SPRAM_64x32.memlib.
+//  Warning: /Core(SPRAM_8192x36)/Memory
+//           Read from file: /home/01fe21bec223/DFT_TESSENT/TESSENT/MBIST/memlibs/SPRAM_8192x36.memlib, line number: 1
+//           The wrapper already exists in memory and it will be overwritten with the data from file
+//           ../memlibs/SPRAM_8192x36.memlib.
+//  Warning: /Core(rd3_256x8)/Memory
+//           Read from file: /home/01fe21bec223/DFT_TESSENT/TESSENT/MBIST/memlibs/rd3_256x8.memlib, line number: 2
+//           The wrapper already exists in memory and it will be overwritten with the data from file
+//           ../memlibs/rd3_256x8.memlib.
+//  Warning: /Core(spram_8192_5)/Memory
+//           Read from file: /home/01fe21bec223/DFT_TESSENT/TESSENT/MBIST/memlibs/spram_8192_5.memlib, line number: 1
+//           The wrapper already exists in memory and it will be overwritten with the data from file
+//           ../memlibs/spram_8192_5.memlib.
+//  Warning: /Core(spram_8192_7)/Memory
+//           Read from file: /home/01fe21bec223/DFT_TESSENT/TESSENT/MBIST/memlibs/spram_8192_7.memlib, line number: 1
+//           The wrapper already exists in memory and it will be overwritten with the data from file
+//           ../memlibs/spram_8192_7.memlib.
+//  command: set_current_design cpu_sys_emep_top
+//  Warning: Undefined modules were found.
+//           Before using "set_system_mode" or "create_flat_model", you must either define
+//           the missing modules using "read_verilog" and/or "read_cell_library", or use the
+//           following command to treat them as black boxes:
+             add_black_boxes -modules { \
+                    DPRAM_512x24 \
+                    SPRAM_64x32 \
+                    SPRAM_8192x36 \
+                    rd3_256x8 \
+                    rd3_512x16 \
+                    spram_8192_5 \
+                    spram_8192_7 \
+             }
+//           You can also use "add_black_boxes -auto" to black box all undefined modules but
+//           it is recommended that you do not add this command to your dofile. Doing so may
+//           unintentionally black-box new undefined modules in future runs.
+//  Warning: 255514 cases: Undriven net in netlist module
+//  Warning: 48 cases: Undriven primary inout pin in netlist module
+//  Warning: 605 cases: Net in netlist not connected
+//  Warning: 1 case: Undefined module pin assumed to be input
+//  Warning: 3 cases: Undefined module pin assumed to be inout
+//  Note: Issue set_current_design with the -show_elaboration_warnings option to see more details about previous warnings
+//  Note: Design level set to 'chip' from previous settings
+//  command: add_black_boxes -modules {                      DPRAM_512x24                      SPRAM_64x32                      SPRAM_8192x36                      rd3_256x8                      rd3_512x16                      spram_8192_5                      spram_8192_7               }
+//  command: report_config_data -partition tcd -levels 1
+
+Core(DPRAM_512x24) {
+  tessent_tool_version : 2022.4;
+  tessent_meta_version : 10;
+  Memory {
+    // Not shown
+  }
+}
+Core(SPRAM_64x32) {
+  tessent_tool_version : 2022.4;
+  tessent_meta_version : 10;
+  Memory {
+    // Not shown
+  }
+}
+Core(SPRAM_8192x36) {
+  tessent_tool_version : 2022.4;
+  tessent_meta_version : 10;
+  Memory {
+    // Not shown
+  }
+}
+Core(rd3_256x8) {
+  tessent_tool_version : 2022.4;
+  tessent_meta_version : 10;
+  Memory {
+    // Not shown
+  }
+}
+Core(spram_8192_5) {
+  tessent_tool_version : 2022.4;
+  tessent_meta_version : 10;
+  Memory {
+    // Not shown
+  }
+}
+Core(spram_8192_7) {
+  tessent_tool_version : 2022.4;
+  tessent_meta_version : 10;
+  Memory {
+    // Not shown
+  }
+}
+Core(cpu_sys_emep_top) {
+  tessent_tool_version : 2022.4;
+  tessent_meta_version : 10;
+}
+//  command: report_memory_instances 
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_1/u_bank0_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_1/u_bank1_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_2/u_bank0_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_2/u_bank1_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_3/u_bank0_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_3/u_bank1_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_4/u_bank0_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/edlm/U_edlm_mem_4/u_bank1_my_sram'
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_1/\gen_banks[0].u_sram5_my_sram '
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Memory Instance: 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_1/\gen_banks[0].u_sram7_0_my_sram '
+// ----------------------------------------------
+// bist_data_in_pipelining              : auto
+// physical_cluster_override            : 
+// memory_content_after_test            : 
+// power_domain_island                  : 
+// test_clock_override                  : 
+// use_in_memory_bist_dft_specification : auto
+// use_in_memory_bisr_dft_specification : auto
+// parent_cluster_module                : 
+// partitioning_group                   : 
+// repair_sharing                       : auto
+//
+// Reached limit of 10, skipping remaining 262 instances.
+//  command: report_design_sources 
+// Search design load path settings
+// ================================
+//  format              value
+//  ------------------  -----
+//  icl                 on   
+//  tcd_bscan           on   
+//  tcd_scan            on   
+//  tcd_fusebox         on   
+//  tcd_memory          on   
+//  tcd_memory_cluster  on   
+//
+// File and directory search path
+// ==============================
+//  format              type  path         file extensions                           
+//  ------------------  ----  -----------  ------------------------------------------
+//  verilog             dir   ../Netlist   v v.gz                                    
+//  icl                 dir                icl icl.gz                                
+//  tcd_bscan           dir                tcd_bscan lvbscan tcd_bscan.gz lvbscan.gz 
+//  tcd_scan            dir                tcd_scan tcd_scan.gz                      
+//  tcd_fusebox         dir                tcd_fbox tcd_fbox.gz                      
+//  tcd_memory          dir   ../memlibs/  memlib memlib.gz                          
+//  tcd_memory_cluster  dir                tcd_mem_cluster_lib tcd_mem_cluster_lib.gz
+//  command: set_dft_specification_requirements -memory_test on -memory_bist on
+//  Error: The value 'on' for -memory_bist <enum> is invalid. Allowed values are {auto off}.
+//  command: set_dft_specification_requirements -memory_test on -memory_bist 1
+//  Error: The value '1' for -memory_bist <enum> is invalid. Allowed values are {auto off}.
+//  command: set_dft_specification_requirements -memory_test on
+//  command: check_design_rules 
+//  Error: The following memory or Shared Bus memory cluster module definitions are missing:
+//         DPRAM_512x24,
+//         SPRAM_64x32,
+//         SPRAM_8192x36,
+//         rd3_256x8,
+//         spram_8192_5,
+//         spram_8192_7
+//         Use the 'read_verilog/read_vhdl <file_path> -interface_only' command to load the memory
+//         or Shared Bus memory cluster simulation model or use 'read_cell_library'
+//         command if your memory is described in tessent library format.
+//  command: read_verilog {/jk/SCLPDK_V3.0_KIT/scl180/memory/dpram/6M1L/DPRAM_512x24/DPRAM_512x24.v /jk/SCLPDK_V3.0_KIT/scl180/memory/dpram/6M1L/DP_SRAM_rd3_256x8/rd3_256x8.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SPRAM_64x32/SPRAM_64x32.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SP_SRAM_spram_8192_7/spram_8192_7.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SP_SRAM_spram_8192_5/spram_8192_5.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SPRAM_8192x36/SPRAM_8192x36.v} -interface_only
+//  Error: Cannot read more designs.
+//         The current top design 'cpu_sys_emep_top' setup info will be lost.
+//         Use -Force switch or the "delete_design" command to delete current design.
+//  command: read_verilog {/jk/SCLPDK_V3.0_KIT/scl180/memory/dpram/6M1L/DPRAM_512x24/DPRAM_512x24.v /jk/SCLPDK_V3.0_KIT/scl180/memory/dpram/6M1L/DP_SRAM_rd3_256x8/rd3_256x8.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SPRAM_64x32/SPRAM_64x32.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SP_SRAM_spram_8192_7/spram_8192_7.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SP_SRAM_spram_8192_5/spram_8192_5.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SPRAM_8192x36/SPRAM_8192x36.v} -interface_only --force
+//  Error: Unrecognized argument '--force'.
+//  command: read_verilog {/jk/SCLPDK_V3.0_KIT/scl180/memory/dpram/6M1L/DPRAM_512x24/DPRAM_512x24.v /jk/SCLPDK_V3.0_KIT/scl180/memory/dpram/6M1L/DP_SRAM_rd3_256x8/rd3_256x8.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SPRAM_64x32/SPRAM_64x32.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SP_SRAM_spram_8192_7/spram_8192_7.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SP_SRAM_spram_8192_5/spram_8192_5.v /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SPRAM_8192x36/SPRAM_8192x36.v} -interface_only -force
+//  Note: The elaborated design is no longer available.
+//        Use the 'set_current_design' command to re-elaborate the design.
+//  command: set_current_design cpu_sys_emep_top
+//  Warning: Undefined modules were found.
+//           Before using "set_system_mode" or "create_flat_model", you must either define
+//           the missing modules using "read_verilog" and/or "read_cell_library", or use the
+//           following command to treat them as black boxes:
+             add_black_boxes -modules { \
+                    rd3_512x16 \
+             }
+//           You can also use "add_black_boxes -auto" to black box all undefined modules but
+//           it is recommended that you do not add this command to your dofile. Doing so may
+//           unintentionally black-box new undefined modules in future runs.
+//  Warning: 255514 cases: Undriven net in netlist module
+//  Warning: 16 cases: Undriven primary inout pin in netlist module
+//  Warning: 605 cases: Net in netlist not connected
+//  Warning: 6 cases: Undefined module pin assumed to be input
+//  Warning: 1 case: Undefined module pin assumed to be inout
+//  Note: Issue set_current_design with the -show_elaboration_warnings option to see more details about previous warnings
+//  Note: Design level set to 'chip' from previous settings
+//  command: exit 

@@ -1,0 +1,218 @@
+/home/Mentor/tessent/bin/tessent -shell -log clk.log -replace
+//  Warning: Tessent user documentation not found
+//  Tessent Shell  2022.4    Tue Nov 29 21:19:37 GMT 2022
+//                Unpublished work. Copyright 2022 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Tue Apr 22 17:06:11 IST 2025.
+//  64 bit version
+//  Host: APL10.kletech.ac.in (31578 MB RAM, 15983 MB Swap)
+//
+//  command: set_context dft -scan
+//  command: read_cell_library ../TECHFILES/test_Nangate.mdt 
+//  Reading DFT Library file ../TECHFILES/test_Nangate.mdt
+//  Finished reading file ../TECHFILES/test_Nangate.mdt
+//  command: set_design_sources -format verilog -y ../NRTLIST -extension v
+//  Error: Directory ( ../NRTLIST ) not found.
+//  command: set_design_sources -format verilog -y ../NETLIST -extension v
+//  command: read_verilog ../NETLIST/CLOCK_opt.v 
+//  command: set_current_design 
+//  Note: Top design is 'CLOCK'.
+//  command: set_design_level chip
+//  command: set_scan_enable scan_en -single_global_scan_enable on
+//  command: set_scan_signals -tclk clk -ten scan_en
+//  Warning: Pin 'scan_en' does not exist and will be created when inserting test logic
+//  command: help scan_in
+//  Error: Command 'scan_in' is unknown
+//  command: help scanin
+//  Error: Command 'scanin' is unknown
+//  command: analyze_control_signals -auto
+//  Warning: Rule FN1 violation occurs 3 times
+//  Warning: Rule FN4 violation occurs 25 times
+//  Flattening process completed, cell instances=106, gates=258, PIs=3, POs=25, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin control signals identification analysis.
+//  ---------------------------------------------------------------------------
+//  Identified 1 clock control primary inputs.
+//     '/clk' (1) with off-state = 0.
+//  Identified 0 set control primary inputs.
+//  Identified 1 reset control primary inputs.
+//     '/reset' (2) with off-state = 0.
+//  Identified 0 read control primary inputs.
+//  Identified 0 write control primary inputs.
+//  ---------------------------------------------------------------------------
+//  Total number of internal lines is 75 (25 clocks, 25 sets , 25 resets, 0 reads, 0 writes).
+//  Total number of potentially clockable internal lines is 50 (25 clocks, 0 sets , 25 resets, 0 reads, 0 writes).
+//  Total number of not clockable internal lines is 25 (0 clocks, 25 sets , 0 resets, 0 reads, 0 writes).
+//  Total number of added primary input controls 1 (0 clocks, 0 sets , 1 resets, 0 reads, 0 writes).
+//  ---------------------------------------------------------------------------
+//  Warning: Flattened model deleted.
+//  command: check_design_rules 
+//  Warning: Rule FN1 violation occurs 3 times
+//  Warning: Rule FN4 violation occurs 25 times
+//  Flattening process completed, cell instances=106, gates=258, PIs=3, POs=25, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 25,
+//  sequential library cells = 25.
+//  ---------------------------------------------------------------------------
+//  Error: No 'static_control' group value specified for the signal 'STE'.
+//  Error: Failed to parse equation 'STE'.
+//  Error: Attempting to add the logic signal instance 'STE:0', but its source equation expression 'STE' is invalid.
+//  ---------------------------------------------------------------------------
+//  Begin scannability rules checking for 25 sequential library cells.
+//  ---------------------------------------------------------------------------
+//  25 sequential library cells identified as scannable.
+//  ---------------------------------------------------------------------------
+//  Begin scan clock rules checking.
+//  ---------------------------------------------------------------------------
+//  2 scan clock/set/reset lines have been identified.
+//  All scan clocks successfully passed off-state check.
+//  25 sequential cells passed clock stability checking.
+//  ---------------------------------------------------------------------------
+//  Begin shift register identification for 25 sequential library cells.
+//  ---------------------------------------------------------------------------
+//  No shift registers identified.
+//  Number of targeted sequential library cells = 25
+//  command: help set_scan_insertion_options 
+set_scan_insertion_options [ -single_attribute_set_chains { on | off } ] 
+                           [ -single_class_chains { on | off } ] 
+                           [ -single_clock_domain_chains { on | off } ] 
+                           [ -single_clock_edge_chains { on | off } ] 
+                           [ -single_cluster_chains { on | off } ] 
+                           [ -single_power_domain_chains { on | off } ] 
+                           [ -single_wrapper_type_chains { on | off } ] 
+                           [ -port_index_start_value <int> ] 
+                           [ -port_scalar_index_modifier <int> ] 
+                           [ -chain_length  { unlimited | <int> } ] 
+                           [ -chain_count  { unlimited | <int> } ] 
+                           [ -si_port_format <format_str> ] 
+                           [ -so_port_format <format_str> ] 
+                           [ -attribute_set_for_chain_assembly ] 
+                           [ -si_timing [ (leading_edge) | trailing_edge | any_edge ] ] 
+                           [ -so_timing [ leading_edge | (trailing_edge) | any_edge ] ] 
+                           [ -lockup_cell_type [ flop | (latch) ] ] 
+                           [ -si_lockup_cell_type [ flop | (latch) ] ] 
+                           [ -so_lockup_cell_type [ flop | (latch) ] ] 
+                           [ -unused_chain_connection_handling [ (auto) | insert_pipelining_flop | tie_off_chain_output | dont_touch ] ] 
+                           [ -si_pipelining [ all_chains | off | (wrapper_chains_only) ] ] 
+                           [ -si_pipelining_type [ non_scan_flop | (holding_scan_flop) ] ] 
+                           [ -enable_scan_cell_mapping { on | off } ] 
+                           [ -fully_encoded_scan_mode_logic { on | off } ] 
+                           [ -se_pipeline_count <int> ] [ -port_bus_range [ ascending | (descending) ] ] 
+//  command: set_scan_insertion_options -si_port_format scan_in -so_port_format scan_out -enable_scan_cell_mapping on
+//  Error: missing index specifier (%d) for si_port_format
+//  Error: missing index specifier (%d) for so_port_format
+//  command: set_scan_insertion_options -si_port_format scan_in[0] -so_port_format scan_out[0] -enable_scan_cell_mapping on
+//  Error: missing index specifier (%d) for si_port_format
+//  Error: missing index specifier (%d) for so_port_format
+//  command: set_scan_insertion_options -si_port_format scan_in -so_port_format scan_out -enable_scan_cell_mapping on -port_index_start_value 0
+//  Error: missing index specifier (%d) for si_port_format
+//  Error: missing index specifier (%d) for so_port_format
+//  command: set_scan_insertion_options -si_port_format scan_in 0  -so_port_format scan_out 0  -enable_scan_cell_mapping on 
+//  Error: Unrecognized argument '0'.
+//  command: set_scan_insertion_options -si_port_format scan_in -so_port_format scan_out -enable_scan_cell_mapping on
+//  Error: missing index specifier (%d) for si_port_format
+//  Error: missing index specifier (%d) for so_port_format
+//  command: ANALYSIS> set_scan_insertion_options -si_port_format scan_in_%d -so_port_format scan_out_%d -enable_scan_cell_m
+//  Error: Command 'ANALYSIS> set_scan_insertion_options -si_port_format scan_in_%d -so_port_format scan_out_%d -enable_scan_cell_m' is unknown
+//  command: set_scan_insertion_options -si_port_format scan_in_%d -so_port_format scan_out_%d -enable_scan_cell_mapping on
+//  command: analyze_control_signals -auto
+//  Error: '-Auto_fix' option is allowed only in SETUP mode!
+//  command: analyze_control_signals 
+//  ---------------------------------------------------------------------------
+//  Begin control signals identification analysis.
+//  ---------------------------------------------------------------------------
+//  Identified 1 clock control primary inputs.
+//     '/clk' (1) with off-state = 0.
+//  Identified 0 set control primary inputs.
+//  Identified 1 reset control primary inputs.
+//     '/reset' (2) with off-state = 0.
+//  Identified 0 read control primary inputs.
+//  Identified 0 write control primary inputs.
+//  ---------------------------------------------------------------------------
+//  Total number of internal lines is 75 (25 clocks, 25 sets , 25 resets, 0 reads, 0 writes).
+//  Total number of potentially clockable internal lines is 50 (25 clocks, 0 sets , 25 resets, 0 reads, 0 writes).
+//  Total number of not clockable internal lines is 25 (0 clocks, 25 sets , 0 resets, 0 reads, 0 writes).
+//  Total number of added primary input controls 0 (0 clocks, 0 sets , 0 resets, 0 reads, 0 writes).
+//  ---------------------------------------------------------------------------
+//  command: analyze_scan_chains 
+//  Chain allocation of 'unwrapped' mode completed:
+//         1 distributed chain of size 25
+//  command: insert_test_logic 
+=============================
+Test Logic Insertion Summary:
+=============================
+
+  Structural Data:
+  ----------------
+                           Added top-level port count:           3
+                                 Added instance count:           2
+
+  Logical Data:
+  -------------
+                           Added retiming logic count:           1
+                   Added scan chain count (unwrapped):           1
+
+//  Warning: Flattened model deleted.
+//  command: report_scan_chains 
+
+===============================
+Scan Chains Created by the Tool
+===============================
+
+   Scan mode 'unwrapped' scan chains:
+   ----------------------------------
+      chain = chain0   group = dummy  input = /scan_in_0  output = /scan_out_0  length = 25
+
+//  command: report_scan_elements > ../output/clock_time.txt
+//  command: report_scan_chains > ../output/clock_time_scan_chains.txt
+//  command: report_scan_cells > ../output/clock_time_scan_cells.txt
+//  command: report_scan_enable > ../output/clock_time_scan_enable.txt
+//  command: write_design -output_file ../output/clock_scan.v
+//  command: write_schematic_dofile -display
+//  Error: The switch '-display' requires a value. ( help write_schematic_dofile )
+//  command: help write_atpg_setup 
+//  Write test procedure file and dofile
+//    usage: write_atpg_setup <basename> [-Replace] [-All_internal_clocks] [-NO_Edt] [-NO_Merge]
+//  command: write_atpg_setup atpg_setup
+//  command: help write_core_description 
+write_core_description <file_name> [ -replace ] 
+//  command: write_core_description clock_core_description
+//  command: write_scan_order 
+//   Error: An output filename is required.
+//  command: write_scan_order > ../output/scan_order.txt
+//  command: help create_connections 
+create_connections <obj_list1>  { <obj_list2> | -constant { 0 | 1 } } 
+                   [ -net_name <net_name> ] [ -net_uniquification_suffix <suffix> ] 
+                   [ -treat_common_ancestor_as_unique { on | off } ] 
+                   [ -silent ] 
+//  command: open_visualizer 
+//  Note: Tessent Visualizer client successfully started and connected to the server.
+//  command: set_system_mode setup
+//  command: open_visualizer 
+//  Note: Tessent Visualizer client successfully started and connected to the server.
+//  command: write_schematic_dofile 
+//  Error: Missing options ( <filename> [ -replace ] [ -display { flat_schematic | hierarchical_schematic | icl_schematic | ijtag_network } ]  ) ( help write_schematic_dofile )
+//  command: open_visualizer 
+//  Note: Tessent Visualizer client successfully started and connected to the server.
+//  command: open_visualizer -connection_status 
+//  Server: started
+//  - Hostname:           localhost
+//  - TCP/IP port:        42093
+//  - Authorization code: -
+//  Client: not connected
+//  command: open_visualizer -display hierarchical_schematic 
+//  Note: Tessent Visualizer client successfully started and connected to the server.

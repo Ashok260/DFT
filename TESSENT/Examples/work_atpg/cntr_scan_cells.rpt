@@ -1,0 +1,23 @@
+Scan mode 'unwrapped' scan cells:
+--------------------------------------------------------------------------------------------------------
+CellNo  ChainName  GroupName  Pathname                           CellName  ScanOut  Clock  ClockPolarity
+--------------------------------------------------------------------------------------------------------
+-       chain      dummy      /ts_lockup_latchn_clkc1_intno15_i  DLL_X2             clk    (-)          
+0       chain      dummy      /Q_reg[0]                          SDFFR_X2  Q        clk    (+)          
+1       chain      dummy      /Q_reg[1]                          SDFFR_X2  Q        clk    (+)          
+2       chain      dummy      /Q_reg[2]                          SDFFR_X2  Q        clk    (+)          
+3       chain      dummy      /Q_reg[3]                          SDFFR_X2  Q        clk    (+)          
+4       chain      dummy      /Q_reg[4]                          SDFFR_X2  Q        clk    (+)          
+5       chain      dummy      /Q_reg[5]                          SDFFR_X1  Q        clk    (+)          
+6       chain      dummy      /Q_reg[6]                          SDFFR_X1  Q        clk    (+)          
+7       chain      dummy      /Q_reg[7]                          SDFFR_X1  Q        clk    (+)          
+8       chain      dummy      /Q_reg[8]                          SDFFR_X1  Q        clk    (+)          
+9       chain      dummy      /Q_reg[9]                          SDFFR_X1  Q        clk    (+)          
+10      chain      dummy      /Q_reg[12]                         SDFFR_X1  Q        clk    (+)          
+11      chain      dummy      /Q_reg[10]                         SDFFR_X1  Q        clk    (+)          
+12      chain      dummy      /Q_reg[13]                         SDFFR_X1  Q        clk    (+)          
+13      chain      dummy      /Q_reg[11]                         SDFFR_X1  Q        clk    (+)          
+14      chain      dummy      /Q_reg[14]                         SDFFR_X1  Q        clk    (+)          
+15      chain      dummy      /Q_reg[15]                         SDFFR_X1  Q        clk    (+)          
+--------------------------------------------------------------------------------------------------------
+

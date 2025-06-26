@@ -1,0 +1,42 @@
+//
+// Written by Tessent Shell 2022.4 on Sat May 17 11:00:52 2025
+//
+set time scale 1.000000 ns ;
+ timeplate gen_tp1 =
+    force_pi 0 ; 
+    measure_po 10 ; 
+    pulse_clock 20 10 ; 
+    period 40 ; 
+ end;
+
+ procedure shift =
+    scan_group grp1 ;
+    timeplate gen_tp1 ;
+    // cycle 0 starts at time 0
+    cycle =
+        force_sci ;
+        measure_sco ;
+        pulse clk ;
+    end;
+ end;
+
+ procedure test_setup =
+    timeplate gen_tp1 ;
+    // cycle 0 starts at time 0
+    cycle =
+        force scan_en 0 ;
+    end;
+ end;
+
+ procedure load_unload =
+    scan_group grp1 ;
+    timeplate gen_tp1 ;
+    // cycle 0 starts at time 0
+    cycle =
+        force clk 0 ;
+        force rst 1 ;
+        force scan_en 0 ;
+    end ;
+    apply shift 16;
+ end;
+

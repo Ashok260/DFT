@@ -1,0 +1,24 @@
+Reporting registers that pass DFT rules
+  mc_rb_fuse_vld_q_reg 	PASS; Test clock: mc_rb_ef1_sclk_i/rise; 
+  skew_addr_cntr_reg[0] 	PASS; Test clock: mc_rb_ef1_sclk_i/rise; 
+  skew_addr_cntr_reg[1] 	PASS; Test clock: mc_rb_ef1_sclk_i/rise; 
+  skew_addr_cntr_reg[2] 	PASS; Test clock: mc_rb_ef1_sclk_i/rise; 
+  skew_addr_cntr_reg[3] 	PASS; Test clock: mc_rb_ef1_sclk_i/rise; 
+  skew_addr_cntr_reg[4] 	PASS; Test clock: mc_rb_ef1_sclk_i/rise; 
+Reporting registers that fail DFT rules
+Reporting registers that are preserved or marked dont-scan
+Reporting registers that are marked Abstract Segment Dont Scan
+Reporting registers that are part of shift register segments
+Reporting registers that are identified as lockup elements
+Reporting registers that are level-sensitive elements
+Reporting misc. non-scan registers
+Summary: 
+Total registers that pass DFT rules: 6
+Total registers that fail DFT rules: 0
+Total registers that are marked preserved or dont-scan: 0
+Total registers that are marked Abstract Segment dont-scan: 0
+Total registers that are part of shift register segments: 0
+Total registers that are lockup elements: 0
+Total registers that are level-sensitive: 0
+Total registers that are misc. non-scan: 0
+

@@ -1,0 +1,28 @@
+set dofileName atpg_setup.dofile
+set designFile /home/01fe21bec223/DFT_TESSENT/TESSENT/output/clock_scan.v
+set topName {CLOCK}
+set libName "../TECHFILES/test_Nangate.mdt"
+
+
+proc verify_all_scan_modes {} {
+   set modeList [list unwrapped]
+   foreach mode $modeList {
+      set_system_mode setup
+      reset_design
+      tessent_scan_setup $mode
+      set_edt_options off
+      add_black_box -auto
+      set_system_mode analysis
+      report_scan_cells
+   }
+}
+
+
+set_context patterns -scan
+delete_design
+read_cell_library $libName
+read_verilog $designFile
+set_current_design $topName
+dofile $dofileName
+
+verify_all_scan_modes

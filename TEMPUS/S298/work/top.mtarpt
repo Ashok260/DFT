@@ -1,0 +1,60 @@
+VERSION {1.0}
+PTDEF {instance} {pin} {cell} {edge} {clock_edge} {clock} {phase}
+BANNER
+  {Module} {s298}
+  {Timing} {LATE}
+  {Slew Propagation} {WORST}
+  {Operating Condition} {slow}
+  {PVT Mode} {max}
+  {Tree Type} {balanced}
+  {Process} {1.000}
+  {Voltage} {0.950}
+  {Temperature} {125.000}
+  {time unit} {1.000 ns}
+  {capacitance unit} {1.000 pF}
+  {resistance unit} {1.000 kOhm}
+  {TOOL} {v20.20-p001_1 ((64bit) 12/02/2020 16:07 (Linux 2.6.32-431.11.2.el6.x86_64))}
+  {DATE} {March 12, 2025}
+END_BANNER
+PATH 1
+  VIEW  default
+  CHECK_TYPE {Latch Borrowed Time Check}
+  REF {DFF_9/ts_lockup_latchp_clkc1_intno9_i/Q_reg} {G}
+  ENDPT {DFF_9/ts_lockup_latchp_clkc1_intno9_i/Q_reg} {D} {DLH_X1} {^} {leading} {sclk} {sclk(C)(P) }
+  BEGINPT {DFF_9/q_reg} {Q} {SDFF_X2} {^} {leading} {sclk} {sclk(D)(P) *}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {+} {Time Borrowed} {0.355}
+    {+} {Phase Shift} {0.000}
+    {=} {Required Time} {0.355}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {0.355}
+    {=} {Slack Time} {0.000}
+  END_SLK_CLC
+  SLK 0.000
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {CK} {^} {} {} {CK} {} {} {} {0.000} {0.022} {0.000} {0.000} {} {15} {(0.00, 0.00) } 
+    NET {} {} {} {} {} {CK} {} {0.000} {0.000} {0.000} {0.022} {0.000} {0.000} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {DFF_9/q_reg} {CK} {^} {Q} {^} {} {SDFF_X2} {0.355} {0.000} {0.082} {} {0.355} {0.355} {} {3} {(0.00, 0.00) (0.00, 0.00)} 
+    NET {} {} {} {} {} {G118} {} {0.000} {0.000} {0.082} {0.003} {0.355} {0.355} {} {} {} 
+  END_DATA_PATH
+  OTHER_ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_OTHER_ARR_CLC
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {CK} {^} {} {} {CK} {} {} {} {0.000} {0.019} {0.000} {0.000} {} {15} {(0.00, 0.00) } 
+    NET {} {} {} {} {} {CK} {} {0.000} {0.000} {0.000} {0.019} {0.000} {0.000} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 1
+

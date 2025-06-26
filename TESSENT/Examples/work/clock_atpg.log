@@ -1,0 +1,2080 @@
+/home/Mentor/tessent/bin/tessent -shell -log clock_atpg.log -replace
+//  Warning: Tessent user documentation not found
+//  Tessent Shell  2022.4    Tue Nov 29 21:19:37 GMT 2022
+//                Unpublished work. Copyright 2022 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Tue Apr 22 18:03:21 IST 2025.
+//  64 bit version
+//  Host: APL10.kletech.ac.in (31578 MB RAM, 15983 MB Swap)
+//
+//  command: set_context patterns -scan
+//  command: read_verilog ../output/clock_scan.v 
+//  command: read_cell_library ../TECHFILES/test_Nangate.mdt 
+//  Reading DFT Library file ../TECHFILES/test_Nangate.mdt
+//  Finished reading file ../TECHFILES/test_Nangate.mdt
+//  command: set_current_design 
+//  Note: Top design is 'CLOCK'.
+//  command: dofile atpg_setup.dofile 
+//  command: #
+//  command: #  Written by Tessent Shell 2022.4 on Tue Apr 22 17:31:15 IST 2025
+//  command: #
+//  command: proc tessent_scan_common {} {
+//              add_clocks 0 clk
+//              add_clocks 0 reset
+//              add_pin_constraints scan_en C1
+//           }
+//  command: proc tessent_scan_unwrapped_mode {} {
+//              add_scan_groups grp1 atpg_setup.testproc
+//           
+//              add_scan_chains chain0 grp1 /scan_in_0 /scan_out_0
+//           
+//              tessent_scan_common
+//           
+//           }
+//  command: proc tessent_scan_setup { {mode unwrapped} } {
+//              switch -exact -- $mode {
+//                 unwrapped { tessent_scan_unwrapped_mode }
+//                 default {
+//                    display_message -error "invalid scan mode: $mode"
+//                 }
+//              }
+//           }
+//  command: create_patterns_specification 
+//  Error: The command is prohibited unless a hierarchical ICL description associated
+//              with the top level design is available.
+//              Please provide an ICL top module description (e.g. with the 'read_icl'
+//              and 'set_current_design' commands) or perform ICL extraction using the
+//              'extract_icl' command in order to create the hierarchical ICL model and
+//              to enable the usage of the 'create_patterns_specification' command.
+//  command: check_design_rules 
+//  Warning: Rule FN1 violation occurs 4 times
+//  Warning: Rule FN4 violation occurs 26 times
+//  Flattening process completed, cell instances=108, gates=391, PIs=5, POs=26, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 26.
+//  ---------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------
+//  Begin transparent latch checking for 1 latches.
+//  ---------------------------------------------------------------------------
+//  Number transparent latches = 1.
+//  ---------------------------------------------------------------------------
+//  Begin scan clock rules checking.
+//  ---------------------------------------------------------------------------
+//  0 scan clock/set/reset lines have been identified.
+//  Warning: There were 25 clock rule C7 fails (nonscan cell capture ability check).
+//  ---------------------------------------------------------------------------
+//  26 non-scan memory elements are identified.
+//  ---------------------------------------------------------------------------
+//  25 non-scan memory elements are identified as TIE-X. (D5)
+//   1 non-scan memory element is   identified as TLA.   (D5)
+//  ---------------------------------------------------------------------------
+//  command: create_patterns 
+No faults in fault list. Adding all faults...
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                             Analyzing the design                                                   |
+// |                                                                                                                    |
+// |      Current clock restriction setting:     Domain_clock (edge interaction)                                        |
+// |                                             (optimal)                                                              |
+// |                                                                                                                    |
+// |            Current abort limit setting:     30                                                                     |
+// |                                Calling:     set_abort_limit 300 100                                                |
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                                                                                                    |
+// |               Current sequential depth:     0                                                                      |
+// |               Optimal sequential depth:     2                                                                      |
+// |                                Calling:     set_pattern_type -sequential 2                                         |
+// |                                                                                                                    |
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                                                                                                    |
+// |                        Checking faults:     No undetected faults available. Exit.                                  |
+// |                              Recommend:     reset_au_faults                                                        |
+// | ------------------------------------------------------------------------------------------------------------------ |
+//  command: report_faults -class DS
+
+    type    code    pin_pathname
+    ----   ------   ------------------------------------
+//  Warning: No faults reported.
+//  command: report_statistics 
+                     Statistics Report                     
+                      Stuck-at Faults                      
+-----------------------------------------------------------
+Fault Classes                               #faults        
+                                            (total)        
+---------------------------------  ------------------------
+  FU (full)                                   998          
+  -------------------------------  ------------------------
+  UU (unused)                              32      ( 3.21%)
+  AU (atpg_untestable)                    966      (96.79%)
+-----------------------------------------------------------
+Fault Sub-classes                                          
+  -------------------------------                          
+  AU (atpg_untestable)                                     
+    TC*   (tied_cells)                    958      (95.99%)
+    SEQ   (sequential_depth)                8      ( 0.80%)
+  *Use "report_statistics -detailed_analysis" for details. 
+-----------------------------------------------------------
+Coverage                                                   
+  -------------------------------                          
+  test_coverage                                      0.00% 
+  fault_coverage                                     0.00% 
+  atpg_effectiveness                               100.00% 
+-----------------------------------------------------------
+#test_patterns                                           0 
+#simulated_patterns                                      0 
+CPU_time (secs)                                      661.2 
+-----------------------------------------------------------
+
+//  command: write_patterns clock.ascii -ascii -paralell -replace
+//  Error: Incorrect argument -paralell.
+//  command: write_patterns clock.ascii -ascii -parlell -replace
+//  Error: Incorrect argument -parlell.
+//  command: help write_patterns 
+Usage:  write_patterns  <pattern_filename> [ <format_switch> ]
+                                          [ -PATTERN_SEts [chain] [scan] [burnin_loop] [lvx_loop] [lvx_verification] ]
+                                          [ -Replace ]
+                                          [ -PROcfile <procedure_filename> ]
+                                          [ -PARAMeter_file <parameter_filename> ]
+                                          [ -PARAMETER_List <list_parameter_pairs> ]
+                                          [ -PARALlel | -Serial ]
+                                          [ -BEgin {<pattern_number> | <pattern_name>} ]
+                                          [ -END {<pattern_number> | <pattern_name>} ]
+                                          [ -TAg <tag_name> ]
+                                          [ -CEll_placement { Bottom | Top | None } ]
+                                          [ -ENVironment ]
+                                          [ -TEST_Setup { ONLy | ONE | OFf | ONE_Per_file } ]
+                                          [ -TEST_End { ONLy | ONE | OFf } ]
+                                          [ -TEST_Payload ]
+                                          [ -ALL_Setup_only ]
+                                          [ -ALL_End_only ]
+                                          [ -EXternal ]
+                                          [ -SAmple [ <integer> ] ]
+                                          [ -IDDQ_file ]
+                                          [ -MODE_Internal | -MODE_External ]
+                                          [ -NOPadding | -PAD0 | -PAD1 ]
+                                          [ -MAXloads <load_number> [-ADD_pattern_index_range_to_filename | -ADD_Load_range_to_filename] ]
+                                          [ -PATtern_size <integer> ]
+                                          [ -MEMory_size <size_in_KB> ]
+                                          [ -SCAN_Memory_size <size_in_KB> ]
+                                          [ -VECTOR_Set <TCL_vector_set_definition> ]
+                                          [ -VERBose ]
+
+Values of format_switch:  -Ascii, -BInary, -Wgl, -Verilog, -Stil1999, -CTl2005,
+                         -STIL2005, -TItdl, -Fjtdl, -MItdl, -TSTl2, -PATDB.
+//  command: write_patterns clock.ascii -ascii -parallel -replace
+//  Warning: No scan patterns in internal test pattern set.
+//  command: create_patterns_specification 
+//  Error: The command is prohibited unless a hierarchical ICL description associated
+//              with the top level design is available.
+//              Please provide an ICL top module description (e.g. with the 'read_icl'
+//              and 'set_current_design' commands) or perform ICL extraction using the
+//              'extract_icl' command in order to create the hierarchical ICL model and
+//              to enable the usage of the 'create_patterns_specification' command.
+//  command: help create_patterns
+Usage:  create_patterns      [ -OVerride_user_settings  | -NO_AUto ] 
+                             [ -COMpaction_effort { Low |  High | Maximum | integer } ]  [ -NO_Analyze ] 
+                             [ -COVerage_effort { Low | Medium | High } ] 
+                             [ -NO_REDundancy_analysis ] 
+                             [ -NO_TERMINATE_ineffective_atpg ] 
+                             [ -PATterns_per_pass integer ] 
+                             [ -NO_REPort_statistics ] 
+//  command: create_patterns 
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                             Analyzing the design                                                   |
+// |                                                                                                                    |
+// |      Current clock restriction setting:     Domain_clock (edge interaction)                                        |
+// |                                             (optimal)                                                              |
+// |                                                                                                                    |
+// |            Current abort limit setting:     300(Combinational) 100(Sequential)                                     |
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                                                                                                    |
+// |               Current sequential depth:     2 (optimal)                                                            |
+// |                                                                                                                    |
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                                                                                                    |
+// |                        Checking faults:     No undetected faults available. Exit.                                  |
+// |                              Recommend:     reset_au_faults                                                        |
+// | ------------------------------------------------------------------------------------------------------------------ |
+//  command: reset_au_faults 
+//  command: create_patterns 
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                             Analyzing the design                                                   |
+// |                                                                                                                    |
+// |      Current clock restriction setting:     Domain_clock (edge interaction)                                        |
+// |                                             (optimal)                                                              |
+// |                                                                                                                    |
+// |            Current abort limit setting:     300(Combinational) 100(Sequential)                                     |
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                                                                                                    |
+// |               Current sequential depth:     2 (optimal)                                                            |
+// |                                                                                                                    |
+// | ------------------------------------------------------------------------------------------------------------------ |
+//  ------------------------------------------------------------------------
+//  Simulation performed for #gates = 391  #faults = 966
+//  system mode = analysis    pattern source = internal patterns
+//  ------------------------------------------------------------------------
+//  #patterns  test      #faults  #faults    # eff.    # test         process      RE/AU/AAB
+//  simulated  coverage  in list  detected   patterns  patterns       CPU time
+//   ---        ------      ---       ---      ---       ---          0.07 sec     0/892/0
+//   6           7.45%        3        71        4         4          0.07 sec
+//  1 faults were identified as detected by implication.
+//  -----------------------------------------------------------------------
+//  Performing redundant fault identification for 892 faults
+//  -----------------------------------------------------------------------
+//  deterministic ATPG invoked with abort limit = 300
+//  # red.    # non-red.   # abort     # remn.   progress   test        process
+//  faults      faults      faults      faults              coverage    CPU time
+//       0         892          0            0   100.00%     7.45%       0.01 sec
+
+                     Statistics Report                     
+                      Stuck-at Faults                      
+-----------------------------------------------------------
+Fault Classes                               #faults        
+                                            (total)        
+---------------------------------  ------------------------
+  FU (full)                                   998          
+  -------------------------------  ------------------------
+  UO (unobserved)                           1      ( 0.10%)
+  DS (det_simulation)                      71      ( 7.11%)
+  DI (det_implication)                      1      ( 0.10%)
+  PT (posdet_testable)                      1      ( 0.10%)
+  UU (unused)                              32      ( 3.21%)
+  AU (atpg_untestable)                    892      (89.38%)
+-----------------------------------------------------------
+Fault Sub-classes                                          
+  -------------------------------                          
+  AU (atpg_untestable)                                     
+    TC*   (tied_cells)                    887      (88.88%)
+    SEQ   (sequential_depth)                5      ( 0.50%)
+  UC+UO                                                    
+    UNS   (unsuccess)                       1      ( 0.10%)
+  *Use "report_statistics -detailed_analysis" for details. 
+-----------------------------------------------------------
+Coverage                                                   
+  -------------------------------                          
+  test_coverage                                      7.51% 
+  fault_coverage                                     7.26% 
+  atpg_effectiveness                                99.80% 
+-----------------------------------------------------------
+#test_patterns                                           4 
+  #basic_patterns                                        1 
+  #clock_sequential_patterns                             3 
+#simulated_patterns                                      6 
+CPU_time (secs)                                     1153.6 
+-----------------------------------------------------------
+
+//  command: report_faults -class DS
+
+    type    code    pin_pathname
+    ----   ------   ------------------------------------
+      1    DS       /g2378/ZN
+      0    EQ       /g2378/A
+      0    EQ       /reset
+      0    DS       /g2378/ZN
+      1    EQ       /g2378/A
+      1    EQ       /reset
+      0    DS       "/\H_reg_reg[6] /SI"
+      0    EQ       /tessent_persistent_cell_buf_extsi25_i/Z
+      0    EQ       /tessent_persistent_cell_buf_extsi25_i/A
+      0    EQ       /scan_in_0
+      1    DS       /tessent_persistent_cell_buf_extsi25_i/Z
+      1    EQ       /tessent_persistent_cell_buf_extsi25_i/A
+      1    EQ       /scan_in_0
+      1    EQ       "/\H_reg_reg[6] /SI"
+      0    DS       "/\H_reg_reg[6] /Q"
+      1    DS       "/\H_reg_reg[6] /Q"
+      1    DS       "/\H_reg_reg[7] /Q"
+      1    DS       "/\H_reg_reg[5] /Q"
+      1    DS       "/\M_reg_reg[7] /Q"
+      1    DS       "/\H_reg_reg[1] /Q"
+      1    DS       /pm_reg_reg/Q
+      1    DS       "/\H_reg_reg[3] /Q"
+      1    DS       "/\H_reg_reg[2] /Q"
+      1    DS       "/\M_reg_reg[3] /Q"
+      1    DS       "/\H_reg_reg[4] /Q"
+      1    DS       "/\M_reg_reg[1] /Q"
+      1    DS       "/\S_reg_reg[5] /Q"
+      1    DS       "/\M_reg_reg[5] /Q"
+      1    DS       "/\M_reg_reg[4] /Q"
+      1    DS       "/\S_reg_reg[7] /Q"
+      1    DS       "/\M_reg_reg[6] /Q"
+      1    DS       "/\H_reg_reg[0] /Q"
+      1    DS       "/\S_reg_reg[3] /Q"
+      1    DS       "/\M_reg_reg[2] /Q"
+      1    DS       "/\S_reg_reg[2] /Q"
+      1    DS       "/\S_reg_reg[4] /Q"
+      1    DS       "/\M_reg_reg[0] /Q"
+      1    DS       "/\S_reg_reg[6] /Q"
+      1    DS       "/\S_reg_reg[1] /Q"
+      1    DS       "/\S_reg_reg[0] /Q"
+      0    DS       "/\H_reg_reg[6] /RN"
+      1    DS       "/\H_reg_reg[6] /RN"
+      1    DS       /scan_out_0
+      1    EQ       /ts_lockup_latchn_clkc1_intno24_i/Q
+      1    DS       /ts_lockup_latchn_clkc1_intno24_i/D
+      1    DS       /pm
+      1    DS       /hh[7]
+      0    DS       /hh[6]
+      1    DS       /hh[6]
+      1    DS       /hh[5]
+      1    DS       /hh[4]
+      1    DS       /hh[3]
+      1    DS       /hh[2]
+      1    DS       /hh[1]
+      1    DS       /hh[0]
+      1    DS       /mm[7]
+      1    DS       /mm[6]
+      1    DS       /mm[5]
+      1    DS       /mm[4]
+      1    DS       /mm[3]
+      1    DS       /mm[2]
+      1    DS       /mm[1]
+      1    DS       /mm[0]
+      1    DS       /ss[7]
+      1    DS       /ss[6]
+      1    DS       /ss[5]
+      1    DS       /ss[4]
+      1    DS       /ss[3]
+      1    DS       /ss[2]
+      1    DS       /ss[1]
+      1    DS       /ss[0]
+//  command: report_faults 
+
+    type    code    pin_pathname
+    ----   ------   ------------------------------------
+      0    PT       /clk
+      1    AU.SEQ   /clk
+      1    DS       /g2378/ZN
+      0    EQ       /g2378/A
+      0    EQ       /reset
+      0    DS       /g2378/ZN
+      1    EQ       /g2378/A
+      1    EQ       /reset
+      0    AU.TC    /ena
+      1    AU.TC    /ena
+      0    DS       "/\H_reg_reg[6] /SI"
+      0    EQ       /tessent_persistent_cell_buf_extsi25_i/Z
+      0    EQ       /tessent_persistent_cell_buf_extsi25_i/A
+      0    EQ       /scan_in_0
+      1    DS       /tessent_persistent_cell_buf_extsi25_i/Z
+      1    EQ       /tessent_persistent_cell_buf_extsi25_i/A
+      1    EQ       /scan_in_0
+      1    EQ       "/\H_reg_reg[6] /SI"
+      0    AU.TC    /scan_en
+      1    AU.TC    /scan_en
+      0    UU       "/\H_reg_reg[6] /QN"
+      1    UU       "/\H_reg_reg[6] /QN"
+      0    DS       "/\H_reg_reg[6] /Q"
+      1    DS       "/\H_reg_reg[6] /Q"
+      0    UU       "/\H_reg_reg[7] /QN"
+      1    UU       "/\H_reg_reg[7] /QN"
+      0    AU.TC    "/\H_reg_reg[7] /Q"
+      1    DS       "/\H_reg_reg[7] /Q"
+      0    UU       "/\H_reg_reg[5] /QN"
+      1    UU       "/\H_reg_reg[5] /QN"
+      0    AU.TC    "/\H_reg_reg[5] /Q"
+      1    DS       "/\H_reg_reg[5] /Q"
+      0    UU       "/\M_reg_reg[7] /QN"
+      1    UU       "/\M_reg_reg[7] /QN"
+      0    AU.TC    "/\M_reg_reg[7] /Q"
+      1    DS       "/\M_reg_reg[7] /Q"
+      0    UU       "/\H_reg_reg[1] /QN"
+      1    UU       "/\H_reg_reg[1] /QN"
+      0    AU.TC    "/\H_reg_reg[1] /Q"
+      1    DS       "/\H_reg_reg[1] /Q"
+      0    UU       /pm_reg_reg/QN
+      1    UU       /pm_reg_reg/QN
+      0    AU.TC    /pm_reg_reg/Q
+      1    DS       /pm_reg_reg/Q
+      0    AU.TC    "/\H_reg_reg[3] /QN"
+      1    AU.TC    "/\H_reg_reg[3] /QN"
+      0    AU.TC    "/\H_reg_reg[3] /Q"
+      1    DS       "/\H_reg_reg[3] /Q"
+      0    AU.TC    "/\H_reg_reg[2] /QN"
+      1    AU.TC    "/\H_reg_reg[2] /QN"
+      0    AU.TC    "/\H_reg_reg[2] /Q"
+      1    DS       "/\H_reg_reg[2] /Q"
+      0    AU.TC    "/\M_reg_reg[3] /QN"
+      1    AU.TC    "/\M_reg_reg[3] /QN"
+      0    AU.TC    "/\M_reg_reg[3] /Q"
+      1    DS       "/\M_reg_reg[3] /Q"
+      0    UU       "/\H_reg_reg[4] /QN"
+      1    UU       "/\H_reg_reg[4] /QN"
+      0    AU.TC    "/\H_reg_reg[4] /Q"
+      1    DS       "/\H_reg_reg[4] /Q"
+      0    UU       "/\M_reg_reg[1] /QN"
+      1    UU       "/\M_reg_reg[1] /QN"
+      0    AU.TC    "/\M_reg_reg[1] /Q"
+      1    DS       "/\M_reg_reg[1] /Q"
+      0    UU       "/\S_reg_reg[5] /QN"
+      1    UU       "/\S_reg_reg[5] /QN"
+      0    AU.TC    "/\S_reg_reg[5] /Q"
+      1    DS       "/\S_reg_reg[5] /Q"
+      0    AU.TC    "/\M_reg_reg[5] /QN"
+      1    AU.TC    "/\M_reg_reg[5] /QN"
+      0    AU.TC    "/\M_reg_reg[5] /Q"
+      1    DS       "/\M_reg_reg[5] /Q"
+      0    AU.TC    "/\M_reg_reg[4] /QN"
+      1    AU.TC    "/\M_reg_reg[4] /QN"
+      0    AU.TC    "/\M_reg_reg[4] /Q"
+      1    DS       "/\M_reg_reg[4] /Q"
+      0    UU       "/\S_reg_reg[7] /QN"
+      1    UU       "/\S_reg_reg[7] /QN"
+      0    AU.TC    "/\S_reg_reg[7] /Q"
+      1    DS       "/\S_reg_reg[7] /Q"
+      0    UU       "/\M_reg_reg[6] /QN"
+      1    UU       "/\M_reg_reg[6] /QN"
+      0    AU.TC    "/\M_reg_reg[6] /Q"
+      1    DS       "/\M_reg_reg[6] /Q"
+      0    UU       "/\H_reg_reg[0] /QN"
+      1    UU       "/\H_reg_reg[0] /QN"
+      0    AU.TC    "/\H_reg_reg[0] /Q"
+      1    DS       "/\H_reg_reg[0] /Q"
+      0    AU.TC    "/\S_reg_reg[3] /QN"
+      0    EQ       /g2367__3680/A3
+      0    AU.TC    /g2367__3680/ZN
+      1    EQ       /g2367__3680/A3
+      1    EQ       /g2367__3680/A2
+      1    EQ       /g2367__3680/A1
+      1    EQ       "/\S_reg_reg[3] /QN"
+      0    AU.TC    "/\S_reg_reg[3] /Q"
+      1    DS       "/\S_reg_reg[3] /Q"
+      0    AU.TC    "/\M_reg_reg[2] /QN"
+      1    AU.TC    "/\M_reg_reg[2] /QN"
+      0    AU.TC    "/\M_reg_reg[2] /Q"
+      1    DS       "/\M_reg_reg[2] /Q"
+      0    AU.TC    "/\S_reg_reg[2] /QN"
+      1    AU.TC    "/\S_reg_reg[2] /QN"
+      0    AU.TC    "/\S_reg_reg[2] /Q"
+      1    DS       "/\S_reg_reg[2] /Q"
+      0    AU.TC    "/\S_reg_reg[4] /QN"
+      1    AU.TC    "/\S_reg_reg[4] /QN"
+      0    AU.TC    "/\S_reg_reg[4] /Q"
+      1    DS       "/\S_reg_reg[4] /Q"
+      0    UU       "/\M_reg_reg[0] /QN"
+      1    UU       "/\M_reg_reg[0] /QN"
+      0    AU.TC    "/\M_reg_reg[0] /Q"
+      1    DS       "/\M_reg_reg[0] /Q"
+      0    UU       "/\S_reg_reg[6] /QN"
+      1    UU       "/\S_reg_reg[6] /QN"
+      0    AU.TC    "/\S_reg_reg[6] /Q"
+      1    DS       "/\S_reg_reg[6] /Q"
+      0    UU       "/\S_reg_reg[1] /QN"
+      1    UU       "/\S_reg_reg[1] /QN"
+      0    AU.TC    "/\S_reg_reg[1] /Q"
+      1    DS       "/\S_reg_reg[1] /Q"
+      0    UU       "/\S_reg_reg[0] /QN"
+      1    UU       "/\S_reg_reg[0] /QN"
+      0    AU.TC    "/\S_reg_reg[0] /Q"
+      1    DS       "/\S_reg_reg[0] /Q"
+      0    AU.TC    /g2376/ZN
+      1    EQ       /g2376/A
+      1    AU.TC    /g2376/ZN
+      0    EQ       /g2376/A
+      0    AU.TC    /g2351__2398/B
+      1    AU.TC    /g2351__2398/B
+      0    AU.TC    "/\M_reg_reg[3] /SE"
+      1    AU.TC    "/\M_reg_reg[3] /SE"
+      0    AU.TC    "/\H_reg_reg[2] /SE"
+      1    AU.TC    "/\H_reg_reg[2] /SE"
+      0    AU.TC    "/\H_reg_reg[3] /SE"
+      1    AU.TC    "/\H_reg_reg[3] /SE"
+      0    AU.TC    /pm_reg_reg/SE
+      1    AU.TC    /pm_reg_reg/SE
+      0    AU.TC    "/\H_reg_reg[1] /SE"
+      1    AU.TC    "/\H_reg_reg[1] /SE"
+      0    AU.TC    "/\M_reg_reg[7] /SE"
+      1    AU.TC    "/\M_reg_reg[7] /SE"
+      0    AU.TC    "/\H_reg_reg[5] /SE"
+      1    AU.TC    "/\H_reg_reg[5] /SE"
+      0    AU.TC    "/\H_reg_reg[7] /SE"
+      1    AU.TC    "/\H_reg_reg[7] /SE"
+      0    AU.TC    "/\H_reg_reg[6] /SE"
+      1    AU.TC    "/\H_reg_reg[6] /SE"
+      0    AU.TC    "/\H_reg_reg[7] /SI"
+      1    AU.TC    "/\H_reg_reg[7] /SI"
+      0    AU.TC    /g2370__1705/ZN
+      0    EQ       /g2353__5477/A2
+      0    AU.TC    /g2353__5477/ZN
+      1    EQ       /g2353__5477/A3
+      1    EQ       /g2353__5477/A2
+      1    EQ       /g2353__5477/A1
+      1    EQ       /g2353__5477/A4
+      1    EQ       /g2370__1705/ZN
+      1    EQ       /g2370__1705/A1
+      1    EQ       /g2370__1705/A2
+      0    AU.TC    /g2370__1705/A1
+      0    AU.TC    /g2370__1705/A2
+      0    AU.TC    "/\H_reg_reg[5] /SI"
+      1    AU.TC    "/\H_reg_reg[5] /SI"
+      1    AU.TC    /g2353__5477/ZN
+      0    AU.TC    /g2353__5477/A3
+      0    AU.TC    /g2353__5477/A1
+      0    AU.TC    /g2353__5477/A4
+      0    AU.TC    "/\M_reg_reg[7] /SI"
+      1    AU.TC    "/\M_reg_reg[7] /SI"
+      0    AU.TC    /g2273__6260/B
+      1    AU.TC    /g2273__6260/B
+      0    AU.TC    /g2364__8428/ZN
+      0    EQ       /g2348__6161/A1
+      0    AU.TC    /g2348__6161/ZN
+      1    EQ       /g2348__6161/A3
+      1    EQ       /g2348__6161/A1
+      1    EQ       /g2348__6161/A4
+      1    EQ       /g2348__6161/A2
+      1    EQ       /g2364__8428/ZN
+      1    EQ       /g2364__8428/A2
+      1    EQ       /g2364__8428/A1
+      1    EQ       /g2364__8428/A3
+      0    AU.TC    /g2364__8428/A2
+      0    AU.TC    /g2364__8428/A1
+      0    AU.TC    /g2364__8428/A3
+      0    AU.TC    "/\H_reg_reg[1] /SI"
+      1    AU.TC    "/\H_reg_reg[1] /SI"
+      0    AU.TC    /g2368__8246/ZN
+      1    AU.TC    /g2368__8246/ZN
+      0    EQ       /g2368__8246/A1
+      0    EQ       /g2368__8246/A2
+      1    AU.TC    /g2368__8246/A1
+      1    AU.TC    /g2368__8246/A2
+      0    AU.TC    /pm_reg_reg/SI
+      1    AU.TC    /pm_reg_reg/SI
+      0    AU.TC    "/\H_reg_reg[3] /SI"
+      1    AU.TC    "/\H_reg_reg[3] /SI"
+      0    AU.TC    "/\H_reg_reg[2] /SI"
+      1    AU.TC    "/\H_reg_reg[2] /SI"
+      0    AU.TC    /g2362__4319/ZN
+      1    AU.TC    /g2362__4319/ZN
+      1    EQ       /g2362__4319/A2
+      1    EQ       /g2362__4319/A1
+      0    AU.TC    /g2362__4319/A2
+      0    AU.TC    /g2362__4319/A1
+      0    AU.TC    /g2318__9945/B2
+      0    EQ       /g2318__9945/B1
+      1    AU.TC    /g2318__9945/B2
+      1    AU.TC    /g2318__9945/B1
+      0    AU.TC    "/\M_reg_reg[3] /SI"
+      1    AU.TC    "/\M_reg_reg[3] /SI"
+      0    AU.TC    /g2285__2802/B
+      1    AU.TC    /g2285__2802/B
+      0    AU.TC    /g2369__1617/ZN
+      1    AU.TC    /g2369__1617/ZN
+      0    EQ       /g2369__1617/A1
+      0    EQ       /g2369__1617/A2
+      1    AU.TC    /g2369__1617/A1
+      1    AU.TC    /g2369__1617/A2
+      0    AU.TC    /g2365__5526/ZN
+      1    AU.TC    /g2365__5526/ZN
+      0    EQ       /g2365__5526/A3
+      0    EQ       /g2365__5526/A1
+      0    EQ       /g2365__5526/A2
+      0    EQ       /g2365__5526/A4
+      1    AU.TC    /g2365__5526/A3
+      1    AU.TC    /g2365__5526/A1
+      1    AU.TC    /g2365__5526/A2
+      1    AU.TC    /g2365__5526/A4
+      0    AU.TC    /g2371__5122/ZN
+      1    AU.TC    /g2371__5122/ZN
+      1    EQ       /g2371__5122/A2
+      1    EQ       /g2371__5122/A1
+      0    AU.TC    /g2371__5122/A2
+      0    AU.TC    /g2371__5122/A1
+      0    AU.TC    /g2298__5122/B
+      1    AU.TC    /g2298__5122/B
+      0    AU.TC    /g2297__8246/B
+      1    AU.TC    /g2297__8246/B
+      0    AU.TC    /g2366__6783/ZN
+      1    AU.TC    /g2366__6783/ZN
+      1    EQ       /g2366__6783/A3
+      1    EQ       /g2366__6783/A2
+      1    EQ       /g2366__6783/A1
+      0    AU.TC    /g2366__6783/A3
+      0    AU.TC    /g2366__6783/A2
+      0    AU.TC    /g2366__6783/A1
+      0    AU.TC    /g2360__5107/ZN
+      1    AU.TC    /g2360__5107/ZN
+      1    EQ       /g2360__5107/A1
+      1    EQ       /g2360__5107/A2
+      0    AU.TC    /g2360__5107/A1
+      0    AU.TC    /g2360__5107/A2
+      0    AU.TC    /g2310__5107/B
+      1    AU.TC    /g2310__5107/B
+      0    AU.TC    /g2322__2398/B
+      1    AU.TC    /g2322__2398/B
+      0    AU.TC    /g2372__2802/ZN
+      1    AU.TC    /g2372__2802/ZN
+      0    EQ       /g2372__2802/A1
+      0    EQ       /g2372__2802/A2
+      1    AU.TC    /g2372__2802/A1
+      1    AU.TC    /g2372__2802/A2
+      0    AU.TC    /g2351__2398/A
+      1    AU.TC    /g2351__2398/A
+      0    AU.SEQ   /ts_lockup_latchn_clkc1_intno24_i/GN
+      1    AU.SEQ   /ts_lockup_latchn_clkc1_intno24_i/GN
+      0    AU.TC    "/\M_reg_reg[3] /RN"
+      1    AU.TC    "/\M_reg_reg[3] /RN"
+      0    AU.TC    "/\H_reg_reg[2] /SN"
+      1    AU.TC    "/\H_reg_reg[2] /SN"
+      0    AU.TC    "/\H_reg_reg[3] /RN"
+      1    AU.TC    "/\H_reg_reg[3] /RN"
+      0    AU.TC    /pm_reg_reg/RN
+      1    AU.TC    /pm_reg_reg/RN
+      0    AU.TC    "/\H_reg_reg[1] /SN"
+      1    AU.TC    "/\H_reg_reg[1] /SN"
+      0    AU.TC    "/\M_reg_reg[7] /RN"
+      1    AU.TC    "/\M_reg_reg[7] /RN"
+      0    AU.TC    "/\H_reg_reg[5] /RN"
+      1    AU.TC    "/\H_reg_reg[5] /RN"
+      0    AU.TC    "/\H_reg_reg[7] /RN"
+      1    AU.TC    "/\H_reg_reg[7] /RN"
+      0    DS       "/\H_reg_reg[6] /RN"
+      1    DS       "/\H_reg_reg[6] /RN"
+      0    AU.TC    /g2361__6260/ZN
+      1    EQ       /g2361__6260/A1
+      1    EQ       /g2361__6260/A2
+      1    AU.TC    /g2361__6260/ZN
+      0    AU.TC    /g2361__6260/A1
+      0    AU.TC    /g2361__6260/A2
+      0    AU.TC    /g2351__2398/CO
+      0    EQ       /g2339__4733/A
+      1    AU.TC    /g2351__2398/CO
+      1    EQ       /g2339__4733/A
+      0    AU.TC    "/\S_reg_reg[0] /D"
+      0    EQ       /g2351__2398/S
+      1    AU.TC    /g2351__2398/S
+      1    EQ       "/\S_reg_reg[0] /D"
+      0    AU.TC    "/\S_reg_reg[0] /SE"
+      1    AU.TC    "/\S_reg_reg[0] /SE"
+      0    AU.TC    "/\S_reg_reg[1] /SE"
+      1    AU.TC    "/\S_reg_reg[1] /SE"
+      0    AU.TC    "/\S_reg_reg[6] /SE"
+      1    AU.TC    "/\S_reg_reg[6] /SE"
+      0    AU.TC    "/\M_reg_reg[0] /SE"
+      1    AU.TC    "/\M_reg_reg[0] /SE"
+      0    AU.TC    "/\S_reg_reg[4] /SE"
+      1    AU.TC    "/\S_reg_reg[4] /SE"
+      0    AU.TC    "/\S_reg_reg[2] /SE"
+      1    AU.TC    "/\S_reg_reg[2] /SE"
+      0    AU.TC    "/\M_reg_reg[2] /SE"
+      1    AU.TC    "/\M_reg_reg[2] /SE"
+      0    AU.TC    "/\S_reg_reg[3] /SE"
+      1    AU.TC    "/\S_reg_reg[3] /SE"
+      0    AU.TC    "/\H_reg_reg[0] /SE"
+      1    AU.TC    "/\H_reg_reg[0] /SE"
+      0    AU.TC    "/\M_reg_reg[6] /SE"
+      1    AU.TC    "/\M_reg_reg[6] /SE"
+      0    AU.TC    "/\S_reg_reg[7] /SE"
+      1    AU.TC    "/\S_reg_reg[7] /SE"
+      0    AU.TC    "/\M_reg_reg[4] /SE"
+      1    AU.TC    "/\M_reg_reg[4] /SE"
+      0    AU.TC    "/\M_reg_reg[5] /SE"
+      1    AU.TC    "/\M_reg_reg[5] /SE"
+      0    AU.TC    "/\S_reg_reg[5] /SE"
+      1    AU.TC    "/\S_reg_reg[5] /SE"
+      0    AU.TC    "/\M_reg_reg[1] /SE"
+      1    AU.TC    "/\M_reg_reg[1] /SE"
+      0    AU.TC    "/\H_reg_reg[4] /SE"
+      1    AU.TC    "/\H_reg_reg[4] /SE"
+      0    AU.TC    /g2350/ZN
+      1    EQ       /g2350/A
+      0    EQ       /g2347__6131/A1
+      0    AU.TC    /g2347__6131/ZN
+      1    EQ       /g2347__6131/A1
+      1    EQ       /g2347__6131/A3
+      1    EQ       /g2347__6131/A2
+      1    EQ       /g2347__6131/A4
+      1    EQ       /g2350/ZN
+      0    EQ       /g2350/A
+      1    AU.TC    /g2348__6161/ZN
+      0    AU.TC    /g2348__6161/A3
+      0    AU.TC    /g2348__6161/A4
+      0    AU.TC    /g2348__6161/A2
+      0    AU.TC    /g2316__2883/A2
+      0    EQ       /g2316__2883/A1
+      0    EQ       /g2355__1666/ZN
+      1    EQ       /g2355__1666/A2
+      1    EQ       /g2355__1666/A1
+      1    AU.TC    /g2355__1666/ZN
+      1    EQ       /g2316__2883/A2
+      0    AU.TC    /g2355__1666/A2
+      0    AU.TC    /g2355__1666/A1
+      0    AU.TC    /g2316__2883/B2
+      0    EQ       /g2316__2883/B1
+      1    AU.TC    /g2316__2883/B2
+      1    AU.TC    /g2316__2883/B1
+      0    AU.TC    /g2358__6417/ZN
+      1    EQ       /g2358__6417/A3
+      1    EQ       /g2358__6417/A2
+      1    EQ       /g2358__6417/A1
+      1    AU.TC    /g2358__6417/ZN
+      0    AU.TC    /g2358__6417/A3
+      0    AU.TC    /g2358__6417/A2
+      0    AU.TC    /g2358__6417/A1
+      0    AU.TC    /g2354__7410/ZN
+      1    AU.TC    /g2354__7410/ZN
+      1    EQ       /g2354__7410/A1
+      1    EQ       /g2354__7410/A2
+      0    AU.TC    /g2354__7410/A1
+      0    AU.TC    /g2354__7410/A2
+      0    AU.TC    /g2352__2346/ZN
+      0    EQ       /g2307__1881/A2
+      1    AU.TC    /g2307__1881/A2
+      1    EQ       /g2307__1881/A1
+      1    EQ       /g2352__2346/ZN
+      1    EQ       /g2352__2346/A2
+      1    EQ       /g2352__2346/A1
+      0    AU.TC    /g2352__2346/A2
+      0    AU.TC    /g2352__2346/A1
+      1    AU.TC    /g2367__3680/ZN
+      0    AU.TC    /g2367__3680/A2
+      0    AU.TC    /g2367__3680/A1
+      0    AU.TC    "/\S_reg_reg[0] /RN"
+      1    AU.TC    "/\S_reg_reg[0] /RN"
+      0    AU.TC    "/\S_reg_reg[1] /RN"
+      1    AU.TC    "/\S_reg_reg[1] /RN"
+      0    AU.TC    "/\S_reg_reg[6] /RN"
+      1    AU.TC    "/\S_reg_reg[6] /RN"
+      0    AU.TC    "/\M_reg_reg[0] /RN"
+      1    AU.TC    "/\M_reg_reg[0] /RN"
+      0    AU.TC    "/\S_reg_reg[4] /RN"
+      1    AU.TC    "/\S_reg_reg[4] /RN"
+      0    AU.TC    "/\S_reg_reg[2] /RN"
+      1    AU.TC    "/\S_reg_reg[2] /RN"
+      0    AU.TC    "/\M_reg_reg[2] /RN"
+      1    AU.TC    "/\M_reg_reg[2] /RN"
+      0    AU.TC    "/\S_reg_reg[3] /RN"
+      1    AU.TC    "/\S_reg_reg[3] /RN"
+      0    AU.TC    "/\H_reg_reg[0] /RN"
+      1    AU.TC    "/\H_reg_reg[0] /RN"
+      0    AU.TC    "/\M_reg_reg[6] /RN"
+      1    AU.TC    "/\M_reg_reg[6] /RN"
+      0    AU.TC    "/\S_reg_reg[7] /RN"
+      1    AU.TC    "/\S_reg_reg[7] /RN"
+      0    AU.TC    "/\M_reg_reg[4] /RN"
+      1    AU.TC    "/\M_reg_reg[4] /RN"
+      0    AU.TC    "/\M_reg_reg[5] /RN"
+      1    AU.TC    "/\M_reg_reg[5] /RN"
+      0    AU.TC    "/\S_reg_reg[5] /RN"
+      1    AU.TC    "/\S_reg_reg[5] /RN"
+      0    AU.TC    "/\M_reg_reg[1] /RN"
+      1    AU.TC    "/\M_reg_reg[1] /RN"
+      0    AU.TC    "/\H_reg_reg[4] /RN"
+      1    AU.TC    "/\H_reg_reg[4] /RN"
+      0    AU.TC    /g2359/ZN
+      1    EQ       /g2359/A
+      1    AU.TC    /g2359/ZN
+      0    EQ       /g2359/A
+      0    AU.TC    "/\S_reg_reg[1] /D"
+      0    EQ       /g2339__4733/Z
+      1    AU.TC    /g2339__4733/Z
+      1    EQ       "/\S_reg_reg[1] /D"
+      0    AU.TC    /g2339__4733/B
+      1    AU.TC    /g2339__4733/B
+      0    AU.TC    "/\S_reg_reg[0] /SI"
+      1    AU.TC    "/\S_reg_reg[0] /SI"
+      0    AU.TC    "/\S_reg_reg[1] /SI"
+      1    AU.TC    "/\S_reg_reg[1] /SI"
+      0    AU.TC    "/\S_reg_reg[6] /SI"
+      1    AU.TC    "/\S_reg_reg[6] /SI"
+      0    AU.TC    "/\M_reg_reg[0] /SI"
+      1    AU.TC    "/\M_reg_reg[0] /SI"
+      0    AU.TC    "/\S_reg_reg[4] /SI"
+      1    AU.TC    "/\S_reg_reg[4] /SI"
+      0    AU.TC    "/\S_reg_reg[2] /SI"
+      1    AU.TC    "/\S_reg_reg[2] /SI"
+      0    AU.TC    "/\M_reg_reg[2] /SI"
+      1    AU.TC    "/\M_reg_reg[2] /SI"
+      0    AU.TC    "/\S_reg_reg[3] /SI"
+      1    AU.TC    "/\S_reg_reg[3] /SI"
+      0    AU.TC    "/\H_reg_reg[0] /SI"
+      1    AU.TC    "/\H_reg_reg[0] /SI"
+      0    AU.TC    "/\M_reg_reg[6] /SI"
+      1    AU.TC    "/\M_reg_reg[6] /SI"
+      0    AU.TC    "/\S_reg_reg[7] /SI"
+      1    AU.TC    "/\S_reg_reg[7] /SI"
+      0    AU.TC    "/\M_reg_reg[4] /SI"
+      1    AU.TC    "/\M_reg_reg[4] /SI"
+      0    AU.TC    "/\M_reg_reg[5] /SI"
+      1    AU.TC    "/\M_reg_reg[5] /SI"
+      0    AU.TC    "/\S_reg_reg[5] /SI"
+      1    AU.TC    "/\S_reg_reg[5] /SI"
+      0    AU.TC    "/\M_reg_reg[1] /SI"
+      1    AU.TC    "/\M_reg_reg[1] /SI"
+      0    AU.TC    "/\H_reg_reg[4] /SI"
+      1    AU.TC    "/\H_reg_reg[4] /SI"
+      1    AU.TC    /g2347__6131/ZN
+      0    AU.TC    /g2347__6131/A3
+      0    AU.TC    /g2347__6131/A2
+      0    AU.TC    /g2347__6131/A4
+      0    AU.TC    /g2345/ZN
+      1    EQ       /g2345/A
+      1    AU.TC    /g2345/ZN
+      0    EQ       /g2345/A
+      0    AU.TC    /g2325__5477/B2
+      1    AU.TC    /g2325__5477/B2
+      1    EQ       /g2325__5477/B1
+      0    AU.TC    /g2325__5477/B1
+      0    AU.TC    /g2343__7482/ZN
+      1    AU.TC    /g2343__7482/ZN
+      1    EQ       /g2343__7482/A1
+      1    EQ       /g2343__7482/A2
+      0    AU.TC    /g2343__7482/A1
+      0    AU.TC    /g2343__7482/A2
+      0    AU.TC    /g2333__7098/B1
+      1    AU.TC    /g2333__7098/B1
+      1    EQ       /g2333__7098/B2
+      0    AU.TC    /g2333__7098/B2
+      0    AU.TC    /g2332__8246/B1
+      1    AU.TC    /g2332__8246/B1
+      1    EQ       /g2332__8246/B2
+      0    AU.TC    /g2332__8246/B2
+      0    AU.TC    /g2342__5115/ZN
+      0    EQ       /g2304__7098/A2
+      1    AU.TC    /g2304__7098/A2
+      1    EQ       /g2304__7098/A1
+      1    EQ       /g2342__5115/ZN
+      1    EQ       /g2342__5115/A2
+      1    EQ       /g2342__5115/A1
+      0    AU.TC    /g2342__5115/A2
+      0    AU.TC    /g2342__5115/A1
+      0    AU.TC    /g2328__6260/B2
+      0    EQ       /g2328__6260/B1
+      1    AU.TC    /g2328__6260/B2
+      1    AU.TC    /g2328__6260/B1
+      0    AU.TC    /g2363/ZN
+      1    EQ       /g2363/A
+      1    AU.TC    /g2363/ZN
+      0    EQ       /g2363/A
+      0    AU.TC    /g2322__2398/A
+      0    EQ       /g2357__9945/ZN
+      0    EQ       /g2357__9945/A3
+      0    EQ       /g2357__9945/A1
+      0    EQ       /g2357__9945/A2
+      0    EQ       /g2357__9945/A4
+      1    AU.TC    /g2322__2398/A
+      1    EQ       /g2357__9945/ZN
+      1    AU.TC    /g2357__9945/A3
+      1    AU.TC    /g2357__9945/A1
+      1    AU.TC    /g2357__9945/A2
+      1    AU.TC    /g2357__9945/A4
+      0    AU.TC    /g2349__2883/ZN
+      1    EQ       /g2349__2883/A3
+      1    EQ       /g2349__2883/A2
+      1    EQ       /g2349__2883/A1
+      1    AU.TC    /g2349__2883/ZN
+      0    AU.TC    /g2349__2883/A3
+      0    AU.TC    /g2349__2883/A2
+      0    AU.TC    /g2349__2883/A1
+      0    AU.TC    /g2324__6417/B1
+      0    EQ       /g2324__6417/B2
+      1    AU.TC    /g2324__6417/B1
+      1    AU.TC    /g2324__6417/B2
+      0    AU.TC    /g2335__1617/ZN
+      1    AU.TC    /g2335__1617/ZN
+      0    EQ       /g2335__1617/A1
+      0    EQ       /g2335__1617/A2
+      1    AU.TC    /g2335__1617/A1
+      1    AU.TC    /g2335__1617/A2
+      0    AU.TC    /g2323__6783/B2
+      0    EQ       /g2323__6783/B1
+      1    AU.TC    /g2323__6783/B2
+      1    AU.TC    /g2323__6783/B1
+      0    AU.TC    /g2340__1705/ZN
+      1    EQ       /g2340__1705/A2
+      1    EQ       /g2340__1705/A3
+      1    EQ       /g2340__1705/A1
+      0    EQ       /g2324__6417/A
+      1    AU.TC    /g2321/ZN
+      0    EQ       /g2321/A
+      0    EQ       /g2324__6417/ZN
+      1    EQ       /g2324__6417/A
+      1    EQ       /g2340__1705/ZN
+      1    EQ       "/\S_reg_reg[2] /D"
+      0    AU.TC    /g2340__1705/A2
+      0    AU.TC    /g2340__1705/A3
+      0    AU.TC    /g2340__1705/A1
+      0    AU.TC    /g2337__2802/ZN
+      1    EQ       /g2337__2802/A2
+      1    EQ       /g2337__2802/A3
+      1    EQ       /g2337__2802/A1
+      0    EQ       /g2317__1666/A
+      1    AU.TC    /g2315/ZN
+      0    EQ       /g2315/A
+      0    EQ       /g2317__1666/ZN
+      1    EQ       /g2317__1666/A
+      1    EQ       /g2337__2802/ZN
+      1    EQ       "/\S_reg_reg[4] /D"
+      0    AU.TC    /g2337__2802/A2
+      0    AU.TC    /g2337__2802/A3
+      0    AU.TC    /g2337__2802/A1
+      0    AU.TC    /g2338__5526/ZN
+      1    EQ       /g2338__5526/A3
+      1    EQ       /g2338__5526/A2
+      1    EQ       /g2338__5526/A4
+      1    EQ       /g2338__5526/A1
+      0    EQ       /g2311__6161/A
+      1    AU.TC    /g2309/ZN
+      0    EQ       /g2309/A
+      0    EQ       /g2311__6161/ZN
+      1    EQ       /g2311__6161/A
+      1    EQ       /g2338__5526/ZN
+      1    EQ       "/\S_reg_reg[3] /D"
+      0    AU.TC    /g2338__5526/A3
+      0    AU.TC    /g2338__5526/A2
+      0    AU.TC    /g2338__5526/A4
+      0    AU.TC    /g2338__5526/A1
+      0    AU.TC    /g2333__7098/ZN
+      1    AU.TC    /g2333__7098/ZN
+      0    EQ       /g2333__7098/A
+      1    AU.TC    /g2333__7098/A
+      0    AU.TC    /g2311__6161/B1
+      0    EQ       /g2311__6161/B2
+      0    EQ       /g2332__8246/ZN
+      1    AU.TC    /g2332__8246/ZN
+      0    EQ       /g2332__8246/A
+      1    EQ       /g2311__6161/B1
+      1    AU.TC    /g2332__8246/A
+      0    AU.TC    /g2304__7098/A1
+      0    AU.TC    /g2356__9315/ZN
+      0    EQ       /g2306__6131/B2
+      1    AU.TC    /g2306__6131/B2
+      1    EQ       /g2306__6131/B1
+      1    EQ       /g2356__9315/ZN
+      1    EQ       /g2356__9315/A2
+      1    EQ       /g2356__9315/A1
+      1    EQ       /g2356__9315/A3
+      0    AU.TC    /g2356__9315/A2
+      0    AU.TC    /g2356__9315/A1
+      0    AU.TC    /g2356__9315/A3
+      0    AU.TC    /g2346/ZN
+      1    EQ       /g2346/A
+      1    AU.TC    /g2346/ZN
+      0    EQ       /g2346/A
+      0    AU.TC    /g2336__1881/ZN
+      1    AU.TC    /g2336__1881/ZN
+      0    EQ       /g2336__1881/A1
+      0    EQ       /g2336__1881/A2
+      1    AU.TC    /g2336__1881/A1
+      1    AU.TC    /g2336__1881/A2
+      0    AU.TC    /g2310__5107/A
+      1    AU.TC    /g2310__5107/A
+      0    AU.TC    "/\S_reg_reg[2] /D"
+      0    EQ       /g2321/ZN
+      1    EQ       /g2321/A
+      1    EQ       /g2324__6417/ZN
+      0    AU.TC    /g2320__2346/A1
+      1    AU.TC    /g2320__2346/A1
+      1    EQ       /g2320__2346/A2
+      0    AU.TC    /g2320__2346/A2
+      0    AU.TC    /g2327__4733/ZN
+      1    EQ       /g2327__4733/A4
+      1    EQ       /g2327__4733/A3
+      1    EQ       /g2327__4733/A1
+      1    EQ       /g2327__4733/A2
+      0    EQ       /g2305__1705/A
+      1    AU.TC    /g2303/ZN
+      0    EQ       /g2303/A
+      0    EQ       /g2305__1705/ZN
+      1    EQ       /g2305__1705/A
+      1    EQ       /g2327__4733/ZN
+      1    EQ       "/\M_reg_reg[3] /D"
+      0    AU.TC    /g2327__4733/A4
+      0    AU.TC    /g2327__4733/A3
+      0    AU.TC    /g2327__4733/A1
+      0    AU.TC    /g2327__4733/A2
+      0    AU.TC    /g2307__1881/A1
+      0    AU.TC    /g2323__6783/ZN
+      1    EQ       /g2323__6783/A
+      0    EQ       /g2307__1881/B1
+      1    AU.TC    /g2307__1881/B1
+      1    EQ       /g2307__1881/B2
+      1    EQ       /g2323__6783/ZN
+      0    AU.TC    /g2323__6783/A
+      0    AU.TC    /g2319__7410/B1
+      1    AU.TC    /g2319__7410/B1
+      1    EQ       /g2319__7410/B2
+      0    AU.TC    /g2319__7410/B2
+      0    AU.TC    /g2317__1666/B1
+      0    EQ       /g2317__1666/B2
+      1    AU.TC    /g2317__1666/B1
+      1    AU.TC    /g2317__1666/B2
+      1    AU.TC    /g2311__6161/B2
+      0    AU.TC    /g2306__6131/B1
+      0    AU.TC    /g2322__2398/CO
+      0    EQ       /g2308__5115/A
+      1    AU.TC    /g2322__2398/CO
+      1    EQ       /g2308__5115/A
+      0    AU.TC    "/\S_reg_reg[6] /D"
+      0    EQ       /g2322__2398/S
+      1    AU.TC    /g2322__2398/S
+      1    EQ       "/\S_reg_reg[6] /D"
+      0    AU.TC    /g2298__5122/A
+      0    EQ       /g2341__5122/ZN
+      1    EQ       /g2341__5122/A1
+      1    EQ       /g2341__5122/A3
+      1    EQ       /g2341__5122/A2
+      1    AU.TC    /g2298__5122/A
+      1    EQ       /g2341__5122/ZN
+      0    AU.TC    /g2341__5122/A1
+      0    AU.TC    /g2341__5122/A3
+      0    AU.TC    /g2341__5122/A2
+      0    AU.TC    /g2334__3680/ZN
+      1    EQ       /g2334__3680/A1
+      1    EQ       /g2334__3680/A2
+      1    AU.TC    /g2334__3680/ZN
+      0    AU.TC    /g2334__3680/A1
+      0    AU.TC    /g2334__3680/A2
+      0    AU.TC    /g2328__6260/ZN
+      1    EQ       /g2328__6260/A
+      0    EQ       /g2304__7098/B1
+      1    AU.TC    /g2304__7098/B1
+      1    EQ       /g2304__7098/B2
+      1    EQ       /g2328__6260/ZN
+      0    AU.TC    /g2328__6260/A
+      0    AU.TC    /g2331/ZN
+      1    EQ       /g2331/A
+      1    AU.TC    /g2331/ZN
+      0    EQ       /g2331/A
+      0    AU.TC    /g2285__2802/A
+      0    EQ       /g2330__8428/ZN
+      1    EQ       /g2330__8428/A3
+      1    EQ       /g2330__8428/A2
+      1    EQ       /g2330__8428/A1
+      1    AU.TC    /g2285__2802/A
+      1    EQ       /g2330__8428/ZN
+      0    AU.TC    /g2330__8428/A3
+      0    AU.TC    /g2330__8428/A2
+      0    AU.TC    /g2330__8428/A1
+      0    AU.TC    /g2329__4319/ZN
+      1    EQ       /g2329__4319/A3
+      1    EQ       /g2329__4319/A2
+      1    EQ       /g2329__4319/A1
+      1    AU.TC    /g2329__4319/ZN
+      0    AU.TC    /g2329__4319/A3
+      0    AU.TC    /g2329__4319/A2
+      0    AU.TC    /g2329__4319/A1
+      0    AU.TC    /g2310__5107/CO
+      0    EQ       /g2294__7482/B
+      1    AU.TC    /g2310__5107/CO
+      1    EQ       /g2294__7482/B
+      0    AU.TC    "/\M_reg_reg[0] /D"
+      0    EQ       /g2310__5107/S
+      1    AU.TC    /g2310__5107/S
+      1    EQ       "/\M_reg_reg[0] /D"
+      0    AU.TC    /g2307__1881/B2
+      1    AU.TC    /g2306__6131/ZN
+      0    EQ       /g2306__6131/A
+      0    EQ       /g2319__7410/ZN
+      1    EQ       "/\S_reg_reg[5] /D"
+      1    AU.TC    /g2319__7410/ZN
+      0    EQ       /g2319__7410/A
+      1    EQ       /g2306__6131/A
+      1    AU.TC    /g2319__7410/A
+      0    AU.TC    "/\S_reg_reg[4] /D"
+      0    EQ       /g2315/ZN
+      1    EQ       /g2315/A
+      1    EQ       /g2317__1666/ZN
+      0    AU.TC    "/\S_reg_reg[3] /D"
+      0    EQ       /g2309/ZN
+      1    EQ       /g2309/A
+      1    EQ       /g2311__6161/ZN
+      0    AU.TC    "/\S_reg_reg[5] /D"
+      0    EQ       /g2306__6131/ZN
+      0    AU.TC    "/\S_reg_reg[7] /D"
+      0    EQ       /g2308__5115/Z
+      1    AU.TC    /g2308__5115/Z
+      1    EQ       "/\S_reg_reg[7] /D"
+      0    AU.TC    /g2308__5115/B
+      1    AU.TC    /g2308__5115/B
+      0    AU.TC    /g2305__1705/B1
+      0    EQ       /g2305__1705/B2
+      0    EQ       /g2325__5477/ZN
+      1    AU.TC    /g2325__5477/ZN
+      0    EQ       /g2325__5477/A
+      1    EQ       /g2305__1705/B1
+      1    AU.TC    /g2325__5477/A
+      0    AU.TC    /g2320__2346/B2
+      1    AU.TC    /g2320__2346/B2
+      1    EQ       /g2320__2346/B1
+      0    AU.TC    /g2320__2346/B1
+      0    AU.TC    /g2304__7098/B2
+      1    AU.TC    /g2316__2883/A1
+      0    AU.TC    /g2297__8246/A
+      1    AU.TC    /g2297__8246/A
+      0    AU.TC    /g2293__1617/B2
+      1    AU.TC    /g2293__1617/B2
+      1    EQ       /g2293__1617/B1
+      0    AU.TC    /g2293__1617/B1
+      0    AU.TC    /g2292__3680/B2
+      1    AU.TC    /g2292__3680/B2
+      1    EQ       /g2292__3680/B1
+      0    AU.TC    /g2292__3680/B1
+      0    AU.TC    /g2318__9945/ZN
+      1    EQ       /g2318__9945/A
+      0    EQ       /g2292__3680/A1
+      1    AU.TC    /g2292__3680/A2
+      1    EQ       /g2292__3680/A1
+      1    EQ       /g2318__9945/ZN
+      0    AU.TC    /g2318__9945/A
+      0    AU.TC    /g2312__9315/ZN
+      0    EQ       /g2291__6783/A
+      1    AU.TC    /g2312__9315/ZN
+      0    EQ       /g2312__9315/A2
+      0    EQ       /g2312__9315/A1
+      1    EQ       /g2291__6783/A
+      1    AU.TC    /g2312__9315/A2
+      1    AU.TC    /g2312__9315/A1
+      0    AU.TC    "/\M_reg_reg[1] /D"
+      0    EQ       /g2294__7482/Z
+      1    AU.TC    /g2294__7482/Z
+      1    EQ       "/\M_reg_reg[1] /D"
+      0    AU.TC    /g2294__7482/A
+      1    AU.TC    /g2294__7482/A
+      0    AU.TC    "/\M_reg_reg[4] /D"
+      0    EQ       /g2307__1881/ZN
+      1    AU.TC    /g2307__1881/ZN
+      1    EQ       "/\M_reg_reg[4] /D"
+      0    AU.TC    /g2298__5122/CO
+      0    EQ       /g2281__4319/B
+      1    AU.TC    /g2298__5122/CO
+      1    EQ       /g2281__4319/B
+      0    AU.TC    "/\M_reg_reg[6] /D"
+      0    EQ       /g2298__5122/S
+      1    AU.TC    /g2298__5122/S
+      1    EQ       "/\M_reg_reg[6] /D"
+      1    AU.TC    /g2305__1705/B2
+      0    AU.TC    "/\M_reg_reg[2] /D"
+      0    EQ       /g2320__2346/ZN
+      1    AU.TC    /g2320__2346/ZN
+      1    EQ       "/\M_reg_reg[2] /D"
+      0    AU.TC    "/\M_reg_reg[5] /D"
+      0    EQ       /g2304__7098/ZN
+      1    AU.TC    /g2304__7098/ZN
+      1    EQ       "/\M_reg_reg[5] /D"
+      0    AU.TC    /g2316__2883/ZN
+      0    EQ       /g2293__1617/A1
+      1    AU.TC    /g2293__1617/A2
+      1    EQ       /g2293__1617/A1
+      1    EQ       /g2316__2883/ZN
+      0    AU.TC    /g2297__8246/CO
+      0    EQ       /g2282__8428/B
+      1    AU.TC    /g2297__8246/CO
+      1    EQ       /g2282__8428/B
+      0    AU.TC    "/\H_reg_reg[0] /D"
+      0    EQ       /g2297__8246/S
+      1    AU.TC    /g2297__8246/S
+      1    EQ       "/\H_reg_reg[0] /D"
+      0    AU.TC    /g2285__2802/CO
+      1    AU.TC    /g2285__2802/CO
+      0    AU.TC    "/\H_reg_reg[4] /D"
+      0    EQ       /g2285__2802/S
+      1    AU.TC    /g2285__2802/S
+      1    EQ       "/\H_reg_reg[4] /D"
+      0    AU.TC    /g2292__3680/A2
+      0    AU.TC    /pm_reg_reg/D
+      0    EQ       /g2291__6783/ZN
+      1    AU.TC    /g2291__6783/ZN
+      1    EQ       /pm_reg_reg/D
+      0    AU.TC    /g2291__6783/B
+      1    AU.TC    /g2291__6783/B
+      0    AU.TC    "/\M_reg_reg[7] /D"
+      0    EQ       /g2281__4319/Z
+      1    AU.TC    /g2281__4319/Z
+      1    EQ       "/\M_reg_reg[7] /D"
+      0    AU.TC    /g2281__4319/A
+      1    AU.TC    /g2281__4319/A
+      0    AU.TC    "/\M_reg_reg[3] /D"
+      0    EQ       /g2303/ZN
+      1    EQ       /g2303/A
+      1    EQ       /g2305__1705/ZN
+      0    AU.TC    /g2293__1617/A2
+      0    AU.TC    "/\H_reg_reg[1] /D"
+      0    EQ       /g2282__8428/Z
+      1    AU.TC    /g2282__8428/Z
+      1    EQ       "/\H_reg_reg[1] /D"
+      0    AU.TC    /g2282__8428/A
+      1    AU.TC    /g2282__8428/A
+      0    AU.TC    /g2283__5526/ZN
+      0    EQ       /g2274__5107/A
+      1    AU.TC    /g2283__5526/ZN
+      0    EQ       /g2283__5526/A1
+      0    EQ       /g2283__5526/A3
+      0    EQ       /g2283__5526/A2
+      1    EQ       /g2274__5107/A
+      1    AU.TC    /g2283__5526/A1
+      1    AU.TC    /g2283__5526/A3
+      1    AU.TC    /g2283__5526/A2
+      0    AU.TC    /g2273__6260/A
+      1    AU.TC    /g2273__6260/A
+      0    AU.TC    "/\H_reg_reg[2] /D"
+      0    EQ       /g2292__3680/ZN
+      1    AU.TC    /g2292__3680/ZN
+      1    EQ       "/\H_reg_reg[2] /D"
+      0    AU.TC    "/\H_reg_reg[3] /D"
+      0    EQ       /g2293__1617/ZN
+      1    AU.TC    /g2293__1617/ZN
+      1    EQ       "/\H_reg_reg[3] /D"
+      0    AU.TC    "/\H_reg_reg[7] /D"
+      0    EQ       /g2274__5107/ZN
+      1    AU.TC    /g2274__5107/ZN
+      1    EQ       "/\H_reg_reg[7] /D"
+      0    AU.TC    /g2274__5107/B
+      1    AU.TC    /g2274__5107/B
+      0    AU.TC    /g2273__6260/CO
+      0    EQ       /g2270__2398/B
+      1    AU.TC    /g2273__6260/CO
+      1    EQ       /g2270__2398/B
+      0    AU.TC    "/\H_reg_reg[5] /D"
+      0    EQ       /g2273__6260/S
+      1    AU.TC    /g2273__6260/S
+      1    EQ       "/\H_reg_reg[5] /D"
+      0    AU.TC    "/\H_reg_reg[6] /D"
+      0    EQ       /g2270__2398/Z
+      1    AU.TC    /g2270__2398/Z
+      1    EQ       "/\H_reg_reg[6] /D"
+      0    AU.TC    /g2270__2398/A
+      1    AU.TC    /g2270__2398/A
+      0    DI.CLK   "/\H_reg_reg[6] /CK"
+      1    AU.TC    "/\H_reg_reg[6] /CK"
+      0    AU.TC    "/\H_reg_reg[7] /CK"
+      1    AU.TC    "/\H_reg_reg[7] /CK"
+      0    AU.TC    "/\H_reg_reg[5] /CK"
+      1    AU.TC    "/\H_reg_reg[5] /CK"
+      0    AU.TC    "/\M_reg_reg[7] /CK"
+      1    AU.TC    "/\M_reg_reg[7] /CK"
+      0    AU.TC    "/\H_reg_reg[1] /CK"
+      1    AU.TC    "/\H_reg_reg[1] /CK"
+      0    AU.TC    /pm_reg_reg/CK
+      1    AU.TC    /pm_reg_reg/CK
+      0    AU.TC    "/\H_reg_reg[3] /CK"
+      1    AU.TC    "/\H_reg_reg[3] /CK"
+      0    AU.TC    "/\H_reg_reg[2] /CK"
+      1    AU.TC    "/\H_reg_reg[2] /CK"
+      0    AU.TC    "/\M_reg_reg[3] /CK"
+      1    AU.TC    "/\M_reg_reg[3] /CK"
+      0    AU.TC    "/\H_reg_reg[4] /CK"
+      1    AU.TC    "/\H_reg_reg[4] /CK"
+      0    AU.TC    "/\M_reg_reg[1] /CK"
+      1    AU.TC    "/\M_reg_reg[1] /CK"
+      0    AU.TC    "/\S_reg_reg[5] /CK"
+      1    AU.TC    "/\S_reg_reg[5] /CK"
+      0    AU.TC    "/\M_reg_reg[5] /CK"
+      1    AU.TC    "/\M_reg_reg[5] /CK"
+      0    AU.TC    "/\M_reg_reg[4] /CK"
+      1    AU.TC    "/\M_reg_reg[4] /CK"
+      0    AU.TC    "/\S_reg_reg[7] /CK"
+      1    AU.TC    "/\S_reg_reg[7] /CK"
+      0    AU.TC    "/\M_reg_reg[6] /CK"
+      1    AU.TC    "/\M_reg_reg[6] /CK"
+      0    AU.TC    "/\H_reg_reg[0] /CK"
+      1    AU.TC    "/\H_reg_reg[0] /CK"
+      0    AU.TC    "/\S_reg_reg[3] /CK"
+      1    AU.TC    "/\S_reg_reg[3] /CK"
+      0    AU.TC    "/\M_reg_reg[2] /CK"
+      1    AU.TC    "/\M_reg_reg[2] /CK"
+      0    AU.TC    "/\S_reg_reg[2] /CK"
+      1    AU.TC    "/\S_reg_reg[2] /CK"
+      0    AU.TC    "/\S_reg_reg[4] /CK"
+      1    AU.TC    "/\S_reg_reg[4] /CK"
+      0    AU.TC    "/\M_reg_reg[0] /CK"
+      1    AU.TC    "/\M_reg_reg[0] /CK"
+      0    AU.TC    "/\S_reg_reg[6] /CK"
+      1    AU.TC    "/\S_reg_reg[6] /CK"
+      0    AU.TC    "/\S_reg_reg[1] /CK"
+      1    AU.TC    "/\S_reg_reg[1] /CK"
+      0    UO.UNS   "/\S_reg_reg[0] /CK"
+      1    AU.TC    "/\S_reg_reg[0] /CK"
+      0    AU.SEQ   /scan_out_0
+      0    EQ       /ts_lockup_latchn_clkc1_intno24_i/Q
+      1    DS       /scan_out_0
+      1    EQ       /ts_lockup_latchn_clkc1_intno24_i/Q
+      0    AU.TC    /ts_lockup_latchn_clkc1_intno24_i/D
+      1    DS       /ts_lockup_latchn_clkc1_intno24_i/D
+      0    AU.TC    /pm
+      1    DS       /pm
+      0    AU.TC    /hh[7]
+      1    DS       /hh[7]
+      0    DS       /hh[6]
+      1    DS       /hh[6]
+      0    AU.TC    /hh[5]
+      1    DS       /hh[5]
+      0    AU.TC    /hh[4]
+      1    DS       /hh[4]
+      0    AU.TC    /hh[3]
+      1    DS       /hh[3]
+      0    AU.TC    /hh[2]
+      1    DS       /hh[2]
+      0    AU.TC    /hh[1]
+      1    DS       /hh[1]
+      0    AU.TC    /hh[0]
+      1    DS       /hh[0]
+      0    AU.TC    /mm[7]
+      1    DS       /mm[7]
+      0    AU.TC    /mm[6]
+      1    DS       /mm[6]
+      0    AU.TC    /mm[5]
+      1    DS       /mm[5]
+      0    AU.TC    /mm[4]
+      1    DS       /mm[4]
+      0    AU.TC    /mm[3]
+      1    DS       /mm[3]
+      0    AU.TC    /mm[2]
+      1    DS       /mm[2]
+      0    AU.TC    /mm[1]
+      1    DS       /mm[1]
+      0    AU.TC    /mm[0]
+      1    DS       /mm[0]
+      0    AU.TC    /ss[7]
+      1    DS       /ss[7]
+      0    AU.TC    /ss[6]
+      1    DS       /ss[6]
+      0    AU.TC    /ss[5]
+      1    DS       /ss[5]
+      0    AU.TC    /ss[4]
+      1    DS       /ss[4]
+      0    AU.TC    /ss[3]
+      1    DS       /ss[3]
+      0    AU.TC    /ss[2]
+      1    DS       /ss[2]
+      0    AU.TC    /ss[1]
+      1    DS       /ss[1]
+      0    AU.TC    /ss[0]
+      1    DS       /ss[0]
+//  command: report_statistics 
+                     Statistics Report                     
+                      Stuck-at Faults                      
+-----------------------------------------------------------
+Fault Classes                               #faults        
+                                            (total)        
+---------------------------------  ------------------------
+  FU (full)                                   998          
+  -------------------------------  ------------------------
+  UO (unobserved)                           1      ( 0.10%)
+  DS (det_simulation)                      71      ( 7.11%)
+  DI (det_implication)                      1      ( 0.10%)
+  PT (posdet_testable)                      1      ( 0.10%)
+  UU (unused)                              32      ( 3.21%)
+  AU (atpg_untestable)                    892      (89.38%)
+-----------------------------------------------------------
+Fault Sub-classes                                          
+  -------------------------------                          
+  AU (atpg_untestable)                                     
+    TC*   (tied_cells)                    887      (88.88%)
+    SEQ   (sequential_depth)                5      ( 0.50%)
+  UC+UO                                                    
+    UNS   (unsuccess)                       1      ( 0.10%)
+  *Use "report_statistics -detailed_analysis" for details. 
+-----------------------------------------------------------
+Coverage                                                   
+  -------------------------------                          
+  test_coverage                                      7.51% 
+  fault_coverage                                     7.26% 
+  atpg_effectiveness                                99.80% 
+-----------------------------------------------------------
+#test_patterns                                           4 
+  #basic_patterns                                        1 
+  #clock_sequential_patterns                             3 
+#simulated_patterns                                      6 
+CPU_time (secs)                                     1340.6 
+-----------------------------------------------------------
+
+//  command: report_statistics -detailed_analysis
+               Statistics Report              
+                Stuck-at Faults               
+----------------------------------------------
+Fault Classes                       #faults   
+                                    (total)   
+------------------------------  --------------
+  FU (full)                           998     
+  ----------------------------  --------------
+  UO (unobserved)                   1 ( 0.10%)
+  DS (det_simulation)              71 ( 7.11%)
+  DI (det_implication)              1 ( 0.10%)
+  PT (posdet_testable)              1 ( 0.10%)
+  UU (unused)                      32 ( 3.21%)
+  AU (atpg_untestable)            892 (89.38%)
+----------------------------------------------
+Fault Sub-classes                             
+  ----------------------------                
+  DI (det_implication)                        
+    CLK   (clock)                   1 ( 0.10%)
+  AU (atpg_untestable)                        
+    TC    (tied_cells)            887 (88.88%)
+      /\S_reg_reg[0]  (364) TX    319 (31.96%)
+      /\H_reg_reg[0]  (356) TX     62 ( 6.21%)
+      /\S_reg_reg[4]  (360) TX     33 ( 3.31%)
+      /\S_reg_reg[2]  (359) TX     31 ( 3.11%)
+      /\M_reg_reg[0]  (361) TX     31 ( 3.11%)
+      /\H_reg_reg[2]  (347) TX     30 ( 3.01%)
+      /\H_reg_reg[3]  (346) TX     28 ( 2.81%)
+      /\M_reg_reg[3]  (348) TX     24 ( 2.40%)
+      /\S_reg_reg[3]  (357) TX     24 ( 2.40%)
+      /\S_reg_reg[5]  (351) TX     22 ( 2.20%)
+      /\M_reg_reg[2]  (358) TX     21 ( 2.10%)
+      /\S_reg_reg[6]  (362) TX     21 ( 2.10%)
+      /\M_reg_reg[5]  (352) TX     20 ( 2.00%)
+      /\M_reg_reg[4]  (353) TX     20 ( 2.00%)
+      /\H_reg_reg[5]  (342) TX     19 ( 1.90%)
+      /\H_reg_reg[4]  (349) TX     19 ( 1.90%)
+      /\H_reg_reg[7]  (341) TX     18 ( 1.80%)
+      /\S_reg_reg[1]  (363) TX     18 ( 1.80%)
+      /\M_reg_reg[6]  (355) TX     18 ( 1.80%)
+      /\S_reg_reg[7]  (354) TX     18 ( 1.80%)
+      /\M_reg_reg[1]  (350) TX     18 ( 1.80%)
+      /pm_reg_reg (345) TX         18 ( 1.80%)
+      /\H_reg_reg[1]  (344) TX     18 ( 1.80%)
+      /\M_reg_reg[7]  (343) TX     18 ( 1.80%)
+      /\H_reg_reg[6]  (340) TX     11 ( 1.10%)
+      (Combined tied cells)         8 ( 0.80%)
+    SEQ   (sequential_depth)        5 ( 0.50%)
+  UC+UO                                       
+    UNS   (unsuccess)               1 ( 0.10%)
+----------------------------------------------
+Coverage                                      
+  ----------------------------                
+  test_coverage                         7.51% 
+  fault_coverage                        7.26% 
+  atpg_effectiveness                   99.80% 
+----------------------------------------------
+#test_patterns                              4 
+  #basic_patterns                           1 
+  #clock_sequential_patterns                3 
+#simulated_patterns                         6 
+CPU_time (secs)                        1383.4 
+----------------------------------------------
+
+//  command: write_patterns clock.ascii -ascii -parallel -replace
+//  command: write_patterns clock.v -verilog  -parallel -replace
+//  command: write_patterns clock_serial.ascii -ascii -serial -replace
+//  Error: ASCII patterns cannot be saved in serial form.  
+//  command: write_patterns clock_serial.v -verilog -serial -replace
+//  command: open_visualizer 
+//  Note: Generating flat model helper data for visualization purposes... done.
+//  Note: Grouping DRC violations for visualization purposes... done.
+//  Note: Tessent Visualizer client successfully started and connected to the server.
+//  command: report_faults > ../output/clock_atpg_faults
+//  command: report_statistics -detailed_analysis > ../output/clock_atpg_statastics
+//  command: incr
+//  Error: wrong # args: should be "incr varName ?increment?"
+//  command: set_system_mode insertion
+//  Error: The system mode insertion is not available in the current context.
+//         It is available in the following contexts: dft.
+//  command: help set_system_mode
+Usage:  set_system_mode  {setup | analysis} [ -Force ]
+//  command: help 
+add_atpg_constraints
+add_atpg_functions
+add_bist_capture_range
+add_cell_constraints
+add_chain_masks
+add_config_element
+add_config_message
+add_config_tab
+add_design_partition
+add_drc_violation
+add_false_paths
+add_fault_sites
+add_faults
+add_gate_to_rtl_mapping
+add_iddq_exceptions
+add_input_constraints
+add_lists
+add_misrs
+add_nofaults
+add_output_masks
+add_processors
+add_rtl_to_gates_mapping
+add_schematic_callout
+add_schematic_connections
+add_schematic_objects
+add_schematic_path
+add_simulation_context
+add_simulation_forces
+add_tcl_variables_to_flat_model
+add_to_collection
+add_wave_generator_pins
+analyze_atpg_constraints
+analyze_bus
+analyze_compression
+analyze_control_signals
+analyze_drc_violation
+analyze_fault
+analyze_graybox
+analyze_restrictions
+analyze_simulation_mismatches
+append_to_collection
+apply_specification_defaults
+b
+catch_output
+check_synthesis
+check_testbench_simulations
+close_layout
+close_tsdb
+close_visualizer
+compare_collections
+compress_patterns
+convert_design_path_format
+copy_collection
+copy_simulation_context
+create layout
+create_capture_procedures
+create_feature_statistics
+create_initialization_patterns
+create_layout
+create_patterns
+create_patterns_specification
+create_reversible_patterns
+defer_schematic_updates
+delete_atpg_constraints
+delete_atpg_functions
+delete_bist_capture_ranges
+delete_capture_procedures
+delete_cell_constraints
+delete_chain_masks
+delete_config_element
+delete_config_messages
+delete_config_tabs
+delete_design_partitions
+delete_false_paths
+delete_fault_sites
+delete_faults
+delete_gate_to_rtl_mapping
+delete_iddq_exceptions
+delete_input_constraints
+delete_lists
+delete_misrs
+delete_multicycle_paths
+delete_output_masks
+delete_patterns
+delete_processors
+delete_rtl_to_gates_mapping
+delete_schematic_callout
+delete_schematic_objects
+delete_schematic_path
+delete_simulation_contexts
+delete_simulation_forces
+delete_wave_generator_pins
+display_diagnosis_report
+display_message
+display_specification
+dofile
+echo
+elaborate_icl_modules
+exit
+expand_compressed_patterns
+extract_icl
+f
+filter_collection
+find_design_names
+foreach_in_collection
+format_dictionary
+get_attribute_list
+get_attribute_option
+get_attribute_value_list
+get_attributed_objects
+get_auxiliary_pins
+get_boundary_scan_port_option
+get_bundle_objects
+get_burnin_option
+get_capture_timing_option
+get_clock_option
+get_clocks
+get_common_parent_instance
+get_config_elements
+get_config_messages
+get_config_value
+get_context
+get_current_design
+get_current_mode
+get_current_physical_block
+get_current_silicon_insight_setup
+get_current_simulation_context
+get_default_ssn_datapath_configuration
+get_defaults_value
+get_design_level
+get_design_objects
+get_design_sources
+get_dft_info_dictionary
+get_dft_signal
+get_dft_specification_requirement
+get_dot10_cmd_vector_list
+get_drc_handling
+get_fanins
+get_fanouts
+get_fault_type
+get_flat_model_option
+get_gate_pins
+get_icl_extraction_options
+get_icl_fanins_in_module
+get_icl_fanouts_in_module
+get_icl_instances
+get_icl_modules
+get_icl_objects
+get_icl_pins
+get_icl_ports
+get_icl_scan_interface_chain_list
+get_icl_scan_interface_list
+get_icl_scan_interface_port_list
+get_icl_ssn_datapath_list
+get_icl_ssn_datapath_ports
+get_ijtag_instance_option
+get_ijtag_instances
+get_ijtag_retargeting_options
+get_input_constraints
+get_insertion_option
+get_instances
+get_instrument_dictionary
+get_license_queue_timeout
+get_load_unload_timing_option
+get_loadboard_loopback_option
+get_logfile
+get_lvx_option
+get_master_module_name
+get_memory_instance_option
+get_memory_instances
+get_module_matching_options
+get_modules
+get_multiprocessing_option
+get_name_list
+get_net_name_list
+get_nets
+get_open_pattern_set
+get_pattern_cycle_count
+get_pattern_set_data
+get_pattern_set_option
+get_pin_name_list
+get_pins
+get_port_name_list
+get_ports
+get_procfile_name
+get_read_verilog_option
+get_resource
+get_run_synthesis_options
+get_scan_chain_option
+get_scratch_directory
+get_simulation_context_list
+get_simulation_library_sources
+get_simulation_option
+get_simulation_value_list
+get_single_attribute_value
+get_single_name
+get_ssn_option
+get_synchronous_clock_groups
+get_system_mode
+get_tcl_shell_option
+get_testbench_simulation_options
+get_tester_option
+get_timeplate_list
+get_tool_info
+get_tool_option
+get_trace_flat_model_option
+get_transcript_style
+get_tsdb_info
+get_tsdb_list
+get_tsdb_option
+get_tsdb_output_directory
+get_validated_objects
+get_write_patterns_options
+get_xclock_handling
+help
+history
+identify_redundant_faults
+index_collection
+iPDLLevel
+is_collection
+lock_current_registration
+macrotest
+map_tsdb_container_paths
+move_config_element
+no_transcript
+open_layout
+open_tsdb
+open_visualizer
+order_patterns
+printenv
+process_patterns_specification
+quit
+range_collection
+read_config_data
+read_failures
+read_fault_sites
+read_faults
+read_liberty
+read_patterns
+read_procfile
+read_sdc
+read_sdf
+read_verilog
+read_vhdl
+register_attribute
+register_callback
+register_drc
+register_drc_class
+register_static_dft_signal_names
+register_tcl_command
+remove_from_collection
+report_aborted_faults
+report_atpg_constraints
+report_atpg_functions
+report_atpg_timing
+report_attributes
+report_bist_capture_ranges
+report_black_boxes
+report_boundary_scan_port_options
+report_bsdl
+report_bus_data
+report_bypass_chains
+report_capture_procedures
+report_capture_timing_options
+report_cell_constraints
+report_chain_masks
+report_clock_controls
+report_clock_domains
+report_clocks
+report_compactor_connections
+report_config_data
+report_config_messages
+report_config_syntax
+report_context
+report_core_descriptions
+report_core_instance_parameters
+report_core_instances
+report_core_parameters
+report_current_design
+report_default_ssn_datapath_configuration
+report_design_partitions
+report_design_sources
+report_dft_clock_enables
+report_dft_clock_muxes
+report_dft_control_points
+report_dft_signal_names
+report_dft_signals
+report_drc_rules
+report_edt_abort_analysis
+report_edt_blocks
+report_edt_configurations
+report_edt_finder
+report_edt_instances
+report_edt_lockup_cells
+report_edt_pins
+report_environment
+report_external_simulator
+report_failures
+report_false_paths
+report_fault_sites
+report_faults
+report_feedback_paths
+report_flattener_rules
+report_gate_to_rtl_mapping
+report_gates
+report_graybox_statistics
+report_icl_extraction_options
+report_id_stamp
+report_iddq_exceptions
+report_ijtag_instances
+report_ijtag_logical_connections
+report_ijtag_retargeting_options
+report_input_constraints
+report_iprocs
+report_lbist_configuration
+report_lbist_pins
+report_lfsr_connections
+report_lfsrs
+report_licenses
+report_lists
+report_load_unload_timing_options
+report_loadboard_loopback_pairs
+report_loops
+report_lpct_configuration
+report_lpct_pins
+report_measure_cycles
+report_memory_cluster_configuration
+report_memory_dft_summary
+report_mismatch_sources
+report_misr_connections
+report_misrs
+report_module_matching
+report_module_matching_options
+report_multicycle_paths
+report_multiprocessing_options
+report_nofaults
+report_nonscan_cells
+report_output_masks
+report_pattern_filtering
+report_patterns
+report_power_control
+report_power_data
+report_power_metrics
+report_primary_inputs
+report_primary_outputs
+report_procedures
+report_processors
+report_read_controls
+report_read_verilog_options
+report_register_value
+report_resources
+report_rtl_to_gates_mapping
+report_run_synthesis_options
+report_scan_cells
+report_scan_chains
+report_scan_groups
+report_scan_modes
+report_scan_path
+report_scan_volume
+report_seq_transparent_procedures
+report_sequential_fault_depth
+report_simulation_contexts
+report_simulation_forces
+report_simulation_library_sources
+report_ssn_configuration
+report_statistics
+report_synchronous_clock_groups
+report_tcl_shell_options
+report_test_stimulus
+report_testbench_simulation_options
+report_tester_options
+report_tester_statistics
+report_tied_signals
+report_timeplates
+report_udfm_statistics
+report_version_data
+report_write_controls
+report_write_patterns_options
+reset_attribute_value
+reset_au_faults
+reset_capture_timing_options
+reset_di_faults
+reset_ijtag_retargeting_options
+reset_load_unload_timing_options
+reset_physical_block_settings
+reset_state
+run_synthesis
+run_testbench_simulations
+set_abort_limit
+set_atpg_fill
+set_atpg_limits
+set_atpg_timing
+set_attribute_options
+set_attribute_value
+set_au_analysis
+set_bist_chain_test
+set_bist_debug
+set_bist_trace
+set_burnin_options
+set_bus_handling
+set_bus_simulation
+set_capture_clock
+set_capture_procedures
+set_capture_timing_options
+set_chain_test
+set_checkpointing_options
+set_clock_controls
+set_clock_off_simulation
+set_clock_restriction
+set_config_value
+set_contention_check
+set_context
+set_core_instance_parameters
+set_critical_area_options
+set_current_design
+set_current_edt_block
+set_current_physical_block
+set_current_simulation_context
+set_defaults_value
+set_display
+set_drc_handling
+set_driver_restriction
+set_edt_abort_analysis_options
+set_edt_instances
+set_edt_options
+set_edt_pins
+set_edt_power_controller
+set_external_capture_options
+set_external_simulator
+set_fails_report
+set_fault_mode
+set_fault_sampling
+set_fault_selection_options
+set_fault_subclass_analysis
+set_fault_type
+set_gate_level
+set_gate_report
+set_gzip_options
+set_icl_extraction_options
+set_iddq_checks
+set_ijtag_instance_options
+set_ijtag_retargeting_options
+set_insertion_options
+set_io_mask
+set_learn_report
+set_lfsr_seed
+set_license_queue_timeout
+set_list_file
+set_load_unload_timing_options
+set_logfile_handling
+set_loop_handling
+set_lvx_options
+set_macrotest_options
+set_marker_file_options
+set_memory_instance_options
+set_misr_connections
+set_module_matching_options
+set_multiple_detection
+set_multiprocessing_options
+set_net_dominance
+set_number_shifts
+set_observation_point
+set_output_masks
+set_parallel_load_subchains
+set_pathdelay_holdpi
+set_pattern_buffer
+set_pattern_classification
+set_pattern_filtering
+set_pattern_source
+set_pattern_type
+set_physical_translation
+set_possible_credit
+set_power_control
+set_power_metrics
+set_random_clocks
+set_random_patterns
+set_read_verilog_options
+set_register_value
+set_relevant_coverage
+set_run_synthesis_options
+set_screen_display
+set_simulation_library_sources
+set_simulation_mode
+set_simulation_options
+set_skewed_load
+set_split_capture_cycle
+set_ssn_options
+set_stability_check
+set_static_learning
+set_system_mode
+set_tcl_shell_options
+set_testbench_simulation_options
+set_tester_options
+set_timing_exceptions_handling
+set_tool_options
+set_trace_flat_model_options
+set_trace_report
+set_transcript_style
+set_transient_detection
+set_transition_holdpi
+set_tsdb_options
+set_visualizer_preferences
+set_write_patterns_options
+set_xclock_handling
+set_zhold_behavior
+setenv
+simulate_clock_pulses
+simulate_forces
+simulate_patterns
+sizeof_collection
+sort_collection
+system
+trace_flat_model
+unregister_attribute
+unregister_tcl_command
+unsetenv
+update_implication_detections
+validate_remote_host_access
+verify_patterns
+write_cell_library
+write_config_data
+write_core_description
+write_core_timing_constraints
+write_design
+write_design_import_script
+write_design_source_dictionary
+write_failures
+write_fault_sites
+write_faults
+write_flat_model
+write_loops
+write_modelfile
+write_patterns
+write_pdl
+write_procedure_testbench
+write_procfile
+write_schematic_dofile
+write_tsdb_data
+//  command: write_tsdb_data 
+//  Writing ./tsdb_outdir/logic_test_cores/CLOCK.logic_test_core/CLOCK.atpg_mode_unwrapped/CLOCK_unwrapped.tcd.gz
+//  Error: The current mode does not contain any scan chains.
+//         Generating a core description for scan test requires scan chains.
+//  Writing ./tsdb_outdir/logic_test_cores/CLOCK.logic_test_core/CLOCK.atpg_mode_unwrapped/CLOCK_unwrapped.flat.gz
+//  Writing ./tsdb_outdir/logic_test_cores/CLOCK.logic_test_core/CLOCK.atpg_mode_unwrapped/CLOCK_unwrapped_stuck.patdb
+//  Writing ./tsdb_outdir/logic_test_cores/CLOCK.logic_test_core/CLOCK.atpg_mode_unwrapped/CLOCK_unwrapped_stuck.faults.gz
+//  command: verify_patterns 
+//  Error: 'verify_patterns' is not supported in current context.
+//  command: help write_procedure_testbench 
+Usage:  write_procedure_testbench
+       testbench_file_name [ -Replace ] 
+       [ -ALl | -CApture capture_name | -LOad_unload ]
+       [ -Verilog | -VHdl ]
+       [ -PARAMeter parameter_file_name ] 
+//  command: write_procedure_testbench clock_tb.v -verilog -All
+//  command: write_core_description clock_atpg_core
+//  Error: The current mode does not contain any scan chains.
+//         Generating a core description for scan test requires scan chains.
+//  command: simulate_patterns 
+//  ------------------------------------------------------------------------
+//  Simulation performed for #gates = 391  #faults = 2
+//  Run fault simulation without storing patterns.  pattern source = 0 external patterns
+//  ------------------------------------------------------------------------
+//  #patterns  test      #faults  #faults    # eff.    # test         process 
+//  simulated  coverage  in list  detected   patterns  patterns       CPU time
+//  command: report_testbench_simulation_options -simulator 
+//  Error: The switch '-simulator' requires a value. ( help report_testbench_simulation_options )
+//  command: help report_testbench_simulation_options
+report_testbench_simulation_options [ -simulator {questa | vcs | incisive} ] 
+//  command: help report_testbench_simulation_options vcs
+report_testbench_simulation_options [ -simulator {questa | vcs | incisive} ] 
+//  command: report_testbench_simulation_options vcs
+//  Error: Unrecognized argument 'vcs'. ( help report_testbench_simulation_options )
+//  command: report_testbench_simulation_options -simulator vcs
+
+// Testbench simulation options for 'vcs'
+// ======================================
+// -------------------------------  ------------------------------
+// Option                           Value
+// -------------------------------  ------------------------------
+// compilation_options              {}
+// simulator_options                {}
+// simulation_run_commands          {run
+//                                   dump -flush
+//                                   dump -close
+//                                   quit
+//                                  }
+// waveform_configuration_commands  {dump -file dump.vpd -type VPD
+//                                   dump -add / -depth 0
+//                                  }
+//
+//  command: run 
+//  ------------------------------------------------------------------------
+//  Simulation performed for #gates = 391  #faults = 2
+//  system mode = analysis    pattern source = 0 external patterns
+//  ------------------------------------------------------------------------
+//  #patterns  test      #faults  #faults    # eff.    # test         process 
+//  simulated  coverage  in list  detected   patterns  patterns       CPU time
+//  command: run_synthesis 
+//  Error: The default startup file './.synopsys_dc.setup' does not exist.
+//  command: analyze_simulation_mismatches 
+//  New directory work_dft_debug has been created to store files for mismatch debug.
+//  ------------------------------------------------------------------------------------------
+//  Step-1  Creating Verilog testbench work_dft_debug/tessent_default.v with failure file dump.
+//  ------------------------------------------------------------------------------------------
+//  Step-2  Running Verilog testbench work_dft_debug/tessent_default.v to create failure file.
+//  Error: Error when compiling testbench work_dft_debug/tessent_default.v.
+//  command: exit 

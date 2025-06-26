@@ -1,0 +1,51 @@
+
+
+Working Directory = /home/01fe21bec223/DFT_TESSENT/GENUS/work_mem
+QoS Summary for memory_system_with_lib
+==========================================================================================
+Metric                          generic         map             opt             final          
+==========================================================================================
+Slack (ps):                       inf             inf             inf             inf
+  R2R (ps):                  no_value        no_value        no_value        no_value
+  I2R (ps):                  no_value        no_value        no_value        no_value
+  R2O (ps):                  no_value        no_value        no_value        no_value
+  I2O (ps):                  no_value        no_value        no_value        no_value
+  CG  (ps):                  no_value        no_value        no_value        no_value
+TNS (ps):                           0               0               0               0
+  R2R (ps):                  no_value        no_value        no_value        no_value
+  I2R (ps):                  no_value        no_value        no_value        no_value
+  R2O (ps):                  no_value        no_value        no_value        no_value
+  I2O (ps):                  no_value        no_value        no_value        no_value
+  CG  (ps):                  no_value        no_value        no_value        no_value
+Failing Paths:                      0               0               0               0
+Cell Area:                  8,000,325       8,000,275       8,000,275       8,000,275
+Total Cell Area:            8,000,325       8,000,275       8,000,275       8,000,275
+Leaf Instances:                   293             139             139             139
+Total Instances:                  293             139             139             139
+Utilization (%):                 0.00            0.00            0.00            0.00
+Tot. Net Length (um):        no_value        no_value        no_value        no_value
+Avg. Net Length (um):        no_value        no_value        no_value        no_value
+Route Overflow H (%):        no_value        no_value        no_value        no_value
+Route Overflow V (%):        no_value        no_value        no_value        no_value
+MBCI(%) (bits/gate) :            0.00            0.00            0.00            0.00
+Norm Cong Hotspot Area:
+  Max Cong:                  no_value        no_value        no_value        no_value
+  Tot Cong:                  no_value        no_value        no_value        no_value
+==========================================================================================
+CPU  Runtime (h:m:s):        00:30:05        00:30:02        00:30:00        00:30:00
+Real Runtime (h:m:s):        00:30:04        00:30:02        00:30:00        00:30:00
+CPU  Elapsed (h:m:s):        00:30:07        00:30:09        00:30:09        00:30:09
+Real Elapsed (h:m:s):        00:30:05        00:30:07        00:30:07        00:30:07
+Memory (MB):                  1195.95         1233.62         1198.62         1234.45
+==========================================================================================
+==========================================================================================
+Flow Settings:
+==========================================================================================
+Total Runtime (h:m:s): 00:30:06
+Total Memory (MB):     1242.46
+Executable Version:    20.11-s111_1
+==========================================================================================
+Total Cell Area =  Cell Area + Physical Cell Area
+Total Instances =  Leaf Instances + Physical Instances
+
+

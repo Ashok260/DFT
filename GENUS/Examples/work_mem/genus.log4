@@ -1,0 +1,272 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 20.11-s111_1, built Mon Apr 26 02:27:38 PDT 2021
+Options: 
+Date:    Wed Apr 30 16:07:00 2025
+Host:    APL10.kletech.ac.in (x86_64 w/Linux 4.18.0-553.47.1.el8_10.x86_64) (6cores*12cpus*1physical cpu*12th Gen Intel(R) Core(TM) i5-12500 18432KB) (32336164KB)
+PID:     116252
+OS:      Red Hat Enterprise Linux release 8.10 (Ootpa)
+
+Checkout succeeded: Genus_Synthesis/EF29107615D411912BD3
+	License file: 5280@14.139.1.126
+	License Server: 5280@14.139.1.126
+Checking out license: Genus_Synthesis (3 seconds elapsed).
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (6 seconds elapsed).
+
+WARNING: This version of the tool is 1465 days old.
+@genus:root: 1> read_hdl ../RTL/mem_block_16384_36.v
+@genus:root: 2> read_lib {../TECHFILES/slow.lib ../TECHFILES/memories/SPRAM_8192x36_min_SP.lib}
+
+Threads Configured:6
+
+  Message Summary for Library both libraries:
+  *******************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  Missing library level attribute. [LBR-516]: 1
+  An unsupported construct was detected in this library. [LBR-40]: 3
+  *******************************************
+ 
+Warning : Libraries have inconsistent nominal operating conditions. In the Liberty library, there are attributes called nom_voltage, nom_process and nom_temperature. Genus reports the message, if the respective values of the 2 given .libs differ. [LBR-38]
+        : The libraries are 'slow' and 'SPRAM_8192x36_min_SP'.
+        : This is a common source of delay calculation confusion and should be avoided.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.080000, 125.000000) in library 'slow.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (0.800000, 1.980000, -40.000000) in library 'SPRAM_8192x36_min_SP.lib'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/ADDFHX2'.
+        : Specify a valid area value for the libcell.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/ADDFHX4'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/ADDFHXL'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/ADDFXL'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/ADDHX2'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/ADDHXL'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/AND2X4'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/AND2X6'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/AND2XL'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/AND3X1'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/AND3X8'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/AND3XL'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/AND4X1'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/AND4X4'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/AND4X8'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/AND4XL'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/AO21X1'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/AO21X2'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/AO21XL'.
+Warning : Libcell has no area attribute.  Defaulting to 0 area. [LBR-43]
+        : Assigning 0 area to library cell 'slow/AO22X1'.
+Warning : Found libraries with and without pg_pin construct. [LBR-12]
+        : Libraries with and without pg_pin construct have been loaded.
+        : This can lead to issues later in the flow.
+@genus:root: 3> read_hdl ../RTL/mem_block_16384_36.v
+module sram_sp_16384d_36w_16m_8b (
+                               |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'sram_sp_16384d_36w_16m_8b' with Verilog module in file '../RTL/mem_block_16384_36.v' on line 1, column 32.
+        : A Verilog description is replaced when a new description of the same name and same library is read again.
+    Verilog descriptions are:
+       module
+       macromodule
+       configuration
+    SystemVerilog adds the following descriptions:
+       interface
+       program
+       package.
+module memory_wrapper_8192_36 (
+                            |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'memory_wrapper_8192_36' with Verilog module in file '../RTL/mem_block_16384_36.v' on line 51, column 29.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'sram_sp_16384d_36w_16m_8b' in library 'default' with newly read Verilog module 'sram_sp_16384d_36w_16m_8b' in the same library in file '../RTL/mem_block_16384_36.v' on line 1.
+        : A newly read VHDL entity replaces any previously read Verilog module or VHDL entity in the same library if its name matches (case-insensitively) the existing module or entity.
+    For instance:
+        VHDL 'foo'                  replaces  VHDL {'FOO' or 'foo' or 'Foo' or ...} in the same library
+        VHDL 'foo' (in any library) replaces  Verilog {'FOO' or 'foo' or 'Foo' or ...} in the same library
+ 
+A newly read Verilog module replaces any previously read Verilog module if its name matches (case-sensitively) that module.  Further, it replaces any previously read VHDL entity in the same library if its name matches (case -insensitively) that entity.
+    For instance:
+        Verilog 'foo' replaces    VHDL {'FOO' or 'foo' or 'Foo' or ...} in the same library
+        Verilog 'foo' replaces    Verilog 'foo' only
+    In addition:
+        Verilog 'foo' does not replace Verilog 'FOO' and the two remain as distinct modules.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'memory_wrapper_8192_36' in library 'default' with newly read Verilog module 'memory_wrapper_8192_36' in the same library in file '../RTL/mem_block_16384_36.v' on line 51.
+@genus:root: 4> read_physical -lefs {../TECHFILES/all.lef ../TECHFILES/memories/SPRAM_8192x36.lef }
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M3' referenced in pin 'A[0]' in macro 'SPRAM_8192x36' is not found in the database.
+        : A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro section. Review the LEF files specified in the lef_library attribute to see if the layer is not defined or is defined after the macro definition which refers to the layer in its pin section.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M3' referenced in pin 'A[10]' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M1' referenced in pin 'CE' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M1' referenced in pin 'CSB' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M1' referenced in pin 'OEB' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M1' referenced in pin 'WEB' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M3' referenced in pin 'A[11]' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M3' referenced in pin 'A[12]' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M3' referenced in pin 'A[1]' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M3' referenced in pin 'A[2]' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M3' referenced in pin 'A[3]' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M3' referenced in pin 'A[4]' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M1' referenced in pin 'A[4]' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M3' referenced in pin 'A[5]' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M3' referenced in pin 'A[6]' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M3' referenced in pin 'A[7]' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M3' referenced in pin 'A[8]' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M3' referenced in pin 'A[9]' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M2' referenced in pin 'I[0]' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : Undefined pin layer detected. [PHYS-148] [read_physical]
+        : The layer 'M1' referenced in pin 'I[0]' in macro 'SPRAM_8192x36' is not found in the database.
+Error   : LEF File Interface. [PHYS-100] [read_physical]
+        : File '/home/01fe21bec223/DFT_TESSENT/GENUS/work_mem/../TECHFILES/memories/SPRAM_8192x36.lef' contains an error on or near line '107645'.
+        : Check the LEF file and rerun the command.
+
+  According to lef_library, there are total 6 routing layers [ V(3) / H(3) ]
+
+  Libraries have 324 usable logic and 126 usable sequential lib-cells.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'AND2X6' was marked 'avoid' because there was no physical data in the LEF file.
+        : To prevent the library cell from being set to 'avoid', set attribute 'lib_lef_consistency_check_enable' to 'false'.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'AND3X8' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'AND4X8' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'AO21X1' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'AO21X2' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'AO21XL' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'AO22X1' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'AO22X2' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'AO22XL' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'CLKAND2X2' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'CLKAND2X6' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'CLKBUFX6' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'CLKINVX6' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'CLKMX2X12' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'CLKXOR2X1' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'CLKXOR2X4' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'DFFQX1' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'DFFQX2' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'DFFQX4' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'DFFSHQX8' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL8 cannot be found in library.
+        : Ensure that the proper library files are available and have been imported.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL64 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL4 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL32 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL2 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL16 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL1 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell RF2R1WX2 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell RF1R1WX2 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell TLATSXL cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell TLATSX4 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell TLATSX2 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell TLATSX1 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell TLATRXL cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell TLATRX4 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell TLATRX2 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell TLATRX1 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell TLATNSXL cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell TLATNSX4 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell TLATNSX2 cannot be found in library.
+@genus:root: 5> elaborate
+  Libraries have 240 usable logic and 97 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'sram_sp_16384d_36w_16m_8b' from file '../RTL/mem_block_16384_36.v'.
+Error   : Could not find a port. [CDFG-211] [elaborate]
+        : Unable to find port 'CEB' of instance 'my_sram' of library cell 'SPRAM_8192x36'.  Available ports are 'input CE, input OEB, input CSB, input WEB, input A, input I, output O, inout VSS, inout VDD' in file '../RTL/mem_block_16384_36.v' on line 62.
+        : Ensure that the desired port is defined in the module definition of the instantiated instance.
+Info    : Unable to elaborate the design. [ELAB-4]
+        : Module 'sram_sp_16384d_36w_16m_8b' contains errors and cannot be elaborated.
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+1
+@genus:root: 6> elaborate
+      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+@genus:root: 7> exit
+Normal exit.

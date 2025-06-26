@@ -1,0 +1,2 @@
+ -v /home/01fe21bec223/DFT/DFT/slow.v
+ -v $TESSENT_HOME/lnx-x86/lib64/hdleng/lib/dft_sim.v

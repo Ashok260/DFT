@@ -1,0 +1,218 @@
+//
+//  Tessent Shell  2022.4
+//
+//  Design  = /home/01fe21bec223/DFT_TESSENT/TESSENT/work_atpg/tsdb_outdir/dft_inserted_designs/counter_16bit_gate.dft_inserted_design/counter_16bit.vg
+//  Created = Mon May 19 17:07:41 IST 2025
+//
+//  Statistics:
+//      Test Coverage   =  100.00%
+//      Total Faults    =  402
+//          DS (det_simulation)    =  243
+//          DI (det_implication)   =  129
+//          UU (unused)            =  30
+//      Total            Patterns  =  8
+//
+//  Settings:
+//      Simulation Mode =  combinational, seq_depth = 0
+//      Fault Type      =  stuck
+//      Fault Mode      =  uncollapsed
+//      Pos_Det Credit  =  50%
+//      Z external      =  X
+//      Z internal      =  X
+//      wired_net       =  WIRE
+//
+//  Warnings:
+//      1 rule D5 fails (non-scan memory element)
+//
+//  Clock Information:
+//      /clk  off-state = 0  type = shift-MASTER  poflag = 0
+//      /rst  off-state = 1  type = reset-MASTER  poflag = 0
+//
+
+ASCII_PATTERN_FILE_VERSION = 3;
+
+
+SETUP = 
+
+    declare input bus "PI" = "/clk", "/rst", "/scan_in_0", "/scan_en";
+
+    declare output bus "PO" = "/Q[15]", "/Q[14]", "/Q[13]", "/Q[12]", "/Q[11]",
+         "/Q[10]", "/Q[9]", "/Q[8]", "/Q[7]", "/Q[6]", "/Q[5]",
+         "/Q[4]", "/Q[3]", "/Q[2]", "/Q[1]", "/Q[0]", "/scan_out_0";
+
+    clock "/clk" =
+        off_state   = 0;
+        pulse_width = 1;
+    end;
+
+    clock "/rst" =
+        off_state   = 1;
+        pulse_width = 1;
+    end;
+
+    scan_group "grp1" =
+        scan_chain "chain" =
+            scan_in = "/scan_in_0";
+            scan_out = "/scan_out_0";
+            length = 16;
+        end;
+        procedure shift "grp1_load_shift" =
+            force_sci "chain" 0;
+            force "/clk" 1 20;
+            force "/clk" 0 30;
+            period 40;
+        end;
+        procedure shift "grp1_unload_shift" =
+            measure_sco "chain" 10;
+            force "/clk" 1 20;
+            force "/clk" 0 30;
+            period 40;
+        end;
+        procedure load "grp1_load" =
+            force "/clk" 0 0;
+            force "/rst" 1 0;
+            force "/scan_en" 1 0;
+            apply "grp1_load_shift" 16 40;
+        end;
+        procedure unload "grp1_unload" =
+            force "/clk" 0 0;
+            force "/rst" 1 0;
+            force "/scan_en" 1 0;
+            apply "grp1_unload_shift" 16 40;
+        end;
+    end;
+
+end;
+
+CHAIN_TEST =
+
+    pattern = 0;
+    apply "grp1_load" 0 =
+        chain "chain" = "0011001100110011";
+    end;
+    force   "PI" "01XX" 1;
+    measure "PO" "XXXXXXXXXXXXXXXXX" 2;
+    apply "grp1_unload" 3 =
+        chain "chain" = "0011001100110011";
+    end;
+
+end;
+
+SCAN_TEST =
+
+    pattern = 0;
+    apply "grp1_load" 0 =
+        chain "chain" = "1000110001011101";
+    end;
+    force   "PI" "0100" 1;
+    measure "PO" "10101110001100011" 2;
+    pulse "/clk" 3;
+    apply "grp1_unload" 4 =
+        chain "chain" = "0100110001011101";
+    end;
+
+    pattern = 1;
+    apply "grp1_load" 0 =
+        chain "chain" = "0011001001100010";
+    end;
+    force   "PI" "0100" 1;
+    measure "PO" "01010010010011000" 2;
+    pulse "/clk" 3;
+    apply "grp1_unload" 4 =
+        chain "chain" = "1011001001100010";
+    end;
+
+    pattern = 2;
+    apply "grp1_load" 0 =
+        chain "chain" = "1111111111001110";
+    end;
+    force   "PI" "0100" 1;
+    measure "PO" "01101011111111111" 2;
+    pulse "/clk" 3;
+    apply "grp1_unload" 4 =
+        chain "chain" = "0000000000011110";
+    end;
+
+    pattern = 3;
+    apply "grp1_load" 0 =
+        chain "chain" = "1111111111111111";
+    end;
+    force   "PI" "0100" 1;
+    measure "PO" "11111111111111111" 2;
+    pulse "/rst" 3;
+    apply "grp1_unload" 4 =
+        chain "chain" = "0000000000000000";
+    end;
+
+    pattern = 4;
+    apply "grp1_load" 0 =
+        chain "chain" = "1111111110011101";
+    end;
+    force   "PI" "0110" 1;
+    measure "PO" "10101101111111111" 2;
+    pulse "/clk" 3;
+    apply "grp1_unload" 4 =
+        chain "chain" = "0000000001011101";
+    end;
+
+    pattern = 5;
+    apply "grp1_load" 0 =
+        chain "chain" = "1111111111011000";
+    end;
+    force   "PI" "0100" 1;
+    measure "PO" "00100111111111111" 2;
+    pulse "/clk" 3;
+    apply "grp1_unload" 4 =
+        chain "chain" = "0000000000001100";
+    end;
+
+    pattern = 6;
+    apply "grp1_load" 0 =
+        chain "chain" = "1111100110011110";
+    end;
+    force   "PI" "0110" 1;
+    measure "PO" "01101101100111111" 2;
+    pulse "/clk" 3;
+    apply "grp1_unload" 4 =
+        chain "chain" = "0000010110011110";
+    end;
+
+    pattern = 7;
+    apply "grp1_load" 0 =
+        chain "chain" = "1111111111111110";
+    end;
+    force   "PI" "0100" 1;
+    measure "PO" "01111111111111111" 2;
+    pulse "/clk" 3;
+    apply "grp1_unload" 4 =
+        chain "chain" = "0000000000000001";
+    end;
+
+end;
+
+
+SCAN_CELLS = 
+
+    scan_group "grp1" =
+        scan_chain "chain" =
+            scan_cell =    0  MASTER  FFFF  "/\Q_reg[0] "  "mlc_inst24/mlc_dff"  "SI"  "Q";
+            scan_cell =    1  MASTER  FFFF  "/\Q_reg[1] "  "mlc_inst24/mlc_dff"  "SI"  "Q";
+            scan_cell =    2  MASTER  FFFF  "/\Q_reg[2] "  "mlc_inst24/mlc_dff"  "SI"  "Q";
+            scan_cell =    3  MASTER  FFFF  "/\Q_reg[3] "  "mlc_inst24/mlc_dff"  "SI"  "Q";
+            scan_cell =    4  MASTER  FFFF  "/\Q_reg[4] "  "mlc_inst24/mlc_dff"  "SI"  "Q";
+            scan_cell =    5  MASTER  FFFF  "/\Q_reg[5] "  "mlc_inst23/mlc_dff"  "SI"  "Q";
+            scan_cell =    6  MASTER  FFFF  "/\Q_reg[6] "  "mlc_inst23/mlc_dff"  "SI"  "Q";
+            scan_cell =    7  MASTER  FFFF  "/\Q_reg[7] "  "mlc_inst23/mlc_dff"  "SI"  "Q";
+            scan_cell =    8  MASTER  FFFF  "/\Q_reg[8] "  "mlc_inst23/mlc_dff"  "SI"  "Q";
+            scan_cell =    9  MASTER  FFFF  "/\Q_reg[9] "  "mlc_inst23/mlc_dff"  "SI"  "Q";
+            scan_cell =   10  MASTER  FFFF  "/\Q_reg[12] "  "mlc_inst23/mlc_dff"  "SI"  "Q";
+            scan_cell =   11  MASTER  FFFF  "/\Q_reg[10] "  "mlc_inst23/mlc_dff"  "SI"  "Q";
+            scan_cell =   12  MASTER  FFFF  "/\Q_reg[13] "  "mlc_inst23/mlc_dff"  "SI"  "Q";
+            scan_cell =   13  MASTER  FFFF  "/\Q_reg[11] "  "mlc_inst23/mlc_dff"  "SI"  "Q";
+            scan_cell =   14  MASTER  FFFF  "/\Q_reg[14] "  "mlc_inst23/mlc_dff"  "SI"  "Q";
+            scan_cell =   15  MASTER  FFFF  "/\Q_reg[15] "  "mlc_inst23/mlc_dff"  "SI"  "Q";
+        end;
+    end;
+
+end;
+

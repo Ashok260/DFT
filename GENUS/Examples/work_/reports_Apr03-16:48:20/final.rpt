@@ -1,0 +1,51 @@
+
+
+Working Directory = /home/01fe21bec223/DFT_TESSENT/GENUS/work_
+QoS Summary for mcrb
+================================================================================
+Metric                          generic         map             syn_opt        
+================================================================================
+Slack (ps):                     3,482           2,994           2,994
+  R2R (ps):                     3,482           2,994           2,994
+  I2R (ps):                     3,934           3,598           3,598
+  R2O (ps):                     3,875           3,853           3,853
+  I2O (ps):                  no_value        no_value        no_value
+  CG  (ps):                  no_value        no_value        no_value
+TNS (ps):                           0               0               0
+  R2R (ps):                         0               0               0
+  I2R (ps):                         0               0               0
+  R2O (ps):                         0               0               0
+  I2O (ps):                  no_value        no_value        no_value
+  CG  (ps):                  no_value        no_value        no_value
+Failing Paths:                      0               0               0
+Cell Area:                         50              60              60
+Total Cell Area:                   50              60              60
+Leaf Instances:                    35              23              23
+Total Instances:                   35              23              23
+Utilization (%):                 0.00            0.00            0.00
+Tot. Net Length (um):        no_value        no_value        no_value
+Avg. Net Length (um):        no_value        no_value        no_value
+Route Overflow H (%):        no_value        no_value        no_value
+Route Overflow V (%):        no_value        no_value        no_value
+MBCI(%) (bits/gate) :            0.00            0.00            0.00
+Norm Cong Hotspot Area:
+  Max Cong:                  no_value        no_value        no_value
+  Tot Cong:                  no_value        no_value        no_value
+================================================================================
+CPU  Runtime (h:m:s):        00:30:04        00:30:01        00:30:00
+Real Runtime (h:m:s):        00:30:15        00:30:01        00:30:01
+CPU  Elapsed (h:m:s):        00:30:06        00:30:07        00:30:07
+Real Elapsed (h:m:s):        00:30:17        00:30:18        00:30:19
+Memory (MB):                  1072.78         1112.27         1077.26
+================================================================================
+================================================================================
+Flow Settings:
+================================================================================
+Total Runtime (h:m:s): 00:30:17
+Total Memory (MB):     1078.27
+Executable Version:    20.11-s111_1
+================================================================================
+Total Cell Area =  Cell Area + Physical Cell Area
+Total Instances =  Leaf Instances + Physical Instances
+
+

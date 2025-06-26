@@ -1,0 +1,36 @@
+/home/Mentor/tessent/bin/tessent -shell -log sram.log2 -replace
+//  Warning: Tessent user documentation not found
+//  Tessent Shell  2022.4    Tue Nov 29 21:19:37 GMT 2022
+//                Unpublished work. Copyright 2022 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Wed Apr 16 18:54:08 IST 2025.
+//  64 bit version
+//  Host: APL10.kletech.ac.in (31578 MB RAM, 15983 MB Swap)
+//
+//  command: set_context dft -rtl
+//  command: pwd
+/home/01fe21bec223/DFT_TESSENT/GENUS/work_mem
+//  command: read_cell_library ../TECHFILES/nangate.mdt 
+//  Reading DFT Library file ../TECHFILES/nangate.mdt
+//  Finished reading file ../TECHFILES/nangate.mdt
+//  command: read_liberty "../../DFT/cpu_sys/LIBS/slow.lib /home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/sram_sp_32768d_33w_16m_8b.lib"
+//  Error: Cannot open file '../../DFT/cpu_sys/LIBS/slow.lib /home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/sram_sp_32768d_33w_16m_8b.lib' for reading.
+//  command: read_liberty ../../DFT/cpu_sys/LIBS/slow.lib
+reading ../../DFT/cpu_sys/LIBS/slow.lib...
+//  Error: The Liberty parser returned an error code from its parse of file '../../DFT/cpu_sys/LIBS/slow.lib'
+//         Will not attempt to process any of the Liberty information from this read_library invocation.
+
+//  command: read_liberty /home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/sram_sp_32768d_33w_16m_8b.lib
+reading /home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/sram_sp_32768d_33w_16m_8b.lib...
+//  command: set_design_sources 
+//  No -v/-y files/directories specified.
+//  command: set_design_sources -format verilog -y {/home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/ ../NETLIST} -extension v
+//  Error: Directory ( ../NETLIST ) not found.
+//  command: set_design_sources -format verilog -y {/home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/ ../NETLIST} -extension v
+//  Error: Directory ( ../NETLIST ) not found.

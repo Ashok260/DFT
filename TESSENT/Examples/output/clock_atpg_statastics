@@ -1,0 +1,64 @@
+               Statistics Report              
+                Stuck-at Faults               
+----------------------------------------------
+Fault Classes                       #faults   
+                                    (total)   
+------------------------------  --------------
+  FU (full)                           998     
+  ----------------------------  --------------
+  UO (unobserved)                   1 ( 0.10%)
+  DS (det_simulation)              71 ( 7.11%)
+  DI (det_implication)              1 ( 0.10%)
+  PT (posdet_testable)              1 ( 0.10%)
+  UU (unused)                      32 ( 3.21%)
+  AU (atpg_untestable)            892 (89.38%)
+----------------------------------------------
+Fault Sub-classes                             
+  ----------------------------                
+  DI (det_implication)                        
+    CLK   (clock)                   1 ( 0.10%)
+  AU (atpg_untestable)                        
+    TC    (tied_cells)            887 (88.88%)
+      /\S_reg_reg[0]  (364) TX    319 (31.96%)
+      /\H_reg_reg[0]  (356) TX     62 ( 6.21%)
+      /\S_reg_reg[4]  (360) TX     33 ( 3.31%)
+      /\S_reg_reg[2]  (359) TX     31 ( 3.11%)
+      /\M_reg_reg[0]  (361) TX     31 ( 3.11%)
+      /\H_reg_reg[2]  (347) TX     30 ( 3.01%)
+      /\H_reg_reg[3]  (346) TX     28 ( 2.81%)
+      /\M_reg_reg[3]  (348) TX     24 ( 2.40%)
+      /\S_reg_reg[3]  (357) TX     24 ( 2.40%)
+      /\S_reg_reg[5]  (351) TX     22 ( 2.20%)
+      /\M_reg_reg[2]  (358) TX     21 ( 2.10%)
+      /\S_reg_reg[6]  (362) TX     21 ( 2.10%)
+      /\M_reg_reg[5]  (352) TX     20 ( 2.00%)
+      /\M_reg_reg[4]  (353) TX     20 ( 2.00%)
+      /\H_reg_reg[5]  (342) TX     19 ( 1.90%)
+      /\H_reg_reg[4]  (349) TX     19 ( 1.90%)
+      /\H_reg_reg[7]  (341) TX     18 ( 1.80%)
+      /\S_reg_reg[1]  (363) TX     18 ( 1.80%)
+      /\M_reg_reg[6]  (355) TX     18 ( 1.80%)
+      /\S_reg_reg[7]  (354) TX     18 ( 1.80%)
+      /\M_reg_reg[1]  (350) TX     18 ( 1.80%)
+      /pm_reg_reg (345) TX         18 ( 1.80%)
+      /\H_reg_reg[1]  (344) TX     18 ( 1.80%)
+      /\M_reg_reg[7]  (343) TX     18 ( 1.80%)
+      /\H_reg_reg[6]  (340) TX     11 ( 1.10%)
+      (Combined tied cells)         8 ( 0.80%)
+    SEQ   (sequential_depth)        5 ( 0.50%)
+  UC+UO                                       
+    UNS   (unsuccess)               1 ( 0.10%)
+----------------------------------------------
+Coverage                                      
+  ----------------------------                
+  test_coverage                         7.51% 
+  fault_coverage                        7.26% 
+  atpg_effectiveness                   99.80% 
+----------------------------------------------
+#test_patterns                              4 
+  #basic_patterns                           1 
+  #clock_sequential_patterns                3 
+#simulated_patterns                         6 
+CPU_time (secs)                        1753.5 
+----------------------------------------------
+

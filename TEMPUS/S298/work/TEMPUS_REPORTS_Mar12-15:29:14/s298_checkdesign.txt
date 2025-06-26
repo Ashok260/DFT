@@ -1,0 +1,61 @@
+Design: s298
+
+------ Design Summary:
+Total Standard Cell Number   (cells) : 71
+Total Block Cell Number      (cells) : 0
+Total I/O Pad Cell Number    (cells) : 0
+Total Standard Cell Area     ( um^2) : 0.00
+Total Block Cell Area        ( um^2) : 0.00
+Total I/O Pad Cell Area      ( um^2) : 0.00
+
+------ Design Statistics:
+
+Number of Instances            : 71
+Number of Non-uniquified Insts : 62
+Number of Nets                 : 93
+Average number of Pins per Net : 3.08
+Maximum number of Pins in Net  : 16
+
+------ I/O Port summary
+
+Number of Primary I/O Ports    : 15
+Number of Input Ports          : 8
+Number of Output Ports         : 7
+Number of Bidirectional Ports  : 0
+Number of Power/Ground Ports   : 0
+Number of Floating Ports                     *: 2
+Number of Ports Connected to Multiple Pads   *: 0
+Number of Ports Connected to Core Instances   : 13
+**WARN: (IMPREPO-200):	There are 2 Floating Ports in the top design.
+**WARN: (IMPREPO-202):	There are 13 Ports connected to core instances.
+
+------ Design Rule Checking:
+
+Number of Output Pins connect to Power/Ground *: 0
+Number of Insts with Input Pins tied together ?: 0
+Number of TieHi/Lo term nets not connected to instance's PG terms ?: 0
+Number of Input/InOut Floating Pins            : 0
+Number of Output Floating Pins                 : 0
+Number of Output Term Marked TieHi/Lo         *: 0
+
+Number of nets with tri-state drivers          : 0
+Number of nets with parallel drivers           : 0
+Number of nets with multiple drivers           : 0
+Number of nets with no driver (No FanIn)       : 0
+Number of Output Floating nets (No FanOut)     : 16
+Number of High Fanout nets (>50)               : 0
+**WARN: (IMPREPO-212):	There are 2 Floating I/O Pins.
+**WARN: (IMPREPO-213):	There are 13 I/O Pins connected to Non-IO Insts.
+Checking for any assigns in the netlist...
+  No assigns found.
+Design check done.
+Report saved in file checkDesign/s298.main.htm.ascii
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPREPO-200          1  There are %d Floating Ports in the top d...
+WARNING   IMPREPO-202          1  There are %d Ports connected to core ins...
+WARNING   IMPREPO-212          1  There are %d Floating I/O Pins.          
+WARNING   IMPREPO-213          1  There are %d I/O Pins connected to Non-I...
+*** Message Summary: 4 warning(s), 0 error(s)
+

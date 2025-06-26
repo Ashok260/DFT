@@ -1,0 +1,100 @@
+Detected 10 DFT rule violation(s)
+	Summary of check_dft_rules
+	**************************
+	Number of usable scan cells: 0
+Clock Rule Violations:
+---------------------
+	  Internally driven clock net: 0
+	      Tied constant clock net: 0
+	           Undriven clock net: 0
+	Conflicting async & clock net: 0
+	              Misc. clock net: 0
+
+Async. set/reset Rule Violations:
+--------------------------------
+	Internally driven async net: 10
+	      Tied active async net: 0
+	         Undriven async net: 0
+	            Misc. async net: 0
+
+   Total number of DFT violations: 10
+
+Async Violation
+# 0 <vid_0_async>: internal or gated async signal in module 'D_FF', net 'n_8', inst/pin 'u0/g6/z'   [ASYNC-04]
+  Effective fanin cone:
+    initialized_value[0] 
+    rst_n 
+ 
+Async Violation
+# 1 <vid_1_async>: internal or gated async signal in module 'D_FF', net 'n_7', inst/pin 'u0/g5/z'   [ASYNC-04]
+  Effective fanin cone:
+    initialized_value[0] 
+    rst_n 
+ 
+Async Violation
+# 2 <vid_2_async>: internal or gated async signal in module 'D_FF', net 'n_8', inst/pin 'u1/g6/z'   [ASYNC-04]
+  Effective fanin cone:
+    initialized_value[1] 
+    rst_n 
+ 
+Async Violation
+# 3 <vid_3_async>: internal or gated async signal in module 'D_FF', net 'n_7', inst/pin 'u1/g5/z'   [ASYNC-04]
+  Effective fanin cone:
+    initialized_value[1] 
+    rst_n 
+ 
+Async Violation
+# 4 <vid_4_async>: internal or gated async signal in module 'D_FF', net 'n_8', inst/pin 'u2/g6/z'   [ASYNC-04]
+  Effective fanin cone:
+    initialized_value[2] 
+    rst_n 
+ 
+Async Violation
+# 5 <vid_5_async>: internal or gated async signal in module 'D_FF', net 'n_7', inst/pin 'u2/g5/z'   [ASYNC-04]
+  Effective fanin cone:
+    initialized_value[2] 
+    rst_n 
+ 
+Async Violation
+# 6 <vid_6_async>: internal or gated async signal in module 'D_FF', net 'n_8', inst/pin 'u3/g6/z'   [ASYNC-04]
+  Effective fanin cone:
+    initialized_value[3] 
+    rst_n 
+ 
+Async Violation
+# 7 <vid_7_async>: internal or gated async signal in module 'D_FF', net 'n_7', inst/pin 'u3/g5/z'   [ASYNC-04]
+  Effective fanin cone:
+    initialized_value[3] 
+    rst_n 
+ 
+Async Violation
+# 8 <vid_8_async>: internal or gated async signal in module 'D_FF', net 'n_8', inst/pin 'u4/g6/z'   [ASYNC-04]
+  Effective fanin cone:
+    initialized_value[4] 
+    rst_n 
+ 
+Async Violation
+# 9 <vid_9_async>: internal or gated async signal in module 'D_FF', net 'n_7', inst/pin 'u4/g5/z'   [ASYNC-04]
+  Effective fanin cone:
+    initialized_value[4] 
+    rst_n 
+ 
+Violations sorted by type and number of affected registers
+Note - a register may be violating multiple DFT rules.
+	Violation #0 <vid_0_async> affects  1 registers
+	Violation #1 <vid_1_async> affects  1 registers
+	Violation #2 <vid_2_async> affects  1 registers
+	Violation #3 <vid_3_async> affects  1 registers
+	Violation #4 <vid_4_async> affects  1 registers
+	Violation #5 <vid_5_async> affects  1 registers
+	Violation #6 <vid_6_async> affects  1 registers
+	Violation #7 <vid_7_async> affects  1 registers
+	Violation #8 <vid_8_async> affects  1 registers
+	Violation #9 <vid_9_async> affects  1 registers
+ 
+Total number of Test Clock Domains: 1
+  DFT Test Clock Domain: scanclk
+Number of user specified non-Scan registers:   0
+    Number of registers that fail DFT rules:   5
+    Number of registers that pass DFT rules:   0
+Percentage of total registers that are scannable:  0%

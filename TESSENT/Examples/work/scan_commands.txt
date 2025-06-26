@@ -1,0 +1,26 @@
+//  command: set_context dft -scan
+//  command: read_cell_library ../TECHFILES/test_Nangate.mdt 
+//  command: set_design_sources -format verilog -y ../NETLIST -extension v
+//  command: read_verilog ../NETLIST/CLOCK_opt.v 
+//  command: set_current_design 
+//  command: set_design_level chip
+//  command: set_scan_enable scan_en -single_global_scan_enable on
+//  command: set_scan_signals -tclk clk -ten scan_en
+//  command: analyze_control_signals -auto
+//  command: check_design_rules 
+//  command: set_scan_insertion_options -si_port_format scan_in_%d -so_port_format scan_out_%d -enable_scan_cell_mapping on
+//  command: analyze_control_signals 
+//  command: analyze_scan_chains 
+//  command: insert_test_logic 
+//  command: report_scan_chains 
+//  command: report_scan_elements > ../output/clock_time.txt
+//  command: report_scan_chains > ../output/clock_time_scan_chains.txt
+//  command: report_scan_cells > ../output/clock_time_scan_cells.txt
+//  command: report_scan_enable > ../output/clock_time_scan_enable.txt
+//  command: write_design -output_file ../output/clock_scan.v
+//  command: write_atpg_setup atpg_setup
+//  command: write_core_description clock_core_description
+//  command: write_scan_order 
+//  command: write_scan_order > ../output/scan_order.txt
+//  command: open_visualizer 
+

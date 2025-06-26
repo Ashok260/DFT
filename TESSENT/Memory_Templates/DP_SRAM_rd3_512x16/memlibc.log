@@ -1,0 +1,31 @@
+
+********************************************************************************
+*                                                                              *
+*                                 memlibCertify                                *
+*                               Version: 2022.4                                *
+*                                                                              *
+********************************************************************************
+
+Command-line: 
+
+  /siemens/bin/memlibc  \
+    -memLib rd3_512x16.memlib  \
+    -extension v:vg  \
+    -simModelFile /jk/SCLPDK_V3.0_KIT/scl180/memory/dpram/6M1L/DP_SRAM_rd3_512x16/rd3_512x16.v  \
+    -tshell  \
+    -verilogOptionFile ../VerilogOptions
+
+  -Found memory template: [rd3_512x16]
+  -MemoryType : sram
+  -CellName : rd3_512x16
+  -OperationSet : Sync
+  -Memory algorithm : SMARCH
+
+Generating MemoryBist configuration files
+Generating Tessent Shell Do Files
+
+Info: Type 'make all' to execute the memory library certification process
+      or execute the particular certification process phases with
+        make gen       # Create/Process DFT specification
+        make testbench # Create/Process Patterns specification
+        make sim_rtl   # Run testbench simulations

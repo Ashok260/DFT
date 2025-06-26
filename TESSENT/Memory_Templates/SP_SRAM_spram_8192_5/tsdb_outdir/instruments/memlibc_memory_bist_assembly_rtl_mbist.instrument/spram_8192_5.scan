@@ -1,0 +1,177 @@
+/*
+----------------------------------------------------------------------------------
+-                                                                                -
+-  Unpublished work. Copyright 2022 Siemens                                      -
+-                                                                                -
+-  This material contains trade secrets or otherwise confidential                -
+-  information owned by Siemens Industry Software Inc. or its affiliates         -
+-  (collectively, SISW), or its licensors. Access to and use of this             -
+-  information is strictly limited as set forth in the Customer's                -
+-  applicable agreements with SISW.                                              -
+-                                                                                -
+----------------------------------------------------------------------------------
+-  File created by: Tessent Shell                                                -
+-          Version: 2022.4                                                       -
+-       Created on: Tue Jun  3 16:59:24 IST 2025                                 -
+----------------------------------------------------------------------------------
+
+
+*/
+`ifdef MGC_INHIBIT_MEM_SCAN_MODEL
+`else
+
+`celldefine
+module spram_8192_5 (
+    
+    CEB,
+    WEB,
+    OEB,
+    CSB,
+    A,
+    I,
+    O
+
+);
+input           CEB;
+input           WEB;
+input           OEB;
+input           CSB;
+input  [12:0]   A;
+input  [4:0]    I;
+output [4:0]    O;
+
+
+//------------
+//-- Wires  --
+//------------
+// {{{
+wire CEB_BIT0_MUXED;
+wire A_BIT12_MUXED;
+wire A_BIT11_MUXED;
+wire A_BIT10_MUXED;
+wire A_BIT9_MUXED;
+wire A_BIT8_MUXED;
+wire A_BIT7_MUXED;
+wire A_BIT6_MUXED;
+wire A_BIT5_MUXED;
+wire A_BIT4_MUXED;
+wire A_BIT3_MUXED;
+wire A_BIT2_MUXED;
+wire A_BIT1_MUXED;
+wire A_BIT0_MUXED;
+wire WEB_BIT0_MUXED;
+wire OEB_BIT0_MUXED;
+wire CSB_BIT0_MUXED;
+wire I_BIT4_MUXED;
+wire I_BIT3_MUXED;
+wire I_BIT2_MUXED;
+wire I_BIT1_MUXED;
+wire I_BIT0_MUXED;
+wire O_BIT4_DRIVER;
+wire O_BIT3_DRIVER;
+wire O_BIT2_DRIVER;
+wire O_BIT1_DRIVER;
+wire O_BIT0_DRIVER;
+// }}}
+
+//---------------
+//-- Main Code --
+//---------------
+
+//-----------------
+//-- Clock ports --
+//-----------------
+// {{{
+assign CEB_BIT0_MUXED  = CEB;
+// }}}
+
+//-------------------
+//-- Address ports --
+//-------------------
+// {{{
+assign A_BIT12_MUXED  = A[12];
+assign A_BIT11_MUXED  = A[11];
+assign A_BIT10_MUXED  = A[10];
+assign A_BIT9_MUXED  = A[9];
+assign A_BIT8_MUXED  = A[8];
+assign A_BIT7_MUXED  = A[7];
+assign A_BIT6_MUXED  = A[6];
+assign A_BIT5_MUXED  = A[5];
+assign A_BIT4_MUXED  = A[4];
+assign A_BIT3_MUXED  = A[3];
+assign A_BIT2_MUXED  = A[2];
+assign A_BIT1_MUXED  = A[1];
+assign A_BIT0_MUXED  = A[0];
+// }}}
+
+//-------------------
+//-- Control ports --
+//-------------------
+// {{{
+assign WEB_BIT0_MUXED  = WEB;
+assign OEB_BIT0_MUXED  = OEB;
+assign CSB_BIT0_MUXED  = CSB;
+// }}}
+
+//----------------------
+//-- Data input ports --
+//----------------------
+// {{{
+assign I_BIT4_MUXED  = I[4];
+assign I_BIT3_MUXED  = I[3];
+assign I_BIT2_MUXED  = I[2];
+assign I_BIT1_MUXED  = I[1];
+assign I_BIT0_MUXED  = I[0];
+// }}}
+
+//-----------------------
+//-- Data output ports --
+//-----------------------
+// {{{
+assign O_BIT4_DRIVER  = 1'bz;
+assign O_BIT3_DRIVER  = 1'bz;
+assign O_BIT2_DRIVER  = 1'bz;
+assign O_BIT1_DRIVER  = 1'bz;
+assign O_BIT0_DRIVER  = 1'bz;
+assign O[4]     = O_BIT4_DRIVER;
+assign O[3]     = O_BIT3_DRIVER;
+assign O[2]     = O_BIT2_DRIVER;
+assign O[1]     = O_BIT1_DRIVER;
+assign O[0]     = O_BIT0_DRIVER;
+// }}}
+
+`ifdef LV_scanmodel
+// {{{
+lv_assumed_mbist_mem_in( A_BIT12_MUXED );
+lv_assumed_mbist_mem_in( A_BIT11_MUXED );
+lv_assumed_mbist_mem_in( A_BIT10_MUXED );
+lv_assumed_mbist_mem_in( A_BIT9_MUXED );
+lv_assumed_mbist_mem_in( A_BIT8_MUXED );
+lv_assumed_mbist_mem_in( A_BIT7_MUXED );
+lv_assumed_mbist_mem_in( A_BIT6_MUXED );
+lv_assumed_mbist_mem_in( A_BIT5_MUXED );
+lv_assumed_mbist_mem_in( A_BIT4_MUXED );
+lv_assumed_mbist_mem_in( A_BIT3_MUXED );
+lv_assumed_mbist_mem_in( A_BIT2_MUXED );
+lv_assumed_mbist_mem_in( A_BIT1_MUXED );
+lv_assumed_mbist_mem_in( A_BIT0_MUXED );
+lv_assumed_mbist_mem_in( WEB_BIT0_MUXED );
+lv_assumed_mbist_mem_in( OEB_BIT0_MUXED );
+lv_assumed_mbist_mem_in( CSB_BIT0_MUXED );
+lv_assumed_mbist_mem_in( I_BIT4_MUXED );
+lv_assumed_mbist_mem_in( I_BIT3_MUXED );
+lv_assumed_mbist_mem_in( I_BIT2_MUXED );
+lv_assumed_mbist_mem_in( I_BIT1_MUXED );
+lv_assumed_mbist_mem_in( I_BIT0_MUXED );
+lv_assumed_mbist_mem_out( O_BIT4_DRIVER );
+lv_assumed_mbist_mem_out( O_BIT3_DRIVER );
+lv_assumed_mbist_mem_out( O_BIT2_DRIVER );
+lv_assumed_mbist_mem_out( O_BIT1_DRIVER );
+lv_assumed_mbist_mem_out( O_BIT0_DRIVER );
+// }}}
+`endif
+
+endmodule
+`endcelldefine
+
+`endif

@@ -1,0 +1,24 @@
+#######################################################
+#                                                     
+#  Tempus Timing Solution Command Logging File                     
+#  Created on Tue Jun 10 17:25:01 2025                
+#                                                     
+#######################################################
+
+#@(#)CDS: Tempus Timing Solution v22.11-s001_1 (64bit) 09/16/2022 15:45 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 22.11-s001_1 NR220910-1931/22_11-UB (database version 18.20.592) {superthreading v2.19}
+#@(#)CDS: AAE 22.11-e006 (64bit) 09/16/2022 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 22.11-e010_1 () Sep  5 2022 07:16:46 ( )
+#@(#)CDS: SYNTECH 22.11-e002_1 () Aug  2 2022 07:54:00 ( )
+#@(#)CDS: CPE v22.11-e028
+
+read_design ./cpu_sys_tempus.dat cpu_sys_emep_top
+read_sdc ../cpu_sys.sdc
+report_clocks
+report_clocks > clocks.rpt
+report_clocks U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/Y
+report_clocks U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/
+report_fanin -to U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/Y
+report_fanin -to U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U_clk1_sel_sync/signal_synched_reg/CK
+report_fanin -to pll0_cmu_life_clk
+report_clocks pll0_cmu_life_clk

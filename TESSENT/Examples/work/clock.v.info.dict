@@ -1,0 +1,18 @@
+#
+# Information Dictionary File produced by Tessent Shell 2022.4
+# Date           : Tue Apr 22 18:27:46 2025
+#
+# <view> : (interface) | scan_graybox | full | ijtag_graybox
+# <language_version> : (verilog_2001) | verilog_sv31a
+
+set pattern_info_dict {
+  version 1
+  pattern_type scan
+  ssn off
+  current_mode unwrapped
+  simulation_design_view {
+    testbench_language verilog_2001
+    testbench_name CLOCK_clock_v_ctl
+    dut_inst CLOCK_inst
+  }
+}

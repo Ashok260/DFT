@@ -1,0 +1,32 @@
+Scan mode 'unwrapped' scan cells:
+--------------------------------------------------------------------------------------------------------
+CellNo  ChainName  GroupName  Pathname                           CellName  ScanOut  Clock  ClockPolarity
+--------------------------------------------------------------------------------------------------------
+-       chain0     dummy      /ts_lockup_latchn_clkc1_intno24_i  DLL_X2             clk    (-)          
+0       chain0     dummy      /S_reg_reg[0]                      SDFFR_X2  Q        clk    (+)          
+1       chain0     dummy      /S_reg_reg[1]                      SDFFR_X2  Q        clk    (+)          
+2       chain0     dummy      /S_reg_reg[6]                      SDFFR_X1  Q        clk    (+)          
+3       chain0     dummy      /M_reg_reg[0]                      SDFFR_X2  Q        clk    (+)          
+4       chain0     dummy      /S_reg_reg[4]                      SDFFR_X2  Q        clk    (+)          
+5       chain0     dummy      /S_reg_reg[2]                      SDFFR_X2  Q        clk    (+)          
+6       chain0     dummy      /M_reg_reg[2]                      SDFFR_X1  Q        clk    (+)          
+7       chain0     dummy      /S_reg_reg[3]                      SDFFR_X2  Q        clk    (+)          
+8       chain0     dummy      /H_reg_reg[0]                      SDFFR_X2  Q        clk    (+)          
+9       chain0     dummy      /M_reg_reg[6]                      SDFFR_X1  Q        clk    (+)          
+10      chain0     dummy      /S_reg_reg[7]                      SDFFR_X1  Q        clk    (+)          
+11      chain0     dummy      /M_reg_reg[4]                      SDFFR_X2  Q        clk    (+)          
+12      chain0     dummy      /M_reg_reg[5]                      SDFFR_X2  Q        clk    (+)          
+13      chain0     dummy      /S_reg_reg[5]                      SDFFR_X2  Q        clk    (+)          
+14      chain0     dummy      /M_reg_reg[1]                      SDFFR_X2  Q        clk    (+)          
+15      chain0     dummy      /H_reg_reg[4]                      SDFFR_X1  Q        clk    (+)          
+16      chain0     dummy      /M_reg_reg[3]                      SDFFR_X2  Q        clk    (+)          
+17      chain0     dummy      /H_reg_reg[2]                      SDFFS_X2  Q        clk    (+)          
+18      chain0     dummy      /H_reg_reg[3]                      SDFFR_X2  Q        clk    (+)          
+19      chain0     dummy      /pm_reg_reg                        SDFFR_X1  Q        clk    (+)          
+20      chain0     dummy      /H_reg_reg[1]                      SDFFS_X2  Q        clk    (+)          
+21      chain0     dummy      /M_reg_reg[7]                      SDFFR_X1  Q        clk    (+)          
+22      chain0     dummy      /H_reg_reg[5]                      SDFFR_X2  Q        clk    (+)          
+23      chain0     dummy      /H_reg_reg[7]                      SDFFR_X1  Q        clk    (+)          
+24      chain0     dummy      /H_reg_reg[6]                      SDFFR_X2  Q        clk    (+)          
+--------------------------------------------------------------------------------------------------------
+

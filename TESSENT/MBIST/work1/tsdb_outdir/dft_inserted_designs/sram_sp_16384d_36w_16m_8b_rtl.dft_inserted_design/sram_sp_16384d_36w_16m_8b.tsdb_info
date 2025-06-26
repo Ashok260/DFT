@@ -1,0 +1,23 @@
+//-------------------------------------------------
+//  File created by: Tessent Shell
+//          Version: 2022.4
+//       Created on: Sat Jun 21 12:23:15 IST 2025
+//-------------------------------------------------
+
+
+TsdbInfo(sram_sp_16384d_36w_16m_8b,rtl) {
+  tessent_tool_version : 2022.4;
+  tessent_meta_version : 10;
+  version : 3;
+  creation_date : Sat Jun 21 06:55:16 GMT 2025;
+  creation_user : "";
+  creation_step : process_dft_specification;
+  level : physical_block;
+  icl_extraction_needed : On;
+  library_name : work;
+  gate_extension : vg;
+  interface_has_external_dependencies : 0;
+  OpenedTsdbDirectories {
+    /home/01fe21bec223/DFT_TESSENT/TESSENT/MBIST/work1/tsdb_outdir;
+  }
+}

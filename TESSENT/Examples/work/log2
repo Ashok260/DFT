@@ -1,0 +1,233 @@
+/home/Mentor/tessent/bin/tessent -shell -log log2
+//  Warning: Tessent user documentation not found
+//  Tessent Shell  2022.4    Tue Nov 29 21:19:37 GMT 2022
+//                Unpublished work. Copyright 2022 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Mon Apr 14 13:34:09 IST 2025.
+//  64 bit version
+//  Host: APL10.kletech.ac.in (31578 MB RAM, 15983 MB Swap)
+//
+//  command: help set_context 
+set_context 
+Usage: 
+set_context dft [ -scan ] [ -test_points ] [ -edt ] [ -logic_bist ] [ -rtl | 
+-no_rtl ] [ -design_identifier <design_identifier> ] [ -license <license> ] 
+[ -force ] 
+set_context patterns [ -ijtag | -scan | -scan_retargeting | -scan_diagnosis | 
+-failure_mapping ] [ -silicon_insight ] [ -rtl | -no_rtl ] [ -design_identifier <design_identifier> ] 
+[ -license <license> ] [ -force ] 
+//  command: set_context dft -scan -design_identifier gate
+//  command: read_verilog ../NETLIST/counter_opt.v 
+//  command: read_cell_library ../TECHFILES/test_Nangate.mdt 
+//  Reading DFT Library file ../TECHFILES/test_Nangate.mdt
+//  Finished reading file ../TECHFILES/test_Nangate.mdt
+//  command: set_current_design 
+//  Note: Top design is 'counter'.
+//  command: add_black_boxes -auto
+//  command: set_design_level physical_block
+//  command: analyze_control_signals -auto
+//  Warning: Rule FN1 violation occurs 1 times
+//  Warning: Rule FN4 violation occurs 32 times
+//  Flattening process completed, cell instances=126, gates=320, PIs=3, POs=32, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin control signals identification analysis.
+//  ---------------------------------------------------------------------------
+//  Identified 1 clock control primary inputs.
+//     '/clk' (1) with off-state = 1.
+//  Identified 0 set control primary inputs.
+//  Identified 0 reset control primary inputs.
+//  Identified 0 read control primary inputs.
+//  Identified 0 write control primary inputs.
+//  ---------------------------------------------------------------------------
+//  Total number of internal lines is 96 (32 clocks, 32 sets , 32 resets, 0 reads, 0 writes).
+//  Total number of potentially clockable internal lines is 32 (32 clocks, 0 sets , 0 resets, 0 reads, 0 writes).
+//  Total number of not clockable internal lines is 64 (0 clocks, 32 sets , 32 resets, 0 reads, 0 writes).
+//  Total number of added primary input controls 1 (1 clocks, 0 sets , 0 resets, 0 reads, 0 writes).
+//  ---------------------------------------------------------------------------
+//  Warning: Flattened model deleted.
+//  command: check_design_rules 
+//  Warning: Rule FN1 violation occurs 1 times
+//  Warning: Rule FN4 violation occurs 32 times
+//  Flattening process completed, cell instances=126, gates=320, PIs=3, POs=32, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 32,
+//  sequential library cells = 32.
+//  ---------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------
+//  Begin scannability rules checking for 32 sequential library cells.
+//  ---------------------------------------------------------------------------
+//  32 sequential library cells identified as scannable.
+//  ---------------------------------------------------------------------------
+//  Begin scan clock rules checking.
+//  ---------------------------------------------------------------------------
+//  1 scan clock/set/reset lines have been identified.
+//  All scan clocks successfully passed off-state check.
+//  32 sequential cells passed clock stability checking.
+//  ---------------------------------------------------------------------------
+//  Begin shift register identification for 32 sequential library cells.
+//  ---------------------------------------------------------------------------
+//  No shift registers identified.
+//  Number of targeted sequential library cells = 32
+//  Warning: The tool may require a shift-capture clock during insertion, 
+//           but no 'shift_capture_clock' DFT signal was identified 
+//           and no TCLK source was specified using the command 'set_scan_signals -tclk'.
+//  Note: The system clock 'clk' will be used as the shift-capture clock, if needed.
+//  command: analyze_wrapper_cells 
+//  
+//     Port information and user constraints:
+//     --------------------------------------
+//         Input ports:     3 total,     1 ignored,     0 excluded,     0 off,     0 on,     2 auto
+//        Output ports:    32 total,     0 ignored,     0 excluded,     0 off,     0 on,    32 auto
+//  
+//  
+//     Wrapper analysis summary:
+//     -------------------------
+//        0 flip-flops were converted into output shared wrapper cells.
+//        32 flip-flops were converted into input shared wrapper cells.
+//        Use report_wrapper_cells for more details.
+//  
+//  command: set_scan_insertion_options -single_class_chains on -single_wrapper_type_chains on -single_power_domain_chains on -single_cluster_chains on
+//  command: add_scan_mode int_mode -type internal -chain_length 2 -chain_count 1 -single_power_domain_chains ON
+{int_mode}
+//  command: analyze_scan_chains 
+//  Warning: Over-constrained specification: mode 'int_mode' has a specified chain count of 1, but requires at least 32 chains to meet chain length constraints.
+//  Warning: The requested chain length (2) was exceeded for the mode 'int_mode'.
+//  Chain allocation of 'int_mode' mode completed:
+//         1 distributed chain of size 33
+//  command: insert_test_logic -verbose 
+=============================
+Test Logic Insertion Summary:
+=============================
+
+  Structural Data:
+  ----------------
+                           Added top-level port count:           4
+                                 Added instance count:          67
+
+  Logical Data:
+  -------------
+                      Added input wrapper logic count:          64
+                         Added pipelining logic count:           1
+                           Added retiming logic count:           1
+                    Added scan chain count (int_mode):           1
+
+//  Warning: Flattened model deleted.
+//  command: report_scan_chains 
+
+===============================
+Scan Chains Created by the Tool
+===============================
+
+   Scan mode 'int_mode' scan chains:
+   ---------------------------------
+      input wrapper chain = chain   group = dummy  input = /ts_si[0]  output = /ts_so[0]  length = 33
+
+//  command: report_scan_elements 
+==============================================================================
+name          type       length  si_so_clocks  state   is_non_scannable_reason
+------------  ---------  ------  ------------  ------  -----------------------
+/\q_reg[27]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[13]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[14]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[15]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[16]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[17]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[18]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[19]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[20]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[21]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[22]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[23]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[24]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[25]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[26]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[1]    leaf_cell  1       +clk          usable  --                     
+/\q_reg[6]    leaf_cell  1       +clk          usable  --                     
+/\q_reg[30]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[31]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[2]    leaf_cell  1       +clk          usable  --                     
+/\q_reg[3]    leaf_cell  1       +clk          usable  --                     
+/\q_reg[4]    leaf_cell  1       +clk          usable  --                     
+/\q_reg[5]    leaf_cell  1       +clk          usable  --                     
+/\q_reg[29]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[7]    leaf_cell  1       +clk          usable  --                     
+/\q_reg[8]    leaf_cell  1       +clk          usable  --                     
+/\q_reg[9]    leaf_cell  1       +clk          usable  --                     
+/\q_reg[10]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[11]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[12]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[28]   leaf_cell  1       +clk          usable  --                     
+/\q_reg[0]    leaf_cell  1       +clk          usable  --                     
+//  command: report_scan_cells 
+Scan mode 'int_mode' scan cells:
+-----------------------------------------------------------------------------------------------------------------------------
+CellNo  ChainName  GroupName  Pathname                                       CellName           ScanOut  Clock  ClockPolarity
+-----------------------------------------------------------------------------------------------------------------------------
+-       chain      dummy      /ts_lockup_latchp_clkc2_intno31_i              active_high_latch           clk    (-)          
+0       chain      dummy      /q_reg[0]                                      SDFF_X2            Q        clk    (+)          
+1       chain      dummy      /q_reg[28]                                     SDFF_X2            Q        clk    (+)          
+2       chain      dummy      /q_reg[12]                                     SDFF_X2            Q        clk    (+)          
+3       chain      dummy      /q_reg[11]                                     SDFF_X2            Q        clk    (+)          
+4       chain      dummy      /q_reg[10]                                     SDFF_X2            Q        clk    (+)          
+5       chain      dummy      /q_reg[9]                                      SDFF_X2            Q        clk    (+)          
+6       chain      dummy      /q_reg[8]                                      SDFF_X2            Q        clk    (+)          
+7       chain      dummy      /q_reg[7]                                      SDFF_X2            Q        clk    (+)          
+8       chain      dummy      /q_reg[29]                                     SDFF_X2            Q        clk    (+)          
+9       chain      dummy      /q_reg[5]                                      SDFF_X2            Q        clk    (+)          
+10      chain      dummy      /q_reg[4]                                      SDFF_X2            Q        clk    (+)          
+11      chain      dummy      /q_reg[3]                                      SDFF_X2            Q        clk    (+)          
+12      chain      dummy      /q_reg[2]                                      SDFF_X2            Q        clk    (+)          
+13      chain      dummy      /q_reg[31]                                     SDFF_X2            Q        clk    (+)          
+14      chain      dummy      /q_reg[30]                                     SDFF_X2            Q        clk    (+)          
+15      chain      dummy      /q_reg[6]                                      SDFF_X2            Q        clk    (+)          
+16      chain      dummy      /q_reg[1]                                      SDFF_X2            Q        clk    (+)          
+17      chain      dummy      /q_reg[26]                                     SDFF_X2            Q        clk    (+)          
+18      chain      dummy      /q_reg[25]                                     SDFF_X2            Q        clk    (+)          
+19      chain      dummy      /q_reg[24]                                     SDFF_X2            Q        clk    (+)          
+20      chain      dummy      /q_reg[23]                                     SDFF_X2            Q        clk    (+)          
+21      chain      dummy      /q_reg[22]                                     SDFF_X2            Q        clk    (+)          
+22      chain      dummy      /q_reg[21]                                     SDFF_X2            Q        clk    (+)          
+23      chain      dummy      /q_reg[20]                                     SDFF_X2            Q        clk    (+)          
+24      chain      dummy      /q_reg[19]                                     SDFF_X2            Q        clk    (+)          
+25      chain      dummy      /q_reg[18]                                     SDFF_X2            Q        clk    (+)          
+26      chain      dummy      /q_reg[17]                                     SDFF_X2            Q        clk    (+)          
+27      chain      dummy      /q_reg[16]                                     SDFF_X2            Q        clk    (+)          
+28      chain      dummy      /q_reg[15]                                     SDFF_X2            Q        clk    (+)          
+29      chain      dummy      /q_reg[14]                                     SDFF_X2            Q        clk    (+)          
+30      chain      dummy      /q_reg[13]                                     SDFF_X2            Q        clk    (+)          
+31      chain      dummy      /q_reg[27]                                     SDFF_X2            Q        clk    (+)          
+32      chain      dummy      /ts_pipeline_fsffn_clkc1_lo0l1_extsi32_sea0_i  SDFF_X2                     clk    (+)          
+-----------------------------------------------------------------------------------------------------------------------------
+
+//  command: write_design -output_file counter_scan.v
+//  command: set_system_mode setup
+//  command: open_visualizer 
+//  Note: Tessent Visualizer client successfully started and connected to the server.
+//  command: open_visualizer 
+//  Note: Tessent Visualizer client successfully started and connected to the server.
+//  command: write_schematic_dofile -display flat_schematic 
+//  Error: Syntax error   ( <filename> [ -replace ] [ -display { flat_schematic | hierarchical_schematic | icl_schematic | ijtag_network } ]  ) ( help write_schematic_dofile )
+//         Missing option ( <filename> )
+//  command: write_schematic_dofile sch.do -display flat_schematic
+//  Error: The flat_schematic is empty. Dofile will not be written out.
+//  command: write_schematic_dofile sch.do 
+//  Error: The flat_schematic is empty. Dofile will not be written out.
+//  command: open_visualizer 
+//  Note: Tessent Visualizer client successfully started and connected to the server.
+//  command: analyze_scan_chains 
+//  Error: Command 'analyze_scan_chains' is not available in the current system mode.
+//         It is available in the following system modes: analysis.

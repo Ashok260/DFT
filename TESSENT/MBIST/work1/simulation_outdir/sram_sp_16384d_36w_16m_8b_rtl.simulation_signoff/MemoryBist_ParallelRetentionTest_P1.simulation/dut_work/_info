@@ -1,0 +1,863 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+!s11f vlog 2022.4 2022.10, Oct 18 2022
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/01fe21bec223/DFT_TESSENT/TESSENT/MBIST/work1/simulation_outdir/sram_sp_16384d_36w_16m_8b_rtl.simulation_signoff/MemoryBist_ParallelRetentionTest_P1.simulation
+T_opt
+!s110 1750489274
+Vd8<nFm_>Kcz;1z@kPQ3VY2
+04 49 4 work MemoryBist_ParallelRetentionTest_P1_configuration fast 0
+=1-28c5c87d8703-685658ba-bcea8-25ce0
+R0
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work dut_work -L dut_work +nowarnTFMPC +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2022.4;75
+vCLKAND2X8
+Z3 !s110 1750489273
+!i10b 1
+!s100 oW[M_T>:OAJdDd?Z`F8Kl0
+I8[Q]oJk^mLQWj5TP]X[im1
+R1
+Z4 w1154315428
+Z5 8/home/01fe21bec223/DFT/DFT/slow.v
+Z6 F/home/01fe21bec223/DFT/DFT/slow.v
+!i122 5
+L0 3389 22
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2022.4;75
+r1
+!s85 0
+31
+Z9 !s108 1750489273.000000
+Z10 !s107 ../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_interface_m2.v|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_interface_m1.v|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller.v|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap.v|
+Z11 !s90 -work|dut_work|-L|dut_work|-mixedansiports|+librescan|-ysearchlib|-mfcu|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap.v|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller.v|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_interface_m1.v|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_interface_m2.v|-f|questa.arguments_1|
+!i113 0
+Z12 o-work dut_work -L dut_work -mixedansiports +librescan -mfcu -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z13 !s92 -work dut_work -L dut_work -mixedansiports +librescan -mfcu -v /home/01fe21bec223/DFT/DFT/slow.v -v /siemens/lnx-x86/lib64/hdleng/lib/dft_sim.v -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@c@l@k@a@n@d2@x8
+vCLKMX2X6
+R3
+!i10b 1
+!s100 ]DhZXDX:@WcV^QI?2X64Q1
+IXlRN10IMkE@Qln_85zP@<0
+R1
+R4
+R5
+R6
+!i122 0
+L0 3921 29
+R7
+R8
+r1
+!s85 0
+31
+R9
+Z14 !s107 ../../../tsdb_outdir/dft_inserted_designs/sram_sp_16384d_36w_16m_8b_rtl.dft_inserted_design/modified_rtl_files/sram_sp_16384d_36w_16m_8b.v|
+Z15 !s90 -work|dut_work|-L|dut_work|-mixedansiports|+librescan|-ysearchlib|-mfcu|../../../tsdb_outdir/dft_inserted_designs/sram_sp_16384d_36w_16m_8b_rtl.dft_inserted_design/modified_rtl_files/sram_sp_16384d_36w_16m_8b.v|-f|questa.arguments_1|
+!i113 0
+R12
+R13
+R2
+n@c@l@k@m@x2@x6
+vDLY4X4
+R3
+!i10b 1
+!s100 BaAzAhXTb9YJ97GanQcnV3
+IWG7mVeeT0l^2:dIA[c>HY0
+R1
+R4
+R5
+R6
+!i122 4
+L0 6645 18
+R7
+R8
+r1
+!s85 0
+31
+R9
+Z16 !s107 ../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_ijtag.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_2.v|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_ijtag.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_1.v|
+Z17 !s90 -work|dut_work|-L|dut_work|-mixedansiports|+librescan|-ysearchlib|-mfcu|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_ijtag.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_1.v|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_ijtag.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_2.v|-f|questa.arguments_1|
+!i113 0
+R12
+R13
+R2
+n@d@l@y4@x4
+JMemoryBist_ParallelRetentionTest_P1_configuration
+R3
+!i10b 0
+!s100 o1:elzHbeF`;4gXD3`eTK2
+I@9oWLPeUT4:BX53K=ebLm2
+R1
+w1750489393
+8./patterns.configuration
+F./patterns.configuration
+!i122 7
+L0 1 0
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 ./patterns.configuration|
+!s90 -work|dut_work|-L|dut_work|-mixedansiports|+librescan|-ysearchlib|-mfcu|./patterns.configuration|
+!i113 0
+R12
+R2
+n@memory@bist_@parallel@retention@test_@p1_configuration
+vNAND2BX4
+R3
+!i10b 1
+!s100 mm2zVWO^H>=d40VN^5USZ1
+I64RgzQS:1hBIBM=ONRXAc0
+R1
+R4
+R5
+R6
+!i122 0
+L0 9040 24
+R7
+R8
+r1
+!s85 0
+31
+R9
+R14
+R15
+!i113 0
+R12
+R13
+R2
+n@n@a@n@d2@b@x4
+vOR2X2
+R3
+!i10b 1
+!s100 DORfUSaZNHHUblZMU_KY;3
+Ih3Goo[Cm=Mdm5M_K8>^_40
+R1
+R4
+R5
+R6
+!i122 0
+L0 12998 22
+R7
+R8
+r1
+!s85 0
+31
+R9
+R14
+R15
+!i113 0
+R12
+R13
+R2
+n@o@r2@x2
+vSPRAM_8192x36
+R3
+!i10b 1
+!s100 IXB=L2iVC<hg_eRJ[>8b:3
+I^LL[VKC<A>YR_E>9U5<;P3
+R1
+Z18 w1709029217
+Z19 8/jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SPRAM_8192x36/SPRAM_8192x36.v
+Z20 F/jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SPRAM_8192x36/SPRAM_8192x36.v
+!i122 1
+L0 54 519
+R7
+R8
+r1
+!s85 0
+31
+R9
+Z21 !s107 /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SPRAM_8192x36/SPRAM_8192x36.v|
+Z22 !s90 -work|dut_work|-L|dut_work|-mixedansiports|+librescan|-ysearchlib|-mfcu|/jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SPRAM_8192x36/SPRAM_8192x36.v|-f|questa.arguments_1|
+!i113 0
+R12
+R13
+R2
+n@s@p@r@a@m_8192x36
+vSPRAM_8192x36_behave
+R3
+!i10b 1
+!s100 g=2=KoIdSeZz;^9WAle2J1
+IXh7D]FgnImXVWB:iC<K?=1
+R1
+R18
+R19
+R20
+!i122 1
+L0 575 217
+R7
+R8
+r1
+!s85 0
+31
+R9
+R21
+R22
+!i113 0
+R12
+R13
+R2
+n@s@p@r@a@m_8192x36_behave
+vsram_sp_16384d_36w_16m_8b
+R3
+!i10b 1
+!s100 KIlo78Xj[SDeCZdYbm1z]3
+IP=]3dlb1SmJTh@3dGmYVP1
+R1
+w1750488916
+8../../../tsdb_outdir/dft_inserted_designs/sram_sp_16384d_36w_16m_8b_rtl.dft_inserted_design/modified_rtl_files/sram_sp_16384d_36w_16m_8b.v
+F../../../tsdb_outdir/dft_inserted_designs/sram_sp_16384d_36w_16m_8b_rtl.dft_inserted_design/modified_rtl_files/sram_sp_16384d_36w_16m_8b.v
+!i122 0
+L0 7 231
+R7
+R8
+r1
+!s85 0
+31
+R9
+R14
+R15
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_clk_buf
+R3
+!i10b 1
+!s100 k4Tg5OYDibWJKnh1[]X1]2
+I`FD8kY];hJb=`_7n25B1M3
+R1
+Z23 w1750488909
+8../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_clk_buf.v
+F../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_clk_buf.v
+!i122 3
+Z24 L0 18 8
+R7
+R8
+r1
+!s85 0
+31
+R9
+Z25 !s107 ../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_clk_inv.v|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_clk_buf.v|
+Z26 !s90 -work|dut_work|-L|dut_work|-mixedansiports|+librescan|-ysearchlib|-mfcu|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_clk_buf.v|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_clk_inv.v|-f|questa.arguments_1|
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_clk_inv
+R3
+!i10b 1
+!s100 @5FKIJaOaBW[IfRE;n=Ah0
+I[N9E;]NPkmbA55^FX6Yoh2
+R1
+R23
+8../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_clk_inv.v
+F../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_clk_inv.v
+!i122 3
+R24
+R7
+R8
+r1
+!s85 0
+31
+R9
+R25
+R26
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_clk_mux2
+R3
+!i10b 1
+!s100 eRKF1`3j<Ad>B;V@>UUYR2
+InYlZ4lc4RA<L@@?YS3^561
+R1
+R23
+8../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_clk_mux2.v
+F../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_clk_mux2.v
+!i122 2
+L0 18 10
+R7
+R8
+r1
+!s85 0
+31
+R9
+Z27 !s107 ../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_posedge_synchronizer_reset.v|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_clk_mux2.v|
+Z28 !s90 -work|dut_work|-L|dut_work|-mixedansiports|+librescan|-ysearchlib|-mfcu|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_clk_mux2.v|../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_posedge_synchronizer_reset.v|-f|questa.arguments_1|
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap
+R3
+!i10b 1
+!s100 l8Xo>9HWb1AS6gV;2@7_b2
+IL9>1>TiH8FlfnhjUUB23I2
+R1
+Z29 w1750488911
+Z30 8../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap.v
+Z31 F../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap.v
+!i122 5
+L0 17 216
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_ctl_sib
+R3
+!i10b 1
+!s100 c4fVA9=R6DbB]nP:2>RTG1
+II=c<WPH:=XNRXSj[jP<1F2
+R1
+R29
+R30
+R31
+!i122 5
+L0 527 57
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_sib
+R3
+!i10b 1
+!s100 cR98YPRAbK]B4[c^@V1F?1
+Izn^;Nf>>i8>hfG2>ZR75;0
+R1
+R29
+R30
+R31
+!i122 5
+L0 478 49
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_bap_tdr
+R3
+!i10b 1
+!s100 8?kX=Ej0N45QaIichMK8n0
+I;fWOT2dXc3b_XEiB]AJGX1
+R1
+R29
+R30
+R31
+!i122 5
+L0 234 243
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller
+R3
+!i10b 1
+!s100 9HzRPMi0CFiK]01G7icj92
+ITn29fK8B=h]dD0H=XQLnj1
+R1
+Z32 w1750488910
+Z33 8../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller.v
+Z34 F../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller.v
+!i122 5
+L0 30 905
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_add_format
+R3
+!i10b 1
+!s100 g@ST>fA:ndlaQcGP<[jf[3
+IMAPoRGO<?LN`PQShj8;zA2
+R1
+R32
+R33
+R34
+!i122 5
+L0 2285 16
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_add_gen
+R3
+!i10b 1
+!s100 ?:^:MFi4[lP:6z;96Keaj2
+IUZBCA6Po>?^I8kDb0P:O51
+R1
+R32
+R33
+R34
+!i122 5
+L0 2316 726
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_ctl_comp
+R3
+!i10b 1
+!s100 X4[oJUW[hDJ93]TPhZVIl3
+ISLB2M65mkWj:PYJ>3Y@GS0
+R1
+R32
+R33
+R34
+!i122 5
+L0 944 229
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_data_gen
+R3
+!i10b 1
+!s100 <<jXDI8bHP=3`Y[RPN`642
+II1L9>06;hU]>bhA?TT[IV2
+R1
+R32
+R33
+R34
+!i122 5
+L0 3915 260
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_fsm
+R3
+!i10b 1
+!s100 _dXbmM2DIZZ<><n4K>?H[3
+ISj[I^<;>iDfkjjHa21onM2
+R1
+R32
+R33
+R34
+!i122 5
+L0 3051 175
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_pointer_cntrl
+R3
+!i10b 1
+!s100 UWCKL9[g@?c^FWUg19b5U1
+IQ971m@oN8n;z`cV1gJ4;m0
+R1
+R32
+R33
+R34
+!i122 5
+L0 1204 1068
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_repeat_loop_cntrl
+R3
+!i10b 1
+!s100 11N9F<eFz@lY;G[Yo]i=E0
+I^HcS=DZ@Jf_fgIa5=9_n32
+R1
+R32
+R33
+R34
+!i122 5
+L0 3615 291
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_controller_signal_gen
+R3
+!i10b 1
+!s100 6:nH6fIY@hD_XULhh>?eR2
+I>g0UCYfm2WlL?;AnJ<8160
+R1
+R32
+R33
+R34
+!i122 5
+L0 3233 373
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_interface_m1
+R3
+!i10b 1
+!s100 [NXj58Lo7zCjZnTPCihaV2
+I8T@:5X2KJUQo8o6?SbMHY0
+R1
+R29
+Z35 8../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_interface_m1.v
+Z36 F../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_interface_m1.v
+!i122 5
+Z37 L0 53 511
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_interface_m1_STATUS
+R3
+!i10b 1
+!s100 ;E94c:TjS9HTi[LEkHTgm0
+IOe]b0idG4kKAjFciFoGHz0
+R1
+R29
+R35
+R36
+!i122 5
+Z38 L0 568 335
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+nsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_interface_m1_@s@t@a@t@u@s
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_interface_m2
+R3
+!i10b 1
+!s100 E]cz^i4A>DbaOPIFJ[KYM3
+IeST5V<c:RAPLNoeH^Rk^e1
+R1
+R29
+Z39 8../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_interface_m2.v
+Z40 F../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_mbist.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_interface_m2.v
+!i122 5
+R37
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_interface_m2_STATUS
+R3
+!i10b 1
+!s100 3MRUgzEJGf0i3i8ol]lI[1
+I>^m6bbcE>OiZIOY2B_d2E0
+R1
+R29
+R39
+R40
+!i122 5
+R38
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R2
+nsram_sp_16384d_36w_16m_8b_rtl_tessent_mbist_c1_interface_m2_@s@t@a@t@u@s
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_posedge_synchronizer_reset
+R3
+!i10b 1
+!s100 NPSognD@GT[3F8gZQUIQ^2
+I]O2BIRCOi;1kkAle?Xz@31
+R1
+R23
+8../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_posedge_synchronizer_reset.v
+F../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_cells.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_posedge_synchronizer_reset.v
+!i122 2
+L0 18 17
+R7
+R8
+r1
+!s85 0
+31
+R9
+R27
+R28
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_sib_1
+R3
+!i10b 1
+!s100 603S[znGEJ1KmbK`UWa4i1
+Ic660XmTY68I?>kLAInHUD3
+R1
+R23
+8../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_ijtag.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_1.v
+F../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_ijtag.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_1.v
+!i122 4
+L0 17 192
+R7
+R8
+r1
+!s85 0
+31
+R9
+R16
+R17
+!i113 0
+R12
+R13
+R2
+vsram_sp_16384d_36w_16m_8b_rtl_tessent_sib_2
+R3
+!i10b 1
+!s100 X[mIdJ4O2Ol^ieE57IGPQ2
+I0fUe9d^lleUlboWcY9ULo1
+R1
+R23
+8../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_ijtag.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_2.v
+F../../../tsdb_outdir/instruments/sram_sp_16384d_36w_16m_8b_rtl_ijtag.instrument/sram_sp_16384d_36w_16m_8b_rtl_tessent_sib_2.v
+!i122 4
+L0 17 53
+R7
+R8
+r1
+!s85 0
+31
+R9
+R16
+R17
+!i113 0
+R12
+R13
+R2
+vTB
+R3
+!i10b 1
+!s100 9OEC`>UXY[4EfhgPE]gc_3
+IJa;o>;zBkU;9_gg]0fOBm0
+R1
+w1750488979
+8./patterns_directory/MemoryBist_ParallelRetentionTest_P1.v
+F./patterns_directory/MemoryBist_ParallelRetentionTest_P1.v
+!i122 6
+L0 29 1795
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 ./patterns_directory/MemoryBist_ParallelRetentionTest_P1.v|
+!s90 -work|dut_work|-L|dut_work|-mixedansiports|+librescan|-ysearchlib|-mfcu|./patterns_directory/MemoryBist_ParallelRetentionTest_P1.v|-f|questa.arguments_1|
+!i113 0
+R12
+R13
+R2
+n@t@b
+vTLATNTSCAX8
+R3
+!i10b 1
+!s100 D0VTH;AToM8zXQRnUNR262
+I[G`kYo0i@CMRjYDadNJD52
+R1
+R4
+R5
+R6
+!i122 4
+L0 19342 44
+R7
+R8
+r1
+!s85 0
+31
+R9
+R16
+R17
+!i113 0
+R12
+R13
+R2
+n@t@l@a@t@n@t@s@c@a@x8
+Uudp_mux2
+R3
+!i10b 1
+!s100 4HbmdhG2bGAW=FF=@5]6;3
+Ibd:hCo5z^ZUfRfz:gaLaF1
+R1
+R4
+R5
+R6
+!i122 0
+L0 20582 0
+R7
+R8
+r1
+!s85 0
+31
+R9
+R14
+R15
+!i113 0
+R12
+R13
+R2
+Uudp_tlat
+R3
+!i10b 1
+!s100 QbhGoicZZjINDR<J8SP[J1
+Iil`Ec8kQ7BnBhnd_zjooP0
+R1
+R4
+R5
+R6
+!i122 4
+L0 20556 0
+R7
+R8
+r1
+!s85 0
+31
+R9
+R16
+R17
+!i113 0
+R12
+R13
+R2

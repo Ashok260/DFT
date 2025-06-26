@@ -1,0 +1,7 @@
+config ICLNetwork_configuration;
+  design TB;
+  default liblist dut_work tsdb_ijtag_graybox;
+
+  instance TB.DUT_inst use     tsdb_ijtag_graybox.sram_sp_16384d_36w_16m_8b;
+  instance TB.DUT_inst liblist tsdb_ijtag_graybox dut_work;
+endconfig

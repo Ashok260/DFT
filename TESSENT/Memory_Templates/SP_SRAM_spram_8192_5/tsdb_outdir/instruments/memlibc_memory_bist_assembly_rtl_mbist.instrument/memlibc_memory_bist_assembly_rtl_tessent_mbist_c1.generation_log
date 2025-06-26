@@ -1,0 +1,253 @@
+membistipg c1 -configfile /tmp/.tessent.tmp.APL5.kletech.ac.in.01fe21bec223.34035/scratch/membistipg_workdir/memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_controller/c1.membist  -library /tmp/.tessent.tmp.APL5.kletech.ac.in.01fe21bec223.34035/scratch/membistipg_workdir/memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_controller/MemLibs/spram_8192_5.lib -clockPeriod 10 -failureLimit 4096 -compStat sharedwithgo -usemulticyclepaths on -parallelStaticRetentionTest on -controllertype programmable -extension v -structuralExtension vg -bak off -flow tessent_shell -designName memlibc_memory_bist_assembly -pass_id rtl -scratch_dir "/tmp/.tessent.tmp.APL5.kletech.ac.in.01fe21bec223.34035/scratch/membistipg_workdir" -outDir "/home/01fe21bec223/DFT_TESSENT/TESSENT/Memory_Templates/SP_SRAM_spram_8192_5/tsdb_outdir/instruments/memlibc_memory_bist_assembly_rtl_mbist.instrument" -log membistipg.log_c1 -multithreading -xortreecapacity 3 
+
+***************************************************************************************************
+*                                                                                                 *
+* This material contains trade secrets or otherwise confidential                                  *
+* information owned by Siemens Industry Software Inc. or its affiliates                           *
+* (collectively, "SISW"), or its licensors. Access to and use of this                             *
+* information is strictly limited as set forth in the Customer's                                  *
+* applicable agreements with SISW.                                                                *
+*                                                                                                 *
+* Unpublished work. Copyright 2022 Siemens                                                        *
+*                                                                                                 *
+* RESTRICTED RIGHTS USE (SHORT FORM)                                                              *
+*                                                                                                 *
+***************************************************************************************************
+
+
+***************************************************************************************************
+*                                                                                                 *
+*                                        membistipGenerate                                        *
+*                                         Version 2022.4                                          *
+*                               (optimized for 64-bit architecture)                               *
+*                                                                                                 *
+***************************************************************************************************
+
+ Parsing command line options...
+ Reading the configuration file /tmp/.tessent.tmp.APL5.kletech.ac.in.01fe21bec223.34035/scratch/membistipg_workdir/memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_controller/c1.membist.
+ Reading the library file /tmp/.tessent.tmp.APL5.kletech.ac.in.01fe21bec223.34035/scratch/membistipg_workdir/memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_controller/MemLibs/spram_8192_5.lib.
+
+
+
+Checked out mttsmemorybistf from mttsmemorybist_c.
+Checked out mttsmemstdprog from mttsmemorybist_c.
+Warning [PPHW01] : You have not specified the property NumberOfDataRegisterBits. The controller is HardProgrammable 
+                   and only specifies algorithms from the SMarch/SMarchCHKB family. Setting the size 
+                   of the expect and write data registers to the minimum value of 2 bits.
+
+User Options:                           
+  Working Directory:                    /home/01fe21bec223/DFT_TESSENT/TESSENT/Memory_Templates/SP_SRAM_spram_8192_5/
+  Source Directory:                     /siemens
+  Configuration File:                   memlibc_memory_bist_assembly.membistpg
+  Memory Library File:                  /tmp/.tessent.tmp.APL5.kletech.ac.in.01fe21bec223.34035/scratch/membistipg_workdir/memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_controller/MemLibs/spram_8192_5.lib
+  Output Directory:                     /home/01fe21bec223/DFT_TESSENT/TESSENT/Memory_Templates/SP_SRAM_spram_8192_5/tsdb_outdir/instruments/memlibc_memory_bist_assembly_rtl_mbist.instrument
+  Log File:                             /home/01fe21bec223/DFT_TESSENT/TESSENT/Memory_Templates/SP_SRAM_spram_8192_5/tsdb_outdir/instruments/memlibc_memory_bist_assembly_rtl_mbist.instrument/membistipg.log_c1
+  Language:                             VERILOG
+  Extension:                            v
+  Structural Extension:                 vg
+  Collar Generation:                    ON
+  Controller Generation:                ON
+  CompStat:                             SHAREDWITHGO
+  Scan Model Generation:                ON
+  Scan Chains:                          PREP
+  Clock Period:                         10 ns
+  Xor Tree Capacity:                    3
+  Use MultiCycle Paths:                 ON
+  Include Test Pattern Library:         ON
+  Algorithm Summary:                    OFF
+
+Including Algorithms from the Test Pattern Library...
+  Including the Library Test Pattern SMARCH.
+
+Controller Options:                     
+  Controller Type:                      Programmable
+  Soft-Algorithm Instructions:          0
+  SoftAlgorithmAddressMinMax:           No
+  EnableAEqualsBCommand:                No
+  X0 Address Segment Bits:              0
+  Y0 Address Segment Bits:              0
+  InvertDataWithAddressBitRange:        0
+  Data Register Bits:                   2
+  Delay Counter Bits:                   0
+  CounterA Bits:                        0
+  Stop-On-Nth-Error Counter Bits:       12
+
+Validating all user specified algorithms and any included algorithms from the library of test patterns...
+
+  Calculating the run length for algorithm SMARCH...
+    Run Length Summary for Algorithm SMARCH and OperationSet SYNC used in Step 0 with BitSlice 1
+      Instruction(INST0_IDLE_PH_1)
+        Total Instruction Executions:        1.0
+        Total Clocks:                        4.0
+      Instruction(INS1_PH_2)
+        Total Instruction Executions:        1.0
+        Total Clocks:                        2.0
+      Instruction(INS2_PH_2)
+        Total Instruction Executions:        1.0
+        Total Clocks:                        2.0
+      Instruction(INS3_PH_3)
+        Total Instruction Executions:        1.0
+        Total Clocks:                        2.0
+      Instruction(INS4_PH_3)
+        Total Instruction Executions:        1.0
+        Total Clocks:                        2.0
+      Instruction(INS5_PH_4)
+        Total Instruction Executions:        8191.0
+        Total Clocks:                        16382.0
+      Instruction(INS6_PH_5)
+        Total Instruction Executions:        8192.0
+        Total Clocks:                        16384.0
+      Instruction(INS7_PH_5)
+        Total Instruction Executions:        8192.0
+        Total Clocks:                        16384.0
+      Instruction(INS8_PH_6)
+        Total Instruction Executions:        8192.0
+        Total Clocks:                        16384.0
+      Instruction(INS9_PH_6)
+        Total Instruction Executions:        8192.0
+        Total Clocks:                        16384.0
+      Instruction(INS10_PH_7)
+        Total Instruction Executions:        16384.0
+        Total Clocks:                        32768.0
+      Instruction(INS11_PH_7)
+        Total Instruction Executions:        16384.0
+        Total Clocks:                        32768.0
+      Instruction(INS12_PH_9)
+        Total Instruction Executions:        8192.0
+        Total Clocks:                        16384.0
+      Instruction(INS13_PH_9)
+        Total Instruction Executions:        8192.0
+        Total Clocks:                        16384.0
+      Total Clocks:                          180234.0
+      Total Time(@10ns period):              1.80234 ms
+      Max Number of Strobes:                 81924.0
+
+Memory Configurations:                  
+
+Memory:                                 m1
+
+  Status Information
+  ------------------
+    DataComparatorMap
+    -----------------
+    -----------------
+    GO_ID[0] <- LocalComparator[0] <- DATA[0] 
+    GO_ID[1] <- LocalComparator[1] <- DATA[1] 
+    GO_ID[2] <- LocalComparator[2] <- DATA[2] 
+    GO_ID[3] <- LocalComparator[3] <- DATA[3] 
+    GO_ID[4] <- LocalComparator[4] <- DATA[4] 
+
+  Address Counter
+  ---------------
+  RowAddress[6:0] Countrange:           Maximum[7'b1111111]
+                                        Minimum[7'b0000000]
+  ColumnAddress[5:0] Countrange:        Maximum[6'b111111]
+                                        Minimum[6'b000000]
+
+  Function Data Bus  Data Register Bit  Port
+  ----------------   -----------------  ----
+  d[4] (INPUT)       WRITE[0]           I[4]
+  d[3] (INPUT)       WRITE[1]           I[3]
+  d[2] (INPUT)       WRITE[0]           I[2]
+  d[1] (INPUT)       WRITE[1]           I[1]
+  d[0] (INPUT)       WRITE[0]           I[0]
+  d[4] (OUTPUT)      EXPECT[0]          O[4]
+  d[3] (OUTPUT)      EXPECT[1]          O[3]
+  d[2] (OUTPUT)      EXPECT[0]          O[2]
+  d[1] (OUTPUT)      EXPECT[1]          O[1]
+  d[0] (OUTPUT)      EXPECT[0]          O[0]
+
+  Function Address Bus             Logical Bit         Port
+  --------------------             -----------         ----
+  Address[12]                      RowAddress[6]       A[12]
+  Address[11]                      RowAddress[5]       A[11]
+  Address[10]                      RowAddress[4]       A[10]
+  Address[9]                       RowAddress[3]       A[9]
+  Address[8]                       RowAddress[2]       A[8]
+  Address[7]                       RowAddress[1]       A[7]
+  Address[6]                       RowAddress[0]       A[6]
+  Address[5]                       ColumnAddress[5]    A[5]
+  Address[4]                       ColumnAddress[4]    A[4]
+  Address[3]                       ColumnAddress[3]    A[3]
+  Address[2]                       ColumnAddress[2]    A[2]
+  Address[1]                       ColumnAddress[1]    A[1]
+  Address[0]                       ColumnAddress[0]    A[0]
+
+  Test Port                        Logical Read/Write Ports
+  ---------                        ------------------------
+  0                                (All ports)
+
+
+Summary of Operations                   
+---------------------
+
+  OperationSetFamily:                   DEFAULT
+
+    OperationSet:                       SYNC
+
+      Operation:                        NOOPERATION
+        Tick:                           1234
+        WRITEENABLE:                    0000
+        OUTPUTENABLE:                   1111
+        SELECT:                         1111
+        STROBEDATAOUT:                  0000
+
+      Operation:                        WRITE
+        Tick:                           12
+        WRITEENABLE:                    11
+        OUTPUTENABLE:                   11
+        SELECT:                         11
+        STROBEDATAOUT:                  00
+
+      Operation:                        READ
+        Tick:                           12
+        WRITEENABLE:                    00
+        OUTPUTENABLE:                   11
+        SELECT:                         11
+        STROBEDATAOUT:                  01
+
+      Operation:                        READMODIFYWRITE
+        Tick:                           12
+        WRITEENABLE:                    01
+        OUTPUTENABLE:                   11
+        SELECT:                         11
+        STROBEDATAOUT:                  01
+
+      Operation:                        WRITEREAD
+        Tick:                           12
+        WRITEENABLE:                    10
+        OUTPUTENABLE:                   11
+        SELECT:                         11
+        STROBEDATAOUT:                  00
+
+
+ Generating design files...
+   Registering memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_controller.v for generation.
+   Registering memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_interface_m1.v for generation.
+   Registering memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_interface_m1.icl for generation.
+   Registering spram_8192_5.scan for generation.
+   Registering spram_8192_5.syn for generation.
+   Registering memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_controller.gtool_info for generation.
+   Registering memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_controller.icl for generation.
+   Registering memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_controller.pdl for generation.
+   Registering memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_controller.tcd for generation.
+   Registering memlibc_memory_bist_assembly_rtl_tessent_mbist_c1.designa for generation.
+   Generating controller module:                     /home/01fe21bec223/DFT_TESSENT/TESSENT/Memory_Templates/SP_SRAM_spram_8192_5/tsdb_outdir/instruments/memlibc_memory_bist_assembly_rtl_mbist.instrument/memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_controller.v
+   Generating interface module:                      /home/01fe21bec223/DFT_TESSENT/TESSENT/Memory_Templates/SP_SRAM_spram_8192_5/tsdb_outdir/instruments/memlibc_memory_bist_assembly_rtl_mbist.instrument/memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_interface_m1.v
+   Generating interface ICL:                         /home/01fe21bec223/DFT_TESSENT/TESSENT/Memory_Templates/SP_SRAM_spram_8192_5/tsdb_outdir/instruments/memlibc_memory_bist_assembly_rtl_mbist.instrument/memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_interface_m1.icl
+   Generating memory scan model:                     /home/01fe21bec223/DFT_TESSENT/TESSENT/Memory_Templates/SP_SRAM_spram_8192_5/tsdb_outdir/instruments/memlibc_memory_bist_assembly_rtl_mbist.instrument/spram_8192_5.scan
+   Generating memory synthesis model:                /home/01fe21bec223/DFT_TESSENT/TESSENT/Memory_Templates/SP_SRAM_spram_8192_5/tsdb_outdir/instruments/memlibc_memory_bist_assembly_rtl_mbist.instrument/spram_8192_5.syn
+   Generating gtool_info file:                       /home/01fe21bec223/DFT_TESSENT/TESSENT/Memory_Templates/SP_SRAM_spram_8192_5/tsdb_outdir/instruments/memlibc_memory_bist_assembly_rtl_mbist.instrument/memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_controller.gtool_info
+   Generating ICL file:                              /home/01fe21bec223/DFT_TESSENT/TESSENT/Memory_Templates/SP_SRAM_spram_8192_5/tsdb_outdir/instruments/memlibc_memory_bist_assembly_rtl_mbist.instrument/memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_controller.icl
+   Generating PDL file:                              /home/01fe21bec223/DFT_TESSENT/TESSENT/Memory_Templates/SP_SRAM_spram_8192_5/tsdb_outdir/instruments/memlibc_memory_bist_assembly_rtl_mbist.instrument/memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_controller.pdl
+   Generating Tessent Instrument Description file:   /home/01fe21bec223/DFT_TESSENT/TESSENT/Memory_Templates/SP_SRAM_spram_8192_5/tsdb_outdir/instruments/memlibc_memory_bist_assembly_rtl_mbist.instrument/memlibc_memory_bist_assembly_rtl_tessent_mbist_c1_controller.tcd
+   Generating designa file:                          /home/01fe21bec223/DFT_TESSENT/TESSENT/Memory_Templates/SP_SRAM_spram_8192_5/tsdb_outdir/instruments/memlibc_memory_bist_assembly_rtl_mbist.instrument/memlibc_memory_bist_assembly_rtl_tessent_mbist_c1.designa
+
+ Error Summary:
+
+	Total Warnings	: 1
+
+ Log file is /home/01fe21bec223/DFT_TESSENT/TESSENT/Memory_Templates/SP_SRAM_spram_8192_5/tsdb_outdir/instruments/memlibc_memory_bist_assembly_rtl_mbist.instrument/membistipg.log_c1.
+
+ Done.
+

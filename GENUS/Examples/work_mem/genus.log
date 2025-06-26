@@ -1,0 +1,134 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 20.11-s111_1, built Mon Apr 26 02:27:38 PDT 2021
+Options: -files run_synthesis.tcl 
+Date:    Wed Apr 16 15:50:00 2025
+Host:    APL10.kletech.ac.in (x86_64 w/Linux 4.18.0-553.47.1.el8_10.x86_64) (6cores*12cpus*1physical cpu*12th Gen Intel(R) Core(TM) i5-12500 18432KB) (32336152KB)
+PID:     86101
+OS:      Red Hat Enterprise Linux release 8.10 (Ootpa)
+
+Checkout succeeded: Genus_Synthesis/EF29107615D411912BD3
+	License file: 5280@14.139.1.126
+	License Server: 5280@14.139.1.126
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (5 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source run_synthesis.tcl
+#@ Begin verbose source ./run_synthesis.tcl
+@file(run_synthesis.tcl) 1: set DATE [clock format [clock seconds] -format "%b%d-%T"]
+@file(run_synthesis.tcl) 2: read_lib "../TECHFILES/NangateOpenCellLibrary_slow_conditional_ccs.lib ../TECHFILES/memories/rf_2p_136d_74w_1m_4b.lib ../TECHFILES/memories/rf_2p_256d_76w_1m_4b.lib ../TECHFILES/memories/rf_2p_512d_76w_2m_4b.lib ../TECHFILES/memories/sram_sp_16384d_36w_16m_8b.lib ../TECHFILES/memories/sram_sp_32768d_33w_16m_8b.lib ../TECHFILES/memories/sram_sp_512d_32w_4m_2b.lib"
+
+Threads Configured:8
+
+  Message Summary for Library all 7 libraries:
+  ********************************************
+  An unsupported construct was detected in this library. [LBR-40]: 13
+  ********************************************
+ 
+Warning : Libraries have inconsistent nominal operating conditions. In the Liberty library, there are attributes called nom_voltage, nom_process and nom_temperature. Genus reports the message, if the respective values of the 2 given .libs differ. [LBR-38]
+        : The libraries are 'NangateOpenCellLibrary' and 'rf_2p_136d_74w_1m_4b'.
+        : This is a common source of delay calculation confusion and should be avoided.
+Warning : Libraries have inconsistent nominal operating conditions. In the Liberty library, there are attributes called nom_voltage, nom_process and nom_temperature. Genus reports the message, if the respective values of the 2 given .libs differ. [LBR-38]
+        : The libraries are 'NangateOpenCellLibrary' and 'rf_2p_256d_76w_1m_4b'.
+Warning : Libraries have inconsistent nominal operating conditions. In the Liberty library, there are attributes called nom_voltage, nom_process and nom_temperature. Genus reports the message, if the respective values of the 2 given .libs differ. [LBR-38]
+        : The libraries are 'NangateOpenCellLibrary' and 'rf_2p_512d_76w_2m_4b'.
+Warning : Libraries have inconsistent nominal operating conditions. In the Liberty library, there are attributes called nom_voltage, nom_process and nom_temperature. Genus reports the message, if the respective values of the 2 given .libs differ. [LBR-38]
+        : The libraries are 'NangateOpenCellLibrary' and 'sram_sp_16384d_36w_16m_8b'.
+Warning : Libraries have inconsistent nominal operating conditions. In the Liberty library, there are attributes called nom_voltage, nom_process and nom_temperature. Genus reports the message, if the respective values of the 2 given .libs differ. [LBR-38]
+        : The libraries are 'NangateOpenCellLibrary' and 'sram_sp_32768d_33w_16m_8b'.
+Warning : Libraries have inconsistent nominal operating conditions. In the Liberty library, there are attributes called nom_voltage, nom_process and nom_temperature. Genus reports the message, if the respective values of the 2 given .libs differ. [LBR-38]
+        : The libraries are 'NangateOpenCellLibrary' and 'sram_sp_512d_32w_4m_2b'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.950000, 125.000000) in library 'NangateOpenCellLibrary_slow_conditional_ccs.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.080000, 125.000000) in library 'rf_2p_136d_74w_1m_4b.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.080000, 125.000000) in library 'rf_2p_256d_76w_1m_4b.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.080000, 125.000000) in library 'rf_2p_512d_76w_2m_4b.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.080000, 125.000000) in library 'sram_sp_16384d_36w_16m_8b.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.080000, 125.000000) in library 'sram_sp_32768d_33w_16m_8b.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.080000, 125.000000) in library 'sram_sp_512d_32w_4m_2b.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA_X1' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA_X1' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLCELL_X1' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLCELL_X1' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLCELL_X16' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLCELL_X16' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLCELL_X2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLCELL_X2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLCELL_X32' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLCELL_X32' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLCELL_X4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLCELL_X4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLCELL_X8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILLCELL_X8' must have an output pin.
+@file(run_synthesis.tcl) 3: read_hdl ../RTL/mem_block.v
+@file(run_synthesis.tcl) 4: elaborate
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '3K_hvratio_1_2' is non-monotonic.
+        : Non-monotonic wireload models can cause problems during synthesis and/or mapping.  Raising some of the points in the curve to give it a monotonic shape.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '3K_hvratio_1_2' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '3K_hvratio_1_2' is non-monotonic.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'memory_system_with_lib' from file '../RTL/mem_block.v'.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'decoder_3to8' in file '../RTL/mem_block.v' on line 129.
+Warning : Libpin is wider than connected signal. [CDFG-467]
+        : Signal width (10) does not match width of input port 'A' (15) of instance 'my_sram' of libcell 'sram_sp_32768d_33w_16m_8b' in file '../RTL/mem_block.v' on line 158.
+        : This may cause simulation mismatches between the original and synthesized designs.
+Warning : Libpin is wider than connected signal. [CDFG-467]
+        : Signal width (1) does not match width of input port 'WEN' (33) of instance 'my_sram' of libcell 'sram_sp_32768d_33w_16m_8b' in file '../RTL/mem_block.v' on line 158.
+Warning : Module port is wider than connected signal. [CDFG-465]
+        : Signal width (4) does not match width of input port 'addr' (10) of instance 'mem0' of module 'memory_wrapper' in file '../RTL/mem_block.v' on line 19.
+        : This may cause simulation mismatches between the original and synthesized designs.
+Warning : Module port is wider than connected signal. [CDFG-465]
+        : Signal width (16) does not match width of input port 'din' (33) of instance 'mem0' of module 'memory_wrapper' in file '../RTL/mem_block.v' on line 19.
+Warning : Module port is wider than connected signal. [CDFG-465]
+        : Signal width (16) does not match width of output port 'dout' (33) of instance 'mem0' of module 'memory_wrapper' in file '../RTL/mem_block.v' on line 19.
+Error   : Illegal port association. [CDFG-161] [elaborate]
+        : Cannot associate an expression with the output port 'dout' in file '../RTL/mem_block.v' on line 27.
+        : Output and inout ports of instantiated modules and functions can be connected to variables, bit-selects, part-selects, or concatenations.
+Info    : Unable to elaborate the design. [ELAB-4]
+        : Module 'memory_system_with_lib' contains errors and cannot be elaborated.
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+#@ End verbose source ./run_synthesis.tcl
+1
+Encountered problems processing file: run_synthesis.tcl
+WARNING: This version of the tool is 1451 days old.
+@genus:root: 2> exit
+Normal exit.

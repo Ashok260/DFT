@@ -1,0 +1,49 @@
+# ---------------------------------------------------------
+# SPRAM_32x8 Memory Compilation and Simulation Setup
+# ---------------------------------------------------------
+
+# Source the custom cshrc environment (Questa_sim)
+source ~/cshrc_custom.csh
+
+# ---------------------------------------------------------
+# Verilog Options for Simulation
+# (Refer to SPRAM_32x8.v for signal conventions)
+# ---------------------------------------------------------
+# Create VerilogOptions file with the following contents:
+# (if not already created)
+
+
+#VerilogOptions:
+#+define+nobanner
+#+pulse_x/0
+#+pulse_r/0
+#+pathpulse
+#+define+verbose_0
+
+# ---------------------------------------------------------
+# Memory Compilation Command
+# ---------------------------------------------------------
+# - memLib        : Path to the SPRAM_32x8.memlib file
+# - simModelFile  : Path to the SPRAM_32x8.v simulation model
+# - extension     : Extensions for generated files (v, vg)
+# - verilogOptionFile : File containing Verilog simulation options
+# - tshell        : Enable tshell mode
+
+memlibc -memLib spram_8192_5.memlib \
+        -extension v:vg \
+        -simModelFile /jk/SCLPDK_V3.0_KIT/scl180/memory/spram/6M1L/SP_SRAM_spram_8192_5/spram_8192_5.v \
+        -tshell \
+        -verilogOptionFile ../VerilogOptions
+
+# ---------------------------------------------------------
+# Make Commands for Build and Simulation
+# ---------------------------------------------------------
+# To generate all necessary files, compile, and run simulation:
+# make gen
+# make testbench   # Generate testbench (if applicable)
+# make sim_rtl     # Run RTL simulation
+
+make all         # Compile memory models and setup
+
+
+

@@ -1,0 +1,2 @@
+ -v /jk/SCLPDK_V3.0_KIT/scl180/memory/dpram/6M1L/DP_SRAM_rd3_512x16/rd3_512x16.v
+ -v $TESSENT_HOME/lnx-x86/lib64/hdleng/lib/dft_sim.v

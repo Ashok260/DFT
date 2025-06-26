@@ -1,0 +1,51 @@
+
+
+Working Directory = /home/01fe21bec223/DFT_TESSENT/GENUS/work_cntr
+QoS Summary for random_counter_lfsr
+================================================================================
+Metric                          map             syn_opt         syn_opt_low_incr
+================================================================================
+Slack (ps):                     3,972           3,972           3,972
+  R2R (ps):                     3,972           3,972           3,972
+  I2R (ps):                  no_value        no_value        no_value
+  R2O (ps):                  no_value        no_value        no_value
+  I2O (ps):                  no_value        no_value        no_value
+  CG  (ps):                  no_value        no_value        no_value
+TNS (ps):                           0               0               0
+  R2R (ps):                         0               0               0
+  I2R (ps):                  no_value        no_value        no_value
+  R2O (ps):                  no_value        no_value        no_value
+  I2O (ps):                  no_value        no_value        no_value
+  CG  (ps):                  no_value        no_value        no_value
+Failing Paths:                      0               0               0
+Cell Area:                         47              47              47
+Total Cell Area:                   47              47              47
+Leaf Instances:                    17              17              17
+Total Instances:                   17              17              17
+Utilization (%):                 0.00            0.00            0.00
+Tot. Net Length (um):        no_value        no_value        no_value
+Avg. Net Length (um):        no_value        no_value        no_value
+Route Overflow H (%):        no_value        no_value        no_value
+Route Overflow V (%):        no_value        no_value        no_value
+MBCI(%) (bits/gate) :            0.00            0.00            0.00
+Norm Cong Hotspot Area:
+  Max Cong:                  no_value        no_value        no_value
+  Tot Cong:                  no_value        no_value        no_value
+================================================================================
+CPU  Runtime (h:m:s):        00:30:05        00:30:00        00:30:00
+Real Runtime (h:m:s):        00:30:04        00:30:01        00:30:02
+CPU  Elapsed (h:m:s):        00:30:07        00:30:07        00:30:07
+Real Elapsed (h:m:s):        00:30:05        00:30:06        00:30:08
+Memory (MB):                  1089.69         1059.68         1060.51
+================================================================================
+================================================================================
+Flow Settings:
+================================================================================
+Total Runtime (h:m:s): 00:30:07
+Total Memory (MB):     1061.52
+Executable Version:    20.11-s111_1
+================================================================================
+Total Cell Area =  Cell Area + Physical Cell Area
+Total Instances =  Leaf Instances + Physical Instances
+
+

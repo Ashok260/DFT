@@ -1,0 +1,1001 @@
+
+    type    code    pin_pathname
+    ----   ------   ------------------------------------
+      0    PT       /clk
+      1    AU.SEQ   /clk
+      1    DS       /g2378/ZN
+      0    EQ       /g2378/A
+      0    EQ       /reset
+      0    DS       /g2378/ZN
+      1    EQ       /g2378/A
+      1    EQ       /reset
+      0    AU.TC    /ena
+      1    AU.TC    /ena
+      0    DS       "/\H_reg_reg[6] /SI"
+      0    EQ       /tessent_persistent_cell_buf_extsi25_i/Z
+      0    EQ       /tessent_persistent_cell_buf_extsi25_i/A
+      0    EQ       /scan_in_0
+      1    DS       /tessent_persistent_cell_buf_extsi25_i/Z
+      1    EQ       /tessent_persistent_cell_buf_extsi25_i/A
+      1    EQ       /scan_in_0
+      1    EQ       "/\H_reg_reg[6] /SI"
+      0    AU.TC    /scan_en
+      1    AU.TC    /scan_en
+      0    UU       "/\H_reg_reg[6] /QN"
+      1    UU       "/\H_reg_reg[6] /QN"
+      0    DS       "/\H_reg_reg[6] /Q"
+      1    DS       "/\H_reg_reg[6] /Q"
+      0    UU       "/\H_reg_reg[7] /QN"
+      1    UU       "/\H_reg_reg[7] /QN"
+      0    AU.TC    "/\H_reg_reg[7] /Q"
+      1    DS       "/\H_reg_reg[7] /Q"
+      0    UU       "/\H_reg_reg[5] /QN"
+      1    UU       "/\H_reg_reg[5] /QN"
+      0    AU.TC    "/\H_reg_reg[5] /Q"
+      1    DS       "/\H_reg_reg[5] /Q"
+      0    UU       "/\M_reg_reg[7] /QN"
+      1    UU       "/\M_reg_reg[7] /QN"
+      0    AU.TC    "/\M_reg_reg[7] /Q"
+      1    DS       "/\M_reg_reg[7] /Q"
+      0    UU       "/\H_reg_reg[1] /QN"
+      1    UU       "/\H_reg_reg[1] /QN"
+      0    AU.TC    "/\H_reg_reg[1] /Q"
+      1    DS       "/\H_reg_reg[1] /Q"
+      0    UU       /pm_reg_reg/QN
+      1    UU       /pm_reg_reg/QN
+      0    AU.TC    /pm_reg_reg/Q
+      1    DS       /pm_reg_reg/Q
+      0    AU.TC    "/\H_reg_reg[3] /QN"
+      1    AU.TC    "/\H_reg_reg[3] /QN"
+      0    AU.TC    "/\H_reg_reg[3] /Q"
+      1    DS       "/\H_reg_reg[3] /Q"
+      0    AU.TC    "/\H_reg_reg[2] /QN"
+      1    AU.TC    "/\H_reg_reg[2] /QN"
+      0    AU.TC    "/\H_reg_reg[2] /Q"
+      1    DS       "/\H_reg_reg[2] /Q"
+      0    AU.TC    "/\M_reg_reg[3] /QN"
+      1    AU.TC    "/\M_reg_reg[3] /QN"
+      0    AU.TC    "/\M_reg_reg[3] /Q"
+      1    DS       "/\M_reg_reg[3] /Q"
+      0    UU       "/\H_reg_reg[4] /QN"
+      1    UU       "/\H_reg_reg[4] /QN"
+      0    AU.TC    "/\H_reg_reg[4] /Q"
+      1    DS       "/\H_reg_reg[4] /Q"
+      0    UU       "/\M_reg_reg[1] /QN"
+      1    UU       "/\M_reg_reg[1] /QN"
+      0    AU.TC    "/\M_reg_reg[1] /Q"
+      1    DS       "/\M_reg_reg[1] /Q"
+      0    UU       "/\S_reg_reg[5] /QN"
+      1    UU       "/\S_reg_reg[5] /QN"
+      0    AU.TC    "/\S_reg_reg[5] /Q"
+      1    DS       "/\S_reg_reg[5] /Q"
+      0    AU.TC    "/\M_reg_reg[5] /QN"
+      1    AU.TC    "/\M_reg_reg[5] /QN"
+      0    AU.TC    "/\M_reg_reg[5] /Q"
+      1    DS       "/\M_reg_reg[5] /Q"
+      0    AU.TC    "/\M_reg_reg[4] /QN"
+      1    AU.TC    "/\M_reg_reg[4] /QN"
+      0    AU.TC    "/\M_reg_reg[4] /Q"
+      1    DS       "/\M_reg_reg[4] /Q"
+      0    UU       "/\S_reg_reg[7] /QN"
+      1    UU       "/\S_reg_reg[7] /QN"
+      0    AU.TC    "/\S_reg_reg[7] /Q"
+      1    DS       "/\S_reg_reg[7] /Q"
+      0    UU       "/\M_reg_reg[6] /QN"
+      1    UU       "/\M_reg_reg[6] /QN"
+      0    AU.TC    "/\M_reg_reg[6] /Q"
+      1    DS       "/\M_reg_reg[6] /Q"
+      0    UU       "/\H_reg_reg[0] /QN"
+      1    UU       "/\H_reg_reg[0] /QN"
+      0    AU.TC    "/\H_reg_reg[0] /Q"
+      1    DS       "/\H_reg_reg[0] /Q"
+      0    AU.TC    "/\S_reg_reg[3] /QN"
+      0    EQ       /g2367__3680/A3
+      0    AU.TC    /g2367__3680/ZN
+      1    EQ       /g2367__3680/A3
+      1    EQ       /g2367__3680/A2
+      1    EQ       /g2367__3680/A1
+      1    EQ       "/\S_reg_reg[3] /QN"
+      0    AU.TC    "/\S_reg_reg[3] /Q"
+      1    DS       "/\S_reg_reg[3] /Q"
+      0    AU.TC    "/\M_reg_reg[2] /QN"
+      1    AU.TC    "/\M_reg_reg[2] /QN"
+      0    AU.TC    "/\M_reg_reg[2] /Q"
+      1    DS       "/\M_reg_reg[2] /Q"
+      0    AU.TC    "/\S_reg_reg[2] /QN"
+      1    AU.TC    "/\S_reg_reg[2] /QN"
+      0    AU.TC    "/\S_reg_reg[2] /Q"
+      1    DS       "/\S_reg_reg[2] /Q"
+      0    AU.TC    "/\S_reg_reg[4] /QN"
+      1    AU.TC    "/\S_reg_reg[4] /QN"
+      0    AU.TC    "/\S_reg_reg[4] /Q"
+      1    DS       "/\S_reg_reg[4] /Q"
+      0    UU       "/\M_reg_reg[0] /QN"
+      1    UU       "/\M_reg_reg[0] /QN"
+      0    AU.TC    "/\M_reg_reg[0] /Q"
+      1    DS       "/\M_reg_reg[0] /Q"
+      0    UU       "/\S_reg_reg[6] /QN"
+      1    UU       "/\S_reg_reg[6] /QN"
+      0    AU.TC    "/\S_reg_reg[6] /Q"
+      1    DS       "/\S_reg_reg[6] /Q"
+      0    UU       "/\S_reg_reg[1] /QN"
+      1    UU       "/\S_reg_reg[1] /QN"
+      0    AU.TC    "/\S_reg_reg[1] /Q"
+      1    DS       "/\S_reg_reg[1] /Q"
+      0    UU       "/\S_reg_reg[0] /QN"
+      1    UU       "/\S_reg_reg[0] /QN"
+      0    AU.TC    "/\S_reg_reg[0] /Q"
+      1    DS       "/\S_reg_reg[0] /Q"
+      0    AU.TC    /g2376/ZN
+      1    EQ       /g2376/A
+      1    AU.TC    /g2376/ZN
+      0    EQ       /g2376/A
+      0    AU.TC    /g2351__2398/B
+      1    AU.TC    /g2351__2398/B
+      0    AU.TC    "/\M_reg_reg[3] /SE"
+      1    AU.TC    "/\M_reg_reg[3] /SE"
+      0    AU.TC    "/\H_reg_reg[2] /SE"
+      1    AU.TC    "/\H_reg_reg[2] /SE"
+      0    AU.TC    "/\H_reg_reg[3] /SE"
+      1    AU.TC    "/\H_reg_reg[3] /SE"
+      0    AU.TC    /pm_reg_reg/SE
+      1    AU.TC    /pm_reg_reg/SE
+      0    AU.TC    "/\H_reg_reg[1] /SE"
+      1    AU.TC    "/\H_reg_reg[1] /SE"
+      0    AU.TC    "/\M_reg_reg[7] /SE"
+      1    AU.TC    "/\M_reg_reg[7] /SE"
+      0    AU.TC    "/\H_reg_reg[5] /SE"
+      1    AU.TC    "/\H_reg_reg[5] /SE"
+      0    AU.TC    "/\H_reg_reg[7] /SE"
+      1    AU.TC    "/\H_reg_reg[7] /SE"
+      0    AU.TC    "/\H_reg_reg[6] /SE"
+      1    AU.TC    "/\H_reg_reg[6] /SE"
+      0    AU.TC    "/\H_reg_reg[7] /SI"
+      1    AU.TC    "/\H_reg_reg[7] /SI"
+      0    AU.TC    /g2370__1705/ZN
+      0    EQ       /g2353__5477/A2
+      0    AU.TC    /g2353__5477/ZN
+      1    EQ       /g2353__5477/A3
+      1    EQ       /g2353__5477/A2
+      1    EQ       /g2353__5477/A1
+      1    EQ       /g2353__5477/A4
+      1    EQ       /g2370__1705/ZN
+      1    EQ       /g2370__1705/A1
+      1    EQ       /g2370__1705/A2
+      0    AU.TC    /g2370__1705/A1
+      0    AU.TC    /g2370__1705/A2
+      0    AU.TC    "/\H_reg_reg[5] /SI"
+      1    AU.TC    "/\H_reg_reg[5] /SI"
+      1    AU.TC    /g2353__5477/ZN
+      0    AU.TC    /g2353__5477/A3
+      0    AU.TC    /g2353__5477/A1
+      0    AU.TC    /g2353__5477/A4
+      0    AU.TC    "/\M_reg_reg[7] /SI"
+      1    AU.TC    "/\M_reg_reg[7] /SI"
+      0    AU.TC    /g2273__6260/B
+      1    AU.TC    /g2273__6260/B
+      0    AU.TC    /g2364__8428/ZN
+      0    EQ       /g2348__6161/A1
+      0    AU.TC    /g2348__6161/ZN
+      1    EQ       /g2348__6161/A3
+      1    EQ       /g2348__6161/A1
+      1    EQ       /g2348__6161/A4
+      1    EQ       /g2348__6161/A2
+      1    EQ       /g2364__8428/ZN
+      1    EQ       /g2364__8428/A2
+      1    EQ       /g2364__8428/A1
+      1    EQ       /g2364__8428/A3
+      0    AU.TC    /g2364__8428/A2
+      0    AU.TC    /g2364__8428/A1
+      0    AU.TC    /g2364__8428/A3
+      0    AU.TC    "/\H_reg_reg[1] /SI"
+      1    AU.TC    "/\H_reg_reg[1] /SI"
+      0    AU.TC    /g2368__8246/ZN
+      1    AU.TC    /g2368__8246/ZN
+      0    EQ       /g2368__8246/A1
+      0    EQ       /g2368__8246/A2
+      1    AU.TC    /g2368__8246/A1
+      1    AU.TC    /g2368__8246/A2
+      0    AU.TC    /pm_reg_reg/SI
+      1    AU.TC    /pm_reg_reg/SI
+      0    AU.TC    "/\H_reg_reg[3] /SI"
+      1    AU.TC    "/\H_reg_reg[3] /SI"
+      0    AU.TC    "/\H_reg_reg[2] /SI"
+      1    AU.TC    "/\H_reg_reg[2] /SI"
+      0    AU.TC    /g2362__4319/ZN
+      1    AU.TC    /g2362__4319/ZN
+      1    EQ       /g2362__4319/A2
+      1    EQ       /g2362__4319/A1
+      0    AU.TC    /g2362__4319/A2
+      0    AU.TC    /g2362__4319/A1
+      0    AU.TC    /g2318__9945/B2
+      0    EQ       /g2318__9945/B1
+      1    AU.TC    /g2318__9945/B2
+      1    AU.TC    /g2318__9945/B1
+      0    AU.TC    "/\M_reg_reg[3] /SI"
+      1    AU.TC    "/\M_reg_reg[3] /SI"
+      0    AU.TC    /g2285__2802/B
+      1    AU.TC    /g2285__2802/B
+      0    AU.TC    /g2369__1617/ZN
+      1    AU.TC    /g2369__1617/ZN
+      0    EQ       /g2369__1617/A1
+      0    EQ       /g2369__1617/A2
+      1    AU.TC    /g2369__1617/A1
+      1    AU.TC    /g2369__1617/A2
+      0    AU.TC    /g2365__5526/ZN
+      1    AU.TC    /g2365__5526/ZN
+      0    EQ       /g2365__5526/A3
+      0    EQ       /g2365__5526/A1
+      0    EQ       /g2365__5526/A2
+      0    EQ       /g2365__5526/A4
+      1    AU.TC    /g2365__5526/A3
+      1    AU.TC    /g2365__5526/A1
+      1    AU.TC    /g2365__5526/A2
+      1    AU.TC    /g2365__5526/A4
+      0    AU.TC    /g2371__5122/ZN
+      1    AU.TC    /g2371__5122/ZN
+      1    EQ       /g2371__5122/A2
+      1    EQ       /g2371__5122/A1
+      0    AU.TC    /g2371__5122/A2
+      0    AU.TC    /g2371__5122/A1
+      0    AU.TC    /g2298__5122/B
+      1    AU.TC    /g2298__5122/B
+      0    AU.TC    /g2297__8246/B
+      1    AU.TC    /g2297__8246/B
+      0    AU.TC    /g2366__6783/ZN
+      1    AU.TC    /g2366__6783/ZN
+      1    EQ       /g2366__6783/A3
+      1    EQ       /g2366__6783/A2
+      1    EQ       /g2366__6783/A1
+      0    AU.TC    /g2366__6783/A3
+      0    AU.TC    /g2366__6783/A2
+      0    AU.TC    /g2366__6783/A1
+      0    AU.TC    /g2360__5107/ZN
+      1    AU.TC    /g2360__5107/ZN
+      1    EQ       /g2360__5107/A1
+      1    EQ       /g2360__5107/A2
+      0    AU.TC    /g2360__5107/A1
+      0    AU.TC    /g2360__5107/A2
+      0    AU.TC    /g2310__5107/B
+      1    AU.TC    /g2310__5107/B
+      0    AU.TC    /g2322__2398/B
+      1    AU.TC    /g2322__2398/B
+      0    AU.TC    /g2372__2802/ZN
+      1    AU.TC    /g2372__2802/ZN
+      0    EQ       /g2372__2802/A1
+      0    EQ       /g2372__2802/A2
+      1    AU.TC    /g2372__2802/A1
+      1    AU.TC    /g2372__2802/A2
+      0    AU.TC    /g2351__2398/A
+      1    AU.TC    /g2351__2398/A
+      0    AU.SEQ   /ts_lockup_latchn_clkc1_intno24_i/GN
+      1    AU.SEQ   /ts_lockup_latchn_clkc1_intno24_i/GN
+      0    AU.TC    "/\M_reg_reg[3] /RN"
+      1    AU.TC    "/\M_reg_reg[3] /RN"
+      0    AU.TC    "/\H_reg_reg[2] /SN"
+      1    AU.TC    "/\H_reg_reg[2] /SN"
+      0    AU.TC    "/\H_reg_reg[3] /RN"
+      1    AU.TC    "/\H_reg_reg[3] /RN"
+      0    AU.TC    /pm_reg_reg/RN
+      1    AU.TC    /pm_reg_reg/RN
+      0    AU.TC    "/\H_reg_reg[1] /SN"
+      1    AU.TC    "/\H_reg_reg[1] /SN"
+      0    AU.TC    "/\M_reg_reg[7] /RN"
+      1    AU.TC    "/\M_reg_reg[7] /RN"
+      0    AU.TC    "/\H_reg_reg[5] /RN"
+      1    AU.TC    "/\H_reg_reg[5] /RN"
+      0    AU.TC    "/\H_reg_reg[7] /RN"
+      1    AU.TC    "/\H_reg_reg[7] /RN"
+      0    DS       "/\H_reg_reg[6] /RN"
+      1    DS       "/\H_reg_reg[6] /RN"
+      0    AU.TC    /g2361__6260/ZN
+      1    EQ       /g2361__6260/A1
+      1    EQ       /g2361__6260/A2
+      1    AU.TC    /g2361__6260/ZN
+      0    AU.TC    /g2361__6260/A1
+      0    AU.TC    /g2361__6260/A2
+      0    AU.TC    /g2351__2398/CO
+      0    EQ       /g2339__4733/A
+      1    AU.TC    /g2351__2398/CO
+      1    EQ       /g2339__4733/A
+      0    AU.TC    "/\S_reg_reg[0] /D"
+      0    EQ       /g2351__2398/S
+      1    AU.TC    /g2351__2398/S
+      1    EQ       "/\S_reg_reg[0] /D"
+      0    AU.TC    "/\S_reg_reg[0] /SE"
+      1    AU.TC    "/\S_reg_reg[0] /SE"
+      0    AU.TC    "/\S_reg_reg[1] /SE"
+      1    AU.TC    "/\S_reg_reg[1] /SE"
+      0    AU.TC    "/\S_reg_reg[6] /SE"
+      1    AU.TC    "/\S_reg_reg[6] /SE"
+      0    AU.TC    "/\M_reg_reg[0] /SE"
+      1    AU.TC    "/\M_reg_reg[0] /SE"
+      0    AU.TC    "/\S_reg_reg[4] /SE"
+      1    AU.TC    "/\S_reg_reg[4] /SE"
+      0    AU.TC    "/\S_reg_reg[2] /SE"
+      1    AU.TC    "/\S_reg_reg[2] /SE"
+      0    AU.TC    "/\M_reg_reg[2] /SE"
+      1    AU.TC    "/\M_reg_reg[2] /SE"
+      0    AU.TC    "/\S_reg_reg[3] /SE"
+      1    AU.TC    "/\S_reg_reg[3] /SE"
+      0    AU.TC    "/\H_reg_reg[0] /SE"
+      1    AU.TC    "/\H_reg_reg[0] /SE"
+      0    AU.TC    "/\M_reg_reg[6] /SE"
+      1    AU.TC    "/\M_reg_reg[6] /SE"
+      0    AU.TC    "/\S_reg_reg[7] /SE"
+      1    AU.TC    "/\S_reg_reg[7] /SE"
+      0    AU.TC    "/\M_reg_reg[4] /SE"
+      1    AU.TC    "/\M_reg_reg[4] /SE"
+      0    AU.TC    "/\M_reg_reg[5] /SE"
+      1    AU.TC    "/\M_reg_reg[5] /SE"
+      0    AU.TC    "/\S_reg_reg[5] /SE"
+      1    AU.TC    "/\S_reg_reg[5] /SE"
+      0    AU.TC    "/\M_reg_reg[1] /SE"
+      1    AU.TC    "/\M_reg_reg[1] /SE"
+      0    AU.TC    "/\H_reg_reg[4] /SE"
+      1    AU.TC    "/\H_reg_reg[4] /SE"
+      0    AU.TC    /g2350/ZN
+      1    EQ       /g2350/A
+      0    EQ       /g2347__6131/A1
+      0    AU.TC    /g2347__6131/ZN
+      1    EQ       /g2347__6131/A1
+      1    EQ       /g2347__6131/A3
+      1    EQ       /g2347__6131/A2
+      1    EQ       /g2347__6131/A4
+      1    EQ       /g2350/ZN
+      0    EQ       /g2350/A
+      1    AU.TC    /g2348__6161/ZN
+      0    AU.TC    /g2348__6161/A3
+      0    AU.TC    /g2348__6161/A4
+      0    AU.TC    /g2348__6161/A2
+      0    AU.TC    /g2316__2883/A2
+      0    EQ       /g2316__2883/A1
+      0    EQ       /g2355__1666/ZN
+      1    EQ       /g2355__1666/A2
+      1    EQ       /g2355__1666/A1
+      1    AU.TC    /g2355__1666/ZN
+      1    EQ       /g2316__2883/A2
+      0    AU.TC    /g2355__1666/A2
+      0    AU.TC    /g2355__1666/A1
+      0    AU.TC    /g2316__2883/B2
+      0    EQ       /g2316__2883/B1
+      1    AU.TC    /g2316__2883/B2
+      1    AU.TC    /g2316__2883/B1
+      0    AU.TC    /g2358__6417/ZN
+      1    EQ       /g2358__6417/A3
+      1    EQ       /g2358__6417/A2
+      1    EQ       /g2358__6417/A1
+      1    AU.TC    /g2358__6417/ZN
+      0    AU.TC    /g2358__6417/A3
+      0    AU.TC    /g2358__6417/A2
+      0    AU.TC    /g2358__6417/A1
+      0    AU.TC    /g2354__7410/ZN
+      1    AU.TC    /g2354__7410/ZN
+      1    EQ       /g2354__7410/A1
+      1    EQ       /g2354__7410/A2
+      0    AU.TC    /g2354__7410/A1
+      0    AU.TC    /g2354__7410/A2
+      0    AU.TC    /g2352__2346/ZN
+      0    EQ       /g2307__1881/A2
+      1    AU.TC    /g2307__1881/A2
+      1    EQ       /g2307__1881/A1
+      1    EQ       /g2352__2346/ZN
+      1    EQ       /g2352__2346/A2
+      1    EQ       /g2352__2346/A1
+      0    AU.TC    /g2352__2346/A2
+      0    AU.TC    /g2352__2346/A1
+      1    AU.TC    /g2367__3680/ZN
+      0    AU.TC    /g2367__3680/A2
+      0    AU.TC    /g2367__3680/A1
+      0    AU.TC    "/\S_reg_reg[0] /RN"
+      1    AU.TC    "/\S_reg_reg[0] /RN"
+      0    AU.TC    "/\S_reg_reg[1] /RN"
+      1    AU.TC    "/\S_reg_reg[1] /RN"
+      0    AU.TC    "/\S_reg_reg[6] /RN"
+      1    AU.TC    "/\S_reg_reg[6] /RN"
+      0    AU.TC    "/\M_reg_reg[0] /RN"
+      1    AU.TC    "/\M_reg_reg[0] /RN"
+      0    AU.TC    "/\S_reg_reg[4] /RN"
+      1    AU.TC    "/\S_reg_reg[4] /RN"
+      0    AU.TC    "/\S_reg_reg[2] /RN"
+      1    AU.TC    "/\S_reg_reg[2] /RN"
+      0    AU.TC    "/\M_reg_reg[2] /RN"
+      1    AU.TC    "/\M_reg_reg[2] /RN"
+      0    AU.TC    "/\S_reg_reg[3] /RN"
+      1    AU.TC    "/\S_reg_reg[3] /RN"
+      0    AU.TC    "/\H_reg_reg[0] /RN"
+      1    AU.TC    "/\H_reg_reg[0] /RN"
+      0    AU.TC    "/\M_reg_reg[6] /RN"
+      1    AU.TC    "/\M_reg_reg[6] /RN"
+      0    AU.TC    "/\S_reg_reg[7] /RN"
+      1    AU.TC    "/\S_reg_reg[7] /RN"
+      0    AU.TC    "/\M_reg_reg[4] /RN"
+      1    AU.TC    "/\M_reg_reg[4] /RN"
+      0    AU.TC    "/\M_reg_reg[5] /RN"
+      1    AU.TC    "/\M_reg_reg[5] /RN"
+      0    AU.TC    "/\S_reg_reg[5] /RN"
+      1    AU.TC    "/\S_reg_reg[5] /RN"
+      0    AU.TC    "/\M_reg_reg[1] /RN"
+      1    AU.TC    "/\M_reg_reg[1] /RN"
+      0    AU.TC    "/\H_reg_reg[4] /RN"
+      1    AU.TC    "/\H_reg_reg[4] /RN"
+      0    AU.TC    /g2359/ZN
+      1    EQ       /g2359/A
+      1    AU.TC    /g2359/ZN
+      0    EQ       /g2359/A
+      0    AU.TC    "/\S_reg_reg[1] /D"
+      0    EQ       /g2339__4733/Z
+      1    AU.TC    /g2339__4733/Z
+      1    EQ       "/\S_reg_reg[1] /D"
+      0    AU.TC    /g2339__4733/B
+      1    AU.TC    /g2339__4733/B
+      0    AU.TC    "/\S_reg_reg[0] /SI"
+      1    AU.TC    "/\S_reg_reg[0] /SI"
+      0    AU.TC    "/\S_reg_reg[1] /SI"
+      1    AU.TC    "/\S_reg_reg[1] /SI"
+      0    AU.TC    "/\S_reg_reg[6] /SI"
+      1    AU.TC    "/\S_reg_reg[6] /SI"
+      0    AU.TC    "/\M_reg_reg[0] /SI"
+      1    AU.TC    "/\M_reg_reg[0] /SI"
+      0    AU.TC    "/\S_reg_reg[4] /SI"
+      1    AU.TC    "/\S_reg_reg[4] /SI"
+      0    AU.TC    "/\S_reg_reg[2] /SI"
+      1    AU.TC    "/\S_reg_reg[2] /SI"
+      0    AU.TC    "/\M_reg_reg[2] /SI"
+      1    AU.TC    "/\M_reg_reg[2] /SI"
+      0    AU.TC    "/\S_reg_reg[3] /SI"
+      1    AU.TC    "/\S_reg_reg[3] /SI"
+      0    AU.TC    "/\H_reg_reg[0] /SI"
+      1    AU.TC    "/\H_reg_reg[0] /SI"
+      0    AU.TC    "/\M_reg_reg[6] /SI"
+      1    AU.TC    "/\M_reg_reg[6] /SI"
+      0    AU.TC    "/\S_reg_reg[7] /SI"
+      1    AU.TC    "/\S_reg_reg[7] /SI"
+      0    AU.TC    "/\M_reg_reg[4] /SI"
+      1    AU.TC    "/\M_reg_reg[4] /SI"
+      0    AU.TC    "/\M_reg_reg[5] /SI"
+      1    AU.TC    "/\M_reg_reg[5] /SI"
+      0    AU.TC    "/\S_reg_reg[5] /SI"
+      1    AU.TC    "/\S_reg_reg[5] /SI"
+      0    AU.TC    "/\M_reg_reg[1] /SI"
+      1    AU.TC    "/\M_reg_reg[1] /SI"
+      0    AU.TC    "/\H_reg_reg[4] /SI"
+      1    AU.TC    "/\H_reg_reg[4] /SI"
+      1    AU.TC    /g2347__6131/ZN
+      0    AU.TC    /g2347__6131/A3
+      0    AU.TC    /g2347__6131/A2
+      0    AU.TC    /g2347__6131/A4
+      0    AU.TC    /g2345/ZN
+      1    EQ       /g2345/A
+      1    AU.TC    /g2345/ZN
+      0    EQ       /g2345/A
+      0    AU.TC    /g2325__5477/B2
+      1    AU.TC    /g2325__5477/B2
+      1    EQ       /g2325__5477/B1
+      0    AU.TC    /g2325__5477/B1
+      0    AU.TC    /g2343__7482/ZN
+      1    AU.TC    /g2343__7482/ZN
+      1    EQ       /g2343__7482/A1
+      1    EQ       /g2343__7482/A2
+      0    AU.TC    /g2343__7482/A1
+      0    AU.TC    /g2343__7482/A2
+      0    AU.TC    /g2333__7098/B1
+      1    AU.TC    /g2333__7098/B1
+      1    EQ       /g2333__7098/B2
+      0    AU.TC    /g2333__7098/B2
+      0    AU.TC    /g2332__8246/B1
+      1    AU.TC    /g2332__8246/B1
+      1    EQ       /g2332__8246/B2
+      0    AU.TC    /g2332__8246/B2
+      0    AU.TC    /g2342__5115/ZN
+      0    EQ       /g2304__7098/A2
+      1    AU.TC    /g2304__7098/A2
+      1    EQ       /g2304__7098/A1
+      1    EQ       /g2342__5115/ZN
+      1    EQ       /g2342__5115/A2
+      1    EQ       /g2342__5115/A1
+      0    AU.TC    /g2342__5115/A2
+      0    AU.TC    /g2342__5115/A1
+      0    AU.TC    /g2328__6260/B2
+      0    EQ       /g2328__6260/B1
+      1    AU.TC    /g2328__6260/B2
+      1    AU.TC    /g2328__6260/B1
+      0    AU.TC    /g2363/ZN
+      1    EQ       /g2363/A
+      1    AU.TC    /g2363/ZN
+      0    EQ       /g2363/A
+      0    AU.TC    /g2322__2398/A
+      0    EQ       /g2357__9945/ZN
+      0    EQ       /g2357__9945/A3
+      0    EQ       /g2357__9945/A1
+      0    EQ       /g2357__9945/A2
+      0    EQ       /g2357__9945/A4
+      1    AU.TC    /g2322__2398/A
+      1    EQ       /g2357__9945/ZN
+      1    AU.TC    /g2357__9945/A3
+      1    AU.TC    /g2357__9945/A1
+      1    AU.TC    /g2357__9945/A2
+      1    AU.TC    /g2357__9945/A4
+      0    AU.TC    /g2349__2883/ZN
+      1    EQ       /g2349__2883/A3
+      1    EQ       /g2349__2883/A2
+      1    EQ       /g2349__2883/A1
+      1    AU.TC    /g2349__2883/ZN
+      0    AU.TC    /g2349__2883/A3
+      0    AU.TC    /g2349__2883/A2
+      0    AU.TC    /g2349__2883/A1
+      0    AU.TC    /g2324__6417/B1
+      0    EQ       /g2324__6417/B2
+      1    AU.TC    /g2324__6417/B1
+      1    AU.TC    /g2324__6417/B2
+      0    AU.TC    /g2335__1617/ZN
+      1    AU.TC    /g2335__1617/ZN
+      0    EQ       /g2335__1617/A1
+      0    EQ       /g2335__1617/A2
+      1    AU.TC    /g2335__1617/A1
+      1    AU.TC    /g2335__1617/A2
+      0    AU.TC    /g2323__6783/B2
+      0    EQ       /g2323__6783/B1
+      1    AU.TC    /g2323__6783/B2
+      1    AU.TC    /g2323__6783/B1
+      0    AU.TC    /g2340__1705/ZN
+      1    EQ       /g2340__1705/A2
+      1    EQ       /g2340__1705/A3
+      1    EQ       /g2340__1705/A1
+      0    EQ       /g2324__6417/A
+      1    AU.TC    /g2321/ZN
+      0    EQ       /g2321/A
+      0    EQ       /g2324__6417/ZN
+      1    EQ       /g2324__6417/A
+      1    EQ       /g2340__1705/ZN
+      1    EQ       "/\S_reg_reg[2] /D"
+      0    AU.TC    /g2340__1705/A2
+      0    AU.TC    /g2340__1705/A3
+      0    AU.TC    /g2340__1705/A1
+      0    AU.TC    /g2337__2802/ZN
+      1    EQ       /g2337__2802/A2
+      1    EQ       /g2337__2802/A3
+      1    EQ       /g2337__2802/A1
+      0    EQ       /g2317__1666/A
+      1    AU.TC    /g2315/ZN
+      0    EQ       /g2315/A
+      0    EQ       /g2317__1666/ZN
+      1    EQ       /g2317__1666/A
+      1    EQ       /g2337__2802/ZN
+      1    EQ       "/\S_reg_reg[4] /D"
+      0    AU.TC    /g2337__2802/A2
+      0    AU.TC    /g2337__2802/A3
+      0    AU.TC    /g2337__2802/A1
+      0    AU.TC    /g2338__5526/ZN
+      1    EQ       /g2338__5526/A3
+      1    EQ       /g2338__5526/A2
+      1    EQ       /g2338__5526/A4
+      1    EQ       /g2338__5526/A1
+      0    EQ       /g2311__6161/A
+      1    AU.TC    /g2309/ZN
+      0    EQ       /g2309/A
+      0    EQ       /g2311__6161/ZN
+      1    EQ       /g2311__6161/A
+      1    EQ       /g2338__5526/ZN
+      1    EQ       "/\S_reg_reg[3] /D"
+      0    AU.TC    /g2338__5526/A3
+      0    AU.TC    /g2338__5526/A2
+      0    AU.TC    /g2338__5526/A4
+      0    AU.TC    /g2338__5526/A1
+      0    AU.TC    /g2333__7098/ZN
+      1    AU.TC    /g2333__7098/ZN
+      0    EQ       /g2333__7098/A
+      1    AU.TC    /g2333__7098/A
+      0    AU.TC    /g2311__6161/B1
+      0    EQ       /g2311__6161/B2
+      0    EQ       /g2332__8246/ZN
+      1    AU.TC    /g2332__8246/ZN
+      0    EQ       /g2332__8246/A
+      1    EQ       /g2311__6161/B1
+      1    AU.TC    /g2332__8246/A
+      0    AU.TC    /g2304__7098/A1
+      0    AU.TC    /g2356__9315/ZN
+      0    EQ       /g2306__6131/B2
+      1    AU.TC    /g2306__6131/B2
+      1    EQ       /g2306__6131/B1
+      1    EQ       /g2356__9315/ZN
+      1    EQ       /g2356__9315/A2
+      1    EQ       /g2356__9315/A1
+      1    EQ       /g2356__9315/A3
+      0    AU.TC    /g2356__9315/A2
+      0    AU.TC    /g2356__9315/A1
+      0    AU.TC    /g2356__9315/A3
+      0    AU.TC    /g2346/ZN
+      1    EQ       /g2346/A
+      1    AU.TC    /g2346/ZN
+      0    EQ       /g2346/A
+      0    AU.TC    /g2336__1881/ZN
+      1    AU.TC    /g2336__1881/ZN
+      0    EQ       /g2336__1881/A1
+      0    EQ       /g2336__1881/A2
+      1    AU.TC    /g2336__1881/A1
+      1    AU.TC    /g2336__1881/A2
+      0    AU.TC    /g2310__5107/A
+      1    AU.TC    /g2310__5107/A
+      0    AU.TC    "/\S_reg_reg[2] /D"
+      0    EQ       /g2321/ZN
+      1    EQ       /g2321/A
+      1    EQ       /g2324__6417/ZN
+      0    AU.TC    /g2320__2346/A1
+      1    AU.TC    /g2320__2346/A1
+      1    EQ       /g2320__2346/A2
+      0    AU.TC    /g2320__2346/A2
+      0    AU.TC    /g2327__4733/ZN
+      1    EQ       /g2327__4733/A4
+      1    EQ       /g2327__4733/A3
+      1    EQ       /g2327__4733/A1
+      1    EQ       /g2327__4733/A2
+      0    EQ       /g2305__1705/A
+      1    AU.TC    /g2303/ZN
+      0    EQ       /g2303/A
+      0    EQ       /g2305__1705/ZN
+      1    EQ       /g2305__1705/A
+      1    EQ       /g2327__4733/ZN
+      1    EQ       "/\M_reg_reg[3] /D"
+      0    AU.TC    /g2327__4733/A4
+      0    AU.TC    /g2327__4733/A3
+      0    AU.TC    /g2327__4733/A1
+      0    AU.TC    /g2327__4733/A2
+      0    AU.TC    /g2307__1881/A1
+      0    AU.TC    /g2323__6783/ZN
+      1    EQ       /g2323__6783/A
+      0    EQ       /g2307__1881/B1
+      1    AU.TC    /g2307__1881/B1
+      1    EQ       /g2307__1881/B2
+      1    EQ       /g2323__6783/ZN
+      0    AU.TC    /g2323__6783/A
+      0    AU.TC    /g2319__7410/B1
+      1    AU.TC    /g2319__7410/B1
+      1    EQ       /g2319__7410/B2
+      0    AU.TC    /g2319__7410/B2
+      0    AU.TC    /g2317__1666/B1
+      0    EQ       /g2317__1666/B2
+      1    AU.TC    /g2317__1666/B1
+      1    AU.TC    /g2317__1666/B2
+      1    AU.TC    /g2311__6161/B2
+      0    AU.TC    /g2306__6131/B1
+      0    AU.TC    /g2322__2398/CO
+      0    EQ       /g2308__5115/A
+      1    AU.TC    /g2322__2398/CO
+      1    EQ       /g2308__5115/A
+      0    AU.TC    "/\S_reg_reg[6] /D"
+      0    EQ       /g2322__2398/S
+      1    AU.TC    /g2322__2398/S
+      1    EQ       "/\S_reg_reg[6] /D"
+      0    AU.TC    /g2298__5122/A
+      0    EQ       /g2341__5122/ZN
+      1    EQ       /g2341__5122/A1
+      1    EQ       /g2341__5122/A3
+      1    EQ       /g2341__5122/A2
+      1    AU.TC    /g2298__5122/A
+      1    EQ       /g2341__5122/ZN
+      0    AU.TC    /g2341__5122/A1
+      0    AU.TC    /g2341__5122/A3
+      0    AU.TC    /g2341__5122/A2
+      0    AU.TC    /g2334__3680/ZN
+      1    EQ       /g2334__3680/A1
+      1    EQ       /g2334__3680/A2
+      1    AU.TC    /g2334__3680/ZN
+      0    AU.TC    /g2334__3680/A1
+      0    AU.TC    /g2334__3680/A2
+      0    AU.TC    /g2328__6260/ZN
+      1    EQ       /g2328__6260/A
+      0    EQ       /g2304__7098/B1
+      1    AU.TC    /g2304__7098/B1
+      1    EQ       /g2304__7098/B2
+      1    EQ       /g2328__6260/ZN
+      0    AU.TC    /g2328__6260/A
+      0    AU.TC    /g2331/ZN
+      1    EQ       /g2331/A
+      1    AU.TC    /g2331/ZN
+      0    EQ       /g2331/A
+      0    AU.TC    /g2285__2802/A
+      0    EQ       /g2330__8428/ZN
+      1    EQ       /g2330__8428/A3
+      1    EQ       /g2330__8428/A2
+      1    EQ       /g2330__8428/A1
+      1    AU.TC    /g2285__2802/A
+      1    EQ       /g2330__8428/ZN
+      0    AU.TC    /g2330__8428/A3
+      0    AU.TC    /g2330__8428/A2
+      0    AU.TC    /g2330__8428/A1
+      0    AU.TC    /g2329__4319/ZN
+      1    EQ       /g2329__4319/A3
+      1    EQ       /g2329__4319/A2
+      1    EQ       /g2329__4319/A1
+      1    AU.TC    /g2329__4319/ZN
+      0    AU.TC    /g2329__4319/A3
+      0    AU.TC    /g2329__4319/A2
+      0    AU.TC    /g2329__4319/A1
+      0    AU.TC    /g2310__5107/CO
+      0    EQ       /g2294__7482/B
+      1    AU.TC    /g2310__5107/CO
+      1    EQ       /g2294__7482/B
+      0    AU.TC    "/\M_reg_reg[0] /D"
+      0    EQ       /g2310__5107/S
+      1    AU.TC    /g2310__5107/S
+      1    EQ       "/\M_reg_reg[0] /D"
+      0    AU.TC    /g2307__1881/B2
+      1    AU.TC    /g2306__6131/ZN
+      0    EQ       /g2306__6131/A
+      0    EQ       /g2319__7410/ZN
+      1    EQ       "/\S_reg_reg[5] /D"
+      1    AU.TC    /g2319__7410/ZN
+      0    EQ       /g2319__7410/A
+      1    EQ       /g2306__6131/A
+      1    AU.TC    /g2319__7410/A
+      0    AU.TC    "/\S_reg_reg[4] /D"
+      0    EQ       /g2315/ZN
+      1    EQ       /g2315/A
+      1    EQ       /g2317__1666/ZN
+      0    AU.TC    "/\S_reg_reg[3] /D"
+      0    EQ       /g2309/ZN
+      1    EQ       /g2309/A
+      1    EQ       /g2311__6161/ZN
+      0    AU.TC    "/\S_reg_reg[5] /D"
+      0    EQ       /g2306__6131/ZN
+      0    AU.TC    "/\S_reg_reg[7] /D"
+      0    EQ       /g2308__5115/Z
+      1    AU.TC    /g2308__5115/Z
+      1    EQ       "/\S_reg_reg[7] /D"
+      0    AU.TC    /g2308__5115/B
+      1    AU.TC    /g2308__5115/B
+      0    AU.TC    /g2305__1705/B1
+      0    EQ       /g2305__1705/B2
+      0    EQ       /g2325__5477/ZN
+      1    AU.TC    /g2325__5477/ZN
+      0    EQ       /g2325__5477/A
+      1    EQ       /g2305__1705/B1
+      1    AU.TC    /g2325__5477/A
+      0    AU.TC    /g2320__2346/B2
+      1    AU.TC    /g2320__2346/B2
+      1    EQ       /g2320__2346/B1
+      0    AU.TC    /g2320__2346/B1
+      0    AU.TC    /g2304__7098/B2
+      1    AU.TC    /g2316__2883/A1
+      0    AU.TC    /g2297__8246/A
+      1    AU.TC    /g2297__8246/A
+      0    AU.TC    /g2293__1617/B2
+      1    AU.TC    /g2293__1617/B2
+      1    EQ       /g2293__1617/B1
+      0    AU.TC    /g2293__1617/B1
+      0    AU.TC    /g2292__3680/B2
+      1    AU.TC    /g2292__3680/B2
+      1    EQ       /g2292__3680/B1
+      0    AU.TC    /g2292__3680/B1
+      0    AU.TC    /g2318__9945/ZN
+      1    EQ       /g2318__9945/A
+      0    EQ       /g2292__3680/A1
+      1    AU.TC    /g2292__3680/A2
+      1    EQ       /g2292__3680/A1
+      1    EQ       /g2318__9945/ZN
+      0    AU.TC    /g2318__9945/A
+      0    AU.TC    /g2312__9315/ZN
+      0    EQ       /g2291__6783/A
+      1    AU.TC    /g2312__9315/ZN
+      0    EQ       /g2312__9315/A2
+      0    EQ       /g2312__9315/A1
+      1    EQ       /g2291__6783/A
+      1    AU.TC    /g2312__9315/A2
+      1    AU.TC    /g2312__9315/A1
+      0    AU.TC    "/\M_reg_reg[1] /D"
+      0    EQ       /g2294__7482/Z
+      1    AU.TC    /g2294__7482/Z
+      1    EQ       "/\M_reg_reg[1] /D"
+      0    AU.TC    /g2294__7482/A
+      1    AU.TC    /g2294__7482/A
+      0    AU.TC    "/\M_reg_reg[4] /D"
+      0    EQ       /g2307__1881/ZN
+      1    AU.TC    /g2307__1881/ZN
+      1    EQ       "/\M_reg_reg[4] /D"
+      0    AU.TC    /g2298__5122/CO
+      0    EQ       /g2281__4319/B
+      1    AU.TC    /g2298__5122/CO
+      1    EQ       /g2281__4319/B
+      0    AU.TC    "/\M_reg_reg[6] /D"
+      0    EQ       /g2298__5122/S
+      1    AU.TC    /g2298__5122/S
+      1    EQ       "/\M_reg_reg[6] /D"
+      1    AU.TC    /g2305__1705/B2
+      0    AU.TC    "/\M_reg_reg[2] /D"
+      0    EQ       /g2320__2346/ZN
+      1    AU.TC    /g2320__2346/ZN
+      1    EQ       "/\M_reg_reg[2] /D"
+      0    AU.TC    "/\M_reg_reg[5] /D"
+      0    EQ       /g2304__7098/ZN
+      1    AU.TC    /g2304__7098/ZN
+      1    EQ       "/\M_reg_reg[5] /D"
+      0    AU.TC    /g2316__2883/ZN
+      0    EQ       /g2293__1617/A1
+      1    AU.TC    /g2293__1617/A2
+      1    EQ       /g2293__1617/A1
+      1    EQ       /g2316__2883/ZN
+      0    AU.TC    /g2297__8246/CO
+      0    EQ       /g2282__8428/B
+      1    AU.TC    /g2297__8246/CO
+      1    EQ       /g2282__8428/B
+      0    AU.TC    "/\H_reg_reg[0] /D"
+      0    EQ       /g2297__8246/S
+      1    AU.TC    /g2297__8246/S
+      1    EQ       "/\H_reg_reg[0] /D"
+      0    AU.TC    /g2285__2802/CO
+      1    AU.TC    /g2285__2802/CO
+      0    AU.TC    "/\H_reg_reg[4] /D"
+      0    EQ       /g2285__2802/S
+      1    AU.TC    /g2285__2802/S
+      1    EQ       "/\H_reg_reg[4] /D"
+      0    AU.TC    /g2292__3680/A2
+      0    AU.TC    /pm_reg_reg/D
+      0    EQ       /g2291__6783/ZN
+      1    AU.TC    /g2291__6783/ZN
+      1    EQ       /pm_reg_reg/D
+      0    AU.TC    /g2291__6783/B
+      1    AU.TC    /g2291__6783/B
+      0    AU.TC    "/\M_reg_reg[7] /D"
+      0    EQ       /g2281__4319/Z
+      1    AU.TC    /g2281__4319/Z
+      1    EQ       "/\M_reg_reg[7] /D"
+      0    AU.TC    /g2281__4319/A
+      1    AU.TC    /g2281__4319/A
+      0    AU.TC    "/\M_reg_reg[3] /D"
+      0    EQ       /g2303/ZN
+      1    EQ       /g2303/A
+      1    EQ       /g2305__1705/ZN
+      0    AU.TC    /g2293__1617/A2
+      0    AU.TC    "/\H_reg_reg[1] /D"
+      0    EQ       /g2282__8428/Z
+      1    AU.TC    /g2282__8428/Z
+      1    EQ       "/\H_reg_reg[1] /D"
+      0    AU.TC    /g2282__8428/A
+      1    AU.TC    /g2282__8428/A
+      0    AU.TC    /g2283__5526/ZN
+      0    EQ       /g2274__5107/A
+      1    AU.TC    /g2283__5526/ZN
+      0    EQ       /g2283__5526/A1
+      0    EQ       /g2283__5526/A3
+      0    EQ       /g2283__5526/A2
+      1    EQ       /g2274__5107/A
+      1    AU.TC    /g2283__5526/A1
+      1    AU.TC    /g2283__5526/A3
+      1    AU.TC    /g2283__5526/A2
+      0    AU.TC    /g2273__6260/A
+      1    AU.TC    /g2273__6260/A
+      0    AU.TC    "/\H_reg_reg[2] /D"
+      0    EQ       /g2292__3680/ZN
+      1    AU.TC    /g2292__3680/ZN
+      1    EQ       "/\H_reg_reg[2] /D"
+      0    AU.TC    "/\H_reg_reg[3] /D"
+      0    EQ       /g2293__1617/ZN
+      1    AU.TC    /g2293__1617/ZN
+      1    EQ       "/\H_reg_reg[3] /D"
+      0    AU.TC    "/\H_reg_reg[7] /D"
+      0    EQ       /g2274__5107/ZN
+      1    AU.TC    /g2274__5107/ZN
+      1    EQ       "/\H_reg_reg[7] /D"
+      0    AU.TC    /g2274__5107/B
+      1    AU.TC    /g2274__5107/B
+      0    AU.TC    /g2273__6260/CO
+      0    EQ       /g2270__2398/B
+      1    AU.TC    /g2273__6260/CO
+      1    EQ       /g2270__2398/B
+      0    AU.TC    "/\H_reg_reg[5] /D"
+      0    EQ       /g2273__6260/S
+      1    AU.TC    /g2273__6260/S
+      1    EQ       "/\H_reg_reg[5] /D"
+      0    AU.TC    "/\H_reg_reg[6] /D"
+      0    EQ       /g2270__2398/Z
+      1    AU.TC    /g2270__2398/Z
+      1    EQ       "/\H_reg_reg[6] /D"
+      0    AU.TC    /g2270__2398/A
+      1    AU.TC    /g2270__2398/A
+      0    DI.CLK   "/\H_reg_reg[6] /CK"
+      1    AU.TC    "/\H_reg_reg[6] /CK"
+      0    AU.TC    "/\H_reg_reg[7] /CK"
+      1    AU.TC    "/\H_reg_reg[7] /CK"
+      0    AU.TC    "/\H_reg_reg[5] /CK"
+      1    AU.TC    "/\H_reg_reg[5] /CK"
+      0    AU.TC    "/\M_reg_reg[7] /CK"
+      1    AU.TC    "/\M_reg_reg[7] /CK"
+      0    AU.TC    "/\H_reg_reg[1] /CK"
+      1    AU.TC    "/\H_reg_reg[1] /CK"
+      0    AU.TC    /pm_reg_reg/CK
+      1    AU.TC    /pm_reg_reg/CK
+      0    AU.TC    "/\H_reg_reg[3] /CK"
+      1    AU.TC    "/\H_reg_reg[3] /CK"
+      0    AU.TC    "/\H_reg_reg[2] /CK"
+      1    AU.TC    "/\H_reg_reg[2] /CK"
+      0    AU.TC    "/\M_reg_reg[3] /CK"
+      1    AU.TC    "/\M_reg_reg[3] /CK"
+      0    AU.TC    "/\H_reg_reg[4] /CK"
+      1    AU.TC    "/\H_reg_reg[4] /CK"
+      0    AU.TC    "/\M_reg_reg[1] /CK"
+      1    AU.TC    "/\M_reg_reg[1] /CK"
+      0    AU.TC    "/\S_reg_reg[5] /CK"
+      1    AU.TC    "/\S_reg_reg[5] /CK"
+      0    AU.TC    "/\M_reg_reg[5] /CK"
+      1    AU.TC    "/\M_reg_reg[5] /CK"
+      0    AU.TC    "/\M_reg_reg[4] /CK"
+      1    AU.TC    "/\M_reg_reg[4] /CK"
+      0    AU.TC    "/\S_reg_reg[7] /CK"
+      1    AU.TC    "/\S_reg_reg[7] /CK"
+      0    AU.TC    "/\M_reg_reg[6] /CK"
+      1    AU.TC    "/\M_reg_reg[6] /CK"
+      0    AU.TC    "/\H_reg_reg[0] /CK"
+      1    AU.TC    "/\H_reg_reg[0] /CK"
+      0    AU.TC    "/\S_reg_reg[3] /CK"
+      1    AU.TC    "/\S_reg_reg[3] /CK"
+      0    AU.TC    "/\M_reg_reg[2] /CK"
+      1    AU.TC    "/\M_reg_reg[2] /CK"
+      0    AU.TC    "/\S_reg_reg[2] /CK"
+      1    AU.TC    "/\S_reg_reg[2] /CK"
+      0    AU.TC    "/\S_reg_reg[4] /CK"
+      1    AU.TC    "/\S_reg_reg[4] /CK"
+      0    AU.TC    "/\M_reg_reg[0] /CK"
+      1    AU.TC    "/\M_reg_reg[0] /CK"
+      0    AU.TC    "/\S_reg_reg[6] /CK"
+      1    AU.TC    "/\S_reg_reg[6] /CK"
+      0    AU.TC    "/\S_reg_reg[1] /CK"
+      1    AU.TC    "/\S_reg_reg[1] /CK"
+      0    UO.UNS   "/\S_reg_reg[0] /CK"
+      1    AU.TC    "/\S_reg_reg[0] /CK"
+      0    AU.SEQ   /scan_out_0
+      0    EQ       /ts_lockup_latchn_clkc1_intno24_i/Q
+      1    DS       /scan_out_0
+      1    EQ       /ts_lockup_latchn_clkc1_intno24_i/Q
+      0    AU.TC    /ts_lockup_latchn_clkc1_intno24_i/D
+      1    DS       /ts_lockup_latchn_clkc1_intno24_i/D
+      0    AU.TC    /pm
+      1    DS       /pm
+      0    AU.TC    /hh[7]
+      1    DS       /hh[7]
+      0    DS       /hh[6]
+      1    DS       /hh[6]
+      0    AU.TC    /hh[5]
+      1    DS       /hh[5]
+      0    AU.TC    /hh[4]
+      1    DS       /hh[4]
+      0    AU.TC    /hh[3]
+      1    DS       /hh[3]
+      0    AU.TC    /hh[2]
+      1    DS       /hh[2]
+      0    AU.TC    /hh[1]
+      1    DS       /hh[1]
+      0    AU.TC    /hh[0]
+      1    DS       /hh[0]
+      0    AU.TC    /mm[7]
+      1    DS       /mm[7]
+      0    AU.TC    /mm[6]
+      1    DS       /mm[6]
+      0    AU.TC    /mm[5]
+      1    DS       /mm[5]
+      0    AU.TC    /mm[4]
+      1    DS       /mm[4]
+      0    AU.TC    /mm[3]
+      1    DS       /mm[3]
+      0    AU.TC    /mm[2]
+      1    DS       /mm[2]
+      0    AU.TC    /mm[1]
+      1    DS       /mm[1]
+      0    AU.TC    /mm[0]
+      1    DS       /mm[0]
+      0    AU.TC    /ss[7]
+      1    DS       /ss[7]
+      0    AU.TC    /ss[6]
+      1    DS       /ss[6]
+      0    AU.TC    /ss[5]
+      1    DS       /ss[5]
+      0    AU.TC    /ss[4]
+      1    DS       /ss[4]
+      0    AU.TC    /ss[3]
+      1    DS       /ss[3]
+      0    AU.TC    /ss[2]
+      1    DS       /ss[2]
+      0    AU.TC    /ss[1]
+      1    DS       /ss[1]
+      0    AU.TC    /ss[0]
+      1    DS       /ss[0]
