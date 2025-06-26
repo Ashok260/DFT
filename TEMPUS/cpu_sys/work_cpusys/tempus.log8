@@ -1,0 +1,488 @@
+
+Cadence Tempus(TM) Timing Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v22.11-s001_1, built Fri Sep 16 15:45:21 PDT 2022
+Options:	
+Date:		Tue Jun 10 17:24:48 2025
+Host:		APL10.kletech.ac.in (x86_64 w/Linux 4.18.0-553.47.1.el8_10.x86_64) (6cores*12cpus*12th Gen Intel(R) Core(TM) i5-12500 18432KB)
+OS:		Red Hat Enterprise Linux release 8.10 (Ootpa)
+
+License:
+		[17:24:48.239569] Configured Lic search path (21.01-s002): 5280@10.3.0.68
+
+		tpsxl	Tempus Timing Signoff Solution XL	22.1	checkout succeeded
+		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_23108_dsF1YK'.
+<CMD> read_design ./cpu_sys_tempus.dat cpu_sys_emep_top
+# Tempus Timing Solution 22.11-s001_1
+# read_design
+#  dir ./cpu_sys_tempus.dat cpu_sys_emep_top
+**WARN: (IMPDC-3276):	set_use_elmore_delay_limit command is no longer supported. It will be ignored.
+Set Default Input Pin Transition as 0.1 ps.
+Loading design 'cpu_sys_emep_top' saved by 'Tempus' '22.11-s001_1' on 'Fri May 30 13:34:13 2025'.
+#% Begin Load MMMC data ... (date=06/10 17:25:08, mem=1236.4M)
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#% End Load MMMC data ... (date=06/10 17:25:08, total cpu=0:00:00.0, real=0:00:00.0, peak res=1237.7M, current mem=1237.7M)
+default_emulate_early_rc_corner default_emulate_late_rc_corner default_emulate_rc_corner
+Loading view definition file from /home/01fe21bec223/DFT_TESSENT/GENUS/work_cpusys/cpu_sys_tempus/cpu_sys_tempus.dat/viewDefinition.tcl
+Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/slow.lib' ...
+Read 477 cells in library 'slow' 
+Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/spram_8192_7_min.lib' ...
+**WARN: (TECHLIB-1177):	'index_1' defined in 'power_lut_template' group should have at least '2' float values. This may lead to undesirable analysis results. (File /home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/spram_8192_7_min.lib, Line 113)
+Read 1 cells in library 'spram_8192_7_min' 
+Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/spram_8192_5_min.lib' ...
+**WARN: (TECHLIB-1177):	'index_1' defined in 'power_lut_template' group should have at least '2' float values. This may lead to undesirable analysis results. (File /home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/spram_8192_5_min.lib, Line 113)
+Read 1 cells in library 'spram_8192_5_min' 
+Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/SPRAM_8192x36_min_SP.lib' ...
+**WARN: (TECHLIB-1177):	'index_1' defined in 'power_lut_template' group should have at least '2' float values. This may lead to undesirable analysis results. (File /home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/SPRAM_8192x36_min_SP.lib, Line 83)
+Read 1 cells in library 'SPRAM_8192x36_min_SP' 
+Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/SPRAM_64x32_min.lib' ...
+**WARN: (TECHLIB-1177):	'index_1' defined in 'power_lut_template' group should have at least '2' float values. This may lead to undesirable analysis results. (File /home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/SPRAM_64x32_min.lib, Line 80)
+Read 1 cells in library 'scl_SPRAM_64x32_min_SP' 
+Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/DPRAM_512x24_min.lib' ...
+**WARN: (TECHLIB-1177):	'index_1' defined in 'power_lut_template' group should have at least '2' float values. This may lead to undesirable analysis results. (File /home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/DPRAM_512x24_min.lib, Line 111)
+Read 1 cells in library 'DPRAM_512x24_min' 
+Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/rd3_512x16_ss_1p62v_125c.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'rd3_512x16'. The cell will only be used for analysis. (File /home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/rd3_512x16_ss_1p62v_125c.lib)
+Read 1 cells in library 'rd3_512x16_ss_1p62v_125c' 
+Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/rd3_256x8_ss_1p62v_125c.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'rd3_256x8'. The cell will only be used for analysis. (File /home/01fe21bec223/DFT_TESSENT/GENUS/TECHFILES/memories/rd3_256x8_ss_1p62v_125c.lib)
+Read 1 cells in library 'rd3_256x8_ss_1p62v_125c' 
+*** End library_loading (cpu=0.01min, real=0.02min, mem=41.0M, fe_cpu=0.20min, fe_real=0.35min, fe_mem=1364.3M) ***
+#% Begin Load netlist data ... (date=06/10 17:25:09, mem=1246.7M)
+*** Begin netlist parsing (mem=1364.3M) ***
+Reading verilogBinary netlist '/home/01fe21bec223/DFT_TESSENT/GENUS/work_cpusys/cpu_sys_tempus/cpu_sys_tempus.dat/cpu_sys_emep_top.v.bin'
+
+*** Memory Usage v#1 (Current mem = 1702.297M, initial mem = 618.484M) ***
+*** End netlist parsing (cpu=0:00:00.7, real=0:00:01.0, mem=1702.3M) ***
+#% End Load netlist data ... (date=06/10 17:25:10, total cpu=0:00:00.9, real=0:00:01.0, peak res=1563.1M, current mem=1551.1M)
+Top level cell is cpu_sys_emep_top.
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Building hierarchical netlist for Cell cpu_sys_emep_top ...
+***** UseNewTieNetMode *****.
+*** Netlist is NOT unique.
+** info: there are 5315 modules.
+** info: there are 307864 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 2362.742M, initial mem = 618.484M) ***
+Loading tempus db preserve file
+Set Default Input Pin Transition as 0.1 ps.
+Loading preference file /home/01fe21bec223/DFT_TESSENT/GENUS/work_cpusys/cpu_sys_tempus/cpu_sys_tempus.dat/gui.pref.tcl ...
+/dev/null
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Total number of combinational cells: 316
+Total number of sequential cells: 150
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFX12 BUFX16 BUFX2 BUFX20 BUFX3 BUFX4 CLKBUFX12 CLKBUFX16 CLKBUFX2 CLKBUFX20 CLKBUFX4 CLKBUFX6 CLKBUFX8 BUFX8 CLKBUFX3 BUFX6
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX2 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX6 INVX1 INVX12 INVX2 INVX3 CLKINVX8 INVX20 INVX4 INVX6 INVX16 INVXL INVX8
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X4 DLY2X4 DLY3X4 DLY1X1 DLY4X1 DLY2X1 DLY4X4 DLY3X1
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+default_emulate_constraint_mode
+#% Begin Load MMMC data post ... (date=06/10 17:25:11, mem=2216.7M)
+#% End Load MMMC data post ... (date=06/10 17:25:11, total cpu=0:00:00.0, real=0:00:00.0, peak res=2216.7M, current mem=2216.0M)
+Set Default Input Pin Transition as 0.1 ps.
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+#% Begin Load power constraints ... (date=06/10 17:25:12, mem=2220.7M)
+#% End Load power constraints ... (date=06/10 17:25:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=2220.7M, current mem=2220.7M)
+default_emulate_delay_corner default_emulate_delay_corner_max default_emulate_delay_corner_min
+#% Begin load AAE data ... (date=06/10 17:25:14, mem=2653.1M)
+AAE DB initialization (MEM=3027.39 CPU=0:00:00.0 REAL=0:00:00.0) 
+/dev/null
+#% End load AAE data ... (date=06/10 17:25:16, total cpu=0:00:01.9, real=0:00:02.0, peak res=2782.2M, current mem=2773.4M)
+Ending "read_design" (total cpu=0:00:08.9, real=0:00:08.0, peak res=2782.2M, current mem=2780.9M)
+Loading  (cpu_sys_emep_top)
+Traverse HInst (cpu_sys_emep_top)
+<CMD> read_sdc ../cpu_sys.sdc
+Current (total cpu=0:00:22.5, real=0:00:52.0, peak res=2788.0M, current mem=2787.0M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../cpu_sys.sdc, Line 8).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[3]' (File ../cpu_sys.sdc, Line 9).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[2]' (File ../cpu_sys.sdc, Line 10).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[1]' (File ../cpu_sys.sdc, Line 11).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[0]' (File ../cpu_sys.sdc, Line 12).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[3]' (File ../cpu_sys.sdc, Line 13).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[2]' (File ../cpu_sys.sdc, Line 14).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[1]' (File ../cpu_sys.sdc, Line 15).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[0]' (File ../cpu_sys.sdc, Line 16).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[3]' (File ../cpu_sys.sdc, Line 17).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[2]' (File ../cpu_sys.sdc, Line 18).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[1]' (File ../cpu_sys.sdc, Line 19).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[0]' (File ../cpu_sys.sdc, Line 20).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/atfrtc010/CTL/clk_sel' (File ../cpu_sys.sdc, Line 21).
+
+**WARN: (TCLCMD-1594):	A clock with name REFCLK0 was already defined in the design. Previously defined clock definition of REFCLK0 will be overwritten. (File ../cpu_sys.sdc, Line 22).
+
+**WARN: (TCLCMD-958):	Previously defined source objects for clock 'REFCLK0' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File ../cpu_sys.sdc, Line 22).
+
+**WARN: (TCLCMD-1594):	A clock with name SWCLK was already defined in the design. Previously defined clock definition of SWCLK will be overwritten. (File ../cpu_sys.sdc, Line 23).
+
+**WARN: (TCLCMD-958):	Previously defined source objects for clock 'SWCLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File ../cpu_sys.sdc, Line 23).
+
+**WARN: (TCLCMD-1594):	A clock with name MCUCLK was already defined in the design. Previously defined clock definition of MCUCLK will be overwritten. (File ../cpu_sys.sdc, Line 24).
+
+**WARN: (TCLCMD-958):	Previously defined source objects for clock 'MCUCLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File ../cpu_sys.sdc, Line 24).
+
+**WARN: (TCLCMD-1594):	A clock with name LIFE_CLK was already defined in the design. Previously defined clock definition of LIFE_CLK will be overwritten. (File ../cpu_sys.sdc, Line 25).
+
+**WARN: (TCLCMD-958):	Previously defined source objects for clock 'LIFE_CLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File ../cpu_sys.sdc, Line 25).
+
+**WARN: (TCLCMD-1594):	A clock with name JTAG_CLK was already defined in the design. Previously defined clock definition of JTAG_CLK will be overwritten. (File ../cpu_sys.sdc, Line 26).
+
+**WARN: (TCLCMD-958):	Previously defined source objects for clock 'JTAG_CLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File ../cpu_sys.sdc, Line 26).
+
+**WARN: (TCLCMD-1594):	A clock with name JTAG_CLK_C2C was already defined in the design. Previously defined clock definition of JTAG_CLK_C2C will be overwritten. (File ../cpu_sys.sdc, Line 27).
+
+**WARN: (TCLCMD-958):	Previously defined source objects for clock 'JTAG_CLK_C2C' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File ../cpu_sys.sdc, Line 27).
+
+**WARN: (TCLCMD-1594):	A clock with name DBG_CLK was already defined in the design. Previously defined clock definition of DBG_CLK will be overwritten. (File ../cpu_sys.sdc, Line 28).
+
+**WARN: (TCLCMD-958):	Previously defined source objects for clock 'DBG_CLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File ../cpu_sys.sdc, Line 28).
+
+**WARN: (TCLCMD-1594):	A clock with name MII_TXCLK was already defined in the design. Previously defined clock definition of MII_TXCLK will be overwritten. (File ../cpu_sys.sdc, Line 29).
+
+**WARN: (TCLCMD-958):	Previously defined source objects for clock 'MII_TXCLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File ../cpu_sys.sdc, Line 29).
+
+**WARN: (TCLCMD-1594):	A clock with name MII_RXCLK was already defined in the design. Previously defined clock definition of MII_RXCLK will be overwritten. (File ../cpu_sys.sdc, Line 30).
+
+**WARN: (TCLCMD-958):	Previously defined source objects for clock 'MII_RXCLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File ../cpu_sys.sdc, Line 30).
+
+**WARN: (TCLCMD-1594):	A clock with name SPI_CLK_IN was already defined in the design. Previously defined clock definition of SPI_CLK_IN will be overwritten. (File ../cpu_sys.sdc, Line 31).
+
+**WARN: (TCLCMD-958):	Previously defined source objects for clock 'SPI_CLK_IN' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File ../cpu_sys.sdc, Line 31).
+
+**WARN: (TCLCMD-1142):	Virtual clock 'HPC_CLK_VIR' is being created with no source objects. (File ../cpu_sys.sdc, Line 32).
+
+**WARN: (TCLCMD-1594):	A clock with name HPC_CLK_VIR was already defined in the design. Previously defined clock definition of HPC_CLK_VIR will be overwritten. (File ../cpu_sys.sdc, Line 32).
+
+**WARN: (TCLCMD-1142):	Virtual clock 'GPIO_CLK_VIR' is being created with no source objects. (File ../cpu_sys.sdc, Line 33).
+
+**WARN: (TCLCMD-1594):	A clock with name GPIO_CLK_VIR was already defined in the design. Previously defined clock definition of GPIO_CLK_VIR will be overwritten. (File ../cpu_sys.sdc, Line 33).
+
+**WARN: (TCLCMD-1594):	A clock with name SWCLK_DIV2 was already defined in the design. Previously defined clock definition of SWCLK_DIV2 will be overwritten. (File ../cpu_sys.sdc, Line 34).
+
+**WARN: (TCLCMD-1164):	Previously defined source objects for generated clock 'SWCLK_DIV2' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_generated_clock -source' option in a single command call. (File ../cpu_sys.sdc, Line 34).
+
+**WARN: (TCLCMD-1594):	A clock with name SWCLK_DIV4 was already defined in the design. Previously defined clock definition of SWCLK_DIV4 will be overwritten. (File ../cpu_sys.sdc, Line 35).
+
+**WARN: (TCLCMD-1164):	Previously defined source objects for generated clock 'SWCLK_DIV4' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_generated_clock -source' option in a single command call. (File ../cpu_sys.sdc, Line 35).
+
+**WARN: (TCLCMD-1531):	'create_generated_clock' has been applied on hierarchical pin 'U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_BUF_00/Y' (File ../cpu_sys.sdc, Line 36).
+
+**WARN: (TCLCMD-1594):	A clock with name CPU_CLK was already defined in the design. Previously defined clock definition of CPU_CLK will be overwritten. (File ../cpu_sys.sdc, Line 36).
+
+**WARN: (TCLCMD-1164):	Previously defined source objects for generated clock 'CPU_CLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_generated_clock -source' option in a single command call. (File ../cpu_sys.sdc, Line 36).
+
+**WARN: (TCLCMD-1531):	'create_generated_clock' has been applied on hierarchical pin 'U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_BUF_00/Y' (File ../cpu_sys.sdc, Line 37).
+
+**WARN: (TCLCMD-1594):	A clock with name APB_CLK was already defined in the design. Previously defined clock definition of APB_CLK will be overwritten. (File ../cpu_sys.sdc, Line 37).
+
+**WARN: (TCLCMD-1164):	Previously defined source objects for generated clock 'APB_CLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_generated_clock -source' option in a single command call. (File ../cpu_sys.sdc, Line 37).
+
+**WARN: (TCLCMD-1594):	A clock with name SPI_CLK was already defined in the design. Previously defined clock definition of SPI_CLK will be overwritten. (File ../cpu_sys.sdc, Line 38).
+
+**WARN: (TCLCMD-1164):	Previously defined source objects for generated clock 'SPI_CLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_generated_clock -source' option in a single command call. (File ../cpu_sys.sdc, Line 38).
+
+**WARN: (TCLCMD-1594):	A clock with name RMII_CLK was already defined in the design. Previously defined clock definition of RMII_CLK will be overwritten. (File ../cpu_sys.sdc, Line 39).
+
+**WARN: (TCLCMD-1164):	Previously defined source objects for generated clock 'RMII_CLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_generated_clock -source' option in a single command call. (File ../cpu_sys.sdc, Line 39).
+
+**WARN: (TCLCMD-1594):	A clock with name MII_CLK was already defined in the design. Previously defined clock definition of MII_CLK will be overwritten. (File ../cpu_sys.sdc, Line 40).
+
+**WARN: (TCLCMD-1164):	Previously defined source objects for generated clock 'MII_CLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_generated_clock -source' option in a single command call. (File ../cpu_sys.sdc, Line 40).
+
+**WARN: (TCLCMD-1594):	A clock with name RTC_ECLK was already defined in the design. Previously defined clock definition of RTC_ECLK will be overwritten. (File ../cpu_sys.sdc, Line 41).
+
+**WARN: (TCLCMD-1164):	Previously defined source objects for generated clock 'RTC_ECLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_generated_clock -source' option in a single command call. (File ../cpu_sys.sdc, Line 41).
+
+**WARN: (TCLCMD-1531):	'create_generated_clock' has been applied on hierarchical pin 'U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_BUF_04/Y' (File ../cpu_sys.sdc, Line 42).
+
+Message <TCLCMD-1594> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit. (File ../cpu_sys.sdc, Line 42).
+
+**WARN: (TCLCMD-1164):	Previously defined source objects for generated clock 'FUSE_CLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_generated_clock -source' option in a single command call. (File ../cpu_sys.sdc, Line 42).
+
+**WARN: (TCLCMD-1164):	Previously defined source objects for generated clock 'EEP_TCLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_generated_clock -source' option in a single command call. (File ../cpu_sys.sdc, Line 43).
+
+**WARN: (TCLCMD-1164):	Previously defined source objects for generated clock 'EEP_PCLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_generated_clock -source' option in a single command call. (File ../cpu_sys.sdc, Line 44).
+
+**WARN: (TCLCMD-1164):	Previously defined source objects for generated clock 'DSP_PCLK' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_generated_clock -source' option in a single command call. (File ../cpu_sys.sdc, Line 45).
+
+**WARN: (TCLCMD-1531):	'set_false_path' has been applied on hierarchical pin 'U_cpu_sys_top/U_gpio_glbl_mux/gpio_out_52_i[39]' (File ../cpu_sys.sdc, Line 115).
+
+**WARN: (TCLCMD-1531):	'set_false_path' has been applied on hierarchical pin 'U_cpu_sys_top/U_gpio_glbl_mux/gpio_out_52_i[38]' (File ../cpu_sys.sdc, Line 115).
+
+**WARN: (TCLCMD-1531):	'set_false_path' has been applied on hierarchical pin 'U_cpu_sys_top/U_gpio_glbl_mux/gpio_out_52_i[37]' (File ../cpu_sys.sdc, Line 115).
+
+**WARN: (TCLCMD-1531):	'set_false_path' has been applied on hierarchical pin 'U_cpu_sys_top/U_gpio_glbl_mux/gpio_out_52_i[36]' (File ../cpu_sys.sdc, Line 115).
+
+Message <TCLCMD-1531> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit. (File ../cpu_sys.sdc, Line 115).
+
+Number of path exceptions in the constraint file = 137
+INFO (CTE): Reading of timing constraints file ../cpu_sys.sdc completed, with 65 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.8, real=0:00:01.0, peak res=2862.7M, current mem=2605.2M)
+Current (total cpu=0:00:23.3, real=0:00:53.0, peak res=2862.7M, current mem=2605.2M)
+<CMD> report_clocks
+      --------------------------------------------------------------------------------------  
+                                           Clock Descriptions                                       
+      --------------------------------------------------------------------------------------  
+                                                                           Attributes          
+      --------------------------------------------------------------------------------------  
+        Clock Name          Source         Period    Lead    Trail   Generated   Propagated   
+      --------------------------------------------------------------------------------------  
+       DBG_CLK        io_in_bus[36]      16.000   0.000    8.000       n           n        
+       GPIO_CLK_VIR           -             8.000   0.000    4.000       n           n        
+        HPC_CLK_VIR           -             8.000   0.000    4.000       n           n        
+       JTAG_CLK       io_in_bus[28]      20.000   0.000   10.000       n           n        
+       JTAG_CLK_C2C   ext_die_jtag_tck_i   20.000   0.000   10.000       n           n        
+       LIFE_CLK      pll0_cmu_life_clk   10.000   0.000    5.000       n           n        
+        MCUCLK       pll0_cmu_ck_aux      3.003   0.000    1.502       n           n        
+      MII_RXCLK       io_in_bus[22]      16.000   0.000    8.000       n           n        
+      MII_TXCLK       io_in_bus[21]      16.000   0.000    8.000       n           n        
+       REFCLK0       pll0_cmu_ck_ref      8.000   0.000    4.000       n           n        
+      SPI_CLK_IN      io_in_bus[65]      16.000   0.000    8.000       n           n        
+        SWCLK        pll0_cmu_ck_soc      1.000   0.000    0.500       n           n        
+      --------------------------------------------------------------------------------------  
+      --------------------------------------------------------------------------------------------------------------------------------------------------------------  
+                                                                                Generated-Clock Descriptions                                                                            
+      --------------------------------------------------------------------------------------------------------------------------------------------------------------  
+          Name          Generated Source(pin)              Master Source(pin)         Master-clock   Source   Invert     Freq.      Duty-Cycle   Edges   Edge-Shift   
+                                                                                                     Invert            Multiplier                                     
+      --------------------------------------------------------------------------------------------------------------------------------------------------------------  
+      APB_CLK     U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_apb_clkdivby2_reg/U_clk_dff/Q                                   
+                                                   U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_BUF_00/Y                               
+                                                                                      CPU_CLK        n        n         1/2           0          -         -        
+      CPU_CLK     U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_BUF_00/Y                                   
+                                                   U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_sw_clkdivby2_1_reg/U_clk_dff/Q                               
+                                                                                     SWCLK_DIV4      n        n         1/1           0          -         -        
+      DSP_PCLK    U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/i_pcie_sw_clk_dff/U_clk_dff/Q                                   
+                                                          pll0_cmu_ck_soc              SWCLK         n        n         1/2           0          -         -        
+      EEP_PCLK    U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/i_pcie_sw_clk_dff/U_clk_dff/Q                                   
+                                                          pll0_cmu_ck_soc              SWCLK         n        n         1/2           0          -         -        
+      EEP_TCLK    U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/i_pcie_sw_clk_dff/U_clk_dff/Q                                   
+                                                          pll0_cmu_ck_soc              SWCLK         n        n         1/2           0          -         -        
+      FUSE_CLK    U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_BUF_04/Y                                   
+                                                         pll0_cmu_life_clk            LIFE_CLK       n        n         1/8           0          -         -        
+      MII_CLK     U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_mii_clkdivby2_reg/U_clk_dff/Q                                   
+                                                   U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_rmii_clkdivby2_reg/U_clk_dff/Q                               
+                                                                                      RMII_CLK       n        n         1/2           0          -         -        
+      RMII_CLK    U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_rmii_clkdivby2_reg/U_clk_dff/Q                                   
+                                                          pll0_cmu_ck_ref             REFCLK0        n        n         1/2           0          -         -        
+      RTC_ECLK    U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_rtc_eclkdivby2_reg/U_clk_dff/Q                                   
+                                                   U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_mii_clkdivby2_reg/U_clk_dff/Q                               
+                                                                                      MII_CLK        n        n         1/2           0          -         -        
+      SPI_CLK     U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_spi_clkdivby2_reg/U_clk_dff/Q                                   
+                                                          pll0_cmu_ck_soc              SWCLK         n        n         1/8           0          -         -        
+       SWCLK_DIV2   U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_sw_clkdivby2_0_reg/U_clk_dff/Q                                   
+                                                          pll0_cmu_ck_soc              SWCLK         n        n         1/2           0          -         -        
+       SWCLK_DIV4   U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_sw_clkdivby2_1_reg/U_clk_dff/Q                                   
+                                                   U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_sw_clkdivby2_0_reg/U_clk_dff/Q                               
+                                                                                     SWCLK_DIV2      n        n         1/2           0          -         -        
+      --------------------------------------------------------------------------------------------------------------------------------------------------------------  
+<CMD> report_clocks > clocks.rpt
+<CMD> report_clocks U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/Y
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/Y'
+**ERROR: (TCLCMD-999):	Could not find any clock matching the values specified for '-clocks'
+
+<CMD> report_clocks U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/'
+**ERROR: (TCLCMD-999):	Could not find any clock matching the values specified for '-clocks'
+
+<CMD> report_fanin -to U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/Y
+**WARN: (TA-980):	A mismatch between the values of propagated and asserted constants in the design has been found. Please review the file './CTE_constant_mismatch.rpt' for more detailed information about pins in the design which are affected by this condition.
+       -------------------------------------------------------------------------------------------------------  
+        Source Pin             Sink Pin               Cell Type         Timing Sense      Arc        Case       
+                                                                                          Disabled   Analysis   
+       -------------------------------------------------------------------------------------------------------  
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/S0
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/Y
+                                                     MX2XL             -                 -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/B
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/Y
+                                                     MX2XL             positive_unate    -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/A
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/Y
+                                                     MX2XL             positive_unate    -          -
+       -------------------------------------------------------------------------------------------------------
+       ltest_en               U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/S0
+                                                     (net)             -                 -          -
+       ts_0_not_clkc0_i/Y     U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/B
+                                                     (net)             -                 -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_MUX_21/U_clk_mux/Y
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/ts_0_clkfix_66616mux_stes0_atsource__clkc0inv_i/A
+                                                     (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+       ts_0_not_clkc0_i/A     ts_0_not_clkc0_i/Y     INVXL             negative_unate    -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_MUX_21/U_clk_mux/S0
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_MUX_21/U_clk_mux/Y
+                                                     MX2X1             -                 -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_MUX_21/U_clk_mux/B
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_MUX_21/U_clk_mux/Y
+                                                     MX2X1             positive_unate    -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_MUX_21/U_clk_mux/A
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_MUX_21/U_clk_mux/Y
+                                                     MX2X1             positive_unate    -          -
+       -------------------------------------------------------------------------------------------------------
+       io_in_bus[28]          ts_0_not_clkc0_i/A     (net)             -                 -          -
+       io_in_bus[20]          U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_MUX_21/U_clk_mux/S0
+                                                     (net)             -                 -          -
+       io_in_bus[36]          U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_MUX_21/U_clk_mux/B
+                                                     (net)             -                 -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U3/Y
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_MUX_21/U_clk_mux/A
+                                                     (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U3/B1
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U3/Y
+                                                     OAI2BB2X1         negative_unate    -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U3/B0
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U3/Y
+                                                     OAI2BB2X1         negative_unate    -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U3/A1N
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U3/Y
+                                                     OAI2BB2X1         positive_unate    -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U3/A0N
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U3/Y
+                                                     OAI2BB2X1         positive_unate    -          -
+       -------------------------------------------------------------------------------------------------------
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U4/Y
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U3/B1
+                                                     (net)             -                 -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U_clk2_sel_sync/signal_synched_reg/Q
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U3/B0
+                                                     (net)             -                 -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_sw_clkdivby2_1_reg/U_clk_dff/Q
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U3/A1N
+                                                     (net)             -                 -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U_clk2_sel_sync/signal_synched_reg/Q
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U3/A0N
+                                                     (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U4/B
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U4/Y
+                                                     NOR2BX1           negative_unate    -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U4/AN
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U4/Y
+                                                     NOR2BX1           positive_unate    -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U_clk2_sel_sync/signal_synched_reg/CK
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U_clk2_sel_sync/signal_synched_reg/Q
+                                                     DFFRHQX1          non_unate         -          -
+       -------------------------------------------------------------------------------------------------------
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U3/Y
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U4/B
+                                                     (net)             -                 -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U_clk1_sel_sync/signal_synched_reg/Q
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U4/AN
+                                                     (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U3/B1
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U3/Y
+                                                     OAI2BB2X1         negative_unate    -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U3/B0
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U3/Y
+                                                     OAI2BB2X1         negative_unate    -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U3/A1N
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U3/Y
+                                                     OAI2BB2X1         positive_unate    -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U3/A0N
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U3/Y
+                                                     OAI2BB2X1         positive_unate    -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U_clk1_sel_sync/signal_synched_reg/CK
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_auxclk/U_clk1_sel_sync/signal_synched_reg/Q
+                                                     DFFRHQX1          non_unate         -          -
+       -------------------------------------------------------------------------------------------------------
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U4/Y
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U3/B1
+                                                     (net)             -                 -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U_clk2_sel_sync/signal_synched_reg/Q
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U3/B0
+                                                     (net)             -                 -          -
+       pll0_cmu_ck_ref        U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U3/A1N
+                                                     (net)             -                 -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U_clk2_sel_sync/signal_synched_reg/Q
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U3/A0N
+                                                     (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U4/B
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U4/Y
+                                                     NOR2BX1           negative_unate    -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U4/AN
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U4/Y
+                                                     NOR2BX1           positive_unate    -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U_clk2_sel_sync/signal_synched_reg/CK
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U_clk2_sel_sync/signal_synched_reg/Q
+                                                     DFFRHQX1          non_unate         -          -
+       -------------------------------------------------------------------------------------------------------
+       pll0_cmu_life_clk      U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U4/B
+                                                     (net)             -                 -          -
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U_clk1_sel_sync/signal_synched_reg/Q
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U4/AN
+                                                     (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+       U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U_clk1_sel_sync/signal_synched_reg/CK
+                              U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U_clk1_sel_sync/signal_synched_reg/Q
+                                                     DFFRHQX1          non_unate         -          -
+       -------------------------------------------------------------------------------------------------------
+<CMD> report_fanin -to U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U_clk1_sel_sync/signal_synched_reg/CK
+       -------------------------------------------------------------------------------------------------------  
+        Source Pin             Sink Pin               Cell Type         Timing Sense      Arc        Case       
+                                                                                          Disabled   Analysis   
+       -------------------------------------------------------------------------------------------------------  
+       pll0_cmu_life_clk      U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_gmux_cpu_refclk/U_clk1_sel_sync/signal_synched_reg/CK
+                                                     (net)             -                 -          -
+       -------------------------------------------------------------------------------------------------------
+<CMD> report_fanin -to pll0_cmu_life_clk
+**INFO (INTERRUPT): One more Ctrl-C to exit Tempus Timing Solution ...
+<CMD> report_clocks pll0_cmu_life_clk
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'pll0_cmu_life_clk'
+**ERROR: (TCLCMD-999):	Could not find any clock matching the values specified for '-clocks'
+
+invalid command name "add_clocks"

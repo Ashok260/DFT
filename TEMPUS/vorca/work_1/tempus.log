@@ -1,0 +1,448 @@
+
+Cadence Tempus(TM) Timing Signoff Solution.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.20-p001_1, built Wed Dec 2 16:07:28 PST 2020
+Options:	
+Date:		Sat Apr  5 13:00:04 2025
+Host:		APL9.kletech.ac.in (x86_64 w/Linux 4.18.0-425.3.1.el8.x86_64) (6cores*12cpus*12th Gen Intel(R) Core(TM) i5-12500 18432KB)
+OS:		Red Hat Enterprise Linux release 8.7 (Ootpa)
+
+License:
+		tpsxl	Tempus Timing Signoff Solution XL	20.2	checkout succeeded
+		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_91980_3xVpIh'.
+**ERROR: (IMPQTF-4044):	Error occurs when 'Rda_Event::keyAction sgnMain 489 613 r Ctrl-r {::sgn::reload_view $w}' is executed with the error message: 'Invalid pointer argument "0x0" in "dbCellName"
+Usage: dbCellName <cellPtr>'. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+<CMD> read_lib ../Tech_files/slow.lib
+<CMD> read_lib -lef ../Tech_files/all.lef
+<CMD> read_verilog ../Tech_files/vorca_fixed.v
+<CMD> set_top_module
+#% Begin Load MMMC data ... (date=04/05 13:01:58, mem=761.3M)
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#% End Load MMMC data ... (date=04/05 13:01:58, total cpu=0:00:00.0, real=0:00:00.0, peak res=761.7M, current mem=761.7M)
+default_emulate_early_rc_corner default_emulate_late_rc_corner default_emulate_rc_corner
+
+Loading LEF file ../Tech_files/all.lef ...
+Set DBUPerIGU to M2 pitch 1320.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[0]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[10]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[11]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[12]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[13]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[14]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[15]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[1]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[2]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[3]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[4]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[5]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[6]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[7]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[8]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[9]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[0]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[10]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[11]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[12]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (EMS-62):	Message <IMPLF-201> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'PDB04DGZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'OEN' in macro 'PDB04DGZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'I' in macro 'PDB04DGZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+
+viaInitial starts at Sat Apr  5 13:01:58 2025
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM1 GENERATE.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM2 GENERATE.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM3 GENERATE.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM4 GENERATE.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM5 GENERATE.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM6 GENERATE.
+viaInitial ends at Sat Apr  5 13:01:58 2025
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from .ssv_emulate_view_definition_91980.tcl
+Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT/DFT/vorca/Tech_files/slow.lib' ...
+Read 477 cells in library 'slow' 
+*** End library_loading (cpu=0.00min, real=0.00min, mem=31.0M, fe_cpu=0.22min, fe_real=1.90min, fe_mem=858.2M) ***
+#% Begin Load netlist data ... (date=04/05 13:01:58, mem=819.9M)
+*** Begin netlist parsing (mem=858.2M) ***
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'OAI211XL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'OAI211XL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'SEDFFHQX1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'SEDFFHQX1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'EDFFTRX2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'EDFFTRX2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR3X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR3X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'DFFHQX4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'DFFHQX4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'OAI222XL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'OAI222XL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR4X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR4X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR4BXL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR4BXL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NAND4BBX1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NAND4BBX1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'MXI2X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'MXI2X4' is defined in LEF but not in the timing library.
+**WARN: (EMS-62):	Message <IMPVL-159> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+Reading verilog netlist '../Tech_files/vorca_fixed.v'
+
+*** Memory Usage v#1 (Current mem = 1002.223M, initial mem = 299.711M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1002.2M) ***
+#% End Load netlist data ... (date=04/05 13:01:58, total cpu=0:00:00.2, real=0:00:00.0, peak res=918.3M, current mem=909.7M)
+Top level cell is vorca.
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Building hierarchical netlist for Cell vorca ...
+*** Netlist is unique.
+** info: there are 619 modules.
+** info: there are 1038 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1207.254M, initial mem = 299.711M) ***
+**WARN: (IMPFP-3961):	The techSite 'corner' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Horizontal Layer M1 offset = 560 (derived)
+Vertical Layer M2 offset = 660 (derived)
+Generated pitch 0.99 in Metal6 is different from 1.32 defined in technology file in preferred direction.
+Generated pitch 0.56 in Metal5 is different from 1.12 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+/dev/null
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Reading timing constraints file '/dev/null' ...
+Current (total cpu=0:00:13.4, real=0:01:55, peak res=1272.6M, current mem=1272.6M)
+Total number of combinational cells: 234
+Total number of sequential cells: 105
+Total number of tristate cells: 9
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2 BUFX12 BUFX16 BUFX20 CLKBUFX2 BUFX3 BUFX4 CLKBUFX12 CLKBUFX16 CLKBUFX20 CLKBUFX4 CLKBUFX8 BUFX8 CLKBUFX3
+Total number of usable buffers: 14
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX2 CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX20 INVX1 CLKINVX3 CLKINVX4 INVX12 INVX2 INVX3 CLKINVX8 INVX20 INVX4 INVX16 INVXL INVX8
+Total number of usable inverters: 17
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY4X1 DLY2X1 DLY3X1
+Total number of identified usable delay cells: 4
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+default_emulate_constraint_mode
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+default_emulate_libset_max default_emulate_libset_min
+<CMD> create_clock -name sclk -period 5 [get_ports clk]
+<CMD> set_delay_cal_mode -siAware true
+AAE_INFO: switching -siAware from false to true ...
+<CMD> set_si_mode -enable_delay_report true
+<CMD> set_si_mode -enable_glitch_report true
+<CMD> set_si_mode -enable_glitch_propagation true
+<CMD> set_global timing_pba_exhaustive_path_nworst_limit 2
+<CMD> set_global timing_path_based_exhaustive_max_paths_limit 1000
+<CMD> update_timing -full
+**WARN: (IMPESI-3468):	User needs to specify -equivalent_waveform_model propagation first before specifying -waveform_compression_mode accurate|clock_detailed .
+AAE DB initialization (MEM=1499.28 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Name: vorca
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+Start delay calculation (fullDC) (1 T). (MEM=1527.05)
+/dev/null
+/dev/null
+Total number of fetched objects 2182
+End delay calculation. (MEM=1531.67 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1531.67 CPU=0:00:00.1 REAL=0:00:00.0)
+<CMD> report_timing
+Path 1: MET Setup Check with Pin f32_mux_1_data_reg_10_/CK 
+Endpoint:   f32_mux_1_data_reg_10_/D (^) checked with  leading edge of 'sclk'
+Beginpoint: o_reg_addr_reg_2_/Q      (^) triggered by  leading edge of 'sclk'
+Path Groups: {sclk}
+Other End Arrival Time          0.000
+- Setup                         0.236
++ Phase Shift                   5.000
+= Required Time                 4.764
+- Arrival Time                  1.515
+= Slack Time                    3.249
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ------------------------------------------------------------------------------
+      Instance                       Arc          Cell      Delay  Arrival  Required  
+                                                                   Time     Time  
+      ------------------------------------------------------------------------------
+      o_reg_addr_reg_2_              CK ^         -         -      0.000    3.249  
+      o_reg_addr_reg_2_              CK ^ -> Q ^  SDFFRX1   0.309  0.309    3.558  
+      o_reg_addr_reg_2__scan_iso_or  A ^ -> Y ^   AND2X1    0.149  0.458    3.707  
+      U43                            B ^ -> Y v   NAND2BX1  0.256  0.714    3.963  
+      U31                            A v -> Y ^   NOR2X2    0.206  0.919    4.169  
+      U466                           B ^ -> Y ^   AND2X2    0.232  1.151    4.401  
+      U593                           A ^ -> Y ^   BUFX4     0.128  1.280    4.529  
+      U778                           B0 ^ -> Y v  AOI22X1   0.062  1.342    4.591  
+      U779                           D v -> Y ^   NAND4X1   0.059  1.401    4.650  
+      U785                           A1 ^ -> Y v  AOI21X1   0.067  1.468    4.718  
+      U141                           B v -> Y ^   NAND3X1   0.046  1.515    4.764  
+      f32_mux_1_data_reg_10_         D ^          SDFFRX1   0.000  1.515    4.764  
+      ------------------------------------------------------------------------------
+
+<CMD> report_timing -max_paths 10000000 -retime path_slew_propagation -retime_mode exhaustive -max_slack 0.200 > epba_${DATE}.rpt
+<CMD> check_design -type timing -out_file reports_Apr05-13:01:57/check_design.rpt
+Output file 'reports_Apr05-13:01:57/check_design.rpt' created. Sourcing this file will create a $design_checks TCL dictionary that can be parsed for more information.
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> check_timing -verbose > ${reportDir}/check_timing.rpt
+<CMD> report_analysis_coverage            > ${reportDir}/coverage.rpt
+<CMD> report_clocks                       > ${reportDir}/clocks.rpt
+<CMD> report_case_analysis                > ${reportDir}/case_analysis.rpt
+<CMD> report_inactive_arcs                > ${reportDir}/inactive_arcs.rpt
+<CMD> report_constraint -all_violators > reports_Apr05-13:01:57/allviol.rpt
+<CMD> report_analysis_summary                                         > ${reportDir}/analysis_summary.rpt
+<CMD> report_timing -path_type summary_slack_only -late -max_paths 5  > ${reportDir}/start_end_slack.rpt
+<CMD> report_timing -late   -max_paths 50 -nworst 1 -path_type full_clock -net  > ${reportDir}/worst_max_path.rpt
+<CMD> report_timing -early  -max_paths 50 -nworst 1 -path_type full_clock -net  > ${reportDir}/worst_min_path.rpt
+<CMD> report_timing -path_type end_slack_only                       > ${reportDir}/setup_1.rpt
+<CMD> report_timing -path_type end_slack_only  -early               > ${reportDir}/hold_1.rpt
+<CMD> report_timing -late    -max_paths 100                         > ${reportDir}/setup_100.rpt.gz
+<CMD> report_timing -early   -max_paths 100                         > ${reportDir}/hold_100.rpt.gz
+<CMD> report_timing -retime path_slew_propagation -max_paths 50 -nworst 1 -path_type full_clock    > ${reportDir}/pba_50_paths.rpt
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+**ERROR: (IMPESI-3017):	 Unable to get AAE clock index map from Cte clock with index = 1.
+INFO: Path Based Analysis (PBA) performed on total '50' paths
+All done
+Loading  (vorca)
+Traverse HInst (vorca)
+save out the reporting file "scanChain.rpt"
+
+Usage: specifyScanCell [-help] <cellName> [-in <ftname>] [-out <ftname>]
+                       [-scanClock <ftname>] [-scanEnable <ftname>]
+
+**ERROR: (IMPTCM-32):	Wrong number of arguments specified for command "specifyScanCell".
+
+<CMD> selectObject Net test_si1
+<CMD> deselectObject Net test_si1
+<CMD> selectObject Net test_si1
+<CMD> deselectObject Net test_si1
+<CMD> selectObject Net n1
+<CMD> deselectObject Net n1
+<CMD> selectObject Net n1
+<CMD> deselectObject Net n1
+<CMD> selectInst f32_data_reg_11_
+<CMD> deselectInst f32_data_reg_11_
+<CMD> selectInst f32_data_reg_11_
+<CMD> deselectInst f32_data_reg_11_
+<CMD> selectInst f32_data_reg_11_
+<CMD> deselectInst f32_data_reg_11_
+<CMD> selectInst f32_data_reg_11_
+<CMD> deselectInst f32_data_reg_11_
+<CMD> selectInst f32_data_reg_12_
+<CMD> deselectInst f32_data_reg_12_
+<CMD> selectInst f32_data_reg_12_
+<CMD> deselectInst f32_data_reg_12_
+<CMD> selectInst f32_data_reg_11_
+<CMD> deselectInst f32_data_reg_11_
+<CMD> selectObject Net scan_enable
+<CMD> deselectObject Net scan_enable
+<CMD> selectObject Net {i_wr_data[0]}
+<CMD> selectObject Net {i_wr_data[1]}
+<CMD> selectObject Net {i_wr_data[2]}
+<CMD> selectObject Net {i_wr_data[3]}
+<CMD> selectObject Net {i_wr_data[4]}
+<CMD> selectObject Net {i_wr_data[5]}
+<CMD> selectObject Net {i_wr_data[6]}
+<CMD> selectObject Net {i_wr_data[7]}
+<CMD> selectObject Net {i_wr_data[8]}
+<CMD> selectObject Net {i_wr_data[9]}
+<CMD> selectObject Net {i_wr_data[10]}
+<CMD> selectObject Net {i_wr_data[11]}
+<CMD> selectObject Net {i_wr_data[12]}
+<CMD> selectObject Net {i_wr_data[13]}
+<CMD> selectObject Net {i_wr_data[14]}
+<CMD> selectObject Net {i_wr_data[15]}
+<CMD> selectObject Net {i_wr_data[16]}
+<CMD> selectObject Net {i_wr_data[17]}
+<CMD> selectObject Net {i_wr_data[18]}
+<CMD> selectObject Net {i_wr_data[19]}
+<CMD> selectObject Net {i_wr_data[20]}
+<CMD> selectObject Net {i_wr_data[21]}
+<CMD> selectObject Net {i_wr_data[22]}
+<CMD> selectObject Net {i_wr_data[23]}
+<CMD> selectObject Net {i_wr_data[24]}
+<CMD> selectObject Net {i_wr_data[25]}
+<CMD> selectObject Net {i_wr_data[26]}
+<CMD> selectObject Net {i_wr_data[27]}
+<CMD> selectObject Net {i_wr_data[28]}
+<CMD> selectObject Net {i_wr_data[29]}
+<CMD> selectObject Net {i_wr_data[30]}
+<CMD> selectObject Net {i_wr_data[31]}
+<CMD> deselectObject Net {i_wr_data[0]}
+<CMD> deselectObject Net {i_wr_data[1]}
+<CMD> deselectObject Net {i_wr_data[2]}
+<CMD> deselectObject Net {i_wr_data[3]}
+<CMD> deselectObject Net {i_wr_data[4]}
+<CMD> deselectObject Net {i_wr_data[5]}
+<CMD> deselectObject Net {i_wr_data[6]}
+<CMD> deselectObject Net {i_wr_data[7]}
+<CMD> deselectObject Net {i_wr_data[8]}
+<CMD> deselectObject Net {i_wr_data[9]}
+<CMD> deselectObject Net {i_wr_data[10]}
+<CMD> deselectObject Net {i_wr_data[11]}
+<CMD> deselectObject Net {i_wr_data[12]}
+<CMD> deselectObject Net {i_wr_data[13]}
+<CMD> deselectObject Net {i_wr_data[14]}
+<CMD> deselectObject Net {i_wr_data[15]}
+<CMD> deselectObject Net {i_wr_data[16]}
+<CMD> deselectObject Net {i_wr_data[17]}
+<CMD> deselectObject Net {i_wr_data[18]}
+<CMD> deselectObject Net {i_wr_data[19]}
+<CMD> deselectObject Net {i_wr_data[20]}
+<CMD> deselectObject Net {i_wr_data[21]}
+<CMD> deselectObject Net {i_wr_data[22]}
+<CMD> deselectObject Net {i_wr_data[23]}
+<CMD> deselectObject Net {i_wr_data[24]}
+<CMD> deselectObject Net {i_wr_data[25]}
+<CMD> deselectObject Net {i_wr_data[26]}
+<CMD> deselectObject Net {i_wr_data[27]}
+<CMD> deselectObject Net {i_wr_data[28]}
+<CMD> deselectObject Net {i_wr_data[29]}
+<CMD> deselectObject Net {i_wr_data[30]}
+<CMD> deselectObject Net {i_wr_data[31]}
+**WARN: (IMPSP-9048):	Cell 'specifyScanChain' does not exist.
+
+**WARN: (IMPSP-9048):	Cell 'specifyScanChain' does not exist.
+
+save out the reporting file "scanChain.rpt"
+<CMD> write_def
+**ERROR: (IMPLIC-90):	This command "write_def" does not have the necessary license to run with the current base license 'tpsxl' and there are no optional licenses installed that can enable this command using the current base-license of 'tpsxl'.
+Use 'setLicenseCheck -status' to see the current licenses in use and for more information.
+<CMD> selectObject Net test_se
+<CMD> deselectObject Net test_se
+<CMD> selectObject Net test_se
+<CMD> ui::getColorByName chocolate
+<CMD> ui::getColorByName royalblue
+<CMD> deselectObject Net test_se
+<CMD> selectObject Net test_se
+<CMD> deselectObject Net test_se
+<CMD> selectObject Module u_survik
+Loading u_survik (survik)
+Traverse HInst u_survik(survik)
+<CMD> ui::getColorByName darkgreen
+Loading  (vorca)
+Traverse HInst (vorca)
+-checkType setup                           # enums={setup hold}, default=setup
+<CMD> get_time_unit
+<CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -late > top.mtarpt
+<CMD> load_timing_debug_report -name default_report top.mtarpt
+Parsing file top.mtarpt...
+**WARN: (IMPGTD-801):	File (top.mtarpt) does not contain any timing paths.
+This could be because the report is not of the correct format,
+or because it does not contain any paths (because there are no
+failing paths in the design, for instance).
+**ERROR: (IMPGTD-223):	load_timing_debug_report top.mtarpt failed.
+-checkType setup                           # enums={setup hold}, default=setup
+<CMD> get_time_unit
+<CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -early > top.mtarpt
+<CMD> load_timing_debug_report -name default_report top.mtarpt
+Parsing file top.mtarpt...
+<CMD> selectObject IO_Pin raw_scan_en

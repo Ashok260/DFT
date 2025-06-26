@@ -1,0 +1,623 @@
+[03/12 11:14:52      0s] 
+[03/12 11:14:52      0s] Cadence Tempus(TM) Timing Signoff Solution.
+[03/12 11:14:52      0s] Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+[03/12 11:14:52      0s] 
+[03/12 11:14:52      0s] Version:	v20.20-p001_1, built Wed Dec 2 16:07:28 PST 2020
+[03/12 11:14:52      0s] Options:	
+[03/12 11:14:52      0s] Date:		Wed Mar 12 11:14:52 2025
+[03/12 11:14:52      0s] Host:		APL5.kletech.ac.in (x86_64 w/Linux 4.18.0-425.3.1.el8.x86_64) (6cores*12cpus*12th Gen Intel(R) Core(TM) i5-12500 18432KB)
+[03/12 11:14:52      0s] OS:		Red Hat Enterprise Linux release 8.7 (Ootpa)
+[03/12 11:14:52      0s] 
+[03/12 11:14:52      0s] License:
+[03/12 11:14:53      0s] 		tpsxl	Tempus Timing Signoff Solution XL	20.2	checkout succeeded
+[03/12 11:14:53      0s] 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[03/12 11:14:59      5s] @(#)CDS: Tempus Timing Signoff Solution v20.20-p001_1 (64bit) 12/02/2020 16:07 (Linux 2.6.32-431.11.2.el6.x86_64)
+[03/12 11:14:59      5s] @(#)CDS: NanoRoute 20.20-p001_1 NR200917-0125/MT (database version 18.20.530) {superthreading v2.11}
+[03/12 11:14:59      5s] @(#)CDS: AAE 20.20-p005 (64bit) 12/02/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[03/12 11:14:59      5s] @(#)CDS: CTE 20.20-p010_1 () Dec  2 2020 14:35:30 ( )
+[03/12 11:14:59      5s] @(#)CDS: SYNTECH 20.20-p001_1 () Nov 24 2020 02:28:20 ( )
+[03/12 11:14:59      5s] @(#)CDS: CPE v20.20-p009
+[03/12 11:14:59      5s] @(#)CDS: OA 22.60-s011 Tue Jun 16 12:27:00 2020
+[03/12 11:14:59      5s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[03/12 11:14:59      5s] @(#)CDS: RCDB 11.15.0
+[03/12 11:14:59      5s] @(#)CDS: STYLUS 21.10-d018_1 (08/28/2020 09:14 PDT)
+[03/12 11:14:59      5s] Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+[03/12 11:14:59      5s] **INFO: (TMPDIR-1001): The environment variable TMPDIR is not set.
+Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_14591_923YGn'.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_14591_923YGn'.
+[03/12 11:15:21      7s] <CMD> read_lib /home/01fe21bec223/DFT/MCRB/TEMPUS/TECHFILES/NangateOpenCellLibrary_slow_conditional_ccs.lib
+[03/12 11:15:21      7s] <CMD> set_global timing_apply_default_primary_input_assertion false
+[03/12 11:15:21      7s] <CMD> read_verilog /home/01fe21bec223/DFT/MCRB/TEMPUS/NETLIST/mcrb_opt.v
+[03/12 11:15:22      7s] <CMD> set_top_module mcrb
+[03/12 11:15:22      8s] #% Begin Load MMMC data ... (date=03/12 11:15:22, mem=769.8M)
+[03/12 11:15:22      8s] Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+[03/12 11:15:22      8s] #% End Load MMMC data ... (date=03/12 11:15:22, total cpu=0:00:00.0, real=0:00:00.0, peak res=770.2M, current mem=770.2M)
+[03/12 11:15:22      8s] Loading view definition file from .ssv_emulate_view_definition_14591.tcl
+[03/12 11:15:22      8s] Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT/MCRB/TEMPUS/TECHFILES/NangateOpenCellLibrary_slow_conditional_ccs.lib' ...
+[03/12 11:15:22      8s] Read 134 cells in library 'NangateOpenCellLibrary' 
+[03/12 11:15:22      8s] Ending "PreSetAnalysisView" (total cpu=0:00:00.5, real=0:00:00.0, peak res=865.5M, current mem=782.0M)
+[03/12 11:15:22      8s] *** End library_loading (cpu=0.01min, real=0.00min, mem=42.0M, fe_cpu=0.14min, fe_real=0.50min, fe_mem=810.2M) ***
+[03/12 11:15:22      8s] #% Begin Load netlist data ... (date=03/12 11:15:22, mem=782.0M)
+[03/12 11:15:22      8s] *** Begin netlist parsing (mem=810.2M) ***
+[03/12 11:15:22      8s] Reading verilog netlist '/home/01fe21bec223/DFT/MCRB/TEMPUS/NETLIST/mcrb_opt.v'
+[03/12 11:15:22      8s] 
+[03/12 11:15:22      8s] *** Memory Usage v#1 (Current mem = 962.293M, initial mem = 299.711M) ***
+[03/12 11:15:22      8s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=962.3M) ***
+[03/12 11:15:22      8s] #% End Load netlist data ... (date=03/12 11:15:22, total cpu=0:00:00.2, real=0:00:00.0, peak res=885.6M, current mem=877.9M)
+[03/12 11:15:22      8s] Set top cell to mcrb.
+[03/12 11:15:22      8s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+[03/12 11:15:22      8s] late library set: default_emulate_libset_max
+[03/12 11:15:22      8s] early library set: default_emulate_libset_min
+[03/12 11:15:22      8s] Completed consistency checks. Status: Successful
+[03/12 11:15:22      8s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+[03/12 11:15:22      8s] late library set: default_emulate_libset_max
+[03/12 11:15:22      8s] early library set: default_emulate_libset_min
+[03/12 11:15:22      8s] Completed consistency checks. Status: Successful
+[03/12 11:15:22      8s] Ending "BindLib:" (total cpu=0:00:00.0, real=0:00:00.0, peak res=911.7M, current mem=911.7M)
+[03/12 11:15:22      8s] Building hierarchical netlist for Cell mcrb ...
+[03/12 11:15:22      8s] *** Netlist is unique.
+[03/12 11:15:22      8s] ** info: there are 135 modules.
+[03/12 11:15:22      8s] ** info: there are 23 stdCell insts.
+[03/12 11:15:22      8s] 
+[03/12 11:15:22      8s] *** Memory Usage v#1 (Current mem = 1170.238M, initial mem = 299.711M) ***
+[03/12 11:15:22      8s] Set Default Net Delay as 1000 ps.
+[03/12 11:15:22      8s] Set Default Net Load as 0.5 pF. 
+[03/12 11:15:22      8s] Set Default Input Pin Transition as 0.1 ps.
+[03/12 11:15:22      8s] Extraction setup Started 
+[03/12 11:15:22      8s] Summary of Active RC-Corners : 
+[03/12 11:15:22      8s]  
+[03/12 11:15:22      8s]  Analysis View: default_emulate_view
+[03/12 11:15:22      8s]     RC-Corner Name        : default_emulate_rc_corner
+[03/12 11:15:22      8s]     RC-Corner Index       : 0
+[03/12 11:15:22      8s]     RC-Corner Temperature : 25 Celsius
+[03/12 11:15:22      8s]     RC-Corner Cap Table   : ''
+[03/12 11:15:22      8s]     RC-Corner PostRoute Res Factor        : 1
+[03/12 11:15:22      8s]     RC-Corner PostRoute Cap Factor        : 1
+[03/12 11:15:22      8s]     RC-Corner PostRoute XCap Factor       : 1
+[03/12 11:15:22      8s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+[03/12 11:15:22      8s] late library set: default_emulate_libset_max
+[03/12 11:15:22      8s] early library set: default_emulate_libset_min
+[03/12 11:15:22      8s] Completed consistency checks. Status: Successful
+[03/12 11:15:22      8s] Ending "SetAnalysisView" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1221.5M, current mem=1010.4M)
+[03/12 11:15:23      8s] Reading timing constraints file '/dev/null' ...
+[03/12 11:15:23      8s] Current (total cpu=0:00:09.0, real=0:00:31.0, peak res=1227.8M, current mem=1227.8M)
+[03/12 11:15:23      8s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[03/12 11:15:23      8s] Creating Cell Server ...(0, 1, 1, 1)
+[03/12 11:15:23      8s] Summary for sequential cells identification: 
+[03/12 11:15:23      8s]   Identified SBFF number: 16
+[03/12 11:15:23      8s]   Identified MBFF number: 0
+[03/12 11:15:23      8s]   Identified SB Latch number: 0
+[03/12 11:15:23      8s]   Identified MB Latch number: 0
+[03/12 11:15:23      8s]   Not identified SBFF number: 0
+[03/12 11:15:23      8s]   Not identified MBFF number: 0
+[03/12 11:15:23      8s]   Not identified SB Latch number: 0
+[03/12 11:15:23      8s]   Not identified MB Latch number: 0
+[03/12 11:15:23      8s]   Number of sequential cells which are not FFs: 13
+[03/12 11:15:23      8s] Total number of combinational cells: 92
+[03/12 11:15:23      8s] Total number of sequential cells: 29
+[03/12 11:15:23      8s] Total number of tristate cells: 6
+[03/12 11:15:23      8s] Total number of level shifter cells: 0
+[03/12 11:15:23      8s] Total number of power gating cells: 0
+[03/12 11:15:23      8s] Total number of isolation cells: 0
+[03/12 11:15:23      8s] Total number of power switch cells: 0
+[03/12 11:15:23      8s] Total number of pulse generator cells: 0
+[03/12 11:15:23      8s] Total number of always on buffers: 0
+[03/12 11:15:23      8s] Total number of retention cells: 0
+[03/12 11:15:23      8s] List of usable buffers: BUF_X1 BUF_X2 BUF_X4 BUF_X8 CLKBUF_X1 CLKBUF_X3 CLKBUF_X2
+[03/12 11:15:23      8s] Total number of usable buffers: 7
+[03/12 11:15:23      8s] List of unusable buffers:
+[03/12 11:15:23      8s] Total number of unusable buffers: 0
+[03/12 11:15:23      8s] List of usable inverters: INV_X1 INV_X16 INV_X2 INV_X32 INV_X8 INV_X4
+[03/12 11:15:23      8s] Total number of usable inverters: 6
+[03/12 11:15:23      8s] List of unusable inverters:
+[03/12 11:15:23      8s] Total number of unusable inverters: 0
+[03/12 11:15:23      8s] List of identified usable delay cells: BUF_X16 BUF_X32
+[03/12 11:15:23      8s] Total number of identified usable delay cells: 2
+[03/12 11:15:23      8s] List of identified unusable delay cells:
+[03/12 11:15:23      8s] Total number of identified unusable delay cells: 0
+[03/12 11:15:23      8s] Creating Cell Server, finished. 
+[03/12 11:15:23      8s] 
+[03/12 11:15:23      8s] Deleting Cell Server ...
+[03/12 11:15:23      8s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1256.7M, current mem=1256.7M)
+[03/12 11:15:23      8s] Creating Cell Server ...(0, 0, 0, 0)
+[03/12 11:15:23      8s] Summary for sequential cells identification: 
+[03/12 11:15:23      8s]   Identified SBFF number: 16
+[03/12 11:15:23      8s]   Identified MBFF number: 0
+[03/12 11:15:23      8s]   Identified SB Latch number: 0
+[03/12 11:15:23      8s]   Identified MB Latch number: 0
+[03/12 11:15:23      8s]   Not identified SBFF number: 0
+[03/12 11:15:23      8s]   Not identified MBFF number: 0
+[03/12 11:15:23      8s]   Not identified SB Latch number: 0
+[03/12 11:15:23      8s]   Not identified MB Latch number: 0
+[03/12 11:15:23      8s]   Number of sequential cells which are not FFs: 13
+[03/12 11:15:23      8s]  Visiting view : default_emulate_view
+[03/12 11:15:23      8s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/12 11:15:23      8s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/12 11:15:23      8s]  Visiting view : default_emulate_view
+[03/12 11:15:23      8s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/12 11:15:23      8s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/12 11:15:23      8s] Creating Cell Server, finished. 
+[03/12 11:15:23      8s] 
+[03/12 11:15:23      9s] Extraction setup Started 
+[03/12 11:15:23      9s] Summary of Active RC-Corners : 
+[03/12 11:15:23      9s]  
+[03/12 11:15:23      9s]  Analysis View: default_emulate_view
+[03/12 11:15:23      9s]     RC-Corner Name        : default_emulate_rc_corner
+[03/12 11:15:23      9s]     RC-Corner Index       : 0
+[03/12 11:15:23      9s]     RC-Corner Temperature : 125 Celsius
+[03/12 11:15:23      9s]     RC-Corner Cap Table   : ''
+[03/12 11:15:23      9s]     RC-Corner PostRoute Res Factor        : 1
+[03/12 11:15:23      9s]     RC-Corner PostRoute Cap Factor        : 1
+[03/12 11:15:23      9s]     RC-Corner PostRoute XCap Factor       : 1
+[03/12 11:15:23      9s] Extraction setup Started 
+[03/12 11:15:23      9s] Summary of Active RC-Corners : 
+[03/12 11:15:23      9s]  
+[03/12 11:15:23      9s]  Analysis View: default_emulate_view
+[03/12 11:15:23      9s]     RC-Corner Name        : default_emulate_rc_corner
+[03/12 11:15:23      9s]     RC-Corner Index       : 0
+[03/12 11:15:23      9s]     RC-Corner Temperature : 125 Celsius
+[03/12 11:15:23      9s]     RC-Corner Cap Table   : ''
+[03/12 11:15:23      9s]     RC-Corner PostRoute Res Factor        : 1
+[03/12 11:15:23      9s]     RC-Corner PostRoute Cap Factor        : 1
+[03/12 11:15:23      9s]     RC-Corner PostRoute XCap Factor       : 1
+[03/12 11:15:23      9s] Extraction setup Started 
+[03/12 11:15:23      9s] Summary of Active RC-Corners : 
+[03/12 11:15:23      9s]  
+[03/12 11:15:23      9s]  Analysis View: default_emulate_view
+[03/12 11:15:23      9s]     RC-Corner Name        : default_emulate_rc_corner
+[03/12 11:15:23      9s]     RC-Corner Index       : 0
+[03/12 11:15:23      9s]     RC-Corner Temperature : 125 Celsius
+[03/12 11:15:23      9s]     RC-Corner Cap Table   : ''
+[03/12 11:15:23      9s]     RC-Corner PostRoute Res Factor        : 1
+[03/12 11:15:23      9s]     RC-Corner PostRoute Cap Factor        : 1
+[03/12 11:15:23      9s]     RC-Corner PostRoute XCap Factor       : 1
+[03/12 11:15:23      9s] <CMD> read_sdc /home/01fe21bec223/DFT/MCRB/TEMPUS/SDC/mcrb_m.sdc
+[03/12 11:15:23      9s] Current (total cpu=0:00:09.1, real=0:00:31.0, peak res=1257.2M, current mem=1218.2M)
+[03/12 11:15:23      9s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File /home/01fe21bec223/DFT/MCRB/TEMPUS/SDC/mcrb_m.sdc, Line 9).
+[03/12 11:15:23      9s] 
+[03/12 11:15:23      9s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File /home/01fe21bec223/DFT/MCRB/TEMPUS/SDC/mcrb_m.sdc, Line 10).
+[03/12 11:15:23      9s] 
+[03/12 11:15:23      9s] 
+[03/12 11:15:23      9s] Usage: group_path [-help] [-comment <string>] -name <path_group_name> [ [-from <from_list>] [-to <to_list>] [-through <through_list>] ]
+[03/12 11:15:23      9s] 
+[03/12 11:15:23      9s] 
+[03/12 11:15:23      9s] Usage: group_path [-help] [-comment <string>] -name <path_group_name> [ [-from <from_list>] [-to <to_list>] [-through <through_list>] ]
+[03/12 11:15:23      9s] 
+[03/12 11:15:23      9s] 
+[03/12 11:15:23      9s] Usage: group_path [-help] [-comment <string>] -name <path_group_name> [ [-from <from_list>] [-to <to_list>] [-through <through_list>] ]
+[03/12 11:15:23      9s] 
+[03/12 11:15:23      9s] 
+[03/12 11:15:23      9s] Usage: group_path [-help] [-comment <string>] -name <path_group_name> [ [-from <from_list>] [-to <to_list>] [-through <through_list>] ]
+[03/12 11:15:23      9s] 
+[03/12 11:15:23      9s] INFO (CTE): Reading of timing constraints file /home/01fe21bec223/DFT/MCRB/TEMPUS/SDC/mcrb_m.sdc completed, with 2 WARNING
+[03/12 11:15:23      9s] Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1232.8M, current mem=1232.8M)
+[03/12 11:15:23      9s] Current (total cpu=0:00:09.1, real=0:00:31.0, peak res=1257.2M, current mem=1232.8M)
+[03/12 11:15:23      9s] <CMD> report_clock_timing -type summary > ./REPORTS_${DATE}/clock_summary.rpt
+[03/12 11:15:23      9s] **WARN: (IMPESI-3468):	User needs to specify -equivalent_waveform_model propagation first before specifying -waveform_compression_mode accurate|clock_detailed .
+[03/12 11:15:23      9s] AAE DB initialization (MEM=1454.24 CPU=0:00:00.0 REAL=0:00:00.0) 
+[03/12 11:15:23      9s] #################################################################################
+[03/12 11:15:23      9s] # Design Name: mcrb
+[03/12 11:15:23      9s] # Design Mode: 65nm
+[03/12 11:15:23      9s] # Analysis Mode: MMMC OCV 
+[03/12 11:15:23      9s] # Parasitics Mode: No SPEF/RCDB 
+[03/12 11:15:23      9s] # Signoff Settings: SI Off 
+[03/12 11:15:23      9s] #################################################################################
+[03/12 11:15:23      9s] Topological Sorting (REAL = 0:00:00.0, MEM = 1477.5M, InitMEM = 1477.5M)
+[03/12 11:15:23      9s] Start delay calculation (fullDC) (1 T). (MEM=1477.5)
+[03/12 11:15:23      9s] Start AAE Lib Loading. (MEM=1477.5)
+[03/12 11:15:23      9s] End AAE Lib Loading. (MEM=1477.5 CPU=0:00:00.0 Real=0:00:00.0)
+[03/12 11:15:23      9s] End AAE Lib Interpolated Model. (MEM=1477.5 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[03/12 11:15:23      9s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[03/12 11:15:23      9s] End delay calculation. (MEM=1482.12 CPU=0:00:00.0 REAL=0:00:00.0)
+[03/12 11:15:23      9s] End delay calculation (fullDC). (MEM=1482.12 CPU=0:00:00.0 REAL=0:00:00.0)
+[03/12 11:15:23      9s] *** CDM Built up (cpu=0:00:00.1  real=0:00:00.0  mem= 1482.1M) ***
+[03/12 11:15:23      9s] <CMD> set_global report_timing_format {hpin cell arc slew load delay arrival}
+[03/12 11:15:23      9s] <CMD> check_timing -verbose -type {loops inputs endpoints clocks constant_collision clock_gating_inferred clock_clipping} -include_warning clocks_masked_by_another_clock > ./REPORTS_${DATE}/check_timing_verbose.rpt
+[03/12 11:15:23      9s] <CMD> check_timing -check_only {clock_crossing} -verbose > ./REPORTS_${DATE}/clock_crossings.rpt
+[03/12 11:15:23      9s] <CMD> report_clocks -groups > ./REPORTS_${DATE}/report_clock_groups.rpt
+[03/12 11:15:23      9s] <CMD> report_constraint -all_violators > ./REPORTS_Mar12-11:15:21/report_allViolators.rpt
+[03/12 11:15:23      9s] Loading  (mcrb)
+[03/12 11:15:23      9s] Traverse HInst (mcrb)
+[03/12 11:15:23      9s] Deleting Cell Server ...
+[03/12 11:15:23      9s] Creating Cell Server ...(0, 0, 0, 0)
+[03/12 11:15:23      9s] Summary for sequential cells identification: 
+[03/12 11:15:23      9s]   Identified SBFF number: 16
+[03/12 11:15:23      9s]   Identified MBFF number: 0
+[03/12 11:15:23      9s]   Identified SB Latch number: 0
+[03/12 11:15:23      9s]   Identified MB Latch number: 0
+[03/12 11:15:23      9s]   Not identified SBFF number: 0
+[03/12 11:15:23      9s]   Not identified MBFF number: 0
+[03/12 11:15:23      9s]   Not identified SB Latch number: 0
+[03/12 11:15:23      9s]   Not identified MB Latch number: 0
+[03/12 11:15:23      9s]   Number of sequential cells which are not FFs: 13
+[03/12 11:15:23      9s]  Visiting view : default_emulate_view
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/12 11:15:23      9s]  Visiting view : default_emulate_view
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/12 11:15:23      9s] Creating Cell Server, finished. 
+[03/12 11:15:23      9s] 
+[03/12 11:15:23      9s] Deleting Cell Server ...
+[03/12 11:15:23      9s] Creating Cell Server ...(0, 0, 0, 0)
+[03/12 11:15:23      9s] Summary for sequential cells identification: 
+[03/12 11:15:23      9s]   Identified SBFF number: 16
+[03/12 11:15:23      9s]   Identified MBFF number: 0
+[03/12 11:15:23      9s]   Identified SB Latch number: 0
+[03/12 11:15:23      9s]   Identified MB Latch number: 0
+[03/12 11:15:23      9s]   Not identified SBFF number: 0
+[03/12 11:15:23      9s]   Not identified MBFF number: 0
+[03/12 11:15:23      9s]   Not identified SB Latch number: 0
+[03/12 11:15:23      9s]   Not identified MB Latch number: 0
+[03/12 11:15:23      9s]   Number of sequential cells which are not FFs: 13
+[03/12 11:15:23      9s]  Visiting view : default_emulate_view
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/12 11:15:23      9s]  Visiting view : default_emulate_view
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/12 11:15:23      9s] Creating Cell Server, finished. 
+[03/12 11:15:23      9s] 
+[03/12 11:15:23      9s] Deleting Cell Server ...
+[03/12 11:15:23      9s] Creating Cell Server ...(0, 0, 0, 0)
+[03/12 11:15:23      9s] Summary for sequential cells identification: 
+[03/12 11:15:23      9s]   Identified SBFF number: 16
+[03/12 11:15:23      9s]   Identified MBFF number: 0
+[03/12 11:15:23      9s]   Identified SB Latch number: 0
+[03/12 11:15:23      9s]   Identified MB Latch number: 0
+[03/12 11:15:23      9s]   Not identified SBFF number: 0
+[03/12 11:15:23      9s]   Not identified MBFF number: 0
+[03/12 11:15:23      9s]   Not identified SB Latch number: 0
+[03/12 11:15:23      9s]   Not identified MB Latch number: 0
+[03/12 11:15:23      9s]   Number of sequential cells which are not FFs: 13
+[03/12 11:15:23      9s]  Visiting view : default_emulate_view
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/12 11:15:23      9s]  Visiting view : default_emulate_view
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/12 11:15:23      9s] Creating Cell Server, finished. 
+[03/12 11:15:23      9s] 
+[03/12 11:15:23      9s] Deleting Cell Server ...
+[03/12 11:15:23      9s] Creating Cell Server ...(0, 0, 0, 0)
+[03/12 11:15:23      9s] Summary for sequential cells identification: 
+[03/12 11:15:23      9s]   Identified SBFF number: 16
+[03/12 11:15:23      9s]   Identified MBFF number: 0
+[03/12 11:15:23      9s]   Identified SB Latch number: 0
+[03/12 11:15:23      9s]   Identified MB Latch number: 0
+[03/12 11:15:23      9s]   Not identified SBFF number: 0
+[03/12 11:15:23      9s]   Not identified MBFF number: 0
+[03/12 11:15:23      9s]   Not identified SB Latch number: 0
+[03/12 11:15:23      9s]   Not identified MB Latch number: 0
+[03/12 11:15:23      9s]   Number of sequential cells which are not FFs: 13
+[03/12 11:15:23      9s]  Visiting view : default_emulate_view
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/12 11:15:23      9s]  Visiting view : default_emulate_view
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/12 11:15:23      9s] Creating Cell Server, finished. 
+[03/12 11:15:23      9s] 
+[03/12 11:15:23      9s] Deleting Cell Server ...
+[03/12 11:15:23      9s] Creating Cell Server ...(0, 0, 0, 0)
+[03/12 11:15:23      9s] Summary for sequential cells identification: 
+[03/12 11:15:23      9s]   Identified SBFF number: 16
+[03/12 11:15:23      9s]   Identified MBFF number: 0
+[03/12 11:15:23      9s]   Identified SB Latch number: 0
+[03/12 11:15:23      9s]   Identified MB Latch number: 0
+[03/12 11:15:23      9s]   Not identified SBFF number: 0
+[03/12 11:15:23      9s]   Not identified MBFF number: 0
+[03/12 11:15:23      9s]   Not identified SB Latch number: 0
+[03/12 11:15:23      9s]   Not identified MB Latch number: 0
+[03/12 11:15:23      9s]   Number of sequential cells which are not FFs: 13
+[03/12 11:15:23      9s]  Visiting view : default_emulate_view
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/12 11:15:23      9s]  Visiting view : default_emulate_view
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = 0
+[03/12 11:15:23      9s]    : PowerDomain = none : Weighted F : unweighted  = 28.40 (1.000) with rcCorner = -1
+[03/12 11:15:23      9s] Creating Cell Server, finished. 
+[03/12 11:15:23      9s] 
+[03/12 11:15:23      9s] Deleting Cell Server ...
+[03/12 11:15:49     11s] ambiguous command name "report*": reportAaeNetAndTermProperties reportAlwaysOnBuffer reportAnalysisMode reportAvgRC reportBudget reportCapTable reportCapViolation reportCellPad reportCellProperty reportClkGateOkInSoftBlkg reportClockDomains reportComplexFlop reportCompose reportCongestion reportCouplingCaps reportCpodeContextAwareData reportCritInstance reportCritInstances reportCritNet reportCritTerm reportCrosstalkingPair reportDRV reportDanglingNet reportDanglingPort reportDebugTimeDesignData reportDecompose reportDelayCalculation reportDensityMap reportDontUseCells reportDrvProcessFiles reportECONetAndCell ...
+...too many match (>30)
+[03/12 11:15:59     11s] ambiguous command name "report_t*": report_timearc_params report_timearc_properties report_timing report_timing_derate report_timing_gui report_timing_lib report_timing_summary report_tracks
+[03/12 11:16:31     13s] <CMD> report_timing
+[03/12 11:17:01     15s] <CMD> report_timing -max_paths 50
+[03/12 11:18:40     21s] <CMD> report_timing -max_paths 50 > ./REPORTS_${DATE}/mcrb_tempus_timing.rep
+[03/12 11:24:55     45s] <CMD> verify_connectivity -type regular -error 1000 -warning 50
+[03/12 11:24:57     45s] This command "verify_connectivity -type regular -error 1000 ..." required an extra checkout of license tpstso.
+[03/12 11:24:57     45s] Additional license(s) checked out: 1 'Tempus_Timing_Signoff_TSO' license(s)
+[03/12 11:24:57     45s] **ERROR: (IMPVFC-233):	Design must be floorplanned before running 'verify_connectivity'.
+**WARN: (IMPVFC-226):	verify_connectivity failed.
+[03/12 11:28:38     59s] <CMD> report_slack_histogram
+[03/12 11:28:38     59s] 
+[03/12 11:28:38     59s] #####################################################################
+[03/12 11:28:38     59s] # report_slack_histogram at Wed Mar 12 11:28:38 IST 2025
+[03/12 11:28:38     59s] #   slack file: /tmp/ssv_tmpdir_14591_923YGn/.histogram.14591.slk
+[03/12 11:28:38     59s] #   format    : not compact, step=0.5 ns
+[03/12 11:28:38     59s] #   slack (ns): target=0.000  violating_only
+[03/12 11:28:38     59s] #####################################################################
+[03/12 11:28:38     59s] 
+[03/12 11:28:38     59s] ---------------------------------------------
+[03/12 11:28:38     59s] | Slack Range (ns)     |  Count  |     Sum  |
+[03/12 11:28:38     59s] +----------------------+---------+----------+
+[03/12 11:28:38     59s] | ( -0.995 ~  -0.500]  |      5  |        5 |
+[03/12 11:28:38     59s] | ( -0.500 ~  -0.000]  |      5  |       10 |
+[03/12 11:28:38     59s] ---------------------------------------------
+[03/12 11:28:38     59s] <CMD> report_timing -max_points 50 -machine_readable > mcrb.mtarpt
+[03/12 11:28:38     59s] **WARN: (TCLCMD-1131):	'The -max_points parameter of the report_timing command is obsolete. The timing engine will map it to -max_paths parameter. For future releases, you should remove this parameter from your scripts.'
+[03/12 11:28:38     59s] <CMD> load_timing_debug_report -name default_report mcrb.mtarpt
+[03/12 11:28:38     59s] Parsing file mcrb.mtarpt...
+[03/12 11:29:59     64s] <CMD> all_setup_analysis_views
+[03/12 11:30:56     68s] <CMD> report_slack_histogram
+[03/12 11:30:56     68s] 
+[03/12 11:30:56     68s] #####################################################################
+[03/12 11:30:56     68s] # report_slack_histogram at Wed Mar 12 11:30:56 IST 2025
+[03/12 11:30:56     68s] #   slack file: /tmp/ssv_tmpdir_14591_923YGn/.histogram.14591.slk
+[03/12 11:30:56     68s] #   format    : not compact, step=0.5 ns
+[03/12 11:30:56     68s] #   slack (ns): target=0.000  violating_only
+[03/12 11:30:56     68s] #####################################################################
+[03/12 11:30:56     68s] 
+[03/12 11:30:56     68s] ---------------------------------------------
+[03/12 11:30:56     68s] | Slack Range (ns)     |  Count  |     Sum  |
+[03/12 11:30:56     68s] +----------------------+---------+----------+
+[03/12 11:30:56     68s] | ( -0.995 ~  -0.500]  |      5  |        5 |
+[03/12 11:30:56     68s] | ( -0.500 ~  -0.000]  |      5  |       10 |
+[03/12 11:30:56     68s] ---------------------------------------------
+[03/12 11:30:56     68s] <CMD> report_timing -max_points 50 -machine_readable > mcrb.mtarpt
+[03/12 11:30:56     68s] **WARN: (TCLCMD-1131):	'The -max_points parameter of the report_timing command is obsolete. The timing engine will map it to -max_paths parameter. For future releases, you should remove this parameter from your scripts.'
+[03/12 11:30:56     68s] <CMD> load_timing_debug_report -name default_report mcrb.mtarpt
+[03/12 11:30:56     68s] Parsing file mcrb.mtarpt...
+[03/12 12:24:16    268s] <CMD> all_setup_analysis_views
+[03/12 12:24:16    268s] <CMD> all_setup_analysis_views
+[03/12 12:24:16    268s] <CMD> all_hold_analysis_views
+[03/12 12:24:16    268s] <CMD> get_analysis_view $view -delay_corner
+[03/12 12:24:16    268s] <CMD> get_delay_corner $dc -rc_corner
+[03/12 12:24:25    269s] <CMD> all_setup_analysis_views
+[03/12 12:24:25    269s] <CMD> all_setup_analysis_views
+[03/12 12:24:25    269s] <CMD> all_hold_analysis_views
+[03/12 12:24:25    269s] <CMD> get_analysis_view $view -delay_corner
+[03/12 12:24:25    269s] <CMD> get_delay_corner $dc -rc_corner
+[03/12 12:24:35    270s] <CMD> all_setup_analysis_views
+[03/12 12:24:35    270s] <CMD> all_setup_analysis_views
+[03/12 12:24:35    270s] <CMD> all_hold_analysis_views
+[03/12 12:24:35    270s] <CMD> get_analysis_view $view -delay_corner
+[03/12 12:24:35    270s] <CMD> get_delay_corner $dc -rc_corner
+[03/12 12:24:39    270s] **ERROR: (IMPQTF-4005):	Cannot find item 'addbufapplyb1' in form 'ecoopt'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+**ERROR: (IMPQTF-4005):	Cannot find item 'addbufapplyb2' in form 'ecoopt'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+**ERROR: (IMPQTF-4005):	Cannot find item 'delbufapplyb1' in form 'ecoopt'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+<CMD> all_setup_analysis_views
+[03/12 12:24:58    271s] <CMD> all_setup_analysis_views
+[03/12 12:24:58    271s] <CMD> all_hold_analysis_views
+[03/12 12:24:58    271s] <CMD> get_analysis_view $view -delay_corner
+[03/12 12:24:58    271s] <CMD> get_delay_corner $dc -rc_corner
+[03/12 12:25:56    275s] <CMD> add_repeater -cell BUF_X2 -net { g422__7098 }
+[03/12 12:25:56    275s] #################################################################################
+[03/12 12:25:56    275s] # Design Name: mcrb
+[03/12 12:25:56    275s] # Design Mode: 65nm
+[03/12 12:25:56    275s] # Analysis Mode: MMMC OCV 
+[03/12 12:25:56    275s] # Parasitics Mode: No SPEF/RCDB 
+[03/12 12:25:56    275s] # Signoff Settings: SI Off 
+[03/12 12:25:56    275s] #################################################################################
+[03/12 12:25:56    275s] **ERROR: (IMPOPT-560):	Net ' g422__7098 ' not found.
+**ERROR: (IMPSYT-7004):	Failed to execute add_repeater command.
+[03/12 12:26:07    276s] <CMD_INTERNAL> redraw
+[03/12 12:26:12    276s] <CMD> add_repeater -cell BUF_X2 -net g422__7098
+[03/12 12:26:12    276s] **ERROR: (IMPOPT-560):	Net 'g422__7098' not found.
+Parsing file eco.mtarpt...
+[03/12 12:26:22    277s] -checkType setup                           # enums={setup hold}, default=setup
+[03/12 12:26:25    277s] <CMD> get_time_unit
+[03/12 12:26:25    277s] <CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -late > top.mtarpt
+[03/12 12:26:25    277s] <CMD> load_timing_debug_report -name default_report top.mtarpt
+[03/12 12:26:25    277s] Parsing file top.mtarpt...
+[03/12 12:26:28    277s] -checkType setup                           # enums={setup hold}, default=setup
+[03/12 12:26:36    278s] <CMD> get_time_unit
+[03/12 12:26:36    278s] <CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -early > top.mtarpt
+[03/12 12:26:36    278s] <CMD> load_timing_debug_report -name default_report top.mtarpt
+[03/12 12:26:36    278s] Parsing file top.mtarpt...
+[03/12 12:26:39    278s] -checkType setup                           # enums={setup hold}, default=setup
+[03/12 12:26:45    279s] <CMD> get_time_unit
+[03/12 12:26:45    279s] <CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -early > top.mtarpt
+[03/12 12:26:45    279s] <CMD> load_timing_debug_report -name default_report top.mtarpt
+[03/12 12:26:45    279s] Parsing file top.mtarpt...
+[03/12 12:26:47    279s] -checkType setup                           # enums={setup hold}, default=setup
+[03/12 12:26:53    279s] <CMD> get_time_unit
+[03/12 12:26:53    279s] <CMD> report_timing -machine_readable -max_paths 10000 -max_slack 0.75 -path_exceptions all -late > top.mtarpt
+[03/12 12:26:53    279s] <CMD> load_timing_debug_report -name default_report top.mtarpt
+[03/12 12:26:53    279s] Parsing file top.mtarpt...
+[03/12 12:27:36    282s] invalid command name "CHECK_DESIGN"
+[03/12 12:28:04    284s] <CMD> check_design
+[03/12 12:28:04    284s] 
+[03/12 12:28:04    284s] Usage: check_design [-help] [-out_file <string>] {[-type {power_intent timing hierarchical pin_assign budget assign_statements place opt cts route signoff all}] [-no_check ]}
+[03/12 12:28:04    284s] 
+[03/12 12:28:04    284s] **ERROR: (IMPTCM-32):	Wrong number of arguments specified for command "check_design".
+
+[03/12 12:28:45    286s] <CMD> check_design -out_file checkdesign.txt
+[03/12 12:28:45    286s] **ERROR: (IMPTCM-46):	Argument "{[-type] [-no_check]}" is required for command "check_design", either this option is not specified or an option prior to it is not specified correctly.
+
+[03/12 12:29:41    290s] <CMD> check_design -out_file checkdesign.txt -type all
+[03/12 12:29:41    290s] Running checks for category 'power_intent' ...
+[03/12 12:29:41    290s] ==================================================
+[03/12 12:29:41    290s] INFO: Power intent check skipped, because no power intent is loaded.
+[03/12 12:29:41    290s] Running checks for category 'timing' ...
+[03/12 12:29:41    290s] ==================================================
+[03/12 12:29:41    290s] Running checks for category 'hierarchical' ...
+[03/12 12:29:41    290s] ==================================================
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-502):	Check design failed to finish check for category 'hierarchical'. Results reported in this category are not reliable.
+Running checks for category 'pin_assign' ...
+[03/12 12:29:41    290s] ==================================================
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-502):	Check design failed to finish check for category 'pin_assign'. Results reported in this category are not reliable.
+Running checks for category 'budget' ...
+[03/12 12:29:41    290s] ==================================================
+[03/12 12:29:41    290s] Design does not have Hierarchical Partitions. check_design will ignore check type budget.
+[03/12 12:29:41    290s] Running checks for category 'assign_statements' ...
+[03/12 12:29:41    290s] ==================================================
+[03/12 12:29:41    290s] Checking for any assigns in the netlist...
+[03/12 12:29:41    290s] Running checks for category 'place' ...
+[03/12 12:29:41    290s] ==================================================
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-502):	Check design failed to finish check for category 'place'. Results reported in this category are not reliable.
+Running checks for category 'opt' ...
+[03/12 12:29:41    290s] ==================================================
+[03/12 12:29:41    290s] **Info: Trial Route has Max Route Layer 15/-1.
+[03/12 12:29:41    290s] **ERROR: (IMPOPT-7273):	check_design cannot continue checking opt category due to invalid trialRoute maxRouteLayer value
+Running checks for category 'cts' ...
+[03/12 12:29:41    290s] ==================================================
+[03/12 12:29:41    290s] Skipping CTS checks because no clock trees are defined.
+[03/12 12:29:41    290s] Running checks for category 'route' ...
+[03/12 12:29:41    290s] ==================================================
+[03/12 12:29:41    290s] #Checking wire integrity...
+[03/12 12:29:41    290s] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1301.79 (MB), peak = 1307.58 (MB)
+[03/12 12:29:41    290s] Running checks for category 'signoff' ...
+[03/12 12:29:41    290s] ==================================================
+[03/12 12:29:41    290s] **ERROR: (IMPESO-441):	The placement density is reported a 0% which means that LEF is loaded but not the DEF.
+**WARN: (IMPESO-447):	The parasitic annotation is not reaching 100% on the real nets for RC corner default_emulate_rc_corner.
+[03/12 12:29:41    290s] **WARN: (IMPESO-448):	The standard cell XOR2_X2 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell XOR2_X1 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell XNOR2_X2 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell XNOR2_X1 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell TLAT_X1 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell TINV_X1 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell TBUF_X8 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell TBUF_X4 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell TBUF_X2 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell TBUF_X16 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell TBUF_X1 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell SDFF_X2 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell SDFF_X1 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell SDFFS_X2 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell SDFFS_X1 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell SDFFR_X2 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell SDFFR_X1 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell SDFFRS_X2 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell SDFFRS_X1 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (IMPESO-448):	The standard cell OR4_X4 is part of the timing library but has no physical definition. Ensure that this cell is described in the LEF.
+[03/12 12:29:41    290s] **ERROR: (IMPREPO-508):	The message id 'IMPESO-448' was not registered with check_design properly which means the message will not get properly reported with check_design -no_check. This is an internal error that has no effect on the message or check, and can be ignored by users. It can only be fixed by registering the message inside the code properly.
+**WARN: (EMS-62):	Message <IMPESO-448> has exceeded the default message display limit of 20.
+[03/12 12:29:41    290s] To avoid this warning, increase the display limit per unique message by
+[03/12 12:29:41    290s] using the set_message -limit <number> command.
+[03/12 12:29:41    290s] The message limit can be removed by using the set_message -no_limit command.
+[03/12 12:29:41    290s] Note that setting a very large number using the set_message -limit command
+[03/12 12:29:41    290s] or removing the message limit using the set_message -no_limit command can
+[03/12 12:29:41    290s] significantly increase the log file size.
+[03/12 12:29:41    290s] To suppress a message, use the set_message -suppress command.
+[03/12 12:29:41    290s] **WARN: (EMS-62):	Message <IMPREPO-508> has exceeded the default message display limit of 20.
+[03/12 12:29:41    290s] To avoid this warning, increase the display limit per unique message by
+[03/12 12:29:41    290s] using the set_message -limit <number> command.
+[03/12 12:29:41    290s] The message limit can be removed by using the set_message -no_limit command.
+[03/12 12:29:41    290s] Note that setting a very large number using the set_message -limit command
+[03/12 12:29:41    290s] or removing the message limit using the set_message -no_limit command can
+[03/12 12:29:41    290s] significantly increase the log file size.
+[03/12 12:29:41    290s] To suppress a message, use the set_message -suppress command.
+[03/12 12:29:41    290s] **ERROR: (IMPESO-444):	There has to be at least one host and some threads per hosts to run distributed MMMC timing analysis.
+Output file 'checkdesign.txt' created. Sourcing this file will create a $design_checks TCL dictionary that can be parsed for more information.
+[03/12 12:29:41    290s] 
+[03/12 12:29:41    290s] *** Summary of all messages that are not suppressed in this session:
+[03/12 12:29:41    290s] Severity  ID               Count  Summary                                  
+[03/12 12:29:41    290s] ERROR     IMPOPT-7273          1  check_design cannot continue checking op...
+[03/12 12:29:41    290s] ERROR     IMPREPO-502          3  Check design failed to finish check for ...
+[03/12 12:29:41    290s] ERROR     IMPREPO-508        127  The message id '%s' was not registered w...
+[03/12 12:29:41    290s] WARNING   IMPESO-448         127  The standard cell %s is part of the timi...
+[03/12 12:29:41    290s] ERROR     IMPESO-441           1  The placement density is reported a 0%% ...
+[03/12 12:29:41    290s] ERROR     IMPESO-444           1  There has to be at least one host and so...
+[03/12 12:29:41    290s] WARNING   IMPESO-447           1  The parasitic annotation is not reaching...
+[03/12 12:29:41    290s] *** Message Summary: 128 warning(s), 133 error(s)
+[03/12 12:29:41    290s] 
+[03/12 12:30:31    293s] ambiguous command name "verify*": verifyConnectivity verifyCutDensity verifyFlipChipRoutingConstraints verifyGuide verifyIsolationLogic verifyLsfResourceStatus verifyMetalDensity verifyModuleConstraint verifyMsvNetWire verifyPowerDomain verifyPowerVia verifyQueueStatus verifyShifterLogic verifyTracks verify_AC_limit verify_AC_limit_set_freq verify_PG_short verify_ac_limit verify_ac_limit_set_freq verify_clock_em verify_clock_mesh verify_connectivity verify_pg_short verify_power_domain verify_power_via verify_scan verify_stacked_die verifyconnectivity verifycutdensity verifyflipchiproutingconstraints verifyguide ...
+...too many match (>30)
+[03/12 12:30:53    294s] **ERROR: (IMPVFC-224):	Design must be floorplanned before running 'verifyConnectivity'.
+**WARN: (IMPVFC-79):	verifyConnectivity failed.
+[03/12 12:31:21    296s] ambiguous command name "verify_*": verify_AC_limit verify_AC_limit_set_freq verify_PG_short verify_ac_limit verify_ac_limit_set_freq verify_clock_em verify_clock_mesh verify_connectivity verify_pg_short verify_power_domain verify_power_via verify_scan verify_stacked_die
+[03/12 12:32:14    299s] invalid command name "design*"
+[03/12 12:32:32    301s] ambiguous command name "*design": _issue_design_abort_msg _test_design_globals _write_design_timing apply_design apply_restore_design_cleanup apply_restore_design_init assemble_design bumphandlingforecodesign celtic_load_design check_clock_design check_design check_legacy_design checkdesign checkoadesignpermisions copy_design copy_design_hier create_hier_design create_hier_trimmed_logical_design current_design dbgetdesignnode dbgetdesignprocess deffiledesignname distribute_design_views distribute_read_design eco_opt_design ecooadesign endoptdesigniter free_design freedesign generate_design_checksum get_design ...
+...too many match (>30)
+[03/12 12:33:48    305s] ambiguous command name "*_design_": _issue_design_abort_msg _test_design_globals _write_design_timing apply_restore_design_cleanup apply_restore_design_init copy_design_hier distribute_design_views generate_design_checksum get_design_mode hier_design_temp_disable_compress_pg_enter hier_design_temp_disable_compress_pg_leave init_design_enter init_design_leave load_and_save_heco_design_in_file_threaded load_design_in_db_and_populate_map_th query_design_checksum report_design_parasitics report_design_property report_design_rule reset_design_rule_derate set_design_mode set_design_rule_derate set_ptm_design_rule validate_trim_design_for_basic_error_conditions validate_trim_design_for_basic_error_conditions_for_box
+[03/12 12:35:47    313s] **ERROR: (TCLCMD-982):	Missing required argument '<filename>' in command '_write_design_timing'
+
+[03/12 12:36:58    317s] **ERROR: (TCLCMD-982):	Missing required argument '<filename>' in command '_write_design_timing'
+
+[03/12 12:42:00    336s] No help is available for '_write_design_timing'.
+[03/12 12:42:00    336s]       You might have typed the command name incorrectly
+[03/12 12:42:00    336s]       (command names are case sensitive), or this is an
+[03/12 12:42:00    336s]       unknown or unsupported command.
+[03/12 12:42:00    336s] 
+[03/12 12:42:37    338s] Worst slack reported in the design = -0.407230 (late)  0.713870 (early)
+[03/12 12:42:59    339s] Worst slack reported in the design = -0.407230 (late)  0.713870 (early)
+[03/12 12:43:28    341s] <CMD> report_slack_histogram
+[03/12 12:43:28    341s] 
+[03/12 12:43:28    341s] #####################################################################
+[03/12 12:43:28    341s] # report_slack_histogram at Wed Mar 12 12:43:28 IST 2025
+[03/12 12:43:28    341s] #   slack file: /tmp/ssv_tmpdir_14591_923YGn/.histogram.14591.slk
+[03/12 12:43:28    341s] #   format    : not compact, step=0.5 ns
+[03/12 12:43:28    341s] #   slack (ns): target=0.000  violating_only
+[03/12 12:43:28    341s] #####################################################################
+[03/12 12:43:28    341s] 
+[03/12 12:43:28    341s] ---------------------------------------------
+[03/12 12:43:28    341s] | Slack Range (ns)     |  Count  |     Sum  |
+[03/12 12:43:28    341s] +----------------------+---------+----------+
+[03/12 12:43:28    341s] | ( -0.995 ~  -0.500]  |      5  |        5 |
+[03/12 12:43:28    341s] | ( -0.500 ~  -0.000]  |      5  |       10 |
+[03/12 12:43:28    341s] ---------------------------------------------
+[03/12 12:43:28    341s] <CMD> report_timing -max_points 50 -machine_readable > mcrb.mtarpt
+[03/12 12:43:28    341s] **WARN: (TCLCMD-1131):	'The -max_points parameter of the report_timing command is obsolete. The timing engine will map it to -max_paths parameter. For future releases, you should remove this parameter from your scripts.'
+[03/12 12:43:28    341s] <CMD> load_timing_debug_report -name default_report mcrb.mtarpt
+[03/12 12:43:28    341s] Parsing file mcrb.mtarpt...
+[03/12 12:43:35    342s] **ERROR: (IMPQTF-4002):	Form 'gtdDetail@frameOnly' already exists.
+**ERROR: (IMPQTF-4044):	Error occurs when '::tdg_timing::pathList:d1cb etsanasis@frameOnly tabfmpan3 289 3' is executed with the error message: ''. This is probably an inner GUI action error. Use the TCL command directly instead of the GUI interactive.
+<CMD> ::redraw
+[03/12 12:47:34    358s] 
+--------------------------------------------------------------------------------
+Exiting Tempus Timing Signoff Solution on Wed Mar 12 12:47:34 2025
+  Total CPU time:     0:05:59
+  Total real time:    1:32:43
+  Peak memory (main): 1306.66MB
+
+[03/12 12:47:34    358s] 
+[03/12 12:47:34    358s] *** Memory Usage v#1 (Current mem = 1487.621M, initial mem = 299.711M) ***
+[03/12 12:47:34    358s] 
+[03/12 12:47:34    358s] *** Summary of all messages that are not suppressed in this session:
+[03/12 12:47:34    358s] Severity  ID               Count  Summary                                  
+[03/12 12:47:34    358s] ERROR     IMPSYT-7004          2  %s                                       
+[03/12 12:47:34    358s] WARNING   IMPESI-3468          1  User needs to specify -equivalent_wavefo...
+[03/12 12:47:34    358s] WARNING   IMPVFC-79            1  verifyConnectivity failed.               
+[03/12 12:47:34    358s] ERROR     IMPVFC-224           1  Design must be floorplanned before runni...
+[03/12 12:47:34    358s] WARNING   IMPVFC-226           1  verify_connectivity failed.              
+[03/12 12:47:34    358s] ERROR     IMPVFC-233           1  Design must be floorplanned before runni...
+[03/12 12:47:34    358s] ERROR     IMPOPT-560           2  Net '%s' not found.                      
+[03/12 12:47:34    358s] ERROR     IMPOPT-7273          1  check_design cannot continue checking op...
+[03/12 12:47:34    358s] ERROR     IMPREPO-502          3  Check design failed to finish check for ...
+[03/12 12:47:34    358s] ERROR     IMPREPO-508        127  The message id '%s' was not registered w...
+[03/12 12:47:34    358s] ERROR     IMPTCM-32            1  Wrong number of arguments specified for ...
+[03/12 12:47:34    358s] ERROR     IMPTCM-46            1  Argument "%s" is required for command "%...
+[03/12 12:47:34    358s] ERROR     IMPQTF-4002          1  Form '%s' already exists.                
+[03/12 12:47:34    358s] ERROR     IMPQTF-4005          3  Cannot find item '%s' in form '%s'.This ...
+[03/12 12:47:34    358s] ERROR     IMPQTF-4044          1  Error occurs when '%s' is executed with ...
+[03/12 12:47:34    358s] WARNING   IMPESO-448         127  The standard cell %s is part of the timi...
+[03/12 12:47:34    358s] ERROR     IMPESO-441           1  The placement density is reported a 0%% ...
+[03/12 12:47:34    358s] ERROR     IMPESO-444           1  There has to be at least one host and so...
+[03/12 12:47:34    358s] WARNING   IMPESO-447           1  The parasitic annotation is not reaching...
+[03/12 12:47:34    358s] ERROR     TCLCMD-982           2  Missing required argument '%s' in comman...
+[03/12 12:47:34    358s] WARNING   TCLCMD-1131          3  '%s'                                     
+[03/12 12:47:34    358s] WARNING   TCLCMD-1461          2  Skipped unsupported command: %s          
+[03/12 12:47:34    358s] *** Message Summary: 136 warning(s), 148 error(s)
+[03/12 12:47:34    358s] 
+[03/12 12:47:34    358s] --- Ending "Tempus Timing Signoff Solution" (totcpu=0:05:59, real=1:32:42, mem=1487.6M) ---

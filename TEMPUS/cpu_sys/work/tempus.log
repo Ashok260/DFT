@@ -1,0 +1,935 @@
+
+Cadence Tempus(TM) Timing Signoff Solution.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.20-p001_1, built Wed Dec 2 16:07:28 PST 2020
+Options:	
+Date:		Tue Apr  8 14:30:17 2025
+Host:		APL10.kletech.ac.in (x86_64 w/Linux 4.18.0-553.47.1.el8_10.x86_64) (6cores*12cpus*12th Gen Intel(R) Core(TM) i5-12500 18432KB)
+OS:		Red Hat Enterprise Linux release 8.10 (Ootpa)
+
+License:
+		tpsxl	Tempus Timing Signoff Solution XL	20.2	checkout succeeded
+		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_9490_j8sZjV'.
+<CMD> read_verilog ../RTL/cpu_sys.v
+<CMD> read_lib ../LIBS/slow.lib
+<CMD> read_lib -lef ../LIBS/all.lef
+<CMD> set_top_module
+#% Begin Load MMMC data ... (date=04/08 14:30:45, mem=708.7M)
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#% End Load MMMC data ... (date=04/08 14:30:45, total cpu=0:00:00.0, real=0:00:00.0, peak res=709.2M, current mem=709.2M)
+default_emulate_early_rc_corner default_emulate_late_rc_corner default_emulate_rc_corner
+
+Loading LEF file ../LIBS/all.lef ...
+Set DBUPerIGU to M2 pitch 1320.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[0]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[10]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[11]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[12]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[13]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[14]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[15]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[1]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[2]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[3]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[4]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[5]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[6]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[7]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[8]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[9]' in macro 'rom_512x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[0]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[10]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[11]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'Q[12]' in macro 'ram_256x16A' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (EMS-62):	Message <IMPLF-201> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**WARN: (IMPLF-200):	Pin 'PAD' in macro 'PDB04DGZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'OEN' in macro 'PDB04DGZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'I' in macro 'PDB04DGZ' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+
+viaInitial starts at Tue Apr  8 14:30:45 2025
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM1 GENERATE.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM2 GENERATE.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM3 GENERATE.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM4 GENERATE.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM5 GENERATE.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM6 GENERATE.
+viaInitial ends at Tue Apr  8 14:30:45 2025
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from .ssv_emulate_view_definition_9490.tcl
+Reading default_emulate_libset_max timing library '/home/01fe21bec223/DFT/DFT/cpu_sys/LIBS/slow.lib' ...
+Read 477 cells in library 'slow' 
+*** End library_loading (cpu=0.00min, real=0.00min, mem=29.0M, fe_cpu=0.14min, fe_real=0.47min, fe_mem=771.6M) ***
+#% Begin Load netlist data ... (date=04/08 14:30:45, mem=771.1M)
+*** Begin netlist parsing (mem=771.6M) ***
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'OAI211XL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'OAI211XL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'SEDFFHQX1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'SEDFFHQX1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'EDFFTRX2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'EDFFTRX2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR3X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR3X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'DFFHQX4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'DFFHQX4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'OAI222XL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'OAI222XL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR4X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR4X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR4BXL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR4BXL' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NAND4BBX1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NAND4BBX1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'MXI2X4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'MXI2X4' is defined in LEF but not in the timing library.
+**WARN: (EMS-62):	Message <IMPVL-159> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+Reading verilog netlist '../RTL/cpu_sys.v'
+**WARN: (IMPVL-346):	Module 'sram_sp_16384d_36w_16m_8b' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+**WARN: (IMPVL-346):	Module 'sram_sp_32768d_33w_16m_8b' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+**WARN: (IMPVL-346):	Module 'sram_sp_512d_32w_4m_2b' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+**WARN: (IMPVL-346):	Module 'rf_2p_512d_76w_2m_4b' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+**WARN: (IMPVL-346):	Module 'rf_2p_256d_76w_1m_4b' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+**WARN: (IMPVL-346):	Module 'rf_2p_136d_74w_1m_4b' is instantiated in the netlist, but is not defined in the LEF files.  Since there is no real cell definition for such a cell, it will be treated as an empty module.
+
+*** Memory Usage v#1 (Current mem = 1232.609M, initial mem = 299.730M) ***
+*** End netlist parsing (cpu=0:00:02.2, real=0:00:02.0, mem=1232.6M) ***
+#% End Load netlist data ... (date=04/08 14:30:47, total cpu=0:00:02.3, real=0:00:02.0, peak res=1212.3M, current mem=1126.3M)
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'sram_sp_32768d_33w_16m_8b' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'sram_sp_16384d_36w_16m_8b' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'rf_2p_136d_74w_1m_4b' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'rf_2p_256d_76w_1m_4b' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'rf_2p_512d_76w_2m_4b' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+**WARN: (IMPDB-2504):	Unable to find netlist cell in the design data of the library or LEF. The 'sram_sp_512d_32w_4m_2b' cell is instantiated in the Verilog netlist, but not defined in the library or design data.  Its pin directions might be derived incorrectly. Include the cell definition or its pin information in the library or design data and reload the design to avoid potential issues.
+**WARN: (UI-418):	Undefined cells that are instantiated in the netlist are allowed because load_netlist_ignore_undefined_cell is true. Unexpected results may occur due to missing library data or missing netlist data. For accurate results, provide a consistent library and netlist.
+Top level cell is cpu_sys_emep_top.
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+6 empty module found.
+Building hierarchical netlist for Cell cpu_sys_emep_top ...
+*** Netlist is unique.
+** info: there are 5448 modules.
+** info: there are 303327 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1603.641M, initial mem = 299.730M) ***
+**WARN: (IMPFP-3961):	The techSite 'corner' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Horizontal Layer M1 offset = 560 (derived)
+Vertical Layer M2 offset = 660 (derived)
+Generated pitch 0.99 in Metal6 is different from 1.32 defined in technology file in preferred direction.
+Generated pitch 0.56 in Metal5 is different from 1.12 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+/dev/null
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Reading timing constraints file '/dev/null' ...
+Current (total cpu=0:00:13.8, real=0:00:31.0, peak res=1878.6M, current mem=1878.6M)
+Total number of combinational cells: 234
+Total number of sequential cells: 105
+Total number of tristate cells: 9
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2 BUFX12 BUFX16 BUFX20 CLKBUFX2 BUFX3 BUFX4 CLKBUFX12 CLKBUFX16 CLKBUFX20 CLKBUFX4 CLKBUFX8 BUFX8 CLKBUFX3
+Total number of usable buffers: 14
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX2 CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX20 INVX1 CLKINVX3 CLKINVX4 INVX12 INVX2 INVX3 CLKINVX8 INVX20 INVX4 INVX16 INVXL INVX8
+Total number of usable inverters: 17
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY4X1 DLY2X1 DLY3X1
+Total number of identified usable delay cells: 4
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+default_emulate_constraint_mode
+**ERROR: (IMPSYC-2):	Timing information is not defined for cell sram_sp_32768d_33w_16m_8b; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
+**ERROR: (IMPSYC-2):	Timing information is not defined for cell sram_sp_16384d_36w_16m_8b; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
+**ERROR: (IMPSYC-2):	Timing information is not defined for cell rf_2p_136d_74w_1m_4b; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
+**ERROR: (IMPSYC-2):	Timing information is not defined for cell rf_2p_256d_76w_1m_4b; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
+**ERROR: (IMPSYC-2):	Timing information is not defined for cell rf_2p_512d_76w_2m_4b; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
+**ERROR: (IMPSYC-2):	Timing information is not defined for cell sram_sp_512d_32w_4m_2b; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Initializing multi-corner resistance tables ...
+default_emulate_libset_max default_emulate_libset_min
+**ERROR: (IMPSYC-2):	Timing information is not defined for cell sram_sp_32768d_33w_16m_8b; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
+**ERROR: (IMPSYC-2):	Timing information is not defined for cell sram_sp_16384d_36w_16m_8b; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
+**ERROR: (IMPSYC-2):	Timing information is not defined for cell rf_2p_136d_74w_1m_4b; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
+**ERROR: (IMPSYC-2):	Timing information is not defined for cell rf_2p_256d_76w_1m_4b; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
+**ERROR: (IMPSYC-2):	Timing information is not defined for cell rf_2p_512d_76w_2m_4b; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
+**ERROR: (IMPSYC-2):	Timing information is not defined for cell sram_sp_512d_32w_4m_2b; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the check_library command to verify if the timing library has complete information after the design is loaded.
+<CMD> read_sdc ../SDC/cpu_sys.sdc
+Current (total cpu=0:00:14.3, real=0:00:32.0, peak res=1909.4M, current mem=1789.8M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../SDC/cpu_sys.sdc, Line 8).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[3]' (File ../SDC/cpu_sys.sdc, Line 9).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[2]' (File ../SDC/cpu_sys.sdc, Line 10).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[1]' (File ../SDC/cpu_sys.sdc, Line 11).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_tl_clk_prog_div/div_i[0]' (File ../SDC/cpu_sys.sdc, Line 12).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[3]' (File ../SDC/cpu_sys.sdc, Line 13).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[2]' (File ../SDC/cpu_sys.sdc, Line 14).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[1]' (File ../SDC/cpu_sys.sdc, Line 15).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ep_core_pl_clk_prog_div/div_i[0]' (File ../SDC/cpu_sys.sdc, Line 16).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[3]' (File ../SDC/cpu_sys.sdc, Line 17).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[2]' (File ../SDC/cpu_sys.sdc, Line 18).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[1]' (File ../SDC/cpu_sys.sdc, Line 19).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_emep_top/i_emep_top_clk_rst_gen/i_ds_port_pl_clk_prog_div/div_i[0]' (File ../SDC/cpu_sys.sdc, Line 20).
+
+**WARN: (TCLCMD-1531):	'set_case_analysis' has been applied on hierarchical pin 'U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/atfrtc010/CTL/clk_sel' (File ../SDC/cpu_sys.sdc, Line 21).
+
+**WARN: (TCLCMD-1142):	Virtual clock 'HPC_CLK_VIR' is being created with no source objects. (File ../SDC/cpu_sys.sdc, Line 32).
+
+**WARN: (TCLCMD-1142):	Virtual clock 'GPIO_CLK_VIR' is being created with no source objects. (File ../SDC/cpu_sys.sdc, Line 33).
+
+**WARN: (TCLCMD-1531):	'create_generated_clock' has been applied on hierarchical pin 'U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_BUF_00/Y' (File ../SDC/cpu_sys.sdc, Line 36).
+
+**WARN: (TCLCMD-1531):	'create_generated_clock' has been applied on hierarchical pin 'U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_BUF_00/Y' (File ../SDC/cpu_sys.sdc, Line 37).
+
+**WARN: (TCLCMD-1531):	'create_generated_clock' has been applied on hierarchical pin 'U_cpu_sys_top/U_pcie_sw_clkrst_gen/U_CLK_BUF_04/Y' (File ../SDC/cpu_sys.sdc, Line 42).
+
+**WARN: (TCLCMD-1531):	'set_false_path' has been applied on hierarchical pin 'U_cpu_sys_top/U_gpio_glbl_mux/gpio_out_52_i[39]' (File ../SDC/cpu_sys.sdc, Line 115).
+
+**WARN: (TCLCMD-1531):	'set_false_path' has been applied on hierarchical pin 'U_cpu_sys_top/U_gpio_glbl_mux/gpio_out_52_i[38]' (File ../SDC/cpu_sys.sdc, Line 115).
+
+**WARN: (TCLCMD-1531):	'set_false_path' has been applied on hierarchical pin 'U_cpu_sys_top/U_gpio_glbl_mux/gpio_out_52_i[37]' (File ../SDC/cpu_sys.sdc, Line 115).
+
+**WARN: (TCLCMD-1531):	'set_false_path' has been applied on hierarchical pin 'U_cpu_sys_top/U_gpio_glbl_mux/gpio_out_52_i[36]' (File ../SDC/cpu_sys.sdc, Line 115).
+
+Message <TCLCMD-1531> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit. (File ../SDC/cpu_sys.sdc, Line 115).
+
+Number of path exceptions in the constraint file = 137
+INFO (CTE): Reading of timing constraints file ../SDC/cpu_sys.sdc completed, with 23 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.2, real=0:00:00.0, peak res=1815.8M, current mem=1815.8M)
+Current (total cpu=0:00:14.5, real=0:00:32.0, peak res=1909.4M, current mem=1815.8M)
+**ERROR: (TCLCMD-1022):	Property 'is_memory' is not supported for object type 'db instance'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+**ERROR: (TCLCMD-917):	Cannot find 'cells' that match '*'
+**ERROR: (TCLCMD-1022):	Property 'is_memory' is not supported for object type 'db instance'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern '*'
+**ERROR: (TCLCMD-917):	Cannot find 'cells' that match '*'
+extra characters after close-quote
+Loading  (cpu_sys_emep_top)
+Traverse HInst (cpu_sys_emep_top)
+<CMD> report_clocks -hierarchy -arrival_points -groups > clock_details.txt
+**WARN: (TCLCMD-592):	Option '-arrival_points' is obsolescent and will be removed in a future release.  Option still functional in current release.
+**WARN: (IMPESI-3468):	User needs to specify -equivalent_waveform_model propagation first before specifying -waveform_compression_mode accurate|clock_detailed .
+AAE DB initialization (MEM=2081.23 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Name: cpu_sys_emep_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Start delay calculation (fullDC) (1 T). (MEM=2212.34)
+/dev/null
+End delay calculation. (MEM=2536.09 CPU=0:00:17.2 REAL=0:00:17.0)
+End delay calculation (fullDC). (MEM=2536.09 CPU=0:00:20.1 REAL=0:00:20.0)
+<CMD> report_clocks -groups -hierarchy -description -arrival_points > clocks_details.txt
+**WARN: (TCLCMD-592):	Option '-arrival_points' is obsolescent and will be removed in a future release.  Option still functional in current release.
+
+Usage: foreach_in_collection [-help] <var_name> <collection> {<body> }
+
+**ERROR: (IMPTCM-48):	">flops.txt" is not a legal option for command "foreach_in_collection". Either the current option or an option prior to it is not specified correctly.
+
+**WARN: (IMPOPT-7279):	The command reportVtInstCount will be made obsolete in a future release. Please use report_power -leakage to get the vt based instance count.
+<CMD> get_power_analysis_mode -analysis_view -quiet
+<CMD> all_analysis_views -type leakage
+<CMD> get_eco_opt_mode -quiet -defineVtPartition
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> get_power_analysis_mode -leakage_power_view -quiet
+<CMD> get_power_analysis_mode -analysis_view -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+
+Power view               = default_emulate_view
+Number of VT partitions  = 3
+Standard cells in design = 348
+Instances in design      = 303327
+
+Instance distribution across the VT partitions:
+
+ LVT : inst = 175322 (57.8%), cells = 196 (56.32%)
+   Lib slow                 : inst = 175322 (57.8%)
+
+ SVT : inst = 83467 (27.5%), cells = 143 (41.09%)
+   Lib slow                 : inst = 83467 (27.5%)
+
+ HVT : inst = 1491 (0.5%), cells = 6 (1.72%)
+   Lib slow                 : inst = 1491 (0.5%)
+
+Reporting took 0 sec
+**WARN: (IMPOPT-7279):	The command reportVtInstCount will be made obsolete in a future release. Please use report_power -leakage to get the vt based instance count.
+<CMD> get_power_analysis_mode -analysis_view -quiet
+<CMD> all_analysis_views -type leakage
+<CMD> get_eco_opt_mode -quiet -defineVtPartition
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> get_power_analysis_mode -leakage_power_view -quiet
+<CMD> get_power_analysis_mode -analysis_view -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+<CMD> all_setup_analysis_views
+<CMD> all_analysis_views -type dynamic -quiet
+<CMD> all_analysis_views -type leakage -quiet
+
+Power view               = default_emulate_view
+Number of VT partitions  = 3
+Standard cells in design = 348
+Instances in design      = 303327
+
+Instance distribution across the VT partitions:
+
+ LVT : inst = 175322 (57.8%), cells = 196 (56.32%)
+   Lib slow                 : inst = 175322 (57.8%)
+
+ SVT : inst = 83467 (27.5%), cells = 143 (41.09%)
+   Lib slow                 : inst = 83467 (27.5%)
+
+ HVT : inst = 1491 (0.5%), cells = 6 (1.72%)
+   Lib slow                 : inst = 1491 (0.5%)
+
+Reporting took 0 sec
+<CMD> report_module_model -help
+
+Usage: report_module_model [-help] [-active_rc_corners] [-default_dir]
+                           [-type <string>]
+
+-help              # Prints out the command usage
+-active_rc_corners # <active rc corners> (bool, optional)
+-default_dir       # <default directory> (bool, optional)
+-type <string>     # <type of module model> (string, optional)
+
+
+<CMD> report_module_model
+**ERROR: (IMPSE-25):	You are using a Limited Access feature that requires special setup before you can use it. Please contact Cadence support for more information on how to access this feature.
+ambiguous command name "*memor*": __print_memory_data __print_memory_stats _set_max_memory _syntech_memory_report clean_compressed_dbGet_memory clean_compressed_dbget_memory cte_dump_memory enable_low_memory_mode getmemoryroundofffactor isdesigninmemory islibraryinmemory istalibraryinmemory memoryTest memory_profiling memorytest pdi_report_memory report_aae_memory reportmmmemory reportpeakmemory setallrccornerspernetinmemory setmemorydebuglevel setmemorydump setmemoryroundofffactor settrashmemory timing_report_memory use_memory
+
+Usage: timing_report_memory [-help] -cache {persistent_report} [-op {reset}]
+
+**ERROR: (IMPTCM-46):	Argument "-cache" is required for command "timing_report_memory", either this option is not specified or an option prior to it is not specified correctly.
+
+
+Usage: timing_report_memory [-help] -cache {persistent_report} [-op {reset}]
+
+**ERROR: (IMPTCM-6):	Missing enum value for option "-cache". The allowed values are {persistent_report}
+
+U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/cpu_sys_emep_top_RC_CG_RC_CG_HIER_INST334/RC_CGIC_INST U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/cpu_sys_emep_top_RC_CG_RC_CG_HIER_INST335/RC_CGIC_INST U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U1 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U2 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U3 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U4 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U5 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U6 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U7 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U8 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U9 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U10 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U11 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U12 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U13 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U14 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U15 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U16 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U17 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U18 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U19 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U20 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U21 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U22 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U23 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U24 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U25 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U26 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U27 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U28 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U29 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U30 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U31 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U32 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U33 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U34 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U35 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U36 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U37 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U38 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U39 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U40 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U41 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U42 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U43 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U44 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U45 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U46 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U47 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U48 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U49 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U50 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U51 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U52 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U53 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U54 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U55 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U56 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U57 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U58 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U59 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U60 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U61 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U62 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28/U63 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/cpu_sys_emep_top_RC_CG_RC_CG_HIER_INST334 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/cpu_sys_emep_top_RC_CG_RC_CG_HIER_INST335 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/inc_add_362_28 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/mem_idle_r_reg U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/haddr_r_reg_17_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/haddr_r_reg_18_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/haddr_r_reg_13_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/haddr_r_reg_5_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/spi_cs_r_reg_0_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/spi_cs_r_reg_1_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/ahb_cs_r_reg_1_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/ahb_cs_r_reg_0_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/U89 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/U190 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/spi_addr_r_reg_22_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/spi_addr_r_reg_12_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/spi_addr_r_reg_14_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/spi_addr_r_reg_23_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/spi_addr_r_reg_15_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/mem_clr_cs_r_reg_1_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/mem_clr_cs_r_reg_0_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/haddr_r_reg_11_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/haddr_r_reg_16_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/haddr_r_reg_21_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/haddr_r_reg_19_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/haddr_r_reg_8_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/haddr_r_reg_9_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/haddr_r_reg_10_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/spi_addr_r_reg_10_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/spi_addr_r_reg_6_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/spi_addr_r_reg_4_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/spi_addr_r_reg_8_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/spi_addr_r_reg_5_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/spi_addr_r_reg_9_ U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/spi/u_spi_ahbif_ctrl/spi_addr_r_reg_16_ ...
+U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_1 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_2 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_3 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_4 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_5 U_cpu_sys_top/U_cpu_subsys_core/U_ag101_core/cpu_subsystem/eilm/lm_mem_6
+**ERROR: (TCLCMD-1022):	Property 'name' is not supported for object type 'db port'
+**ERROR: (TCLCMD-917):	Cannot find 'ports' that match '*'
+invalid command name "*memories*"
+ambiguous command name "*memory*": __print_memory_data __print_memory_stats _set_max_memory _syntech_memory_report clean_compressed_dbGet_memory clean_compressed_dbget_memory cte_dump_memory enable_low_memory_mode getmemoryroundofffactor isdesigninmemory islibraryinmemory istalibraryinmemory memoryTest memory_profiling memorytest pdi_report_memory report_aae_memory reportmmmemory reportpeakmemory setallrccornerspernetinmemory setmemorydebuglevel setmemorydump setmemoryroundofffactor settrashmemory timing_report_memory use_memory
+ambiguous command name "*mem*": __allocsysmemtest __dump_syntech_mem_stats __print_memory_data __print_memory_stats _mem_swap_out _set_max_memory _syntech_memory_report addsdpgroupmember allowapproxvirtmemreport clean_compressed_dbGet_memory clean_compressed_dbget_memory cte_dump_memory deletesdpgroupmember enable_low_memory_mode endmonitorcpuandmem endtracemem fememdump fpishinstonlymemberofpowerdomain getmemoryroundofffactor isdesigninmemory islibraryinmemory istalibraryinmemory mem_stats memoryTest memory_profiling memorytest pdi_report_memory peakmemreportonexit peakmemsampleperiod printcputimemem qtmarkmempoller ...
+...too many match (>30)
+
+Usage: get_designs [-help] <patterns> [-quiet]
+
+**ERROR: (IMPTCM-32):	Wrong number of arguments specified for command "CTE::get_designs".
+
+
+Usage: get_designs [-help] <patterns> [-quiet]
+
+-help                # Prints out the command usage
+<patterns>           # Patterns for module names. Patterns include the * and ?
+                     # wildcard characters and collections of modules
+                     # (string, required)
+-quiet               # Suppresses all error and warning messages generated when
+                     # the get_design command is run (bool, optional)
+
+
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'memory'
+**ERROR: (TCLCMD-917):	Cannot find 'modules' that match 'memory'
+
+Usage: get_designs [-help] <patterns> [-quiet]
+
+**ERROR: (IMPTCM-46):	Argument "<patterns>" is required for command "get_designs", either this option is not specified or an option prior to it is not specified correctly.
+

@@ -1,0 +1,42 @@
+*** Statistics for net list s298 ***
+Number of cells      = 71
+Number of nets       = 91
+Number of tri-nets   = 0
+Number of degen nets = 14
+Number of pins       = 270
+Number of i/os       = 15
+
+Number of nets with    1 terms = 14 (15.4%)
+Number of nets with    2 terms = 40 (44.0%)
+Number of nets with    3 terms = 15 (16.5%)
+Number of nets with    4 terms = 10 (11.0%)
+Number of nets with    5 terms = 2 (2.2%)
+Number of nets with    7 terms = 3 (3.3%)
+Number of nets with    8 terms = 3 (3.3%)
+Number of nets with    9 terms = 1 (1.1%)
+Number of nets with >=10 terms = 3 (3.3%)
+
+*** 22 Primitives used:
+Primitive AND2_X2 (2 insts)
+Primitive AND2_X4 (1 insts)
+Primitive AOI211_X2 (1 insts)
+Primitive AOI21_X1 (1 insts)
+Primitive AOI21_X2 (2 insts)
+Primitive AOI22_X2 (1 insts)
+Primitive DLH_X1 (1 insts)
+Primitive INV_X1 (1 insts)
+Primitive INV_X2 (4 insts)
+Primitive INV_X4 (2 insts)
+Primitive NAND2_X1 (5 insts)
+Primitive NAND2_X2 (7 insts)
+Primitive NAND3_X2 (2 insts)
+Primitive NOR2_X2 (13 insts)
+Primitive NOR3_X2 (3 insts)
+Primitive OAI211_X2 (4 insts)
+Primitive OAI21_X2 (2 insts)
+Primitive OR3_X2 (1 insts)
+Primitive SDFF_X2 (14 insts)
+Primitive XNOR2_X1 (2 insts)
+Primitive XOR2_X1 (1 insts)
+Primitive XOR2_X2 (1 insts)
+************
