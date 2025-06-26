@@ -1,6 +1,0 @@
-# iverilog executable
-*.vo
-
-# testbench input data
-*.data
-*.vcd
