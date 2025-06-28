@@ -1,0 +1,40 @@
+//-------------------------------------------------
+//  File created by: Tessent Shell
+//          Version: 2022.4
+//       Created on: Sat Jun 28 12:59:00 IST 2025
+//-------------------------------------------------
+
+
+Core(riscv_core) {
+  Scan {
+    allow_internal_pins : 1;
+    is_hard_module : 1;
+    exclude_from_concatenated_netlist : 1;
+    internal_scan_only : 1;
+    Mode(unwrapped) {
+      type : unwrapped;
+      traceable : 1;
+      make_active_automatically : 1;
+      ScanChain {
+        length : 2319;
+        scan_in_clock : clk_i;
+        scan_out_clock : ~clk_i;
+        scan_in_port : scan_in;
+        scan_out_port : scan_out;
+      }
+      ScanEn(scan_enable) {
+        pipeline_count : 0;
+        active_polarity : all_ones;
+      }
+      Clock(clk_i) {
+        off_state : 1'b0;
+      }
+    }
+  }
+  DesignInfo {
+    design_id : gate;
+    design_level : chip;
+    ChildBlockModules {
+    }
+  }
+}

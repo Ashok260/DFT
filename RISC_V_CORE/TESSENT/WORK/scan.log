@@ -1,0 +1,169 @@
+/siemens/bin/tessent -shell -log scan.log -dofile ../SCRIPTS/scan_insertion.do -replace
+//  Warning: Tessent user documentation not found
+//  Tessent Shell  2022.4    Tue Nov 29 21:19:37 GMT 2022
+//                Unpublished work. Copyright 2022 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Sat Jun 28 12:58:46 IST 2025.
+//  64 bit version
+//  Host: CICS4.kletech.ac.in (15509 MB RAM, 7915 MB Swap)
+//
+//  command: #----------------------------------------------------------
+//  command: # Generic Scan Insertion Script for a Single Design
+//  command: # Compatible with Tessent/DFT tools
+//  command: # Author: [Your Name]
+//  command: # Date: [Update Date]
+//  command: #----------------------------------------------------------
+//  command: #-------------------[ User Configuration ]------------------
+//  command: # Path to the synthesized netlist (Verilog)
+//  command: set NETLIST_PATH "../NETLIST"
+//  command: set VERILOG_FILE "riscv_core_net.v"      ;# Update with your netlist file
+//  command: set TOP_MODULE   "riscv_core"            ;# Update with your top module name
+//  command: set CLK          "clk_i"               ;# Update with your clock signal name
+//  command: # Output and report directories
+//  command: set OUT_DIR "${TOP_MODULE}_OUTPUTS"
+//  command: set RPT_DIR "${TOP_MODULE}_REPORTS"
+//  command: # Cell library for scan insertion (update path as needed)
+//  command: set CELL_LIB_PATH "../MDT/test_Nangate.mdt"
+//  command: #-------------------[ Directory Setup ]---------------------
+//  command: # Create output and report directories if they don't exist
+//  command: if { ![file exists $OUT_DIR] } {
+//               file mkdir $OUT_DIR
+//               puts "Created output directory: $OUT_DIR"
+//           }
+Created output directory: riscv_core_OUTPUTS
+//  command: if { ![file exists $RPT_DIR] } {
+//               file mkdir $RPT_DIR
+//               puts "Created report directory: $RPT_DIR"
+//           }
+Created report directory: riscv_core_REPORTS
+//  command: #-------------------[ DFT/Scan Setup ]----------------------
+//  command: # Set context to scan insertion mode
+//  command: set_context dft -scan
+//  command: # Read cell library for scan cell mapping
+//  command: read_cell_library $CELL_LIB_PATH
+//  Reading DFT Library file ../SCRIPTS/../MDT/test_Nangate.mdt
+//  Finished reading file ../SCRIPTS/../MDT/test_Nangate.mdt
+//  command: # Read Verilog netlist for the design
+//  command: set_design_sources -format verilog -y $NETLIST_PATH -extension v
+//  command: read_verilog $NETLIST_PATH/$VERILOG_FILE
+//  command: # Set the current design
+//  command: set_current_design $TOP_MODULE
+//  Warning: 262 cases: Net in netlist not connected
+//  Note: Issue set_current_design with the -show_elaboration_warnings option to see more details about previous warnings
+//  command: # Set design level (chip/block as appropriate)
+//  command: set_design_level top
+//  command: # Specify scan enable and clock signals
+//  command: set_scan_enable scan_enable -single_global_scan_enable on
+//  command: #set_scan_signals -tclk $CLK -ten scan_en
+//  command: # Analyze and check for control signals and DFT rule violations
+//  command: analyze_control_signals -auto
+//  Warning: Rule FN1 violation occurs 266 times
+//  Warning: Rule FN4 violation occurs 2319 times
+//  Flattening process completed, cell instances=13232, gates=39469, PIs=150, POs=120, CPU time=0.07 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.06 sec.
+//  ---------------------------------------------------------------------------
+//  Begin control signals identification analysis.
+//  ---------------------------------------------------------------------------
+//  Identified 1 clock control primary inputs.
+//     '/clk_i' (1) with off-state = 0.
+//  Identified 0 set control primary inputs.
+//  Identified 1 reset control primary inputs.
+//     '/rst_i' (2) with off-state = 0.
+//  Identified 0 read control primary inputs.
+//  Identified 0 write control primary inputs.
+//  ---------------------------------------------------------------------------
+//  Total number of internal lines is 6957 (2319 clocks, 2319 sets , 2319 resets, 0 reads, 0 writes).
+//  Total number of potentially clockable internal lines is 3646 (2319 clocks, 0 sets , 1327 resets, 0 reads, 0 writes).
+//  Total number of not clockable internal lines is 3311 (0 clocks, 2319 sets , 992 resets, 0 reads, 0 writes).
+//  Total number of added primary input controls 2 (1 clocks, 0 sets , 1 resets, 0 reads, 0 writes).
+//  ---------------------------------------------------------------------------
+//  Warning: Flattened model deleted.
+//  command: check_design_rules 
+//  Warning: Rule FN1 violation occurs 266 times
+//  Warning: Rule FN4 violation occurs 2319 times
+//  Flattening process completed, cell instances=13232, gates=39469, PIs=150, POs=120, CPU time=0.06 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.06 sec.
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 2319,
+//  sequential library cells = 2319.
+//  ---------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------
+//  Begin scannability rules checking for 2319 sequential library cells.
+//  ---------------------------------------------------------------------------
+//  Note: There was 1 S7 violation (Potentially scannable cell that is not in the clock path is driven by a constant value).
+//  2319 sequential library cells identified as scannable.
+//  ---------------------------------------------------------------------------
+//  Begin scan clock rules checking.
+//  ---------------------------------------------------------------------------
+//  2 scan clock/set/reset lines have been identified.
+//  All scan clocks successfully passed off-state check.
+//  2319 sequential cells passed clock stability checking.
+//  There were 992 clock rule C3 fails (clock may capture data affected by its captured data).
+//  Note: Trailing edge triggered device can capture data affected by leading edge.
+//  ---------------------------------------------------------------------------
+//  Begin shift register identification for 2319 sequential library cells.
+//  ---------------------------------------------------------------------------
+//  No shift registers identified.
+//  Number of targeted sequential library cells = 2319
+//  Warning: The tool may require a shift-capture clock during insertion, 
+//           but no 'shift_capture_clock' DFT signal was identified 
+//           and no TCLK source was specified using the command 'set_scan_signals -tclk'.
+//  Note: The system clock 'clk_i' will be used as the shift-capture clock, if needed.
+//  command: add_scan_mode -si_connections scan_in -so_connections scan_out
+//  Setting the chain count to the number of specified scan connections (1).
+//  command: # Set scan insertion options (customize as needed) (optional if already scan ports are in design)
+//  command: #set_scan_insertion_options  #   -si_port_format scan_in_%d  #   -so_port_format scan_out_%d   #   -enable_scan_cell_mapping on    #  -chain_count 1
+//  command: # Analyze scan chains and insert scan logic
+//  command: analyze_scan_chains 
+//  Chain allocation of 'unwrapped' mode completed:
+//         1 distributed chain of size 2319
+//  command: insert_test_logic -write_in_tsdb on
+=============================
+Test Logic Insertion Summary:
+=============================
+
+  Structural Data:
+  ----------------
+                           Added top-level port count:           0
+                                 Added instance count:           3
+
+  Logical Data:
+  -------------
+                           Added retiming logic count:           1
+                   Added scan chain count (unwrapped):           1
+
+//  Warning: Flattened model deleted.
+//  
+//  Writing out netlist and related files in ./tsdb_outdir/dft_inserted_designs/riscv_core_gate.dft_inserted_design
+//  command: #-------------------[ Reporting ]---------------------------
+//  command: # Generate scan-related reports
+//  command: report_scan_chains > ${RPT_DIR}/${TOP_MODULE}_scan_chain.rpt
+//  command: report_scan_elements > ${RPT_DIR}/${TOP_MODULE}_scan_elements.rpt
+//  command: report_scan_cells > ${RPT_DIR}/${TOP_MODULE}_scan_cells.rpt
+//  command: report_scan_enable > ${RPT_DIR}/${TOP_MODULE}_scan_enable.rpt
+//  command: #-------------------[ Output Generation ]-------------------
+//  command: # Write ATPG setup and core description files
+//  command: write_atpg_setup ${OUT_DIR}/${TOP_MODULE}_atpg_setup
+//  command: write_core_description ${OUT_DIR}/${TOP_MODULE}_core_description
+//  command: # Write out the scan-inserted netlist
+//  command: write_design -output_file ${OUT_DIR}/${TOP_MODULE}_scan.v
+//  command: #-------------------[ Optional: Visualization ]-------------
+//  command: # Uncomment the following lines if you want to view the design in the GUI
+//  command: set_system_mode setup
+//  command: open_visualizer 
+//  Note: Tessent Visualizer client successfully started and connected to the server.
+//  command: #-------------------[ Clean Up ]----------------------------
+//  command: #delete_design
+//  command: #-------------------[ END OF SCRIPT ]-----------------------
