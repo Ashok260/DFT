@@ -53,11 +53,13 @@ set_design_level chip
 # Specify scan enable and clock signals
 set_scan_enable scan_en -single_global_scan_enable on
 set_scan_signals -tclk $CLK -ten scan_en
-add_scan_mode -si_connections scan_in -so_connections scan_out
+
 
 # Analyze and check for control signals and DFT rule violations
 analyze_control_signals -auto
 check_design_rules
+
+add_scan_mode -si_connections scan_in -so_connections scan_out
 
 # Set scan insertion options (customize as needed) (optional if already scan ports are in design)
 set_scan_insertion_options \
