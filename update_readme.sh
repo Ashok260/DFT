@@ -1,11 +1,18 @@
 #!/bin/bash
 
-# Read the contents of TREE.md
-TREE_CONTENT=$(<TREE.md)
-
-# Use awk to insert the TREE_CONTENT between the placeholders in README.md
-awk -v tree="$TREE_CONTENT" '
-  /<!-- START OF TREE -->/ { print; print tree; skip=1; next }
-  /<!-- END OF TREE -->/ { skip=0 }
-  !skip
+# Safely read TREE.md line-by-line into the README.md
+awk '
+  BEGIN { inside_block = 0 }
+  /<!-- START OF TREE -->/ {
+    print
+    while ((getline line < "TREE.md") > 0) print line
+    inside_block = 1
+    next
+  }
+  /<!-- END OF TREE -->/ {
+    inside_block = 0
+    print
+    next
+  }
+  !inside_block
 ' README.md > README.tmp && mv README.tmp README.md
