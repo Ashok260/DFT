@@ -532,7 +532,6 @@
 │           ├── genus.log
 │           └── run.tcl
 ├── README.md
-├── README.tmp
 ├── RISC_V_CORE
 │   ├── GENUS
 │   │   ├── OUTPUTS
@@ -3519,5 +3518,5 @@
 ├── generate_tree.sh
 └── update_readme.sh
 
-545 directories, 2973 files
+545 directories, 2972 files
 ```
