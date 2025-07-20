@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Full history needed for rebase
+          fetch-depth: 0
 
       - name: Set up Git identity
         run: |
@@ -22,18 +22,20 @@ jobs:
           git config --global user.email "github-actions@github.com"
 
       - name: Install tree
-        run: sudo apt-get install tree
+        run: sudo apt-get install -y tree
 
       - name: Generate TREE.md and update README.md
         run: bash update_readme.sh
 
-      - name: Pull latest main (rebase mode)
-        run: git pull origin main --rebase
+      - name: Fetch latest and rebase
+        run: |
+          git fetch origin
+          git rebase origin/main
 
-      - name: Commit changes
+      - name: Commit changes (if any)
         run: |
           git add README.md TREE.md
-          git commit -m "Auto-update directory tree in README" || echo "No changes to commit"
+          git diff --cached --quiet || git commit -m "Auto-update directory tree in README"
 
       - name: Push changes
         env:
