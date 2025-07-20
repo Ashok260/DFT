@@ -21,16 +21,16 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
+      - name: Fetch latest main and rebase
+        run: |
+          git fetch origin
+          git rebase origin/main
+
       - name: Install tree
         run: sudo apt-get install -y tree
 
       - name: Generate TREE.md and update README.md
         run: bash update_readme.sh
-
-      - name: Fetch latest and rebase
-        run: |
-          git fetch origin
-          git rebase origin/main
 
       - name: Commit changes (if any)
         run: |
