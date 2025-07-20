@@ -21,7 +21,7 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-      - name: Fetch latest main and rebase
+      - name: Fetch and rebase with latest main
         run: |
           git fetch origin
           git rebase origin/main
@@ -32,7 +32,7 @@ jobs:
       - name: Generate TREE.md and update README.md
         run: bash update_readme.sh
 
-      - name: Commit changes (if any)
+      - name: Commit changes (only if needed)
         run: |
           git add README.md TREE.md
           git diff --cached --quiet || git commit -m "Auto-update directory tree in README"
