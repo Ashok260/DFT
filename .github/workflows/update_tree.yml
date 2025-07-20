@@ -1,13 +1,19 @@
+name: Update README with Tree
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 0 * * 0'  # Every Sunday at midnight
+
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-        with:
-          persist-credentials: false  # optional, if using a PAT
 
-      - name: Configure Git
+      - name: Set up Git config
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
