@@ -25,7 +25,7 @@ jobs:
         run: sudo apt-get install tree
 
       - name: Generate TREE.md and update README.md
-        run: bash update-readme.sh
+        run: bash update_readme.sh
 
       - name: Pull latest changes
         run: git pull origin main --rebase
