@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Replaces the content in README.md between <!-- START OF TREE --> and <!-- END OF TREE -->
+# Replace section in README.md between markers with contents of TREE.md
+
 awk '
   BEGIN { inside = 0 }
   /<!-- START OF TREE -->/ {
@@ -15,4 +16,7 @@ awk '
     next;
   }
   inside == 0
-' README.md > README.tmp && mv README.tmp README.md
+' README.md > README.tmp
+
+# Overwrite the original README.md
+mv README.tmp README.md
