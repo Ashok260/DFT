@@ -16,17 +16,20 @@ jobs:
       - name: Install tree
         run: sudo apt-get install -y tree
 
+      - name: Make scripts executable
+        run: chmod +x generate_tree.sh update_readme.sh
+
       - name: Generate tree
-        run: bash generate_tree.sh
+        run: ./generate_tree.sh
 
       - name: Update README
-        run: bash update_readme.sh
+        run: ./update_readme.sh
 
-      - name: Commit changes
+      - name: Commit and Push changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Ashok260/DFT.git
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add README.md
           git commit -m "Auto-update directory tree in README" || echo "No changes to commit"
           git push
